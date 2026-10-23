@@ -1,0 +1,3055 @@
+/* =========================================================
+   TRAVELORA — HOME 2 COMPLETE STYLESHEET
+   Primary: Teal #009C9A
+   Secondary: Orange #FF8A00
+   Shared Header/Footer: style.css
+   Responsive | Dark Mode | RTL | Animations
+========================================================= */
+
+
+/* ==================== 1. HERO ==================== */
+
+.h2-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 85px 0 90px;
+    background:
+        radial-gradient(ellipse at 8% 15%, rgba(255, 138, 0, 0.09), transparent 34%),
+        linear-gradient(135deg, var(--bg-soft), var(--bg) 55%, var(--primary-light));
+}
+
+.h2-hero::before {
+    position: absolute;
+    z-index: -1;
+    top: -170px;
+    right: -110px;
+    width: 420px;
+    height: 420px;
+    border: 1px solid rgba(0, 156, 154, 0.15);
+    border-radius: 50%;
+    content: "";
+    pointer-events: none;
+}
+
+.h2-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+    align-items: center;
+    gap: clamp(42px, 6vw, 85px);
+}
+
+.h2-hero-content {
+    position: relative;
+    z-index: 2;
+    animation: heroTextIn 750ms ease both;
+}
+
+.h2-hero-content h1 {
+    max-width: 650px;
+    margin-bottom: 23px;
+    font-size: clamp(43px, 5vw, 65px);
+    font-weight: 850;
+    letter-spacing: -0.055em;
+    line-height: 1.1;
+}
+
+.h2-hero-content h1 span {
+    display: block;
+    color: var(--primary);
+}
+
+.h2-hero-content > p {
+    max-width: 550px;
+    margin-bottom: 29px;
+    color: var(--text-muted);
+    font-size: 16px;
+    line-height: 1.95;
+}
+
+.h2-hero-content .hero-actions {
+    gap: 13px;
+}
+
+.h2-hero-trust {
+    display: grid;
+    gap: 12px;
+    margin-top: 31px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+}
+
+.h2-hero-trust > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 650;
+}
+
+.h2-trust-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 850;
+    flex-shrink: 0;
+}
+
+.h2-hero-visual {
+    position: relative;
+    min-width: 0;
+    padding: 14px 14px 22px 0;
+    animation: heroImageIn 900ms ease both;
+}
+
+.h2-hero-image-main {
+    position: relative;
+    overflow: hidden;
+    height: clamp(420px, 45vw, 555px);
+    border-radius: 190px 190px 24px 24px;
+    background: var(--bg-muted);
+    box-shadow: var(--shadow-lg);
+}
+
+.h2-hero-image-main::before {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: inherit;
+    content: "";
+    pointer-events: none;
+}
+
+.h2-hero-image-main > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 850ms cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.h2-hero-image-main:hover > img {
+    transform: scale(1.06);
+}
+
+.h2-hero-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        transparent 35%,
+        rgba(7, 27, 30, 0.78) 100%
+    );
+    pointer-events: none;
+}
+
+.h2-hero-image-caption {
+    position: absolute;
+    right: 26px;
+    bottom: 29px;
+    left: 26px;
+    color: #FFFFFF;
+}
+
+.h2-hero-image-caption > span {
+    display: block;
+    margin-bottom: 10px;
+    color: #FFD09A;
+    font-size: 10px;
+    font-weight: 850;
+    letter-spacing: 0.14em;
+}
+
+.h2-hero-image-caption h2 {
+    color: #FFFFFF;
+    font-size: clamp(27px, 3vw, 39px);
+}
+
+.h2-hero-floating {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: calc(100% - 10px);
+    padding: 14px 17px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--surface);
+    box-shadow: var(--shadow-lg);
+    animation: floatCard 5s ease-in-out infinite;
+}
+
+.h2-floating-top {
+    top: 15%;
+    left: -42px;
+}
+
+.h2-floating-bottom {
+    right: -9px;
+    bottom: 47px;
+    animation-delay: -2.5s;
+}
+
+.h2-floating-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 41px;
+    height: 41px;
+    border-radius: 11px;
+    background: var(--secondary-light);
+    color: var(--secondary);
+    font-size: 23px;
+    flex-shrink: 0;
+}
+
+.h2-floating-bottom .h2-floating-icon {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.h2-hero-floating > div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.h2-hero-floating strong {
+    color: var(--heading);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.h2-hero-floating > div > span {
+    color: var(--text-muted);
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+
+/* ==================== 2. CATEGORY CARDS ==================== */
+
+.h2-categories {
+    background: var(--bg);
+}
+
+.h2-category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.h2-category-card {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    min-width: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+}
+
+.h2-category-card:hover {
+    border-color: var(--secondary);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-8px);
+}
+
+.h2-category-image {
+    overflow: hidden;
+    height: 235px;
+    background: var(--bg-muted);
+}
+
+.h2-category-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 750ms cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.h2-category-card:hover .h2-category-image img {
+    transform: scale(1.08);
+}
+
+.h2-category-content {
+    display: flex;
+    align-items: flex-start;
+    flex: 1;
+    flex-direction: column;
+    padding: 25px 23px 27px;
+}
+
+.h2-category-label {
+    margin-bottom: 13px;
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 850;
+    letter-spacing: 0.13em;
+}
+
+.h2-category-content h3 {
+    margin-bottom: 11px;
+    font-size: 21px;
+}
+
+.h2-category-content > p {
+    flex: 1;
+    margin-bottom: 19px;
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.h2-category-content .text-link {
+    margin-top: auto;
+}
+
+
+/* ==================== 3. FEATURED DESTINATIONS ==================== */
+
+.h2-featured {
+    background: var(--bg-soft);
+}
+
+.h2-featured-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 28px;
+    margin-bottom: 40px;
+}
+
+.h2-featured-heading > div {
+    max-width: 680px;
+}
+
+.h2-featured-heading .section-eyebrow {
+    margin-bottom: 14px;
+}
+
+.h2-featured-heading h2 {
+    margin-bottom: 14px;
+    font-size: clamp(30px, 3.5vw, 43px);
+}
+
+.h2-featured-heading p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.h2-featured-heading > .btn {
+    flex-shrink: 0;
+}
+
+.h2-featured-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-rows: repeat(2, minmax(235px, 1fr));
+    gap: 22px;
+}
+
+.h2-featured-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-width: 0;
+    min-height: 245px;
+    border-radius: var(--radius-lg);
+    background: #233C3D;
+    box-shadow: var(--shadow-sm);
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+.h2-featured-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
+}
+
+.h2-featured-large {
+    grid-row: 1 / 3;
+}
+
+.h2-featured-card > img {
+    position: absolute;
+    z-index: -2;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 850ms cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.h2-featured-card:hover > img {
+    transform: scale(1.07);
+}
+
+.h2-featured-shade {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(7, 24, 28, 0.02) 10%,
+        rgba(7, 24, 28, 0.78) 100%
+    );
+}
+
+.h2-featured-info {
+    position: absolute;
+    right: 24px;
+    bottom: 25px;
+    left: 24px;
+    color: #FFFFFF;
+}
+
+.h2-featured-info > span {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #FFD09A;
+    font-size: 9px;
+    font-weight: 850;
+    letter-spacing: 0.14em;
+}
+
+.h2-featured-info h3 {
+    margin-bottom: 12px;
+    color: #FFFFFF;
+    font-size: clamp(21px, 2.3vw, 29px);
+}
+
+.h2-featured-large .h2-featured-info h3 {
+    max-width: 420px;
+    font-size: clamp(28px, 3vw, 39px);
+}
+
+.h2-featured-info p {
+    max-width: 440px;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.h2-featured-info > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 800;
+    transition: color var(--transition-fast);
+}
+
+.h2-featured-info > a span {
+    color: #FFB45B;
+    font-size: 17px;
+    transition: transform var(--transition);
+}
+
+.h2-featured-info > a:hover {
+    color: #FFD09A;
+}
+
+.h2-featured-info > a:hover span {
+    transform: translateX(4px);
+}
+
+
+/* ==================== 4. BENEFITS ==================== */
+
+.h2-benefits {
+    background: var(--bg);
+}
+
+.h2-benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 21px;
+}
+
+.h2-benefit-card {
+    padding: 29px 22px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition),
+        transform var(--transition);
+}
+
+.h2-benefit-card:hover {
+    border-color: var(--secondary);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-6px);
+}
+
+.h2-benefit-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 49px;
+    height: 49px;
+    margin-bottom: 22px;
+    border-radius: 14px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 25px;
+    font-weight: 700;
+    transition:
+        color var(--transition),
+        background var(--transition),
+        transform var(--transition);
+}
+
+.h2-benefit-card:nth-child(even) .h2-benefit-icon {
+    background: var(--secondary-light);
+    color: var(--secondary);
+}
+
+.h2-benefit-card:hover .h2-benefit-icon {
+    background: var(--secondary);
+    color: #FFFFFF;
+    transform: rotate(-5deg);
+}
+
+.h2-benefit-card h3 {
+    margin-bottom: 11px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.h2-benefit-card p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+
+/* ==================== 5. PROCESS ==================== */
+
+.h2-process {
+    background: var(--bg-soft);
+}
+
+.h2-process-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    align-items: start;
+    gap: clamp(42px, 7vw, 95px);
+}
+
+.h2-process-intro {
+    position: sticky;
+    top: calc(var(--header-height) + 28px);
+}
+
+.h2-process-intro h2 {
+    margin-bottom: 20px;
+    font-size: clamp(32px, 3.5vw, 45px);
+}
+
+.h2-process-intro > p {
+    margin-bottom: 27px;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.95;
+}
+
+.h2-process-steps {
+    display: grid;
+    gap: 0;
+}
+
+.h2-process-step {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 19px;
+    padding: 0 0 31px;
+}
+
+.h2-process-step:not(:last-child)::after {
+    position: absolute;
+    top: 53px;
+    bottom: 0;
+    left: 25px;
+    width: 1px;
+    background: var(--border-strong);
+    content: "";
+}
+
+.h2-step-number {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border: 1px solid rgba(0, 156, 154, 0.2);
+    border-radius: 15px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 850;
+    flex-shrink: 0;
+    transition:
+        background var(--transition),
+        color var(--transition),
+        transform var(--transition);
+}
+
+.h2-process-step:nth-child(even) .h2-step-number {
+    border-color: rgba(255, 138, 0, 0.2);
+    background: var(--secondary-light);
+    color: var(--secondary);
+}
+
+.h2-process-step:hover .h2-step-number {
+    border-color: var(--secondary);
+    background: var(--secondary);
+    color: #FFFFFF;
+    transform: translateY(-3px);
+}
+
+.h2-process-step h3 {
+    margin: 4px 0 9px;
+    font-size: 17px;
+}
+
+.h2-process-step p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+
+/* ==================== 6. FEATURED HOLIDAY PACKAGES ==================== */
+
+.h2-holiday-packages {
+    background: var(--bg);
+}
+
+.h2-holiday-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 28px;
+    margin-bottom: 38px;
+}
+
+.h2-holiday-heading-content {
+    max-width: 680px;
+}
+
+.h2-holiday-heading .section-eyebrow {
+    margin-bottom: 14px;
+}
+
+.h2-holiday-heading h2 {
+    margin-bottom: 14px;
+    font-size: clamp(30px, 3.5vw, 43px);
+}
+
+.h2-holiday-heading p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.h2-holiday-heading > .btn {
+    flex-shrink: 0;
+}
+
+.h2-holiday-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.h2-holiday-card {
+    display: flex;
+    overflow: hidden;
+    min-width: 0;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+}
+
+.h2-holiday-card:hover {
+    border-color: var(--secondary);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-7px);
+}
+
+.h2-holiday-image {
+    position: relative;
+    overflow: hidden;
+    height: 205px;
+    background: var(--bg-muted);
+}
+
+.h2-holiday-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 750ms cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.h2-holiday-card:hover .h2-holiday-image img {
+    transform: scale(1.08);
+}
+
+.h2-holiday-tag {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    max-width: calc(100% - 28px);
+    padding: 7px 11px;
+    border-radius: 6px;
+    background: var(--secondary);
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.h2-holiday-content {
+    display: flex;
+    align-items: flex-start;
+    flex: 1;
+    flex-direction: column;
+    padding: 22px 20px 21px;
+}
+
+.h2-holiday-location {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.h2-holiday-content h3 {
+    margin-bottom: 10px;
+    font-size: 19px;
+    line-height: 1.45;
+}
+
+.h2-holiday-content > p {
+    flex: 1;
+    margin-bottom: 17px;
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.85;
+}
+
+.h2-holiday-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 20px;
+}
+
+.h2-holiday-highlights span {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 9px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background: var(--bg-soft);
+    color: var(--text-muted);
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.h2-holiday-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+    transition: color var(--transition);
+}
+
+.h2-holiday-link span {
+    display: inline-block;
+    color: var(--secondary);
+    font-size: 17px;
+    transition: transform var(--transition);
+}
+
+.h2-holiday-link:hover {
+    color: var(--secondary);
+}
+
+.h2-holiday-link:hover span {
+    transform: translateX(4px);
+}
+
+.h2-holiday-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 34px;
+    text-align: center;
+}
+
+.h2-holiday-bottom p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* ==================== 7. FAQ ==================== */
+
+.h2-faq {
+    background: var(--bg-soft);
+}
+
+.h2-faq-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+    align-items: start;
+    gap: clamp(40px, 7vw, 90px);
+}
+
+.h2-faq-intro {
+    position: sticky;
+    top: calc(var(--header-height) + 25px);
+}
+
+.h2-faq-intro h2 {
+    margin-bottom: 18px;
+    font-size: clamp(30px, 3.3vw, 42px);
+}
+
+.h2-faq-intro > p {
+    margin-bottom: 23px;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.h2-faq-list {
+    display: grid;
+    gap: 13px;
+}
+
+.h2-faq-item {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.h2-faq-item[open] {
+    border-color: rgba(0, 156, 154, 0.4);
+    box-shadow: var(--shadow-sm);
+}
+
+.h2-faq-item summary {
+    position: relative;
+    padding: 20px 52px 20px 21px;
+    color: var(--heading);
+    font-size: 14px;
+    font-weight: 750;
+    line-height: 1.7;
+    list-style: none;
+    cursor: pointer;
+}
+
+.h2-faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.h2-faq-item summary::after {
+    position: absolute;
+    top: 50%;
+    right: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 8px;
+    background: var(--primary-light);
+    color: var(--primary);
+    content: "+";
+    font-size: 19px;
+    font-weight: 500;
+    transform: translateY(-50%);
+    transition:
+        background var(--transition),
+        color var(--transition);
+}
+
+.h2-faq-item[open] summary::after {
+    background: var(--secondary);
+    color: #FFFFFF;
+    content: "−";
+}
+
+.h2-faq-item summary:hover {
+    color: var(--primary);
+}
+
+.h2-faq-item > p {
+    margin: 0;
+    padding: 0 21px 21px;
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+
+/* ==================== 8. DARK MODE ==================== */
+
+body.dark-mode .h2-hero,
+html[data-theme="dark"] .h2-hero,
+body[data-theme="dark"] .h2-hero {
+    background:
+        radial-gradient(ellipse at 8% 15%, rgba(255, 138, 0, 0.07), transparent 34%),
+        linear-gradient(135deg, var(--bg-soft), var(--bg) 55%, var(--primary-light));
+}
+
+
+/* ==================== 9. RTL SUPPORT ==================== */
+
+html[dir="rtl"] .h2-hero-visual {
+    padding-right: 0;
+    padding-left: 14px;
+}
+
+html[dir="rtl"] .h2-floating-top {
+    right: -42px;
+    left: auto;
+}
+
+html[dir="rtl"] .h2-floating-bottom {
+    right: auto;
+    left: -9px;
+}
+
+html[dir="rtl"] .h2-featured-info {
+    right: 24px;
+    left: 24px;
+}
+
+html[dir="rtl"] .h2-process-step:not(:last-child)::after {
+    right: 25px;
+    left: auto;
+}
+
+html[dir="rtl"] .h2-holiday-tag {
+    right: 14px;
+    left: auto;
+}
+
+html[dir="rtl"] .h2-holiday-link:hover span {
+    transform: translateX(-4px);
+}
+
+html[dir="rtl"] .h2-holiday-bottom {
+    direction: rtl;
+}
+
+html[dir="rtl"] .h2-faq-item summary {
+    padding-right: 21px;
+    padding-left: 52px;
+}
+
+html[dir="rtl"] .h2-faq-item summary::after {
+    right: auto;
+    left: 19px;
+}
+
+html[dir="rtl"] .h2-featured-info > a:hover span {
+    transform: translateX(-4px);
+}
+
+
+/* ==================== 10. TABLET ==================== */
+
+@media (max-width: 1000px) {
+    .h2-hero {
+        padding: 70px 0;
+    }
+
+    .h2-hero-grid {
+        gap: 38px;
+    }
+
+    .h2-hero-content h1 {
+        font-size: clamp(40px, 5vw, 55px);
+    }
+
+    .h2-hero-image-main {
+        height: 440px;
+    }
+
+    .h2-floating-top {
+        left: -15px;
+    }
+
+    html[dir="rtl"] .h2-floating-top {
+        right: -15px;
+        left: auto;
+    }
+
+    .h2-floating-bottom {
+        right: -4px;
+    }
+
+    html[dir="rtl"] .h2-floating-bottom {
+        right: auto;
+        left: -4px;
+    }
+
+    .h2-benefit-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .h2-category-grid {
+        gap: 18px;
+    }
+
+    .h2-category-content {
+        padding: 22px 18px 24px;
+    }
+
+    .h2-category-content h3 {
+        font-size: 19px;
+    }
+
+    .h2-holiday-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* ==================== 11. TABLET / MOBILE LAYOUT ==================== */
+
+@media (max-width: 900px) {
+    .h2-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .h2-hero-content {
+        max-width: 720px;
+    }
+
+    .h2-hero-content h1 {
+        max-width: 680px;
+        font-size: clamp(45px, 7vw, 64px);
+    }
+
+    .h2-hero-content > p {
+        max-width: 650px;
+    }
+
+    .h2-hero-visual {
+        width: min(100%, 650px);
+        margin-inline: auto;
+    }
+
+    .h2-hero-image-main {
+        height: clamp(390px, 65vw, 520px);
+    }
+
+    .h2-category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .h2-category-card:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .h2-featured-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .h2-featured-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto;
+    }
+
+    .h2-featured-card,
+    .h2-featured-large {
+        grid-row: auto;
+        min-height: 300px;
+    }
+
+    .h2-featured-large {
+        grid-column: 1 / -1;
+        min-height: 390px;
+    }
+
+    .h2-process-grid,
+    .h2-faq-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .h2-process-intro,
+    .h2-faq-intro {
+        position: static;
+        max-width: 700px;
+    }
+
+    .h2-holiday-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .h2-holiday-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    html[dir="rtl"] .h2-hero-visual {
+        padding-right: 0;
+        padding-left: 14px;
+    }
+}
+
+
+/* ==================== 12. MOBILE ==================== */
+
+@media (max-width: 600px) {
+    .h2-hero {
+        padding: 55px 0 65px;
+    }
+
+    .h2-hero-grid {
+        gap: 40px;
+    }
+
+    .h2-hero-content h1 {
+        margin-bottom: 19px;
+        font-size: clamp(38px, 10vw, 52px);
+        line-height: 1.12;
+    }
+
+    .h2-hero-content > p {
+        margin-bottom: 24px;
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .h2-hero-content .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .h2-hero-content .hero-actions .btn {
+        width: 100%;
+    }
+
+    .h2-hero-trust {
+        gap: 12px;
+        margin-top: 25px;
+        padding-top: 20px;
+    }
+
+    .h2-hero-trust > div {
+        font-size: 11px;
+    }
+
+    .h2-hero-visual {
+        padding-right: 5px;
+        padding-bottom: 9px;
+    }
+
+    .h2-hero-image-main {
+        height: clamp(320px, 95vw, 430px);
+        border-radius: 150px 150px 20px 20px;
+    }
+
+    .h2-hero-image-caption {
+        right: 18px;
+        bottom: 22px;
+        left: 18px;
+    }
+
+    .h2-hero-image-caption > span {
+        font-size: 8px;
+    }
+
+    .h2-hero-image-caption h2 {
+        font-size: 27px;
+    }
+
+    .h2-hero-floating {
+        gap: 8px;
+        padding: 9px 11px;
+        border-radius: 11px;
+    }
+
+    .h2-floating-top {
+        top: 10%;
+        left: -5px;
+    }
+
+    html[dir="rtl"] .h2-floating-top {
+        right: -5px;
+        left: auto;
+    }
+
+    .h2-floating-bottom {
+        right: -2px;
+        bottom: 24px;
+    }
+
+    html[dir="rtl"] .h2-floating-bottom {
+        right: auto;
+        left: -2px;
+    }
+
+    .h2-floating-icon {
+        width: 31px;
+        height: 31px;
+        font-size: 18px;
+    }
+
+    .h2-hero-floating strong {
+        font-size: 10px;
+    }
+
+    .h2-hero-floating > div > span {
+        font-size: 8px;
+    }
+
+    .h2-category-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .h2-category-card:last-child {
+        grid-column: auto;
+    }
+
+    .h2-category-image {
+        height: 220px;
+    }
+
+    .h2-category-content {
+        padding: 22px;
+    }
+
+    .h2-category-content h3 {
+        font-size: 21px;
+    }
+
+    .h2-featured-heading {
+        gap: 20px;
+        margin-bottom: 29px;
+    }
+
+    .h2-featured-heading h2 {
+        font-size: 31px;
+    }
+
+    .h2-featured-heading p {
+        font-size: 13px;
+    }
+
+    .h2-featured-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .h2-featured-card,
+    .h2-featured-large {
+        grid-column: auto;
+        min-height: 320px;
+    }
+
+    .h2-featured-large .h2-featured-info h3 {
+        font-size: 29px;
+    }
+
+    .h2-featured-info {
+        right: 20px;
+        bottom: 21px;
+        left: 20px;
+    }
+
+    html[dir="rtl"] .h2-featured-info {
+        right: 20px;
+        left: 20px;
+    }
+
+    .h2-benefit-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .h2-benefit-card {
+        padding: 23px;
+    }
+
+    .h2-benefit-icon {
+        margin-bottom: 17px;
+    }
+
+    .h2-benefit-card h3 {
+        font-size: 15px;
+    }
+
+    .h2-process-grid,
+    .h2-faq-grid {
+        gap: 30px;
+    }
+
+    .h2-process-intro h2,
+    .h2-faq-intro h2 {
+        font-size: 31px;
+    }
+
+    .h2-process-intro > p,
+    .h2-faq-intro > p {
+        font-size: 13px;
+    }
+
+    .h2-process-step {
+        gap: 13px;
+        padding-bottom: 27px;
+    }
+
+    .h2-process-step:not(:last-child)::after {
+        top: 46px;
+        left: 21px;
+    }
+
+    html[dir="rtl"] .h2-process-step:not(:last-child)::after {
+        right: 21px;
+        left: auto;
+    }
+
+    .h2-step-number {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        font-size: 11px;
+    }
+
+    .h2-process-step h3 {
+        margin-top: 2px;
+        font-size: 14px;
+    }
+
+    .h2-process-step p {
+        font-size: 12px;
+    }
+
+    .h2-holiday-heading {
+        gap: 18px;
+        margin-bottom: 27px;
+    }
+
+    .h2-holiday-heading h2 {
+        font-size: 31px;
+    }
+
+    .h2-holiday-heading p {
+        font-size: 13px;
+    }
+
+    .h2-holiday-heading > .btn {
+        width: 100%;
+    }
+
+    .h2-holiday-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .h2-holiday-image {
+        height: 220px;
+    }
+
+    .h2-holiday-content {
+        padding: 22px;
+    }
+
+    .h2-holiday-content h3 {
+        font-size: 20px;
+    }
+
+    .h2-holiday-bottom {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 27px;
+    }
+
+    .h2-holiday-bottom .btn {
+        width: 100%;
+    }
+
+    .h2-faq-item summary {
+        padding: 17px 45px 17px 16px;
+        font-size: 12px;
+    }
+
+    .h2-faq-item summary::after {
+        right: 13px;
+    }
+
+    html[dir="rtl"] .h2-faq-item summary {
+        padding-right: 16px;
+        padding-left: 45px;
+    }
+
+    html[dir="rtl"] .h2-faq-item summary::after {
+        right: auto;
+        left: 13px;
+    }
+
+    .h2-faq-item > p {
+        padding: 0 16px 18px;
+        font-size: 12px;
+    }
+}
+
+
+/* ==================== 13. EXTRA SMALL SCREENS ==================== */
+
+@media (max-width: 380px) {
+    .h2-hero-content h1 {
+        font-size: 36px;
+    }
+
+    .h2-hero-image-main {
+        height: 300px;
+        border-radius: 135px 135px 17px 17px;
+    }
+
+    .h2-hero-floating {
+        padding: 8px;
+    }
+
+    .h2-hero-floating strong {
+        font-size: 9px;
+    }
+
+    .h2-hero-floating > div > span {
+        font-size: 7px;
+    }
+
+    .h2-featured-card,
+    .h2-featured-large {
+        min-height: 285px;
+    }
+
+    .h2-holiday-image {
+        height: 195px;
+    }
+
+    .h2-holiday-content {
+        padding: 18px;
+    }
+
+    .h2-holiday-content h3 {
+        font-size: 18px;
+    }
+}
+
+
+/* ==================== 14. REDUCED MOTION ==================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .h2-hero-content,
+    .h2-hero-visual,
+    .h2-hero-floating {
+        animation: none;
+    }
+
+    .h2-category-card,
+    .h2-category-image img,
+    .h2-featured-card,
+    .h2-featured-card > img,
+    .h2-benefit-card,
+    .h2-benefit-icon,
+    .h2-process-step .h2-step-number,
+    .h2-holiday-card,
+    .h2-holiday-image img,
+    .h2-holiday-link span {
+        transition: none;
+    }
+}
+
+
+/* ==================== 15. PRINT ==================== */
+
+@media print {
+    .h2-hero,
+    .h2-categories,
+    .h2-featured,
+    .h2-benefits,
+    .h2-process,
+    .h2-holiday-packages,
+    .h2-faq {
+        background: #FFFFFF !important;
+        color: #222222 !important;
+    }
+
+    .h2-hero-floating {
+        display: none;
+    }
+
+    .h2-process-intro,
+    .h2-faq-intro {
+        position: static;
+    }
+}
+/* FIX: Hero bottom floating card overlap */
+
+.h2-floating-bottom {
+    right: -5px;
+    bottom: 75px;
+}
+
+html[dir="rtl"] .h2-floating-bottom {
+    right: auto;
+    left: -5px;
+}
+
+@media (max-width: 600px) {
+    .h2-floating-bottom {
+        right: 0;
+        bottom: 75px;
+    }
+
+    html[dir="rtl"] .h2-floating-bottom {
+        right: auto;
+        left: 0;
+    }
+}
+
+/* HOME 2 — Tagline matching the reference image */
+
+.h2-hero .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 22px;
+    background: rgba(0, 156, 154, 0.07);
+    color: #009C9A;
+    border: 1px solid rgba(0, 156, 154, 0.06);
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.h2-hero .section-eyebrow::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    display: inline-block;
+    flex-shrink: 0;
+    background: #FF8A00;
+    border-radius: 50%;
+}
+
+/* Home 2 — Match Home 1 tagline size */
+
+.h2-hero .section-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    padding: 7px 13px;
+    gap: 8px;
+    line-height: 1.4;
+}
+
+.h2-hero .section-eyebrow::before {
+    width: 7px;
+    height: 7px;
+}
+
+/* Hide the bottom floating card in Home 2 */
+.h2-hero .h2-floating-bottom {
+    display: none;
+}
+
+/* ==========================================
+   HOME 2 — TAGLINE EFFECT
+   Orange dot + subtle background + accent line
+========================================== */
+
+.home2-page .h2-eyebrow,
+.home2-page .hero-eyebrow,
+.home2-page .section-tagline,
+.home2-page .section-label,
+.home2-page .eyebrow,
+.home2-page .section-subtitle,
+.home2-page .subtitle-label,
+.home2-page .overline {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #F47735;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+/* Small orange dot */
+.home2-page .h2-eyebrow::before,
+.home2-page .hero-eyebrow::before,
+.home2-page .section-tagline::before,
+.home2-page .section-label::before,
+.home2-page .eyebrow::before,
+.home2-page .section-subtitle::before,
+.home2-page .subtitle-label::before,
+.home2-page .overline::before {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    min-width: 7px;
+    border-radius: 50%;
+    background: #F47735;
+    box-shadow: 0 0 0 4px rgba(244, 119, 53, 0.12);
+}
+
+/* Keep the tagline unboxed, with a short orange line */
+.home2-page .h2-eyebrow,
+.home2-page .hero-eyebrow,
+.home2-page .section-tagline,
+.home2-page .section-label,
+.home2-page .eyebrow,
+.home2-page .section-subtitle,
+.home2-page .subtitle-label,
+.home2-page .overline {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* ==========================================
+   HOME 2 — SECTION TAGLINE EFFECT
+   Teal text + orange dot + soft glow
+========================================== */
+
+.h2-hero .section-eyebrow,
+.h2-categories .section-eyebrow,
+.h2-featured .section-eyebrow,
+.h2-benefits .section-eyebrow,
+.h2-process .section-eyebrow,
+.h2-holiday-packages .section-eyebrow,
+.h2-faq .section-eyebrow,
+.final-cta .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 0;
+    margin-bottom: 16px;
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    color: #009C9A;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+/* Orange dot with soft glow */
+.h2-hero .section-eyebrow::before,
+.h2-categories .section-eyebrow::before,
+.h2-featured .section-eyebrow::before,
+.h2-benefits .section-eyebrow::before,
+.h2-process .section-eyebrow::before,
+.h2-holiday-packages .section-eyebrow::before,
+.h2-faq .section-eyebrow::before,
+.final-cta .section-eyebrow::before {
+    content: "";
+    display: inline-block;
+    flex: 0 0 7px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #FF8A00;
+    box-shadow: 0 0 0 4px rgba(255, 138, 0, 0.15);
+}
+
+/* Remove the horizontal line */
+.h2-hero .section-eyebrow::after,
+.h2-categories .section-eyebrow::after,
+.h2-featured .section-eyebrow::after,
+.h2-benefits .section-eyebrow::after,
+.h2-process .section-eyebrow::after,
+.h2-holiday-packages .section-eyebrow::after,
+.h2-faq .section-eyebrow::after,
+.final-cta .section-eyebrow::after {
+    content: none;
+    display: none;
+}
+
+/* Only Home 2 hero tagline */
+.h2-hero .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+    padding: 10px 18px;
+
+    border: 1px solid rgba(0, 156, 154, 0.08);
+    border-radius: 50px;
+    background: rgba(0, 156, 154, 0.07);
+
+    color: #009C9A;
+    font-size: 0.76rem;
+    font-weight: 800;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Orange dot with teal soft shadow */
+.h2-hero .section-eyebrow::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    flex: 0 0 9px;
+    border-radius: 50%;
+    background: #FF8A00;
+    box-shadow:
+        0 0 0 5px rgba(0, 156, 154, 0.18),
+        0 0 12px rgba(0, 156, 154, 0.25);
+}
+
+/* Remove horizontal line */
+.h2-hero .section-eyebrow::after {
+    content: none;
+    display: none;
+}
+
+@media (max-width: 560px) {
+    .h2-hero .section-eyebrow {
+        gap: 10px;
+        margin-bottom: 18px;
+        padding: 8px 14px;
+        font-size: 0.70rem;
+        letter-spacing: 1px;
+    }
+}
+
+.h2-hero .section-eyebrow::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    flex: 0 0 9px;
+    border-radius: 50%;
+    background: #FF8A00;
+    box-shadow: 0 0 0 4px rgba(255, 138, 0, 0.12);
+}
+
+/* ==========================================
+   HOME 2 — HERO TAGLINE ONLY
+========================================== */
+
+.h2-hero .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+    padding: 10px 18px;
+
+    border: 1px solid rgba(0, 156, 154, 0.08);
+    border-radius: 50px;
+    background: rgba(0, 156, 154, 0.07);
+
+    color: #009C9A;
+    font-size: 0.76rem;
+    font-weight: 800;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Orange dot with subtle orange glow */
+.h2-hero .section-eyebrow::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    flex: 0 0 9px;
+    border-radius: 50%;
+    background: #FF8A00;
+    box-shadow: 0 0 0 4px rgba(255, 138, 0, 0.12);
+}
+
+/* No line after hero tagline */
+.h2-hero .section-eyebrow::after {
+    content: none;
+    display: none;
+}
+
+/* ==========================================
+   OTHER HOME 2 SECTION TAGLINES
+   Teal text + small orange line before
+========================================== */
+
+.h2-categories .section-eyebrow,
+.h2-featured .section-eyebrow,
+.h2-benefits .section-eyebrow,
+.h2-process .section-eyebrow,
+.h2-holiday-packages .section-eyebrow,
+.h2-faq .section-eyebrow,
+.final-cta .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 12px;
+    padding: 0;
+
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+
+    color: #009C9A;
+    font-size: 0.76rem;
+    font-weight: 800;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Small orange horizontal line before other taglines */
+.h2-categories .section-eyebrow::before,
+.h2-featured .section-eyebrow::before,
+.h2-benefits .section-eyebrow::before,
+.h2-process .section-eyebrow::before,
+.h2-holiday-packages .section-eyebrow::before,
+.h2-faq .section-eyebrow::before,
+.final-cta .section-eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 2px;
+    flex: 0 0 28px;
+    border-radius: 2px;
+    background: #FF8A00;
+}
+
+/* No line after other taglines */
+.h2-categories .section-eyebrow::after,
+.h2-featured .section-eyebrow::after,
+.h2-benefits .section-eyebrow::after,
+.h2-process .section-eyebrow::after,
+.h2-holiday-packages .section-eyebrow::after,
+.h2-faq .section-eyebrow::after,
+.final-cta .section-eyebrow::after {
+    content: none;
+    display: none;
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+    .h2-hero .section-eyebrow {
+        gap: 10px;
+        margin-bottom: 18px;
+        padding: 8px 14px;
+        font-size: 0.70rem;
+        letter-spacing: 1px;
+    }
+
+    .h2-categories .section-eyebrow,
+    .h2-featured .section-eyebrow,
+    .h2-benefits .section-eyebrow,
+    .h2-process .section-eyebrow,
+    .h2-holiday-packages .section-eyebrow,
+    .h2-faq .section-eyebrow,
+    .final-cta .section-eyebrow {
+        gap: 8px;
+        margin-bottom: 10px;
+        font-size: 0.70rem;
+        letter-spacing: 1px;
+    }
+
+    .h2-categories .section-eyebrow::before,
+    .h2-featured .section-eyebrow::before,
+    .h2-benefits .section-eyebrow::before,
+    .h2-process .section-eyebrow::before,
+    .h2-holiday-packages .section-eyebrow::before,
+    .h2-faq .section-eyebrow::before,
+    .final-cta .section-eyebrow::before {
+        width: 24px;
+        flex-basis: 24px;
+    }
+}
+
+/* WHY CHOOSE US — SVG ICONS */
+
+.h2-benefit-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+
+    color: #009C9A;
+    background: rgba(0, 156, 154, 0.09);
+    border: 1px solid rgba(0, 156, 154, 0.15);
+    border-radius: 16px;
+}
+
+.h2-benefit-icon svg {
+    display: block;
+    width: 27px;
+    height: 27px;
+    stroke: currentColor;
+}
+
+.h2-benefit-card:hover .h2-benefit-icon {
+    color: #FF8A00;
+    background: rgba(255, 138, 0, 0.10);
+    border-color: rgba(255, 138, 0, 0.25);
+}
+
+@media (max-width: 560px) {
+    .h2-benefit-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 14px;
+    }
+
+    .h2-benefit-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* =========================================
+   TRAVELORA HOME 2 — ANIMATIONS
+========================================= */
+
+/* 1. Smooth entrance animations */
+@keyframes h2FadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes h2FadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes h2ImageReveal {
+    from {
+        opacity: 0;
+        transform: scale(1.045);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes h2Float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* 2. Hero content animation */
+.h2-hero-content > * {
+    animation: h2FadeUp 0.75s ease both;
+}
+
+.h2-hero-content > *:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.h2-hero-content > *:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.h2-hero-content > *:nth-child(3) {
+    animation-delay: 0.25s;
+}
+
+.h2-hero-content > *:nth-child(4) {
+    animation-delay: 0.35s;
+}
+
+.h2-hero-content > *:nth-child(5) {
+    animation-delay: 0.45s;
+}
+
+.h2-hero-image-main {
+    animation: h2ImageReveal 1s ease both;
+}
+
+.h2-hero-floating {
+    animation: h2FadeUp 0.8s ease both,
+               h2Float 4s ease-in-out 1s infinite;
+}
+
+.h2-floating-top {
+    animation-delay: 0.3s, 1.3s;
+}
+
+.h2-floating-bottom {
+    animation-delay: 0.5s, 1.5s;
+}
+
+/* 3. Category cards */
+.h2-category-card {
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease;
+}
+
+.h2-category-image img {
+    transition: transform 0.65s ease;
+}
+
+.h2-category-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.12);
+}
+
+.h2-category-card:hover .h2-category-image img {
+    transform: scale(1.08);
+}
+
+/* 4. Featured destination images */
+.h2-featured-card {
+    overflow: hidden;
+}
+
+.h2-featured-card > img {
+    transition: transform 0.7s ease;
+}
+
+.h2-featured-card:hover > img {
+    transform: scale(1.08);
+}
+
+.h2-featured-info h3,
+.h2-featured-info a {
+    transition: transform 0.3s ease,
+                color 0.3s ease;
+}
+
+.h2-featured-card:hover .h2-featured-info h3 {
+    transform: translateY(-3px);
+}
+
+.h2-featured-info a:hover {
+    color: var(--secondary);
+}
+
+/* 5. Benefits cards */
+.h2-benefit-card {
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease,
+                border-color 0.35s ease;
+}
+
+.h2-benefit-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.09);
+    border-color: var(--secondary);
+}
+
+.h2-benefit-icon {
+    transition: transform 0.35s ease;
+}
+
+.h2-benefit-card:hover .h2-benefit-icon {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+/* 6. Holiday package cards */
+.h2-holiday-card {
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease;
+}
+
+.h2-holiday-image {
+    overflow: hidden;
+}
+
+.h2-holiday-image img {
+    transition: transform 0.65s ease;
+}
+
+.h2-holiday-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+.h2-holiday-card:hover .h2-holiday-image img {
+    transform: scale(1.08);
+}
+
+.h2-holiday-link span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.h2-holiday-link:hover span {
+    transform: translateX(5px);
+}
+
+/* 7. Process steps */
+.h2-process-step {
+    transition: transform 0.3s ease;
+}
+
+.h2-process-step:hover {
+    transform: translateX(6px);
+}
+
+/* 8. FAQ interactions */
+.h2-faq-item {
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.h2-faq-item:hover {
+    border-color: var(--secondary);
+}
+
+.h2-faq-item summary {
+    cursor: pointer;
+}
+
+/* 9. Button hover effects */
+.h2-hero .btn,
+.h2-featured .btn,
+.h2-process .btn,
+.h2-holiday-packages .btn,
+.final-cta .btn {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+.h2-hero .btn:hover,
+.h2-featured .btn:hover,
+.h2-process .btn:hover,
+.h2-holiday-packages .btn:hover,
+.final-cta .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* 10. Scroll reveal — enabled by JavaScript */
+.h2-category-card.reveal-on-scroll,
+.h2-featured-card.reveal-on-scroll,
+.h2-benefit-card.reveal-on-scroll,
+.h2-holiday-card.reveal-on-scroll,
+.h2-process-step.reveal-on-scroll,
+.h2-faq-item.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.65s ease,
+                transform 0.65s ease;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 11. Accessibility: reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .h2-hero-content > *,
+    .h2-hero-image-main,
+    .h2-hero-floating {
+        animation: none !important;
+    }
+
+    .h2-category-card,
+    .h2-category-image img,
+    .h2-featured-card > img,
+    .h2-benefit-card,
+    .h2-benefit-icon,
+    .h2-holiday-card,
+    .h2-holiday-image img,
+    .h2-process-step,
+    .h2-faq-item,
+    .h2-hero .btn,
+    .h2-featured .btn,
+    .h2-process .btn,
+    .h2-holiday-packages .btn,
+    .final-cta .btn {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .reveal-on-scroll {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Main website font */
+body,
+button,
+input,
+textarea,
+select {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+/* Match Home 1 heading fonts */
+.hero-text h1,
+.hero-image-caption h2,
+.intro-content h2,
+.section-heading h2,
+.why-content h2,
+.inspiration-content h2,
+.final-cta h2 {
+    font-family: 'Dancing Script', cursive !important;
+    font-weight: 700;
+}
+
+/* =========================================
+   TRAVELORA — FONT STYLE UPDATE
+========================================= */
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+select,
+textarea {
+    font-family: "Poppins", sans-serif;
+}
+
+/* =========================================
+   SECONDARY BUTTONS — PRIMARY TEAL COLORS
+========================================= */
+
+.btn-outline,
+.btn-secondary,
+button.btn-outline,
+a.btn-outline {
+    background-color: transparent;
+    color: #009C9A;
+    border: 2px solid #009C9A;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover,
+.btn-secondary:hover,
+button.btn-outline:hover,
+a.btn-outline:hover {
+    background-color: #009C9A;
+    color: #FFFFFF;
+    border-color: #009C9A;
+    transform: translateY(-2px);
+}
+
+/* Keyboard accessibility */
+.btn-outline:focus-visible,
+.btn-secondary:focus-visible {
+    outline: 2px solid #007F7D;
+    outline-offset: 3px;
+}
+
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Main website font */
+body,
+button,
+input,
+textarea,
+select {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+/* Match Home 1 heading fonts */
+.hero-text h1,
+.hero-image-caption h2,
+.intro-content h2,
+.section-heading h2,
+.why-content h2,
+.inspiration-content h2,
+.final-cta h2 {
+    font-family: 'Dancing Script', cursive !important;
+    font-weight: 700;
+}
+
+/* Same fonts for Home 1 and Home 2 */
+body,
+button,
+input,
+textarea,
+select {
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-text h1,
+.hero-image-caption h2,
+.intro-content h2,
+.section-heading h2,
+.why-content h2,
+.inspiration-content h2,
+.final-cta h2 {
+    font-family: 'Dancing Script', cursive !important;
+    font-weight: 700;
+}
+/* Match Home 1's cursive hero heading */
+.h2-hero-content h1 {
+    font-family: 'Dancing Script', cursive !important;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+/* Match the image caption font */
+.h2-hero-image-caption h2 {
+    font-family: 'Dancing Script', cursive !important;
+    font-weight: 700;
+}
+
+/* Make all Home 2 headings cursive */
+.h2-hero-content h1,
+.h2-hero-image-caption h2,
+.h2-categories h2,
+.h2-featured h2,
+.h2-benefits h2,
+.h2-process h2,
+.h2-holiday-packages h2,
+.h2-faq h2,
+.h2-category-card h3,
+.h2-featured-card h3,
+.h2-benefit-card h3,
+.h2-process-step h3,
+.h2-holiday-card h3 {
+    font-family: 'Dancing Script', cursive !important;
+    font-weight: 700;
+}
+
+/* =========================================
+   HOME 2 — TRAVEL PHOTO COLLAGE HERO
+========================================= */
+
+.h2-photo-collage {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    min-height: 510px;
+    isolation: isolate;
+}
+
+/* Large main photograph */
+.h2-photo-collage .h2-hero-image-main {
+    position: absolute;
+    inset-block: 35px 25px;
+    inset-inline: 12% 5%;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    border-radius: 180px 180px 28px 28px;
+    box-shadow: 0 24px 55px rgba(20, 55, 50, 0.18);
+    z-index: 1;
+}
+
+.h2-photo-collage .h2-hero-image-main img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.h2-photo-collage .h2-hero-image-main:hover img {
+    transform: scale(1.05);
+}
+
+.h2-photo-collage .h2-hero-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(8, 35, 32, 0.78),
+        rgba(8, 35, 32, 0.12) 48%,
+        transparent 75%
+    );
+    pointer-events: none;
+}
+
+.h2-photo-collage .h2-hero-image-caption {
+    position: absolute;
+    inset-inline: 25px;
+    bottom: 28px;
+    z-index: 2;
+    color: #ffffff;
+}
+
+.h2-photo-collage .h2-hero-image-caption span {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.h2-photo-collage .h2-hero-image-caption h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(25px, 3vw, 38px);
+    line-height: 1.15;
+}
+
+/* Two smaller overlapping photographs */
+.h2-photo-collage .h2-collage-image {
+    position: absolute;
+    overflow: hidden;
+    border: 6px solid #ffffff;
+    border-radius: 22px;
+    box-shadow: 0 15px 35px rgba(20, 55, 50, 0.20);
+    z-index: 3;
+}
+
+.h2-photo-collage .h2-collage-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.h2-photo-collage .h2-collage-image:hover img {
+    transform: scale(1.08);
+}
+
+/* Beach image — upper right */
+.h2-photo-collage .h2-collage-beach {
+    top: 0;
+    inset-inline-end: 0;
+    width: 37%;
+    height: 165px;
+    transform: rotate(4deg);
+}
+
+/* City image — lower left */
+.h2-photo-collage .h2-collage-city {
+    bottom: 0;
+    inset-inline-start: 0;
+    width: 40%;
+    height: 175px;
+    transform: rotate(-4deg);
+}
+
+/* Floating white information card */
+.h2-photo-collage .h2-floating-top {
+    position: absolute;
+    top: 125px;
+    inset-inline-start: 0;
+    z-index: 4;
+    max-width: 245px;
+    animation: collageFloat 4s ease-in-out infinite;
+}
+
+/* Bottom floating badge */
+.h2-photo-collage .h2-collage-badge {
+    position: absolute;
+    bottom: 45px;
+    inset-inline-end: 0;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    max-width: 245px;
+    padding: 14px 17px;
+    color: #263631;
+    background: #ffffff;
+    border: 1px solid rgba(0, 156, 154, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(20, 55, 50, 0.15);
+}
+
+.h2-photo-collage .h2-collage-badge > span {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    color: #ffffff;
+    background: #009C9A;
+    border-radius: 12px;
+    font-size: 21px;
+}
+
+.h2-photo-collage .h2-collage-badge strong,
+.h2-photo-collage .h2-collage-badge div span {
+    display: block;
+}
+
+.h2-photo-collage .h2-collage-badge strong {
+    margin-bottom: 4px;
+    font-size: 13px;
+}
+
+.h2-photo-collage .h2-collage-badge div span {
+    color: #697771;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* Gentle floating animation */
+@keyframes collageFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Dark mode */
+body.dark-mode .h2-photo-collage .h2-collage-badge,
+.dark-mode .h2-photo-collage .h2-collage-badge {
+    color: #f3f7f5;
+    background: #203632;
+    border-color: #38534c;
+}
+
+body.dark-mode .h2-photo-collage .h2-collage-badge div span,
+.dark-mode .h2-photo-collage .h2-collage-badge div span {
+    color: #c1d0ca;
+}
+
+/* RTL layout is handled using logical inset properties above */
+
+/* Tablet */
+@media (max-width: 900px) {
+    .h2-photo-collage {
+        min-height: 460px;
+        max-width: 620px;
+        margin-inline: auto;
+    }
+
+    .h2-photo-collage .h2-hero-image-main {
+        inset-inline: 12% 8%;
+    }
+
+    .h2-photo-collage .h2-collage-beach {
+        height: 140px;
+    }
+
+    .h2-photo-collage .h2-collage-city {
+        height: 145px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+    .h2-photo-collage {
+        min-height: 390px;
+        margin-top: 15px;
+    }
+
+    .h2-photo-collage .h2-hero-image-main {
+        inset-block: 35px 28px;
+        inset-inline: 12% 7%;
+        border-radius: 110px 110px 22px 22px;
+    }
+
+    .h2-photo-collage .h2-hero-image-caption {
+        inset-inline: 17px;
+        bottom: 20px;
+    }
+
+    .h2-photo-collage .h2-hero-image-caption span {
+        font-size: 9px;
+        letter-spacing: 1.3px;
+    }
+
+    .h2-photo-collage .h2-hero-image-caption h2 {
+        font-size: 25px;
+    }
+
+    .h2-photo-collage .h2-collage-image {
+        border-width: 4px;
+        border-radius: 15px;
+    }
+
+    .h2-photo-collage .h2-collage-beach {
+        width: 35%;
+        height: 112px;
+    }
+
+    .h2-photo-collage .h2-collage-city {
+        width: 37%;
+        height: 115px;
+    }
+
+    .h2-photo-collage .h2-floating-top {
+        top: 100px;
+        max-width: 205px;
+        padding: 10px;
+    }
+
+    .h2-photo-collage .h2-floating-top strong {
+        font-size: 11px;
+    }
+
+    .h2-photo-collage .h2-floating-top div span {
+        font-size: 10px;
+    }
+
+    .h2-photo-collage .h2-collage-badge {
+        bottom: 20px;
+        max-width: 190px;
+        gap: 8px;
+        padding: 9px 11px;
+    }
+
+    .h2-photo-collage .h2-collage-badge > span {
+        width: 34px;
+        height: 34px;
+        font-size: 17px;
+    }
+
+    .h2-photo-collage .h2-collage-badge strong {
+        font-size: 11px;
+    }
+
+    .h2-photo-collage .h2-collage-badge div span {
+        font-size: 9px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .h2-photo-collage .h2-floating-top {
+        animation: none;
+    }
+
+    .h2-photo-collage .h2-hero-image-main img,
+    .h2-photo-collage .h2-collage-image img {
+        transition: none;
+    }
+}
+
+/* Match hero text and image collage heights */
+.h2-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    gap: 50px;
+}
+
+.h2-hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    min-width: 0;
+}
+
+.h2-hero-visual.h2-photo-collage {
+    width: 100%;
+    height: 100%;
+    min-height: 510px;
+    align-self: stretch;
+}
+
+/* Tablet and mobile */
+@media (max-width: 900px) {
+    .h2-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .h2-hero-content {
+        height: auto;
+    }
+
+    .h2-hero-visual.h2-photo-collage {
+        height: 460px;
+        min-height: 460px;
+    }
+}
+
+@media (max-width: 560px) {
+    .h2-hero-visual.h2-photo-collage {
+        height: 390px;
+        min-height: 390px;
+    }
+}
+
+/* Keep floating cards positioned neatly */
+.h2-hero-visual {
+    padding-left: 35px;
+    padding-right: 25px;
+}
+
+.h2-floating-top {
+    top: 15%;
+    left: 0;
+}
+
+.h2-floating-bottom {
+    right: 0;
+    bottom: 47px;
+}
+
+/* Prevent floating cards from colliding on smaller screens */
+@media (max-width: 600px) {
+    .h2-hero-visual {
+        padding: 10px 0 15px;
+    }
+
+    .h2-hero-image-main {
+        height: 380px;
+    }
+
+    .h2-hero-floating {
+        gap: 8px;
+        padding: 10px 12px;
+    }
+
+    .h2-floating-top {
+        top: 12px;
+        left: 8px;
+    }
+
+    .h2-floating-bottom {
+        right: 8px;
+        bottom: 25px;
+    }
+}
+
+/* HERO IMAGE — IMPROVED */
+
+.h2-hero-visual {
+position: relative;
+width: 100%;
+min-width: 0;
+padding: 10px 12px 20px 0;
+}
+
+.h2-hero-image-main {
+position: relative;
+width: 100%;
+height: clamp(380px, 42vw, 540px);
+overflow: hidden;
+border-radius: 180px 180px 24px 24px;
+background: var(--bg-soft);
+box-shadow: var(--shadow-lg);
+}
+
+.h2-hero-image-main > img {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center center;
+transition: transform 0.8s ease;
+}
+
+.h2-hero-image-main:hover > img {
+transform: scale(1.04);
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+.h2-hero-grid {
+grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+gap: 35px;
+}
+
+.h2-hero-image-main {
+    height: 430px;
+    border-radius: 140px 140px 22px 22px;
+}
+
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+.h2-hero-grid {
+grid-template-columns: 1fr;
+gap: 35px;
+}
+
+.h2-hero-visual {
+    width: 100%;
+    max-width: 500px;
+    margin-inline: auto;
+    padding: 0 10px 25px;
+}
+
+.h2-hero-image-main {
+    height: 420px;
+    border-radius: 140px 140px 20px 20px;
+}
+
+}
+
+@media (max-width: 480px) {
+.h2-hero-image-main {
+height: 340px;
+border-radius: 110px 110px 18px 18px;
+}
+}
+
+/* ===== FIX HERO IMAGE AND FLOATING CARD OVERLAP ===== */
+
+.h2-hero-visual {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 0 35px 25px 25px;
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+.h2-hero-image-main {
+    position: relative;
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
+    border-radius: 160px 160px 24px 24px;
+    z-index: 1;
+}
+
+.h2-hero-image-main > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Top floating card */
+.h2-floating-top {
+    position: absolute;
+    top: 45px;
+    left: -5px;
+    right: auto;
+    z-index: 3;
+    max-width: 175px;
+}
+
+/* Bottom floating card */
+.h2-floating-bottom {
+    position: absolute;
+    right: -5px;
+    bottom: 45px;
+    left: auto;
+    z-index: 3;
+    max-width: 195px;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .h2-hero-visual {
+        max-width: 500px;
+        padding: 0 25px 20px 20px;
+    }
+
+    .h2-hero-image-main {
+        height: 440px;
+    }
+
+    .h2-floating-top {
+        left: 0;
+        top: 35px;
+    }
+
+    .h2-floating-bottom {
+        right: 0;
+        bottom: 35px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .h2-hero-visual {
+        max-width: 420px;
+        padding: 0 12px 15px;
+    }
+
+    .h2-hero-image-main {
+        height: 360px;
+        border-radius: 100px 100px 20px 20px;
+    }
+
+    .h2-floating-top {
+        left: 0;
+        top: 25px;
+        max-width: 145px;
+    }
+
+    .h2-floating-bottom {
+        right: 0;
+        bottom: 25px;
+        max-width: 160px;
+    }
+}
+
+/* Remove bottom floating card */
+.h2-floating-bottom {
+    display: none !important;
+}
+
+/* Remove bottom photo if it is a separate image element */
+.h2-hero-image-secondary,
+.h2-hero-image-bottom,
+.h2-floating-photo {
+    display: none !important;
+}
+
+/* Compact hero tagline */
+.h2-hero-content > .section-eyebrow {
+    display: inline-flex !important;
+    align-items: center;
+    width: fit-content !important;
+    max-width: max-content;
+    padding: 5px 10px !important;
+    margin-bottom: 16px;
+    font-size: 10px !important;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    font-weight: 600;
+    border-radius: 5px !important;
+    background: var(--primary-light, #DDF7F5) !important;
+    color: var(--primary-dark, #007E7C) !important;
+    box-shadow: none !important;
+}
+
+/* Dark mode */
+body.dark-mode .h2-hero-content > .section-eyebrow {
+    background: rgba(0, 156, 154, 0.16) !important;
+    color: #62D6D0 !important;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .h2-hero-content > .section-eyebrow {
+        padding: 4px 8px !important;
+        font-size: 9px !important;
+        margin-bottom: 12px;
+    }
+}
+
+/* Final CTA — second button in primary colour */
+.final-cta-actions .btn-cta-outline {
+    background: #009C9A !important;
+    color: #FFFFFF !important;
+    border: 2px solid #009C9A !important;
+}
+
+/* Hover effect */
+.final-cta-actions .btn-cta-outline:hover {
+    background: #007E7C !important;
+    border-color: #007E7C !important;
+    color: #FFFFFF !important;
+}

@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#009C9A">
+    <meta name="description" content="Explore domestic holiday packages across India with Travelora. Discover beautiful hill stations, beaches, heritage cities, wildlife escapes and unforgettable Indian holidays.">
+
+    <title>Domestic Holiday Packages | Travelora</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ==================== HEADER ==================== -->
+
+<header class="site-header">
+    <div class="site-container header-container">
+
+        <a href="index.html" class="brand" aria-label="Travelora Home">
+            <img src="logo.png" alt="Travelora logo" width="52" height="52">
+
+            <span class="brand-text">
+                <span class="brand-name">
+                    <span class="travelora-primary">Travel</span><span class="travelora-secondary">ora</span>
+                </span>
+                <span class="brand-tagline">EXPLORE THE WORLD</span>
+            </span>
+        </a>
+
+        <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+
+            <div class="home-dropdown">
+                <a href="index.html" class="home-link"
+                   aria-haspopup="true" aria-expanded="false"
+                   id="homeDropdownToggle">
+                    Home <span class="dropdown-arrow" aria-hidden="true">▾</span>
+                </a>
+
+                <div class="home-dropdown-menu">
+                    <a href="index.html">Home 1</a>
+                    <a href="home2.html">Home 2</a>
+                </div>
+            </div>
+
+            <a href="about.html">About Us</a>
+            <a href="domestic-packages.html" class="active" aria-current="page">Domestic Packages</a>
+            <a href="international-packages.html">International Packages</a>
+            <a href="honeymoon-family.html">Honeymoon &amp; Family Tours</a>
+            <a href="contact.html">Contact</a>
+            <a href="dashboard.html">Dashboard</a>
+
+        </nav>
+
+        <div class="header-actions">
+
+            <button id="rtlBtn" class="header-icon-btn"
+                    type="button" title="Toggle RTL"
+                    aria-label="Toggle right-to-left layout"
+                    aria-pressed="false">
+                <span aria-hidden="true">⇄</span>
+            </button>
+
+            <button id="themeBtn" class="header-icon-btn"
+                    type="button" title="Toggle dark mode"
+                    aria-label="Toggle dark mode"
+                    aria-pressed="false">
+                <span aria-hidden="true">☾</span>
+            </button>
+
+            <a href="login.html" class="login-btn">Login</a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn"
+                    type="button" aria-label="Open navigation menu"
+                    aria-expanded="false" aria-controls="mainNav">
+                <span aria-hidden="true">☰</span>
+            </button>
+
+        </div>
+    </div>
+</header>
+
+<main id="main-content">
+
+<!-- ==================== DOMESTIC HERO ==================== -->
+
+<section class="hero-section">
+    <div class="site-container">
+
+        <div class="hero-content">
+
+            <div class="hero-text">
+
+                <div class="hero-eyebrow">
+                    <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+                    EXPLORE INDIA · CREATE MEMORIES
+                </div>
+
+                <h1>
+                    Discover the Beauty of
+                    <span>Incredible India</span>
+                </h1>
+
+                <p>
+                    From misty mountain escapes and golden beaches to
+                    vibrant cities and cultural treasures, explore domestic
+                    holidays that bring India's incredible diversity closer
+                    to you.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="#packages" class="btn btn-primary">
+                        Explore Packages
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                    <a href="contact.html" class="btn btn-outline">
+                        Plan Your Trip
+                    </a>
+
+                </div>
+
+                <div class="hero-highlights">
+
+                    <div class="hero-highlight">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 11 12 3l9 8"/>
+                            <path d="M5 10v11h14V10M9 21v-7h6v7"/>
+                        </svg>
+                        <span>Hill Stations &amp; Nature</span>
+                    </div>
+
+                    <div class="hero-highlight">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M2 17c2-2 4-2 6 0s4 2 6 0 4-2 8 0"/>
+                            <path d="M2 21c2-2 4-2 6 0s4 2 6 0 4-2 8 0"/>
+                            <circle cx="17" cy="6" r="3"/>
+                            <path d="M2 11c3-2 6-2 9 0"/>
+                        </svg>
+                        <span>Beaches &amp; Getaways</span>
+                    </div>
+
+                    <div class="hero-highlight">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 3 3 8l9 5 9-5-9-5z"/>
+                            <path d="m3 12 9 5 9-5M3 16l9 5 9-5"/>
+                        </svg>
+                        <span>Culture &amp; Heritage</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="hero-visual">
+
+                <div class="hero-image-decoration" aria-hidden="true"></div>
+
+                <div class="hero-image-wrap">
+
+                    <img
+                        class="hero-image"
+                        src="https://plus.unsplash.com/premium_photo-1697730399235-bcca956cc6d7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="The Taj Mahal, one of India's most famous landmarks"
+                        fetchpriority="high"
+                        decoding="async">
+
+                    <div class="hero-image-overlay"></div>
+
+                    <div class="hero-image-caption">
+                        <span>YOUR INDIA ADVENTURE STARTS HERE</span>
+                        <h2>Incredible India</h2>
+                    </div>
+
+                </div>
+
+                <div class="hero-floating-card hero-location-card">
+                    <div class="hero-floating-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/>
+                            <circle cx="12" cy="10" r="2.5"/>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <span>So many places to discover</span>
+                        <strong>Explore India</strong>
+                    </div>
+                </div>
+
+                <div class="hero-floating-card hero-memory-card">
+                    <span class="hero-memory-star" aria-hidden="true">✦</span>
+                    <div>
+                        <strong>Travel. Discover. Repeat.</strong>
+                        <span>Memories across India</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ==================== DESTINATION INTRO ==================== -->
+
+<section class="section intro-section">
+    <div class="site-container intro-grid">
+
+        <div class="intro-image-wrap">
+            <img
+                class="intro-image"
+                src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
+                alt="Scenic Indian mountain getaway surrounded by nature"
+                loading="lazy">
+
+            <div class="image-caption">
+                <strong>India Has a Story for Everyone</strong>
+                <span>Find a destination that feels right for you.</span>
+            </div>
+        </div>
+
+        <div class="intro-content">
+
+            <span class="section-eyebrow">YOUR JOURNEY THROUGH INDIA</span>
+
+            <h2>One Country. <span>Endless Experiences.</span></h2>
+
+            <p>
+                Every region of India offers something special. Wander
+                through historic cities, unwind along beautiful coastlines,
+                discover peaceful hill stations or experience local
+                traditions and unforgettable food.
+            </p>
+
+            <div class="intro-points">
+
+                <div class="intro-point">
+                    <span class="check-icon" aria-hidden="true">✓</span>
+                    <div>
+                        <strong>Nature &amp; Hill Stations</strong>
+                        <p>Discover mountain scenery, forests and refreshing escapes.</p>
+                    </div>
+                </div>
+
+                <div class="intro-point">
+                    <span class="check-icon" aria-hidden="true">✓</span>
+                    <div>
+                        <strong>Culture &amp; Heritage</strong>
+                        <p>Explore historic monuments, traditions and iconic cities.</p>
+                    </div>
+                </div>
+
+                <div class="intro-point">
+                    <span class="check-icon" aria-hidden="true">✓</span>
+                    <div>
+                        <strong>Relaxing Beach Holidays</strong>
+                        <p>Enjoy coastal scenery, island experiences and laid-back stays.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="#destinations" class="btn btn-primary">
+                Discover Destinations <span aria-hidden="true">→</span>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- ==================== POPULAR DESTINATIONS ==================== -->
+
+<section class="section destinations-section" id="destinations">
+    <div class="site-container">
+
+        <div class="section-heading">
+            <span class="section-eyebrow">PLACES YOU'LL LOVE</span>
+            <h2>Explore Popular Destinations</h2>
+            <p>
+                Discover the mountains, beaches, royal cities and
+                natural wonders that make travelling across India special.
+            </p>
+        </div>
+
+        <div class="destination-grid">
+
+            <article class="destination-card"
+                style="--card-image: url('https://images.unsplash.com/photo-1614082242765-7c98ca0f3df3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D');">
+
+                <div class="destination-content">
+                    <span class="destination-tag">BEACH ESCAPE</span>
+                    <h3>Goa</h3>
+                    <p>Enjoy sandy shores, coastal scenery and a relaxed holiday atmosphere.</p>
+                    <a href="#packages" class="destination-link">
+                        Explore Goa <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+
+            </article>
+
+            <article class="destination-card"
+                style="--card-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=900&amp;q=85');">
+
+                <div class="destination-content">
+                    <span class="destination-tag">MOUNTAIN RETREAT</span>
+                    <h3>Himachal Pradesh</h3>
+                    <p>Find beautiful valleys, mountain villages and refreshing escapes.</p>
+                    <a href="#packages" class="destination-link">
+                        Explore Himachal <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+
+            </article>
+
+            <article class="destination-card"
+                style="--card-image: url('https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&amp;fit=crop&amp;w=900&amp;q=85');">
+
+                <div class="destination-content">
+                    <span class="destination-tag">ROYAL HERITAGE</span>
+                    <h3>Rajasthan</h3>
+                    <p>Discover grand forts, colourful markets and royal architecture.</p>
+                    <a href="#packages" class="destination-link">
+                        Explore Rajasthan <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ==================== DOMESTIC PACKAGES ==================== -->
+
+<section class="section experiences-section" id="packages">
+    <div class="site-container">
+
+        <div class="section-heading">
+            <span class="section-eyebrow">FIND YOUR PERFECT GETAWAY</span>
+            <h2>Featured Domestic Packages</h2>
+            <p>
+                Choose a holiday idea that suits your interests, available
+                time and preferred way to explore India.
+            </p>
+        </div>
+
+        <div class="experience-grid">
+
+            <article class="experience-card">
+                <div class="experience-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1593181629936-11c609b8db9b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="Mountain scenery for a Manali holiday"
+                        loading="lazy">
+                </div>
+
+                <div class="experience-content">
+                    <span class="experience-number"></span>
+                    <h3>Manali Mountain Escape</h3>
+                    <p>
+                        Enjoy mountain landscapes, fresh air, scenic drives
+                        and relaxing moments in Himachal Pradesh.
+                    </p>
+                    <a href="contact.html" class="text-link">
+                        Enquire About This Trip <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="experience-card">
+                <div class="experience-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1560179406-1c6c60e0dc76?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="Sunny beach scenery for a Goa holiday"
+                        loading="lazy">
+                </div>
+
+                <div class="experience-content">
+                    <span class="experience-number"></span>
+                    <h3>Goa Beach Holiday</h3>
+                    <p>
+                        Explore coastal views, beautiful beaches, local
+                        cuisine and time to unwind by the sea.
+                    </p>
+                    <a href="contact.html" class="text-link">
+                        Enquire About This Trip <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="experience-card">
+                <div class="experience-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="Historic architecture and colourful streets of Rajasthan"
+                        loading="lazy">
+                </div>
+
+                <div class="experience-content">
+                    <span class="experience-number"></span>
+                    <h3>Royal Rajasthan Tour</h3>
+                    <p>
+                        Experience magnificent forts, traditional markets,
+                        heritage architecture and regional culture.
+                    </p>
+                    <a href="contact.html" class="text-link">
+                        Enquire About This Trip <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="experience-card">
+                <div class="experience-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&amp;fit=crop&amp;w=800&amp;q=85"
+                        alt="Scenic Himalayan destination in Uttarakhand"
+                        loading="lazy">
+                </div>
+
+                <div class="experience-content">
+                    <span class="experience-number"></span>
+                    <h3>Uttarakhand Nature Tour</h3>
+                    <p>
+                        Discover mountain scenery, peaceful surroundings
+                        and nature-focused holiday experiences.
+                    </p>
+                    <a href="contact.html" class="text-link">
+                        Enquire About This Trip <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="experience-card">
+                <div class="experience-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="Traditional Kerala backwater scenery"
+                        loading="lazy">
+                </div>
+
+                <div class="experience-content">
+                    <span class="experience-number"></span>
+                    <h3>Kerala Backwater Retreat</h3>
+                    <p>
+                        Explore lush landscapes, tranquil waterways and
+                        the natural beauty of Kerala.
+                    </p>
+                    <a href="contact.html" class="text-link">
+                        Enquire About This Trip <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="experience-card">
+                <div class="experience-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&amp;fit=crop&amp;w=800&amp;q=85"
+                        alt="The Taj Mahal in Agra"
+                        loading="lazy">
+                </div>
+
+                <div class="experience-content">
+                    <span class="experience-number"></span>
+                    <h3>Golden Triangle Discovery</h3>
+                    <p>
+                        Explore Delhi, Agra and Jaipur for a memorable
+                        introduction to India's history and heritage.
+                    </p>
+                    <a href="contact.html" class="text-link">
+                        Enquire About This Trip <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CHOOSE YOUR TRAVEL STYLE ==================== -->
+
+<section class="section why-section">
+    <div class="site-container why-grid">
+
+        <div class="why-content">
+
+            <span class="section-eyebrow">TRAVEL THAT SUITS YOU</span>
+
+            <h2>Your Holiday. <span>Your Way.</span></h2>
+
+            <p>
+                The perfect domestic holiday means something different to
+                everyone. Choose the kind of experience you want and start
+                planning a trip that fits your travel style.
+            </p>
+
+            <div class="why-features">
+
+                <div class="why-feature">
+                    <span class="why-feature-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 21s-8-4.5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6.5-8 11-8 11z"/>
+                        </svg>
+                    </span>
+                    <div>
+                        <h3>Family Holidays</h3>
+                        <p>Explore destinations with activities and experiences for different ages.</p>
+                    </div>
+                </div>
+
+                <div class="why-feature">
+                    <span class="why-feature-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="9"/>
+                            <path d="M12 7v5l3 2"/>
+                        </svg>
+                    </span>
+                    <div>
+                        <h3>Weekend Getaways</h3>
+                        <p>Discover places suited to a short break from your routine.</p>
+                    </div>
+                </div>
+
+                <div class="why-feature">
+                    <span class="why-feature-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 11 12 3l9 8"/>
+                            <path d="M5 10v11h14V10M9 21v-7h6v7"/>
+                        </svg>
+                    </span>
+                    <div>
+                        <h3>Nature &amp; Adventure</h3>
+                        <p>Find scenic landscapes, outdoor activities and refreshing escapes.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="honeymoon-family.html" class="btn btn-primary">
+                Explore More Tours <span aria-hidden="true">→</span>
+            </a>
+
+        </div>
+
+        <div class="why-image-wrap">
+            <img
+                src="https://images.unsplash.com/photo-1624049321569-f483adecb8fa?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                alt="Beautiful natural landscape for an outdoor holiday"
+                class="why-image"
+                loading="lazy">
+
+            <div class="why-image-badge">
+                <strong>Find Your Escape</strong>
+                <span>Discover a new side of India.</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ==================== TRAVEL PLANNING ==================== -->
+
+<section class="section inspiration-section">
+    <div class="site-container inspiration-container">
+
+        <div class="inspiration-image">
+            <img
+                src="https://images.unsplash.com/photo-1516655855035-d5215bcb5604?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                alt="Scenic landscape inspiring a domestic holiday"
+                loading="lazy">
+        </div>
+
+        <div class="inspiration-content">
+
+            <span class="section-eyebrow">LET'S PLAN YOUR GETAWAY</span>
+
+            <h2>Your Next Favourite Place Is Closer Than You Think</h2>
+
+            <p>
+                Tell us where you would like to go, when you plan to travel
+                and what kind of experience you have in mind. Get in touch
+                with Travelora to discuss your domestic holiday plans.
+            </p>
+
+            <a href="contact.html" class="btn btn-primary">
+                Plan Your Trip <span aria-hidden="true">→</span>
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ==================== FINAL CTA ==================== -->
+
+<section class="final-cta">
+    <div class="site-container final-cta-inner">
+
+        <div class="final-cta-content">
+            <span class="section-eyebrow">YOUR INDIA ADVENTURE AWAITS</span>
+
+            <h2>Ready to Explore Incredible India?</h2>
+
+            <p>
+                Find your favourite destination, discover new experiences
+                and start planning a memorable domestic holiday with Travelora.
+            </p>
+        </div>
+
+        <div class="final-cta-actions">
+            <a href="#packages" class="btn btn-light">
+                Explore Packages
+            </a>
+
+            <a href="contact.html" class="btn btn-cta-outline">
+                Contact Us
+            </a>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+
+<footer class="site-footer">
+    <div class="site-container footer-container">
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="footer-logo" aria-label="Travelora Home">
+                <img src="logo.png" alt="Travelora logo" width="52" height="52">
+
+                <span class="footer-logo-text">
+                    <span class="footer-brand-name">
+                        <span class="travelora-primary">Travel</span><span class="travelora-secondary">ora</span>
+                    </span>
+                    <span class="footer-tagline">EXPLORE THE WORLD</span>
+                </span>
+            </a>
+
+            <p class="footer-description">
+                Discover remarkable destinations, exciting adventures
+                and memorable holidays with Travelora. Your next journey
+                begins with inspiration.
+            </p>
+
+            <div class="social-links" aria-label="Social media">
+
+                <a href="https://www.facebook.com/"
+                   class="social-icon" aria-label="Facebook"
+                   title="Facebook" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M14 8h3V4h-3c-3 0-5 2-5 5v2H6v4h3v5h4v-5h3l1-4h-4V9c0-.7.3-1 1-1z"/>
+                    </svg>
+                </a>
+
+                <a href="https://www.instagram.com/"
+                   class="social-icon" aria-label="Instagram"
+                   title="Instagram" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="3" width="18" height="18" rx="5"
+                              fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="12" cy="12" r="4"
+                                fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+                    </svg>
+                </a>
+
+                <a href="https://www.linkedin.com/"
+                   class="social-icon" aria-label="LinkedIn"
+                   title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M5 8H2V21H5V8zM3.5 3C2.4 3 2 3.8 2 4.6S2.4 6 3.5 6 5 5.2 5 4.4 4.6 3 3.5 3zM8 8h3v1.8h.1C11.5 8.7 12.7 7.5 15 7.5c3 0 4 2 4 5.2V21h-3v-7.3c0-1.7 0-3.8-2.3-3.8-2.3 0-2.7 1.8-2.7 3.7V21H8V8z"/>
+                    </svg>
+                </a>
+
+                <a href="https://www.youtube.com/"
+                   class="social-icon" aria-label="YouTube"
+                   title="YouTube" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M21 7.2a2.8 2.8 0 0 0-2-2C17.3 4.7 12 4.7 12 4.7s-5.3 0-7 .5a2.8 2.8 0 0 0-2 2C2.5 8.9 2.5 12 2.5 12s0 3.1.5 4.8a2.8 2.8 0 0 0 2 2c1.7.5 7 .5 7 .5s5.3 0 7-.5a2.8 2.8 0 0 0 2-2c.5-1.7.5-4.8.5-4.8s0-3.1-.5-4.8zM10 15.5v-7l6 3.5-6 3.5z"/>
+                    </svg>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="domestic-packages.html" aria-current="page">Domestic Packages</a>
+            <a href="international-packages.html">International Packages</a>
+            <a href="honeymoon-family.html">Honeymoon &amp; Family Tours</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Information</h3>
+            <a href="destinations.html">Popular Destinations</a>
+            <a href="travel-experiences.html">Travel Experiences</a>
+            <a href="travel-guide.html">Travel Guide</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="login.html">Login</a>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+
+            <p class="footer-contact-description">
+                Have questions about your next trip? Get in touch with us.
+            </p>
+
+            <div class="contact-item">
+                <span class="contact-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+                    </svg>
+                </span>
+                <span>Hyderabad, India</span>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6.6 2.5 9.2 2l2 4.8-2.3 1.8a15.8 15.8 0 0 0 6.5 6.5l1.8-2.3 4.8 2 .5 2.6c.2 1-.6 2-1.6 2C11.5 21.4 2.6 12.5 2.6 3.1c0-1 .9-1.8 2-1.6l2 .9z"/>
+                    </svg>
+                </span>
+                <a href="tel:+919876543210">+91 98765 43210</a>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm9 7 8-5H4l8 5zm0 2L4 9v8h16V9l-8 5z"/>
+                    </svg>
+                </span>
+                <a href="mailto:info@travelora.com">info@travelora.com</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <div class="site-container footer-bottom-container">
+
+            <p>© 2026 Travelora. All Rights Reserved.</p>
+
+            <div class="footer-bottom-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms &amp; Conditions</a>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll(
+        "main section:not(.hero):not(.cta-section)"
+    );
+
+    if (!("IntersectionObserver" in window)) {
+        sections.forEach(section => section.classList.add("is-visible"));
+        return;
+    }
+
+    sections.forEach(section => {
+        section.classList.add("reveal-section");
+    });
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.12
+    });
+
+    sections.forEach(section => observer.observe(section));
+});
+</script>
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(
+        ".intro-grid, " +
+        ".section-heading, " +
+        ".destination-card, " +
+        ".experience-card, " +
+        ".why-content, " +
+        ".why-image-wrap, " +
+        ".inspiration-container, " +
+        ".final-cta-content, " +
+        ".final-cta-actions"
+    );
+
+    if (
+        !("IntersectionObserver" in window) ||
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+        return;
+    }
+
+    elements.forEach((element, index) => {
+        element.classList.add("domestic-reveal");
+        element.style.transitionDelay = `${(index % 3) * 100}ms`;
+    });
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.12
+    });
+
+    elements.forEach(element => observer.observe(element));
+});
+
+
+
+</script>
+
+</body>
+</html>

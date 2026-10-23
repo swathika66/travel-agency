@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#009C9A">
+    <meta name="description" content="Discover amazing destinations, domestic holidays, international adventures, honeymoon escapes and family tours with Travelora.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <title>Travelora | Explore the World</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+    <div class="site-container header-container">
+
+        <a href="index.html" class="brand" aria-label="Travelora Home">
+            <img src="logo.png" alt="Travelora logo" width="52" height="52">
+            <span class="brand-text">
+                <span class="brand-name">
+                    <span class="travelora-primary">Travel</span><span class="travelora-secondary">ora</span>
+                </span>
+                <span class="brand-tagline">EXPLORE THE WORLD</span>
+            </span>
+        </a>
+
+        <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+            <div class="home-dropdown">
+                <a href="index.html" class="home-link active"
+                   aria-haspopup="true" aria-expanded="false"
+                   id="homeDropdownToggle">
+                    Home <span class="dropdown-arrow" aria-hidden="true">▾</span>
+                </a>
+                <div class="home-dropdown-menu">
+                    <a href="index.html" aria-current="page">Home 1</a>
+                    <a href="home2.html">Home 2</a>
+                </div>
+            </div>
+
+            <a href="about.html">About Us</a>
+            <a href="domestic-packages.html">Domestic Packages</a>
+            <a href="international-packages.html">International Packages</a>
+            <a href="honeymoon-family.html">Honeymoon &amp; Family Tours</a>
+            <a href="contact.html">Contact</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+
+        <div class="header-actions">
+            <button id="rtlBtn" class="header-icon-btn" type="button"
+                    title="Toggle RTL" aria-label="Toggle right-to-left layout"
+                    aria-pressed="false">
+                <span aria-hidden="true">⇄</span>
+            </button>
+
+            <button id="themeBtn" class="header-icon-btn" type="button"
+                    title="Toggle dark mode" aria-label="Toggle dark mode"
+                    aria-pressed="false">
+                <span aria-hidden="true">☾</span>
+            </button>
+
+            <a href="login.html" class="login-btn">Login</a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" type="button"
+                    aria-label="Open navigation menu" aria-expanded="false"
+                    aria-controls="mainNav">
+                <span aria-hidden="true">☰</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main id="main-content">
+
+    <section class="hero-section">
+        <div class="site-container">
+            <div class="hero-content">
+
+                <div class="hero-text">
+                    <div class="hero-eyebrow">
+                        <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+                        DISCOVER · EXPLORE · EXPERIENCE
+                    </div>
+
+                    <h1>
+                        Discover the World,
+                        <span>One Journey</span>
+                        at a Time
+                    </h1>
+
+                    <p>
+                        From breathtaking landscapes to unforgettable city escapes,
+                        discover inspiring destinations and plan your next memorable
+                        holiday with Travelora.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="domestic-packages.html" class="btn btn-primary">
+                            Explore Destinations <span aria-hidden="true">→</span>
+                        </a>
+                        <a href="international-packages.html" class="btn btn-outline">
+                            International Tours
+                        </a>
+                    </div>
+
+                    <div class="hero-highlights">
+                        <div class="hero-highlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                 stroke-width="1.8" stroke-linecap="round"
+                                 stroke-linejoin="round" aria-hidden="true">
+                                <path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3z"/>
+                            </svg>
+                            <span>Unique Experiences</span>
+                        </div>
+
+                        <div class="hero-highlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                 stroke-width="1.8" stroke-linecap="round"
+                                 stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9"/>
+                                <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/>
+                            </svg>
+                            <span>Beautiful Destinations</span>
+                        </div>
+
+                        <div class="hero-highlight">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                 stroke-width="1.8" stroke-linecap="round"
+                                 stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/>
+                                <path d="m9 12 2 2 4-4"/>
+                            </svg>
+                            <span>Travel with Confidence</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-image-decoration" aria-hidden="true"></div>
+
+                    <div class="hero-image-wrap">
+                        <img class="hero-image"
+                             src="https://plus.unsplash.com/premium_photo-1661904509551-6570836702e8?w=900&auto=format&fit=crop&q=80"
+                             alt="Turquoise lake surrounded by spectacular mountains"
+                             fetchpriority="high" decoding="async">
+
+                        <div class="hero-image-overlay"></div>
+
+                        <div class="hero-image-caption">
+                            <span>YOUR NEXT ADVENTURE BEGINS HERE</span>
+                            <h2>Escape the Ordinary</h2>
+                        </div>
+                    </div>
+
+                    <div class="hero-floating-card hero-location-card">
+                        <div class="hero-floating-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                 stroke-width="1.8" stroke-linecap="round"
+                                 stroke-linejoin="round" aria-hidden="true">
+                                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/>
+                                <circle cx="12" cy="10" r="2.5"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span>Find your next escape</span>
+                            <strong>Explore New Places</strong>
+                        </div>
+                    </div>
+
+                    <div class="hero-floating-card hero-memory-card">
+                        <span class="hero-memory-star" aria-hidden="true">✦</span>
+                        <div>
+                            <strong>Collect Moments</strong>
+                            <span>Make memories that last</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section intro-section">
+        <div class="site-container intro-grid">
+
+            <div class="intro-image-wrap">
+                <img class="intro-image"
+                     src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1000&q=85"
+                     alt="Scenic mountain lake surrounded by nature"
+                     loading="lazy" decoding="async">
+
+                <div class="image-caption">
+                    <strong>Make Every Journey Count</strong>
+                    <span>Discover places that stay with you forever.</span>
+                </div>
+            </div>
+
+            <div class="intro-content">
+                <span class="section-eyebrow">WELCOME TO TRAVELORA</span>
+                <h2>Travel More. <span>Experience More.</span></h2>
+
+                <p>
+                    Every journey brings a new story. At Travelora, we help you
+                    discover remarkable places, enjoy meaningful experiences and
+                    plan holidays that match your interests.
+                </p>
+
+                <div class="intro-points">
+                    <div class="intro-point">
+                        <span class="check-icon" aria-hidden="true">✓</span>
+                        <div>
+                            <strong>Journeys for Every Traveller</strong>
+                            <p>From relaxing getaways to exciting adventures.</p>
+                        </div>
+                    </div>
+
+                    <div class="intro-point">
+                        <span class="check-icon" aria-hidden="true">✓</span>
+                        <div>
+                            <strong>Domestic and International Trips</strong>
+                            <p>Explore wonderful destinations near and far.</p>
+                        </div>
+                    </div>
+
+                    <div class="intro-point">
+                        <span class="check-icon" aria-hidden="true">✓</span>
+                        <div>
+                            <strong>Holidays Made for You</strong>
+                            <p>Find experiences for couples, families and friends.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="about.html" class="btn btn-primary">
+                    Learn About Us <span aria-hidden="true">→</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section destinations-section">
+        <div class="site-container">
+            <div class="section-heading">
+                <span class="section-eyebrow">FIND YOUR NEXT DESTINATION</span>
+                <h2>Explore Amazing Places</h2>
+                <p>
+                    From peaceful beaches to breathtaking mountains,
+                    discover a destination that inspires your next journey.
+                </p>
+            </div>
+
+            <div class="destination-grid">
+                <article class="destination-card"
+                    style="--card-image: url('https://plus.unsplash.com/premium_photo-1697730399235-bcca956cc6d7?w=900&auto=format&fit=crop&q=80');">
+                    <div class="destination-content">
+                        <span class="destination-tag">CULTURE &amp; HERITAGE</span>
+                        <h3>Discover India</h3>
+                        <p>Experience vibrant traditions and remarkable landmarks.</p>
+                        <a href="domestic-packages.html" class="destination-link">
+                            Explore India <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="destination-card"
+                    style="--card-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85');">
+                    <div class="destination-content">
+                        <span class="destination-tag">NATURE &amp; ADVENTURE</span>
+                        <h3>Mountain Escapes</h3>
+                        <p>Find peaceful views and exciting outdoor experiences.</p>
+                        <a href="domestic-packages.html" class="destination-link">
+                            Explore Mountains <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="destination-card"
+                    style="--card-image: url('https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=900&q=85');">
+                    <div class="destination-content">
+                        <span class="destination-tag">BEACH HOLIDAYS</span>
+                        <h3>Tropical Paradise</h3>
+                        <p>Relax beside turquoise waters and beautiful beaches.</p>
+                        <a href="international-packages.html" class="destination-link">
+                            Explore Islands <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section experiences-section">
+        <div class="site-container">
+            <div class="section-heading">
+                <span class="section-eyebrow">TRAVEL YOUR WAY</span>
+                <h2>Find Your Perfect Holiday</h2>
+                <p>
+                    Choose a travel experience that suits your interests,
+                    travel style and the people you love.
+                </p>
+            </div>
+
+            <div class="experience-grid">
+                <article class="experience-card">
+                    <div class="experience-image">
+                        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=85"
+                             alt="Mountain landscape and peaceful lake"
+                             loading="lazy" decoding="async">
+                    </div>
+                    <div class="experience-content">
+                        <span class="experience-number">01</span>
+                        <h3>Domestic Packages</h3>
+                        <p>Discover India's landscapes, heritage cities, hill stations and coastal escapes.</p>
+                        <a href="domestic-packages.html" class="text-link">
+                            Explore Packages <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="experience-card">
+                    <div class="experience-image">
+                        <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=800&q=85"
+                             alt="Beautiful European city streets"
+                             loading="lazy" decoding="async">
+                    </div>
+                    <div class="experience-content">
+                        <span class="experience-number">02</span>
+                        <h3>International Packages</h3>
+                        <p>Explore world-famous cities, beautiful islands and extraordinary cultures.</p>
+                        <a href="international-packages.html" class="text-link">
+                            Explore Packages <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="experience-card">
+                    <div class="experience-image">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=85"
+                             alt="Elegant wedding celebration"
+                             loading="lazy" decoding="async">
+                    </div>
+                    <div class="experience-content">
+                        <span class="experience-number">03</span>
+                        <h3>Honeymoon &amp; Family Tours</h3>
+                        <p>Celebrate special moments and create wonderful memories together.</p>
+                        <a href="honeymoon-family.html" class="text-link">
+                            Discover Tours <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section why-section">
+        <div class="site-container why-grid">
+
+            <div class="why-content">
+                <span class="section-eyebrow">WHY TRAVELORA</span>
+                <h2>Your Journey. <span>Our Inspiration.</span></h2>
+                <p>
+                    Planning a holiday should feel exciting. Travelora helps you
+                    discover suitable destinations and explore travel options
+                    for your next adventure.
+                </p>
+
+                <div class="why-features">
+                    <div class="why-feature">
+                        <span class="why-feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                 stroke-width="1.8" stroke-linecap="round"
+                                 stroke-linejoin="round">
+                                <path d="m12 3-9 5 9 5 9-5-9-5z"/>
+                                <path d="m3 12 9 5 9-5M3 16l9 5 9-5"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <h3>Variety of Destinations</h3>
+                            <p>Discover different places and travel styles.</p>
+                        </div>
+                    </div>
+
+                    <div class="why-feature">
+                        <span class="why-feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                 stroke-width="1.8" stroke-linecap="round"
+                                 stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="9"/>
+                                <path d="M12 7v5l3 2"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <h3>Plan at Your Pace</h3>
+                            <p>Explore travel options that suit your schedule.</p>
+                        </div>
+                    </div>
+
+                    <div class="why-feature">
+                        <span class="why-feature-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                 stroke-width="1.8" stroke-linecap="round"
+                                 stroke-linejoin="round">
+                                <path d="M12 21s-8-4.5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6.5-8 11-8 11z"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <h3>Memorable Experiences</h3>
+                            <p>Find journeys worth remembering and sharing.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="btn btn-primary">
+                    Plan Your Journey <span aria-hidden="true">→</span>
+                </a>
+            </div>
+
+            <div class="why-image-wrap">
+                <img src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1000&q=85"
+                     alt="Traveller exploring a scenic destination"
+                     class="why-image" loading="lazy" decoding="async">
+
+                <div class="why-image-badge">
+                    <strong>Explore More</strong>
+                    <span>Make memories everywhere.</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section inspiration-section">
+        <div class="site-container inspiration-container">
+            <div class="inspiration-image">
+                <img src="https://images.unsplash.com/photo-1682685797208-c741d58c2eff?auto=format&fit=crop&w=900&q=80"
+                     alt="Beautiful scenic landscape inspiring a new adventure"
+                     loading="lazy" decoding="async">
+            </div>
+
+            <div class="inspiration-content">
+                <span class="section-eyebrow">YOUR NEXT CHAPTER</span>
+                <h2>The World Is Waiting for You</h2>
+                <p>
+                    Whether you dream of a relaxing escape, a romantic honeymoon
+                    or an exciting international adventure, start exploring
+                    the possibilities with Travelora.
+                </p>
+                <a href="contact.html" class="btn btn-primary">
+                    Start Exploring <span aria-hidden="true">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="site-container final-cta-inner">
+            <div class="final-cta-content">
+                <span class="section-eyebrow">LET THE JOURNEY BEGIN</span>
+                <h2>Ready for Your Next Adventure?</h2>
+                <p>
+                    Explore destinations, discover packages and start planning
+                    a journey you'll always remember.
+                </p>
+            </div>
+
+            <div class="final-cta-actions">
+                <a href="domestic-packages.html" class="btn btn-light">
+                    Explore Packages
+                </a>
+                <a href="contact.html" class="btn btn-cta-outline">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="site-container footer-container">
+
+        <div class="footer-brand">
+            <a href="index.html" class="footer-logo" aria-label="Travelora Home">
+                <img src="logo.png" alt="Travelora logo" width="52" height="52">
+                <span class="footer-logo-text">
+                    <span class="footer-brand-name">
+                        <span class="travelora-primary">Travel</span><span class="travelora-secondary">ora</span>
+                    </span>
+                    <span class="footer-tagline">EXPLORE THE WORLD</span>
+                </span>
+            </a>
+
+            <p class="footer-description">
+                Discover remarkable destinations, exciting adventures
+                and memorable holidays with Travelora. Your next journey
+                begins with inspiration.
+            </p>
+
+            <div class="social-links" aria-label="Social media">
+                <a href="https://www.facebook.com/" class="social-icon"
+                   aria-label="Facebook" title="Facebook"
+                   target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M14 8h3V4h-3c-3 0-5 2-5 5v2H6v4h3v5h4v-5h3l1-4h-4V9c0-.7.3-1 1-1z"/>
+                    </svg>
+                </a>
+
+                <a href="https://www.instagram.com/" class="social-icon"
+                   aria-label="Instagram" title="Instagram"
+                   target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="3" width="18" height="18" rx="5"
+                              fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="12" cy="12" r="4"
+                                fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+                    </svg>
+                </a>
+
+                <a href="https://www.linkedin.com/" class="social-icon"
+                   aria-label="LinkedIn" title="LinkedIn"
+                   target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M5 8H2V21H5V8zM3.5 3C2.4 3 2 3.8 2 4.6S2.4 6 3.5 6 5 5.2 5 4.4 4.6 3 3.5 3zM8 8h3v1.8h.1C11.5 8.7 12.7 7.5 15 7.5c3 0 4 2 4 5.2V21h-3v-7.3c0-1.7 0-3.8-2.3-3.8-2.3 0-2.7 1.8-2.7 3.7V21H8V8z"/>
+                    </svg>
+                </a>
+
+                <a href="https://www.youtube.com/" class="social-icon"
+                   aria-label="YouTube" title="YouTube"
+                   target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M21 7.2a2.8 2.8 0 0 0-2-2C17.3 4.7 12 4.7 12 4.7s-5.3 0-7 .5a2.8 2.8 0 0 0-2 2C2.5 8.9 2.5 12 2.5 12s0 3.1.5 4.8a2.8 2.8 0 0 0 2 2c1.7.5 7 .5 7 .5s5.3 0 7-.5a2.8 2.8 0 0 0 2-2c.5-1.7.5-4.8.5-4.8s0-3.1-.5-4.8zM10 15.5v-7l6 3.5-6 3.5z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="domestic-packages.html">Domestic Packages</a>
+            <a href="international-packages.html">International Packages</a>
+            <a href="honeymoon-family.html">Honeymoon &amp; Family Tours</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Information</h3>
+            <a href="destinations.html">Popular Destinations</a>
+            <a href="travel-experiences.html">Travel Experiences</a>
+            <a href="travel-guide.html">Travel Guide</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="login.html">Login</a>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p class="footer-contact-description">
+                Have questions about your next trip? Get in touch with us.
+            </p>
+
+            <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+                    </svg>
+                </span>
+                <span>Hyderabad, India</span>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6.6 2.5 9.2 2l2 4.8-2.3 1.8a15.8 15.8 0 0 0 6.5 6.5l1.8-2.3 4.8 2 .5 2.6c.2 1-.6 2-1.6 2C11.5 21.4 2.6 12.5 2.6 3.1c0-1 .9-1.8 2-1.6l2 .9z"/>
+                    </svg>
+                </span>
+                <a href="tel:+919876543210">+91 98765 43210</a>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm9 7 8-5H4l8 5zm0 2L4 9v8h16V9l-8 5z"/>
+                    </svg>
+                </span>
+                <a href="mailto:info@travelora.com">info@travelora.com</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="site-container footer-bottom-container">
+            <p>© 2026 Travelora. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms &amp; Conditions</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll(
+        "main section:not(.hero):not(.cta-section)"
+    );
+
+    if (!("IntersectionObserver" in window)) {
+        sections.forEach(section => {
+            section.classList.add("is-visible");
+        });
+        return;
+    }
+
+    sections.forEach(section => {
+        section.classList.add("reveal-section");
+    });
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.12
+    });
+
+    sections.forEach(section => observer.observe(section));
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#009C9A">
+    <meta name="description" content="Sign in to your Travelora account to manage trips, explore destinations and organize your holidays.">
+
+    <title>Login | Travelora</title>
+
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <!-- ==================== LOGIN HEADER ==================== -->
+    <header class="login-header">    
+        <a href="index.html" class="login-header-brand">
+    <img src="logo.png" alt="Travelora Logo">
+    <span class="travelora-primary">Travel</span><span class="travelora-secondary">ora</span>
+</a>
+        <div class="login-header-controls">
+            <button
+                type="button"
+                id="rtlBtn"
+                aria-label="Toggle right-to-left layout"
+                title="Toggle RTL"
+            >
+                ⇄ 
+            </button>
+
+            <button
+                type="button"
+                id="themeBtn"
+                aria-label="Toggle dark mode"
+                title="Toggle dark mode"
+            >
+                ☾
+            </button>
+        </div>
+
+    </header>
+
+
+    <!-- ==================== LOGIN PAGE ==================== -->
+    <main class="login-page">
+
+        <section class="login-section">
+
+            <div class="login-container">
+
+                <!-- Welcome Panel -->
+                <div class="login-welcome-panel">
+
+                    <h1>
+                        Welcome Back to
+                        <span>Travelora!</span>
+                    </h1>
+
+                    <p>
+                        Your next adventure is just a step away.
+                        Sign in to explore destinations, manage your trips
+                        and plan unforgettable holidays.
+                    </p>
+
+                    <ul class="login-benefits">
+                        <li>Explore amazing destinations</li>
+                        <li>Manage your upcoming trips</li>
+                        <li>Discover personalized holiday packages</li>
+                    </ul>
+
+                    <div class="login-welcome-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85"
+                            alt="Beautiful mountain travel destination"
+                            loading="lazy"
+                        >
+                    </div>
+
+                </div>
+
+
+                <!-- Login Form Panel -->
+                <div class="login-form-panel">
+
+                    <div class="login-form-header">
+                        <h2>Sign In</h2>
+                        <p>Enter your details to access your account.</p>
+                    </div>
+
+                    <form class="login-form" id="loginForm">
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="loginEmail">Email Address</label>
+
+                            <input
+                                type="email"
+                                id="loginEmail"
+                                name="email"
+                                placeholder="Enter your email address"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+
+
+                        <!-- Password -->
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+
+                            <div class="password-wrapper">
+                                <input
+                                    type="password"
+                                    id="loginPassword"
+                                    name="password"
+                                    placeholder="Enter your password"
+                                    autocomplete="current-password"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    class="toggle-password"
+                                    id="togglePassword"
+                                    aria-label="Show password"
+                                >
+                                    Show
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <!-- Remember Me / Forgot Password -->
+                        <div class="login-options">
+
+                            <label class="remember-me">
+                                <input
+                                    type="checkbox"
+                                    id="rememberMe"
+                                    name="remember"
+                                >
+                                <span>Remember me</span>
+                            </label>
+
+                            <a href="forgot-password.html" class="forgot-password">
+                                Forgot password?
+                            </a>
+
+                        </div>
+
+
+                        <!-- Sign In Button -->
+                        <button type="submit" class="login-submit-btn">
+                            Sign In
+                            <span aria-hidden="true">→</span>
+                        </button>
+
+                    </form>
+
+
+                    <!-- Form Status Message -->
+                    <div
+                        class="login-message"
+                        id="loginMessage"
+                        role="status"
+                        aria-live="polite"
+                    ></div>
+
+
+                    <!-- Create Account -->
+                    <p class="login-signup-text">
+                        Don't have an account?
+                        <a href="register.html">Create an account</a>
+                    </p>
+
+
+                    <!-- Back to Home -->
+                    <a href="index.html" class="back-home-link">
+                        <span aria-hidden="true">←</span>
+                        Back to Home
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script src="script.js"></script>
+
+    <script>
+        // Show / Hide Password
+        const passwordInput = document.getElementById("loginPassword");
+        const togglePassword = document.getElementById("togglePassword");
+
+        togglePassword.addEventListener("click", function () {
+            const isPassword = passwordInput.type === "password";
+
+            passwordInput.type = isPassword ? "text" : "password";
+            togglePassword.textContent = isPassword ? "Hide" : "Show";
+            togglePassword.setAttribute(
+                "aria-label",
+                isPassword ? "Hide password" : "Show password"
+            );
+        });
+
+
+        // Demo Form Handling
+        // Connect this form to your authentication backend for real login.
+        const loginForm = document.getElementById("loginForm");
+        const loginMessage = document.getElementById("loginMessage");
+
+        loginForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            loginMessage.textContent =
+                "Login form submitted. Connect your authentication system to sign in.";
+            loginMessage.classList.add("show");
+        });
+    </script>
+
+</body>
+</html>

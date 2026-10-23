@@ -1,0 +1,3293 @@
+/* =========================================================
+   TRAVELORA — DASHBOARD PAGE COMPLETE CSS
+   Matches the original style.css exactly
+   Primary: #009C9A — Teal
+   Secondary: #FF8A00 — Orange
+
+   Includes:
+   Light/Dark Mode | RTL | Responsive | Animations
+
+   Shared header and footer are controlled by style.css.
+========================================================= */
+
+
+/* =========================================================
+   1. DASHBOARD PAGE BASE
+========================================================= */
+
+.dashboard-page {
+    min-height: 100vh;
+    overflow: hidden;
+    background: var(--bg);
+    color: var(--text);
+    transition:
+        background-color var(--transition),
+        color var(--transition);
+}
+
+.dashboard-page *,
+.dashboard-page *::before,
+.dashboard-page *::after {
+    box-sizing: border-box;
+}
+
+.dashboard-page img {
+    display: block;
+    max-width: 100%;
+}
+
+.dashboard-page h1,
+.dashboard-page h2,
+.dashboard-page h3,
+.dashboard-page h4 {
+    color: var(--heading);
+    font-weight: 750;
+    line-height: 1.2;
+    letter-spacing: -0.035em;
+}
+
+.dashboard-page p {
+    color: var(--text-muted);
+}
+
+.dashboard-page a {
+    text-decoration: none;
+}
+
+.dashboard-page button,
+.dashboard-page input,
+.dashboard-page select,
+.dashboard-page textarea {
+    font: inherit;
+}
+
+.dashboard-page button:focus-visible,
+.dashboard-page a:focus-visible,
+.dashboard-page input:focus-visible,
+.dashboard-page select:focus-visible,
+.dashboard-page textarea:focus-visible {
+    outline: 3px solid var(--secondary);
+    outline-offset: 4px;
+}
+
+.dashboard-page .site-container {
+    width: min(var(--container), calc(100% - 48px));
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   2. WELCOME SECTION
+========================================================= */
+
+.dashboard-welcome-section {
+    padding: 48px 0 28px;
+    background: var(--bg);
+}
+
+.dashboard-welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 30px 0;
+}
+
+.dashboard-welcome-content {
+    min-width: 0;
+}
+
+.dashboard-welcome .section-eyebrow {
+    margin-bottom: 14px;
+}
+
+.dashboard-welcome h1 {
+    margin: 0 0 13px;
+    color: var(--heading);
+    font-size: clamp(30px, 3.5vw, 43px);
+    line-height: 1.2;
+}
+
+.dashboard-welcome h1 span {
+    color: var(--primary);
+}
+
+.dashboard-welcome p {
+    max-width: 680px;
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.dashboard-welcome-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   3. DASHBOARD HERO
+========================================================= */
+
+.dashboard-hero-section {
+    padding: 15px 0 42px;
+    background: var(--bg);
+}
+
+.dashboard-hero {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    align-items: stretch;
+    gap: clamp(30px, 5vw, 65px);
+    overflow: hidden;
+    padding: clamp(30px, 4vw, 55px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    background: linear-gradient(
+        135deg,
+        var(--bg-soft) 0%,
+        var(--surface) 58%,
+        var(--primary-light) 150%
+    );
+    box-shadow: var(--shadow-sm);
+    animation: dashboardHeroReveal 700ms ease both;
+}
+
+.dashboard-hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-width: 0;
+    padding: 8px 0;
+}
+
+.dashboard-hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 22px;
+    padding: 9px 14px;
+    border-radius: var(--radius-pill);
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.dashboard-hero-label::before {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--secondary);
+    content: "";
+    flex-shrink: 0;
+}
+
+.dashboard-hero-content h2 {
+    max-width: 600px;
+    margin: 0 0 20px;
+    color: var(--heading);
+    font-size: clamp(32px, 4vw, 51px);
+    font-weight: 850;
+    letter-spacing: -0.05em;
+    line-height: 1.13;
+}
+
+.dashboard-hero-content h2 span {
+    color: var(--primary);
+}
+
+.dashboard-hero-content > p {
+    max-width: 520px;
+    margin: 0 0 27px;
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.95;
+}
+
+.dashboard-hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+/* Dashboard buttons match the global button system */
+
+.dashboard-page .btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 49px;
+    padding: 12px 22px;
+    border: 1px solid transparent;
+    border-radius: var(--radius-pill);
+    font-size: 13px;
+    font-weight: 750;
+    line-height: 1.4;
+    text-align: center;
+    cursor: pointer;
+    transition:
+        color var(--transition),
+        background-color var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition),
+        transform var(--transition);
+}
+
+.dashboard-page .btn span {
+    color: inherit;
+    transition: transform var(--transition);
+}
+
+.dashboard-page .btn:hover span {
+    transform: translateX(4px);
+}
+
+.dashboard-page .btn-primary {
+    border-color: var(--secondary);
+    background: var(--secondary);
+    color: #FFFFFF;
+    box-shadow: 0 5px 14px rgba(255, 138, 0, 0.12);
+}
+
+.dashboard-page .btn-primary:hover {
+    border-color: var(--secondary-dark);
+    background: var(--secondary-dark);
+    color: #FFFFFF;
+    box-shadow: var(--shadow-orange);
+    transform: translateY(-3px);
+}
+
+.dashboard-page .btn-outline {
+    border: 1.5px solid var(--secondary);
+    background: transparent;
+    color: var(--secondary);
+}
+
+.dashboard-page .btn-outline:hover {
+    border-color: var(--secondary);
+    background: var(--secondary);
+    color: #FFFFFF;
+    box-shadow: var(--shadow-orange);
+    transform: translateY(-3px);
+}
+
+.dashboard-page .btn:active {
+    transform: translateY(0);
+}
+
+
+/* Hero image */
+
+.dashboard-hero-image {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-width: 0;
+    min-height: 360px;
+    border-radius: 46% 46% 20px 20px / 32% 32% 20px 20px;
+    background: var(--bg-muted);
+    box-shadow: var(--shadow-md);
+}
+
+.dashboard-hero-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 360px;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 850ms cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.dashboard-hero-image:hover img {
+    transform: scale(1.055);
+}
+
+.dashboard-hero-image::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        transparent 48%,
+        rgba(7, 27, 30, 0.58) 100%
+    );
+    content: "";
+    pointer-events: none;
+}
+
+.dashboard-hero-image figcaption,
+.dashboard-hero-image-caption {
+    position: absolute;
+    z-index: 1;
+    right: 22px;
+    bottom: 23px;
+    left: 22px;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   4. DASHBOARD STATISTICS
+========================================================= */
+
+.dashboard-stats-section {
+    padding: 12px 0 62px;
+    background: var(--bg);
+}
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.dashboard-stat {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    min-width: 0;
+    padding: 25px 22px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition),
+        transform var(--transition),
+        background-color var(--transition);
+}
+
+.dashboard-stat:hover {
+    border-color: rgba(0, 156, 154, 0.45);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-5px);
+}
+
+.dashboard-stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 51px;
+    height: 51px;
+    padding: 13px;
+    border-radius: 15px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 22px;
+    flex-shrink: 0;
+    transition:
+        background var(--transition),
+        color var(--transition),
+        transform var(--transition);
+}
+
+.dashboard-stat:nth-child(2) .dashboard-stat-icon {
+    background: var(--secondary-light);
+    color: var(--secondary-dark);
+}
+
+.dashboard-stat:nth-child(3) .dashboard-stat-icon {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.dashboard-stat:nth-child(4) .dashboard-stat-icon {
+    background: var(--secondary-light);
+    color: var(--secondary-dark);
+}
+
+.dashboard-stat:hover .dashboard-stat-icon {
+    transform: translateY(-3px);
+}
+
+.dashboard-stat-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.dashboard-stat-content {
+    min-width: 0;
+}
+
+.dashboard-stat-label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 650;
+    line-height: 1.6;
+}
+
+.dashboard-stat h3,
+.dashboard-stat-value {
+    display: block;
+    margin: 0;
+    color: var(--heading);
+    font-size: clamp(22px, 2.2vw, 29px);
+    font-weight: 850;
+    letter-spacing: -0.04em;
+    line-height: 1.25;
+}
+
+.dashboard-stat-change {
+    display: inline-block;
+    margin-top: 7px;
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 750;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   5. COMMON DASHBOARD SECTIONS
+========================================================= */
+
+.dashboard-section {
+    padding: 65px 0;
+    background: var(--bg);
+}
+
+.dashboard-section-alt {
+    background: var(--bg-soft);
+}
+
+.dashboard-section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 22px;
+    margin-bottom: 29px;
+}
+
+.dashboard-section-heading > div {
+    min-width: 0;
+}
+
+.dashboard-section-heading .section-eyebrow {
+    margin-bottom: 12px;
+}
+
+.dashboard-section-heading h2 {
+    margin: 0 0 10px;
+    color: var(--heading);
+    font-size: clamp(25px, 3vw, 34px);
+    letter-spacing: -0.04em;
+}
+
+.dashboard-section-heading p {
+    max-width: 620px;
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+.dashboard-text-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-shrink: 0;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+    transition: color var(--transition-fast);
+}
+
+.dashboard-text-link span {
+    color: var(--secondary);
+    font-size: 18px;
+    transition: transform var(--transition);
+}
+
+.dashboard-text-link:hover {
+    color: var(--secondary-dark);
+}
+
+.dashboard-text-link:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   6. QUICK ACTION CARDS
+========================================================= */
+
+.quick-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.quick-action-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    min-height: 220px;
+    padding: 25px 23px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition),
+        transform var(--transition),
+        background-color var(--transition);
+}
+
+.quick-action-card:hover {
+    border-color: rgba(255, 138, 0, 0.55);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-6px);
+}
+
+.quick-action-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 49px;
+    height: 49px;
+    margin-bottom: 21px;
+    padding: 13px;
+    border-radius: 14px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 21px;
+    flex-shrink: 0;
+    transition:
+        background var(--transition),
+        color var(--transition),
+        transform var(--transition);
+}
+
+.quick-action-card:nth-child(even) .quick-action-icon {
+    background: var(--secondary-light);
+    color: var(--secondary-dark);
+}
+
+.quick-action-card:hover .quick-action-icon {
+    transform: translateY(-3px);
+}
+
+.quick-action-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.quick-action-card h3 {
+    margin: 0 0 10px;
+    color: var(--heading);
+    font-size: 17px;
+    letter-spacing: -0.025em;
+}
+
+.quick-action-card p {
+    margin: 0 0 18px;
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.85;
+}
+
+.quick-action-card > a,
+.quick-action-card > button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.quick-action-card > a span,
+.quick-action-card > button span {
+    color: var(--secondary);
+    transition: transform var(--transition);
+}
+
+.quick-action-card > a:hover,
+.quick-action-card > button:hover {
+    color: var(--secondary-dark);
+}
+
+.quick-action-card > a:hover span,
+.quick-action-card > button:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   7. UPCOMING BOOKINGS
+========================================================= */
+
+.dashboard-booking-list {
+    display: grid;
+    gap: 17px;
+}
+
+.dashboard-booking {
+    display: grid;
+    grid-template-columns: 145px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 23px;
+    min-width: 0;
+    padding: 17px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition),
+        transform var(--transition);
+}
+
+.dashboard-booking:hover {
+    border-color: rgba(0, 156, 154, 0.4);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+.dashboard-booking-image {
+    overflow: hidden;
+    width: 145px;
+    height: 120px;
+    border-radius: var(--radius-md);
+    background: var(--bg-muted);
+}
+
+.dashboard-booking-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 700ms cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.dashboard-booking:hover .dashboard-booking-image img {
+    transform: scale(1.07);
+}
+
+.dashboard-booking-info {
+    min-width: 0;
+}
+
+.dashboard-booking-category {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 9px;
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 850;
+    letter-spacing: 0.08em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.dashboard-booking-info h3 {
+    margin: 0 0 9px;
+    color: var(--heading);
+    font-size: 19px;
+    letter-spacing: -0.025em;
+}
+
+.dashboard-booking-info > p {
+    margin: 0 0 12px;
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.dashboard-booking-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    color: var(--text-muted);
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.dashboard-booking-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dashboard-booking-meta svg {
+    width: 15px;
+    height: 15px;
+    fill: none;
+    stroke: var(--primary);
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.dashboard-booking-action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 15px;
+    min-width: 115px;
+}
+
+.dashboard-booking-action strong {
+    color: var(--heading);
+    font-size: 17px;
+    font-weight: 850;
+}
+
+.dashboard-booking-action > a,
+.dashboard-booking-action > button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 37px;
+    padding: 9px 15px;
+    border: 1px solid var(--secondary);
+    border-radius: var(--radius-pill);
+    background: transparent;
+    color: var(--secondary);
+    font-size: 11px;
+    font-weight: 750;
+    text-align: center;
+    cursor: pointer;
+    transition:
+        background var(--transition),
+        border-color var(--transition),
+        color var(--transition),
+        transform var(--transition);
+}
+
+.dashboard-booking-action > a:hover,
+.dashboard-booking-action > button:hover {
+    border-color: var(--secondary);
+    background: var(--secondary);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+
+/* Booking status labels */
+
+.booking-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    width: fit-content;
+    padding: 6px 10px;
+    border-radius: var(--radius-pill);
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+.booking-status::before {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    content: "";
+    flex-shrink: 0;
+}
+
+.booking-status.pending {
+    background: var(--secondary-light);
+    color: var(--secondary-dark);
+}
+
+.booking-status.cancelled {
+    background: var(--bg-muted);
+    color: var(--text-muted);
+}
+
+
+/* =========================================================
+   8. SAVED DESTINATIONS
+========================================================= */
+
+.saved-destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 23px;
+}
+
+.saved-destination-card {
+    overflow: hidden;
+    min-width: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition),
+        transform var(--transition);
+}
+
+.saved-destination-card:hover {
+    border-color: rgba(255, 138, 0, 0.5);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-6px);
+}
+
+.saved-destination-image {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+    background: var(--bg-muted);
+}
+
+.saved-destination-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 800ms cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.saved-destination-card:hover .saved-destination-image img {
+    transform: scale(1.07);
+}
+
+.saved-destination-image .destination-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    margin: 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.saved-destination-content {
+    padding: 22px;
+}
+
+.saved-destination-content h3 {
+    margin: 0 0 9px;
+    color: var(--heading);
+    font-size: 19px;
+    letter-spacing: -0.025em;
+}
+
+.saved-destination-content > p {
+    margin: 0 0 17px;
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.85;
+}
+
+.saved-destination-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
+.saved-destination-details strong {
+    color: var(--heading);
+    font-weight: 800;
+}
+
+.saved-destination-content > a,
+.saved-destination-content > button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.saved-destination-content > a span,
+.saved-destination-content > button span {
+    color: var(--secondary);
+    transition: transform var(--transition);
+}
+
+.saved-destination-content > a:hover,
+.saved-destination-content > button:hover {
+    color: var(--secondary-dark);
+}
+
+.saved-destination-content > a:hover span,
+.saved-destination-content > button:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   9. TRAVEL PLANNER
+========================================================= */
+
+.travel-planner-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.8fr);
+    align-items: stretch;
+    gap: 30px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.travel-planner-card:hover {
+    border-color: rgba(0, 156, 154, 0.4);
+    box-shadow: var(--shadow-md);
+}
+
+.travel-planner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: clamp(28px, 4vw, 45px);
+}
+
+.travel-planner-content .section-eyebrow {
+    margin-bottom: 15px;
+}
+
+.travel-planner-content h2 {
+    margin: 0 0 17px;
+    color: var(--heading);
+    font-size: clamp(27px, 3vw, 37px);
+    letter-spacing: -0.04em;
+}
+
+.travel-planner-content h2 span {
+    color: var(--primary);
+}
+
+.travel-planner-content > p {
+    max-width: 540px;
+    margin: 0 0 24px;
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 1.95;
+}
+
+.travel-planner-content .btn {
+    margin-top: 3px;
+}
+
+.travel-planner-image {
+    position: relative;
+    overflow: hidden;
+    min-height: 320px;
+    background: var(--bg-muted);
+}
+
+.travel-planner-image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 850ms cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.travel-planner-card:hover .travel-planner-image img {
+    transform: scale(1.06);
+}
+
+
+/* =========================================================
+   10. DASHBOARD NOTICE / DISCLAIMER
+========================================================= */
+
+.dashboard-disclaimer {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 30px;
+    padding: 19px 21px;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--secondary);
+    border-radius: var(--radius-md);
+    background: var(--bg-soft);
+}
+
+.dashboard-disclaimer-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    background: var(--secondary-light);
+    color: var(--secondary-dark);
+    font-size: 17px;
+    flex-shrink: 0;
+}
+
+.dashboard-disclaimer-content {
+    min-width: 0;
+}
+
+.dashboard-disclaimer h3 {
+    margin: 0 0 5px;
+    color: var(--heading);
+    font-size: 13px;
+    letter-spacing: -0.01em;
+}
+
+.dashboard-disclaimer p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 11px;
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   11. EMPTY STATES
+========================================================= */
+
+.dashboard-empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 240px;
+    padding: 35px 24px;
+    border: 1px dashed var(--border-strong);
+    border-radius: var(--radius-lg);
+    background: var(--bg-soft);
+    text-align: center;
+}
+
+.dashboard-empty-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 59px;
+    height: 59px;
+    margin-bottom: 17px;
+    padding: 16px;
+    border-radius: 17px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 24px;
+}
+
+.dashboard-empty-state h3 {
+    margin: 0 0 9px;
+    color: var(--heading);
+    font-size: 19px;
+}
+
+.dashboard-empty-state p {
+    max-width: 420px;
+    margin: 0 0 20px;
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   12. DARK MODE
+   Uses the same theme selectors as style.css.
+========================================================= */
+
+body.dark-mode .dashboard-page,
+html[data-theme="dark"] .dashboard-page,
+body[data-theme="dark"] .dashboard-page {
+    background: var(--bg);
+    color: var(--text);
+}
+
+body.dark-mode .dashboard-hero,
+html[data-theme="dark"] .dashboard-hero,
+body[data-theme="dark"] .dashboard-hero {
+    background: linear-gradient(
+        135deg,
+        var(--bg-soft) 0%,
+        var(--surface) 58%,
+        var(--primary-light) 150%
+    );
+    border-color: var(--border);
+}
+
+body.dark-mode .dashboard-stat,
+body.dark-mode .quick-action-card,
+body.dark-mode .dashboard-booking,
+body.dark-mode .saved-destination-card,
+body.dark-mode .travel-planner-card,
+html[data-theme="dark"] .dashboard-stat,
+html[data-theme="dark"] .quick-action-card,
+html[data-theme="dark"] .dashboard-booking,
+html[data-theme="dark"] .saved-destination-card,
+html[data-theme="dark"] .travel-planner-card,
+body[data-theme="dark"] .dashboard-stat,
+body[data-theme="dark"] .quick-action-card,
+body[data-theme="dark"] .dashboard-booking,
+body[data-theme="dark"] .saved-destination-card,
+body[data-theme="dark"] .travel-planner-card {
+    background: var(--surface);
+    border-color: var(--border);
+}
+
+body.dark-mode .dashboard-stat:hover,
+body.dark-mode .quick-action-card:hover,
+body.dark-mode .dashboard-booking:hover,
+body.dark-mode .saved-destination-card:hover,
+body.dark-mode .travel-planner-card:hover,
+html[data-theme="dark"] .dashboard-stat:hover,
+html[data-theme="dark"] .quick-action-card:hover,
+html[data-theme="dark"] .dashboard-booking:hover,
+html[data-theme="dark"] .saved-destination-card:hover,
+html[data-theme="dark"] .travel-planner-card:hover,
+body[data-theme="dark"] .dashboard-stat:hover,
+body[data-theme="dark"] .quick-action-card:hover,
+body[data-theme="dark"] .dashboard-booking:hover,
+body[data-theme="dark"] .saved-destination-card:hover,
+body[data-theme="dark"] .travel-planner-card:hover {
+    border-color: var(--primary);
+}
+
+body.dark-mode .dashboard-disclaimer,
+html[data-theme="dark"] .dashboard-disclaimer,
+body[data-theme="dark"] .dashboard-disclaimer {
+    background: var(--bg-soft);
+    border-color: var(--border);
+    border-left-color: var(--secondary);
+}
+
+body.dark-mode .dashboard-empty-state,
+html[data-theme="dark"] .dashboard-empty-state,
+body[data-theme="dark"] .dashboard-empty-state {
+    background: var(--bg-soft);
+    border-color: var(--border-strong);
+}
+
+
+/* =========================================================
+   13. RTL LAYOUT
+========================================================= */
+
+html[dir="rtl"] .dashboard-page {
+    direction: rtl;
+}
+
+html[dir="rtl"] .dashboard-welcome,
+html[dir="rtl"] .dashboard-section-heading {
+    direction: rtl;
+}
+
+html[dir="rtl"] .dashboard-hero-content {
+    align-items: flex-start;
+    text-align: right;
+}
+
+html[dir="rtl"] .dashboard-hero-actions {
+    direction: rtl;
+}
+
+html[dir="rtl"] .dashboard-hero-image figcaption,
+html[dir="rtl"] .dashboard-hero-image-caption {
+    text-align: right;
+}
+
+html[dir="rtl"] .dashboard-stat {
+    direction: rtl;
+}
+
+html[dir="rtl"] .dashboard-text-link,
+html[dir="rtl"] .quick-action-card > a,
+html[dir="rtl"] .quick-action-card > button,
+html[dir="rtl"] .saved-destination-content > a,
+html[dir="rtl"] .saved-destination-content > button {
+    direction: rtl;
+}
+
+html[dir="rtl"] .dashboard-text-link:hover span,
+html[dir="rtl"] .quick-action-card > a:hover span,
+html[dir="rtl"] .quick-action-card > button:hover span,
+html[dir="rtl"] .saved-destination-content > a:hover span,
+html[dir="rtl"] .saved-destination-content > button:hover span,
+html[dir="rtl"] .dashboard-page .btn:hover span {
+    transform: translateX(-4px);
+}
+
+html[dir="rtl"] .dashboard-booking {
+    direction: rtl;
+}
+
+html[dir="rtl"] .dashboard-booking-action {
+    align-items: flex-start;
+}
+
+html[dir="rtl"] .saved-destination-image .destination-tag {
+    right: 15px;
+    left: auto;
+}
+
+html[dir="rtl"] .dashboard-disclaimer {
+    border-right: 4px solid var(--secondary);
+    border-left: 1px solid var(--border);
+}
+
+
+/* =========================================================
+   14. TABLET RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+    .dashboard-page .site-container {
+        width: min(var(--container), calc(100% - 36px));
+    }
+
+    .dashboard-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .quick-actions-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard-hero {
+        gap: 30px;
+        padding: 35px;
+    }
+
+    .dashboard-hero-content h2 {
+        font-size: clamp(30px, 4.3vw, 44px);
+    }
+
+    .dashboard-hero-image,
+    .dashboard-hero-image img {
+        min-height: 330px;
+    }
+
+    .dashboard-booking {
+        grid-template-columns: 125px minmax(0, 1fr) auto;
+        gap: 18px;
+    }
+
+    .dashboard-booking-image {
+        width: 125px;
+        height: 110px;
+    }
+
+    .saved-destinations-grid {
+        gap: 18px;
+    }
+
+    .saved-destination-image {
+        height: 190px;
+    }
+}
+
+
+/* =========================================================
+   15. TABLET AND MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+    .dashboard-welcome-section {
+        padding-top: 30px;
+    }
+
+    .dashboard-welcome {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .dashboard-hero {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+        padding: 32px;
+    }
+
+    .dashboard-hero-content {
+        max-width: 700px;
+    }
+
+    .dashboard-hero-content h2 {
+        max-width: 650px;
+        font-size: clamp(35px, 6vw, 49px);
+    }
+
+    .dashboard-hero-content > p {
+        max-width: 620px;
+    }
+
+    .dashboard-hero-image {
+        width: 100%;
+        min-height: 0;
+        height: 380px;
+        border-radius: 42% 42% 18px 18px / 29% 29% 18px 18px;
+    }
+
+    .dashboard-hero-image img {
+        min-height: 0;
+    }
+
+    .dashboard-section {
+        padding: 52px 0;
+    }
+
+    .dashboard-booking {
+        grid-template-columns: 115px minmax(0, 1fr);
+    }
+
+    .dashboard-booking-image {
+        width: 115px;
+        height: 110px;
+    }
+
+    .dashboard-booking-action {
+        grid-column: 2;
+        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        min-width: 0;
+        padding-top: 3px;
+    }
+
+    .saved-destinations-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .saved-destination-card:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .saved-destination-card:last-child .saved-destination-image {
+        height: 240px;
+    }
+
+    .travel-planner-card {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+        gap: 0;
+    }
+
+    .travel-planner-content {
+        padding: 27px;
+    }
+
+    .travel-planner-image {
+        min-height: 290px;
+    }
+}
+
+
+/* =========================================================
+   16. MOBILE SCREENS
+========================================================= */
+
+@media (max-width: 600px) {
+    .dashboard-page .site-container {
+        width: calc(100% - 34px);
+    }
+
+    .dashboard-welcome-section {
+        padding-top: 22px;
+    }
+
+    .dashboard-welcome {
+        gap: 17px;
+        padding: 15px 0 21px;
+    }
+
+    .dashboard-welcome .section-eyebrow {
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+
+    .dashboard-welcome h1 {
+        margin-bottom: 11px;
+        font-size: 31px;
+        line-height: 1.2;
+    }
+
+    .dashboard-welcome p {
+        font-size: 13px;
+        line-height: 1.85;
+    }
+
+    .dashboard-welcome-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .dashboard-welcome-actions .btn {
+        width: 100%;
+    }
+
+    .dashboard-hero-section {
+        padding: 8px 0 28px;
+    }
+
+    .dashboard-hero {
+        gap: 25px;
+        padding: 25px 21px 21px;
+        border-radius: var(--radius-lg);
+    }
+
+    .dashboard-hero-label {
+        gap: 8px;
+        margin-bottom: 17px;
+        padding: 8px 11px;
+        font-size: 9px;
+        letter-spacing: 0.08em;
+    }
+
+    .dashboard-hero-content h2 {
+        margin-bottom: 15px;
+        font-size: clamp(31px, 8.5vw, 42px);
+        line-height: 1.15;
+    }
+
+    .dashboard-hero-content > p {
+        margin-bottom: 21px;
+        font-size: 13px;
+        line-height: 1.9;
+    }
+
+    .dashboard-hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .dashboard-hero-actions .btn {
+        width: 100%;
+        min-height: 47px;
+    }
+
+    .dashboard-page .btn {
+        min-height: 46px;
+        padding: 11px 17px;
+        font-size: 12px;
+    }
+
+    .dashboard-hero-image {
+        height: clamp(250px, 75vw, 340px);
+        border-radius: 43% 43% 16px 16px / 29% 29% 16px 16px;
+    }
+
+    .dashboard-hero-image figcaption,
+    .dashboard-hero-image-caption {
+        right: 17px;
+        bottom: 18px;
+        left: 17px;
+        font-size: 12px;
+    }
+
+    .dashboard-stats-section {
+        padding: 4px 0 42px;
+    }
+
+    .dashboard-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .dashboard-stat {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 13px;
+        padding: 17px 15px;
+        border-radius: var(--radius-md);
+    }
+
+    .dashboard-stat-icon {
+        width: 42px;
+        height: 42px;
+        padding: 11px;
+        border-radius: 12px;
+    }
+
+    .dashboard-stat-label {
+        font-size: 10px;
+    }
+
+    .dashboard-stat h3,
+    .dashboard-stat-value {
+        font-size: 24px;
+    }
+
+    .dashboard-stat-change {
+        font-size: 9px;
+    }
+
+    .dashboard-section {
+        padding: 43px 0;
+    }
+
+    .dashboard-section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 13px;
+        margin-bottom: 23px;
+    }
+
+    .dashboard-section-heading .section-eyebrow {
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+
+    .dashboard-section-heading h2 {
+        margin-bottom: 8px;
+        font-size: 27px;
+    }
+
+    .dashboard-section-heading p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .dashboard-text-link {
+        font-size: 12px;
+    }
+
+    .quick-actions-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .quick-action-card {
+        min-height: 205px;
+        padding: 18px 15px;
+        border-radius: var(--radius-md);
+    }
+
+    .quick-action-icon {
+        width: 41px;
+        height: 41px;
+        margin-bottom: 16px;
+        padding: 11px;
+        border-radius: 11px;
+    }
+
+    .quick-action-card h3 {
+        margin-bottom: 8px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .quick-action-card p {
+        margin-bottom: 14px;
+        font-size: 11px;
+        line-height: 1.75;
+    }
+
+    .quick-action-card > a,
+    .quick-action-card > button {
+        gap: 5px;
+        font-size: 10px;
+    }
+
+    .dashboard-booking-list {
+        gap: 14px;
+    }
+
+    .dashboard-booking {
+        grid-template-columns: 92px minmax(0, 1fr);
+        align-items: start;
+        gap: 13px;
+        padding: 12px;
+        border-radius: var(--radius-md);
+    }
+
+    .dashboard-booking-image {
+        width: 92px;
+        height: 103px;
+        border-radius: 10px;
+    }
+
+    .dashboard-booking-category {
+        margin-bottom: 6px;
+        font-size: 9px;
+        letter-spacing: 0.04em;
+    }
+
+    .dashboard-booking-info h3 {
+        margin-bottom: 7px;
+        font-size: 15px;
+        line-height: 1.35;
+    }
+
+    .dashboard-booking-info > p {
+        margin-bottom: 8px;
+        font-size: 11px;
+        line-height: 1.65;
+    }
+
+    .dashboard-booking-meta {
+        gap: 5px 10px;
+        font-size: 10px;
+    }
+
+    .dashboard-booking-meta svg {
+        width: 13px;
+        height: 13px;
+    }
+
+    .dashboard-booking-action {
+        grid-column: 1 / -1;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+        padding-top: 10px;
+        border-top: 1px solid var(--border);
+    }
+
+    .dashboard-booking-action strong {
+        font-size: 15px;
+    }
+
+    .dashboard-booking-action > a,
+    .dashboard-booking-action > button {
+        min-height: 34px;
+        padding: 8px 12px;
+        font-size: 10px;
+    }
+
+    .booking-status {
+        padding: 5px 8px;
+        font-size: 9px;
+    }
+
+    .saved-destinations-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .saved-destination-card:last-child {
+        grid-column: auto;
+    }
+
+    .saved-destination-image,
+    .saved-destination-card:last-child .saved-destination-image {
+        height: 220px;
+    }
+
+    .saved-destination-content {
+        padding: 19px;
+    }
+
+    .saved-destination-content h3 {
+        font-size: 18px;
+    }
+
+    .saved-destination-content > p {
+        font-size: 12px;
+    }
+
+    .travel-planner-card {
+        grid-template-columns: minmax(0, 1fr);
+        border-radius: var(--radius-lg);
+    }
+
+    .travel-planner-content {
+        padding: 25px 21px;
+    }
+
+    .travel-planner-content .section-eyebrow {
+        margin-bottom: 12px;
+        font-size: 10px;
+    }
+
+    .travel-planner-content h2 {
+        margin-bottom: 13px;
+        font-size: 29px;
+    }
+
+    .travel-planner-content > p {
+        margin-bottom: 20px;
+        font-size: 12px;
+        line-height: 1.85;
+    }
+
+    .travel-planner-content .btn {
+        width: 100%;
+    }
+
+    .travel-planner-image {
+        min-height: 0;
+        height: 250px;
+    }
+
+    .dashboard-disclaimer {
+        gap: 11px;
+        margin-top: 22px;
+        padding: 15px;
+    }
+
+    .dashboard-disclaimer-icon {
+        width: 31px;
+        height: 31px;
+        font-size: 15px;
+    }
+
+    .dashboard-disclaimer h3 {
+        font-size: 12px;
+    }
+
+    .dashboard-disclaimer p {
+        font-size: 10px;
+        line-height: 1.8;
+    }
+
+    .dashboard-empty-state {
+        min-height: 210px;
+        padding: 27px 17px;
+    }
+
+    .dashboard-empty-state h3 {
+        font-size: 17px;
+    }
+
+    .dashboard-empty-state p {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   17. EXTRA SMALL SCREENS
+========================================================= */
+
+@media (max-width: 380px) {
+    .dashboard-page .site-container {
+        width: calc(100% - 26px);
+    }
+
+    .dashboard-welcome h1 {
+        font-size: 28px;
+    }
+
+    .dashboard-hero {
+        padding: 21px 16px 17px;
+    }
+
+    .dashboard-hero-content h2 {
+        font-size: 30px;
+    }
+
+    .dashboard-stats {
+        gap: 9px;
+    }
+
+    .dashboard-stat {
+        padding: 14px 11px;
+    }
+
+    .dashboard-stat-icon {
+        width: 37px;
+        height: 37px;
+        padding: 10px;
+    }
+
+    .dashboard-stat h3,
+    .dashboard-stat-value {
+        font-size: 21px;
+    }
+
+    .quick-actions-grid {
+        gap: 9px;
+    }
+
+    .quick-action-card {
+        padding: 15px 12px;
+    }
+
+    .quick-action-card h3 {
+        font-size: 13px;
+    }
+
+    .dashboard-booking {
+        grid-template-columns: 78px minmax(0, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .dashboard-booking-image {
+        width: 78px;
+        height: 91px;
+    }
+
+    .dashboard-booking-info h3 {
+        font-size: 14px;
+    }
+
+    .dashboard-booking-action > a,
+    .dashboard-booking-action > button {
+        padding-inline: 10px;
+    }
+
+    .saved-destination-image,
+    .saved-destination-card:last-child .saved-destination-image {
+        height: 190px;
+    }
+
+    .travel-planner-content h2 {
+        font-size: 26px;
+    }
+}
+
+
+/* =========================================================
+   18. ANIMATIONS
+========================================================= */
+
+@keyframes dashboardHeroReveal {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes dashboardCardReveal {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dashboard-stat,
+.quick-action-card,
+.dashboard-booking,
+.saved-destination-card {
+    animation: dashboardCardReveal 550ms ease both;
+}
+
+.dashboard-stat:nth-child(2),
+.quick-action-card:nth-child(2),
+.saved-destination-card:nth-child(2) {
+    animation-delay: 70ms;
+}
+
+.dashboard-stat:nth-child(3),
+.quick-action-card:nth-child(3),
+.saved-destination-card:nth-child(3) {
+    animation-delay: 140ms;
+}
+
+.dashboard-stat:nth-child(4),
+.quick-action-card:nth-child(4) {
+    animation-delay: 210ms;
+}
+
+
+/* =========================================================
+   19. REDUCED MOTION ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .dashboard-page *,
+    .dashboard-page *::before,
+    .dashboard-page *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .dashboard-hero,
+    .dashboard-stat,
+    .quick-action-card,
+    .dashboard-booking,
+    .saved-destination-card {
+        animation: none !important;
+        transform: none !important;
+    }
+}
+
+
+/* =========================================================
+   20. PRINT
+========================================================= */
+
+@media print {
+    .dashboard-page,
+    .dashboard-section,
+    .dashboard-welcome-section,
+    .dashboard-hero-section,
+    .dashboard-stats-section {
+        background: #FFFFFF !important;
+        color: #222222 !important;
+    }
+
+    .dashboard-page h1,
+    .dashboard-page h2,
+    .dashboard-page h3,
+    .dashboard-page p {
+        color: #222222 !important;
+    }
+
+    .dashboard-welcome-actions,
+    .dashboard-hero-actions,
+    .dashboard-text-link,
+    .dashboard-booking-action,
+    .quick-action-card > a,
+    .quick-action-card > button {
+        display: none !important;
+    }
+
+    .dashboard-hero,
+    .dashboard-stat,
+    .quick-action-card,
+    .dashboard-booking,
+    .saved-destination-card,
+    .travel-planner-card {
+        break-inside: avoid;
+        box-shadow: none !important;
+    }
+
+    .dashboard-section {
+        padding: 25px 0;
+    }
+}
+
+.plan-trip-btn {
+    border: 1px solid transparent;
+    transition: all var(--transition);
+}
+
+.plan-trip-btn:hover {
+    background: var(--secondary);
+    border: 1px solid var(--secondary);
+    color: var(--white);
+}
+
+/* PLAN A TRIP — HOVER EFFECT */
+.dashboard-hero-outline {
+    border: 1px solid transparent;
+    transition: all var(--transition);
+}
+
+.dashboard-hero-outline:hover {
+    background: var(--secondary);
+    border: 1px solid var(--secondary);
+    color: var(--white);
+}
+
+/* =========================================================
+   DASHBOARD ICON ALIGNMENT FIX
+========================================================= */
+
+/* Keep Lucide icons aligned consistently */
+.dashboard-page i[data-lucide] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+/* Quick Action icon containers */
+.dashboard-page .quick-action-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    padding: 11px;
+}
+
+.dashboard-page .quick-action-icon svg {
+    width: 21px;
+    height: 21px;
+}
+
+/* Quick Action card text and spacing */
+.dashboard-page .quick-action-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.dashboard-page .quick-action-card h3 {
+    line-height: 1.45;
+}
+
+.dashboard-page .quick-action-card p {
+    line-height: 1.75;
+}
+
+/* Quick Action arrows inside card links */
+.dashboard-page .quick-action-card .dashboard-text-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 9px;
+    margin-top: auto;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.dashboard-page .quick-action-card .dashboard-text-link i[data-lucide],
+.dashboard-page .quick-action-card .dashboard-text-link svg {
+    width: 19px;
+    height: 19px;
+    color: var(--primary);
+    stroke-width: 2;
+    transition: transform var(--transition);
+}
+
+.dashboard-page .quick-action-card .dashboard-text-link:hover i[data-lucide],
+.dashboard-page .quick-action-card .dashboard-text-link:hover svg {
+    color: var(--secondary);
+    transform: translateX(3px);
+}
+
+/* Calendar/date icon */
+.dashboard-page .dashboard-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.dashboard-page .dashboard-date i[data-lucide],
+.dashboard-page .dashboard-date svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    color: var(--primary);
+}
+
+/* Booking location icons */
+.dashboard-page .dashboard-booking-info > p {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.dashboard-page .dashboard-booking-info > p i[data-lucide],
+.dashboard-page .dashboard-booking-info > p svg {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    color: var(--primary);
+}
+
+/* Hero button icons */
+.dashboard-page .dashboard-hero-actions i[data-lucide],
+.dashboard-page .dashboard-hero-actions svg {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+}
+
+/* RTL arrow direction */
+html[dir="rtl"] .dashboard-page .quick-action-card
+.dashboard-text-link:hover i[data-lucide],
+html[dir="rtl"] .dashboard-page .quick-action-card
+.dashboard-text-link:hover svg {
+    transform: translateX(-3px);
+}
+
+/* Mobile icon sizing */
+@media (max-width: 600px) {
+    .dashboard-page .quick-action-icon {
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+    }
+
+    .dashboard-page .quick-action-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .dashboard-page .quick-action-card .dashboard-text-link {
+        gap: 6px;
+        font-size: 10px;
+    }
+
+    .dashboard-page .quick-action-card .dashboard-text-link i[data-lucide],
+    .dashboard-page .quick-action-card .dashboard-text-link svg {
+        width: 17px;
+        height: 17px;
+    }
+}
+
+/* QUICK ACTIONS ONLY — ARROW ALIGNMENT FIX */
+
+.dashboard-page .quick-action-card .dashboard-text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.dashboard-page .quick-action-card .dashboard-text-link
+i[data-lucide],
+.dashboard-page .quick-action-card .dashboard-text-link svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    color: var(--primary);
+    stroke-width: 2;
+}
+
+.dashboard-page .quick-action-card .dashboard-text-link:hover
+i[data-lucide],
+.dashboard-page .quick-action-card .dashboard-text-link:hover svg {
+    color: var(--secondary);
+}
+
+@media (max-width: 600px) {
+    .dashboard-page .quick-action-card .dashboard-text-link
+    i[data-lucide],
+    .dashboard-page .quick-action-card .dashboard-text-link svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* =========================================================
+   6. QUICK ACTION CARDS
+   Scoped to Quick Actions only
+========================================================= */
+
+.dashboard-page .quick-actions-section .quick-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Each complete card is an anchor in the HTML */
+.dashboard-page .quick-actions-section .quick-action-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    min-height: 220px;
+    padding: 25px 23px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    color: var(--text);
+    text-decoration: none;
+    box-shadow: var(--shadow-sm);
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition),
+        transform var(--transition),
+        background-color var(--transition);
+}
+
+.dashboard-page .quick-actions-section .quick-action-card:hover {
+    border-color: rgba(255, 138, 0, 0.55);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-5px);
+}
+
+/* Top icon container */
+.dashboard-page .quick-actions-section .quick-action-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 49px;
+    height: 49px;
+    margin-bottom: 21px;
+    padding: 13px;
+    border-radius: 14px;
+    background: var(--primary-light);
+    color: var(--primary);
+    flex-shrink: 0;
+    transition:
+        background var(--transition),
+        color var(--transition),
+        transform var(--transition);
+}
+
+/* Alternate teal and orange icon backgrounds */
+.dashboard-page .quick-actions-section
+.quick-action-card:nth-child(even) .quick-action-icon {
+    background: var(--secondary-light);
+    color: var(--secondary-dark);
+}
+
+.dashboard-page .quick-actions-section
+.quick-action-card:hover .quick-action-icon {
+    transform: translateY(-2px);
+}
+
+/* Lucide icons inside the top icon containers */
+.dashboard-page .quick-actions-section .quick-action-icon svg {
+    display: block;
+    width: 23px;
+    height: 23px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Card heading */
+.dashboard-page .quick-actions-section .quick-action-card h3 {
+    margin: 0 0 10px;
+    color: var(--heading);
+    font-size: 17px;
+    font-weight: 750;
+    line-height: 1.4;
+    letter-spacing: -0.025em;
+}
+
+/* Card description */
+.dashboard-page .quick-actions-section .quick-action-card p {
+    margin: 0 0 18px;
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.85;
+}
+
+/* Bottom action label — this is a span, not a nested link */
+.dashboard-page .quick-actions-section
+.quick-action-card > .dashboard-text-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    margin-top: auto;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.5;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+/* Only the arrows inside Quick Actions */
+.dashboard-page .quick-actions-section
+.quick-action-card > .dashboard-text-link svg {
+    display: block;
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+    color: var(--primary);
+    stroke-width: 2;
+    transition:
+        color var(--transition),
+        transform var(--transition);
+}
+
+/* Hovering a card gives its action arrow a subtle effect */
+.dashboard-page .quick-actions-section
+.quick-action-card:hover > .dashboard-text-link {
+    color: var(--secondary-dark);
+}
+
+.dashboard-page .quick-actions-section
+.quick-action-card:hover > .dashboard-text-link svg {
+    color: var(--secondary);
+    transform: translateX(3px);
+}
+
+/* RTL arrow movement */
+html[dir="rtl"] .dashboard-page .quick-actions-section
+.quick-action-card:hover > .dashboard-text-link svg {
+    transform: translateX(-3px);
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+    .dashboard-page .quick-actions-section .quick-actions-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .dashboard-page .quick-actions-section .quick-actions-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .dashboard-page .quick-actions-section .quick-action-card {
+        min-height: 205px;
+        padding: 18px 15px;
+        border-radius: var(--radius-md);
+    }
+
+    .dashboard-page .quick-actions-section .quick-action-icon {
+        width: 41px;
+        height: 41px;
+        margin-bottom: 16px;
+        padding: 11px;
+        border-radius: 11px;
+    }
+
+    .dashboard-page .quick-actions-section .quick-action-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .dashboard-page .quick-actions-section .quick-action-card h3 {
+        margin-bottom: 8px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .dashboard-page .quick-actions-section .quick-action-card p {
+        margin-bottom: 14px;
+        font-size: 11px;
+        line-height: 1.75;
+    }
+
+    .dashboard-page .quick-actions-section
+    .quick-action-card > .dashboard-text-link {
+        gap: 6px;
+        font-size: 10px;
+    }
+
+    .dashboard-page .quick-actions-section
+    .quick-action-card > .dashboard-text-link svg {
+        width: 17px;
+        height: 17px;
+    }
+}
+
+/* Extra-small mobile */
+@media (max-width: 380px) {
+    .dashboard-page .quick-actions-section .quick-actions-grid {
+        gap: 9px;
+    }
+
+    .dashboard-page .quick-actions-section .quick-action-card {
+        padding: 15px 12px;
+    }
+
+    .dashboard-page .quick-actions-section .quick-action-card h3 {
+        font-size: 13px;
+    }
+}
+
+/* Normal-sized arrows */
+.destination-card .explore-link i,
+.destination-card .explore-link svg,
+.destination-card .explore-link .arrow,
+.journey-cta .cta-btn i,
+.journey-cta .cta-btn svg,
+.journey-cta .cta-btn .arrow {
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+    stroke-width: 2;
+    flex-shrink: 0;
+}
+
+/* ==========================================
+   TRAVELORA DASHBOARD — ARROW SIZE FIX
+   ========================================== */
+
+/* Teal arrows: Popular Destinations */
+.dashboard-page .saved-destinations-section
+.saved-destination-content > a svg,
+.dashboard-page .saved-destinations-section
+.dashboard-text-link svg {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px;
+    min-height: 18px;
+    stroke-width: 2;
+    flex-shrink: 0;
+}
+
+/* Orange button: Plan Your Journey */
+.dashboard-page .travel-planner-content
+.btn.btn-primary svg,
+.dashboard-page .travel-planner-content
+.btn.btn-primary i,
+.dashboard-page .travel-planner-content
+.btn.btn-primary [data-lucide="arrow-right"] {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px;
+    min-height: 18px;
+    font-size: 18px;
+    stroke-width: 2;
+    flex-shrink: 0;
+}
+
+/* Keep both links and buttons aligned */
+.dashboard-page .saved-destinations-section
+.saved-destination-content > a,
+.dashboard-page .saved-destinations-section
+.dashboard-text-link,
+.dashboard-page .travel-planner-content
+.btn.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Your Itinerary — Explore Packages arrow */
+.dashboard-page .itinerary-section a svg,
+.dashboard-page .itinerary-section a i,
+.dashboard-page .itinerary-section a [data-lucide="arrow-right"],
+.dashboard-page .itinerary-section a .arrow {
+    width: 16px !important;
+    height: 16px !important;
+    min-width: 16px !important;
+    min-height: 16px !important;
+    font-size: 16px !important;
+    stroke-width: 2 !important;
+    flex-shrink: 0;
+}
+
+/* Fix oversized arrows throughout the dashboard */
+.dashboard-page .dashboard-text-link i,
+.dashboard-page .dashboard-hero-actions .btn-light i,
+.dashboard-page .dashboard-hero-actions a i,
+.dashboard-page .dashboard-section-heading > a i,
+.dashboard-page .travel-planner-content .btn i {
+    width: 14px !important;
+    height: 14px !important;
+    min-width: 14px !important;
+    min-height: 14px !important;
+    max-width: 14px !important;
+    max-height: 14px !important;
+    flex: 0 0 14px !important;
+    stroke-width: 2 !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+/* Keep arrow spacing small */
+.dashboard-page .dashboard-text-link,
+.dashboard-page .dashboard-hero-actions .btn-light,
+.dashboard-page .dashboard-hero-actions a,
+.dashboard-page .travel-planner-content .btn {
+    gap: 7px !important;
+}
+
+/* Prevent arrow SVGs from stretching */
+.dashboard-page .dashboard-text-link svg,
+.dashboard-page .dashboard-hero-actions a svg,
+.dashboard-page .travel-planner-content .btn svg {
+    width: 14px !important;
+    height: 14px !important;
+    min-width: 14px !important;
+    min-height: 14px !important;
+    flex-shrink: 0 !important;
+}
+
+/* ==========================================
+   TRAVELORA DASHBOARD — MATCH CONTACT TAGLINE
+========================================== */
+
+/* Dashboard section taglines */
+.dashboard-page .section-eyebrow,
+.dashboard-page .dashboard-hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 22px;
+    padding: 10px 18px;
+
+    border: 1px solid rgba(0, 156, 154, 0.08);
+    border-radius: 50px;
+
+    background: rgba(0, 156, 154, 0.07);
+    color: #009C9A;
+
+    font-size: 0.76rem;
+    font-weight: 800;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Orange dot and soft glow */
+.dashboard-page .section-eyebrow::before,
+.dashboard-page .dashboard-hero-label::before {
+    content: "";
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    flex: 0 0 9px;
+
+    border-radius: 50%;
+    background: #FF8A00;
+    box-shadow: 0 0 0 5px rgba(255, 138, 0, 0.12);
+}
+
+/* Dark mode */
+body.dark-mode .dashboard-page .section-eyebrow,
+body.dark-mode .dashboard-page .dashboard-hero-label {
+    color: #35C9C5;
+    background: rgba(0, 156, 154, 0.12);
+    border-color: rgba(0, 156, 154, 0.2);
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+    .dashboard-page .section-eyebrow,
+    .dashboard-page .dashboard-hero-label {
+        gap: 10px;
+        margin-bottom: 18px;
+        padding: 8px 14px;
+        font-size: 0.70rem;
+        letter-spacing: 1px;
+    }
+}
+
+/* ==========================================
+   DASHBOARD TAGLINE STYLES
+========================================== */
+
+/* Keep pill style for the two main taglines */
+.dashboard-page .dashboard-welcome-section .section-eyebrow,
+.dashboard-page .dashboard-hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 22px;
+    padding: 10px 18px;
+
+    border: 1px solid rgba(0, 156, 154, 0.08);
+    border-radius: 50px;
+
+    background: rgba(0, 156, 154, 0.07);
+    color: #009C9A;
+
+    font-size: 0.76rem;
+    font-weight: 800;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Orange dot for the two main taglines */
+.dashboard-page .dashboard-welcome-section .section-eyebrow::before,
+.dashboard-page .dashboard-hero-label::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    flex: 0 0 9px;
+
+    border-radius: 50%;
+    background: #FF8A00;
+    box-shadow: 0 0 0 5px rgba(255, 138, 0, 0.12);
+}
+
+/* Remaining taglines: simple horizontal line */
+.dashboard-page .dashboard-section .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 12px;
+    padding: 0;
+
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+
+    color: #009C9A;
+    font-size: 0.76rem;
+    font-weight: 800;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Small orange horizontal line before each remaining tagline */
+.dashboard-page .dashboard-section .section-eyebrow::before {
+    content: "";
+    display: inline-block;
+
+    width: 28px;
+    height: 2px;
+    flex: 0 0 28px;
+
+    border-radius: 2px;
+    background: #FF8A00;
+    box-shadow: none;
+}
+
+/* Dark mode */
+body.dark-mode .dashboard-page .dashboard-welcome-section .section-eyebrow,
+body.dark-mode .dashboard-page .dashboard-hero-label,
+body.dark-mode .dashboard-page .dashboard-section .section-eyebrow {
+    color: #35C9C5;
+}
+
+body.dark-mode .dashboard-page .dashboard-section .section-eyebrow {
+    background: transparent;
+    border: none;
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+    .dashboard-page .dashboard-welcome-section .section-eyebrow,
+    .dashboard-page .dashboard-hero-label {
+        gap: 10px;
+        margin-bottom: 18px;
+        padding: 8px 14px;
+        font-size: 0.70rem;
+        letter-spacing: 1px;
+    }
+
+    .dashboard-page .dashboard-section .section-eyebrow {
+        gap: 8px;
+        margin-bottom: 10px;
+        padding: 0;
+        font-size: 0.70rem;
+        letter-spacing: 1px;
+    }
+
+    .dashboard-page .dashboard-section .section-eyebrow::before {
+        width: 24px;
+        flex-basis: 24px;
+    }
+}
+
+/* Fix RTL button size on Dashboard only */
+.dashboard-page #rtlBtn.header-icon-btn {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
+    padding: 0;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.dashboard-page #rtlBtn.header-icon-btn svg {
+    width: 18px;
+    height: 18px;
+    max-width: 18px;
+    max-height: 18px;
+}
+
+/* ==========================================
+   DASHBOARD — RTL BUTTON SIZE FIX
+========================================== */
+
+.dashboard-page #rtlBtn,
+.dashboard-page button#rtlBtn,
+.dashboard-page #rtlBtn.header-icon-btn {
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    min-height: 42px !important;
+    max-width: 42px !important;
+    max-height: 42px !important;
+
+    padding: 0 !important;
+    margin: 0;
+    box-sizing: border-box !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    flex: 0 0 42px !important;
+    line-height: 1 !important;
+    transform: none !important;
+}
+
+/* Keep the RTL icon small */
+.dashboard-page #rtlBtn svg,
+.dashboard-page #rtlBtn i,
+.dashboard-page #rtlBtn img {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+    min-height: 18px !important;
+    max-width: 18px !important;
+    max-height: 18px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+    flex: 0 0 18px !important;
+    transform: none !important;
+}
+
+/* Keep the size unchanged on mobile */
+@media (max-width: 600px) {
+    .dashboard-page #rtlBtn,
+    .dashboard-page button#rtlBtn {
+        width: 42px !important;
+        height: 42px !important;
+        min-width: 42px !important;
+        min-height: 42px !important;
+        flex: 0 0 42px !important;
+    }
+}
+
+/* ==========================================
+   TRAVELORA DASHBOARD — RTL BUTTON SIZE FIX
+   Keep the header RTL button small and fixed
+========================================== */
+
+.dashboard-page #rtlBtn,
+.dashboard-page button#rtlBtn,
+.dashboard-page .header-actions #rtlBtn {
+    width: 39px !important;
+    height: 39px !important;
+    min-width: 39px !important;
+    min-height: 39px !important;
+    max-width: 39px !important;
+    max-height: 39px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    box-sizing: border-box !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    flex: 0 0 39px !important;
+    line-height: 1 !important;
+    font-size: 18px !important;
+    transform: none;
+}
+
+/* Prevent the RTL icon or image from expanding */
+.dashboard-page #rtlBtn svg,
+.dashboard-page #rtlBtn img,
+.dashboard-page #rtlBtn i {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+    min-height: 18px !important;
+    max-width: 18px !important;
+    max-height: 18px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+    flex: 0 0 18px !important;
+}
+
+/* Keep the button compact on mobile too */
+@media (max-width: 600px) {
+    .dashboard-page #rtlBtn,
+    .dashboard-page button#rtlBtn,
+    .dashboard-page .header-actions #rtlBtn {
+        width: 33px !important;
+        height: 33px !important;
+        min-width: 33px !important;
+        min-height: 33px !important;
+        max-width: 33px !important;
+        max-height: 33px !important;
+        flex: 0 0 33px !important;
+    }
+}
+
+@media (max-width: 380px) {
+    .dashboard-page #rtlBtn,
+    .dashboard-page button#rtlBtn,
+    .dashboard-page .header-actions #rtlBtn {
+        width: 30px !important;
+        height: 30px !important;
+        min-width: 30px !important;
+        min-height: 30px !important;
+        max-width: 30px !important;
+        max-height: 30px !important;
+        flex: 0 0 30px !important;
+    }
+}
+
+/* =========================================
+   PROFESSIONAL TRAVELLER DASHBOARD SECTIONS
+========================================= */
+
+.my-bookings-section,
+.my-itineraries-section,
+.tickets-invoices-section {
+    padding: 38px 0;
+}
+
+.dashboard-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 26px;
+}
+
+.dashboard-section-heading h2 {
+    margin: 7px 0 9px;
+    font-size: clamp(25px, 3vw, 32px);
+    line-height: 1.25;
+}
+
+.dashboard-section-heading p {
+    margin: 0;
+    color: var(--text-muted, #737b85);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.section-eyebrow {
+    color: #009C9A;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.dashboard-section-heading .btn,
+.itinerary-empty-content .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.dashboard-section-heading .btn svg,
+.itinerary-empty-content .btn svg,
+.dashboard-outline-btn svg {
+    width: 17px;
+    height: 17px;
+}
+
+/* Empty states */
+
+.dashboard-empty-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 275px;
+    padding: 36px 24px;
+    text-align: center;
+    background: var(--card-bg, #fff);
+    border: 1px solid var(--border-color, #e7eaee);
+    border-radius: 16px;
+}
+
+.dashboard-empty-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 66px;
+    height: 66px;
+    margin-bottom: 18px;
+    color: #009C9A;
+    background: rgba(0, 156, 154, 0.10);
+    border-radius: 18px;
+}
+
+.dashboard-empty-icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.dashboard-empty-panel h3,
+.itinerary-empty-content h3 {
+    margin: 0 0 10px;
+    color: var(--text-color, #263238);
+    font-size: 21px;
+}
+
+.dashboard-empty-panel p {
+    max-width: 440px;
+    margin: 0 0 22px;
+    color: var(--text-muted, #737b85);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.dashboard-outline-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 12px 18px;
+    color: #008987;
+    background: transparent;
+    border: 1px solid #009C9A;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.dashboard-outline-btn:hover {
+    color: #fff;
+    background: #009C9A;
+}
+
+/* Itinerary panel */
+
+.itinerary-empty-panel {
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    background: var(--card-bg, #fff);
+    border: 1px solid var(--border-color, #e7eaee);
+    border-radius: 16px;
+}
+
+.itinerary-empty-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 170px;
+    color: #009C9A;
+    background: linear-gradient(
+        145deg,
+        rgba(0, 156, 154, 0.14),
+        rgba(0, 156, 154, 0.04)
+    );
+    border-radius: 14px;
+}
+
+.itinerary-empty-visual svg {
+    width: 58px;
+    height: 58px;
+    stroke-width: 1.4;
+}
+
+.itinerary-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #009C9A;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+.itinerary-empty-content p {
+    max-width: 550px;
+    margin: 0 0 20px;
+    color: var(--text-muted, #737b85);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Tickets and invoices */
+
+.dashboard-documents-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.dashboard-document-card {
+    min-width: 0;
+    padding: 25px;
+    background: var(--card-bg, #fff);
+    border: 1px solid var(--border-color, #e7eaee);
+    border-radius: 15px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dashboard-document-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(20, 40, 50, 0.07);
+}
+
+.dashboard-document-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.dashboard-document-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 13px;
+}
+
+.dashboard-document-icon svg {
+    width: 25px;
+    height: 25px;
+}
+
+.ticket-document-icon {
+    color: #008d8b;
+    background: rgba(0, 156, 154, 0.11);
+}
+
+.invoice-document-icon {
+    color: #c56b19;
+    background: rgba(255, 138, 0, 0.12);
+}
+
+.document-type-label {
+    color: var(--text-muted, #737b85);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-align: right;
+}
+
+.dashboard-document-card h3 {
+    margin: 0 0 10px;
+    color: var(--text-color, #263238);
+    font-size: 19px;
+}
+
+.dashboard-document-card > p {
+    min-height: 50px;
+    margin: 0 0 20px;
+    color: var(--text-muted, #737b85);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.dashboard-document-footer {
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color, #e7eaee);
+}
+
+.document-empty-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted, #737b85);
+    font-size: 12px;
+}
+
+.document-empty-status svg {
+    width: 15px;
+    height: 15px;
+}
+
+/* Responsive layout */
+
+@media (max-width: 700px) {
+    .my-bookings-section,
+    .my-itineraries-section,
+    .tickets-invoices-section {
+        padding: 26px 0;
+    }
+
+    .dashboard-section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .itinerary-empty-panel {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 20px;
+    }
+
+    .itinerary-empty-visual {
+        min-height: 120px;
+    }
+
+    .dashboard-documents-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .dashboard-document-card {
+        padding: 20px;
+    }
+}
+
+/* Dashboard functionality controls */
+
+.dashboard-search {
+    margin-bottom: 24px;
+}
+
+.dashboard-search label,
+.dashboard-trip-form label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+.dashboard-search input,
+.dashboard-trip-form input {
+    width: 100%;
+    max-width: 440px;
+    padding: 12px 14px;
+    border: 1px solid var(--border, #dce5e4);
+    border-radius: 10px;
+    background: var(--surface, #fff);
+    color: var(--text, #263631);
+    font: inherit;
+}
+
+.dashboard-search input:focus,
+.dashboard-trip-form input:focus {
+    outline: 2px solid #009C9A;
+    outline-offset: 2px;
+}
+
+.save-destination-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 12px;
+    border: 0;
+    border-radius: 24px;
+    background: #fff;
+    color: #263631;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+}
+
+.saved-destination-image {
+    position: relative;
+}
+
+.save-destination-btn.is-saved {
+    background: #009C9A;
+    color: #fff;
+}
+
+.save-destination-btn:focus-visible,
+.remove-itinerary-btn:focus-visible {
+    outline: 2px solid #FF8A00;
+    outline-offset: 3px;
+}
+
+.dashboard-trip-form {
+    display: grid;
+    gap: 10px;
+    margin-top: 24px;
+    max-width: 440px;
+}
+
+.dashboard-trip-form h3 {
+    margin-bottom: 4px;
+}
+
+.dashboard-trip-form button {
+    justify-self: start;
+    margin-top: 8px;
+}
+
+.dashboard-itinerary-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.dashboard-itinerary-card {
+    padding: 20px;
+    border: 1px solid var(--border, #dce5e4);
+    border-radius: 14px;
+    background: var(--surface, #fff);
+    color: var(--text, #263631);
+}
+
+.dashboard-itinerary-card h3 {
+    margin-top: 0;
+}
+
+.remove-itinerary-btn {
+    padding: 9px 12px;
+    border: 1px solid #009C9A;
+    border-radius: 8px;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+}
+
+.dashboard-search [hidden],
+.dashboard-empty-panel[hidden] {
+    display: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .save-destination-btn {
+        transition: none;
+    }
+}
