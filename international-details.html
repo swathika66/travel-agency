@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#009C9A">
+    <meta name="description" content="Explore Travelora international holiday packages featuring Dubai, Bali, Thailand, Singapore, Maldives and Switzerland.">
+    <title>International Details | Travelora</title>
+
+    <link rel="icon" type="image/png" href="favicon2.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="international-details.css">
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ==================== HEADER ==================== -->
+
+<header class="site-header">
+    <div class="site-container header-container">
+
+        <a href="index.html" class="brand" aria-label="Travelora Home">
+            <img src="logo.png" alt="Travelora logo" width="52" height="52">
+
+            <span class="brand-text">
+                <span class="brand-name">
+                    <span class="travelora-primary">Travel</span><span class="travelora-secondary">ora</span>
+                </span>
+                <span class="brand-tagline">EXPLORE THE WORLD</span>
+            </span>
+        </a>
+
+        <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+
+            <div class="home-dropdown">
+                <a href="index.html" class="home-link"
+                   aria-haspopup="true" aria-expanded="false"
+                   id="homeDropdownToggle">
+                    Home <span class="dropdown-arrow" aria-hidden="true">▾</span>
+                </a>
+
+                <div class="home-dropdown-menu">
+                    <a href="index.html">Home 1</a>
+                    <a href="home2.html">Home 2</a>
+                </div>
+            </div>
+
+            <a href="about.html">About Us</a>
+            <a href="domestic-packages.html">Domestic Packages</a>
+            <a href="international-packages.html" class="active">International Packages</a>
+            <a href="honeymoon-family.html">Honeymoon &amp; Family Tours</a>
+            <a href="contact.html">Contact</a>
+            <a href="dashboard.html">Dashboard</a>
+
+        </nav>
+
+        <div class="header-actions">
+
+            <button id="rtlBtn" class="header-icon-btn"
+                    type="button" title="Toggle RTL"
+                    aria-label="Toggle right-to-left layout"
+                    aria-pressed="false">
+                <span aria-hidden="true">⇄</span>
+            </button>
+
+            <button id="themeBtn" class="header-icon-btn"
+                    type="button" title="Toggle dark mode"
+                    aria-label="Toggle dark mode"
+                    aria-pressed="false">
+                <span aria-hidden="true">☾</span>
+            </button>
+
+            <a href="login.html" class="login-btn">Login</a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn"
+                    type="button" aria-label="Open navigation menu"
+                    aria-expanded="false" aria-controls="mainNav">
+                <span aria-hidden="true">☰</span>
+            </button>
+
+        </div>
+    </div>
+</header>
+
+<main id="main-content">
+
+<!-- ==================== SECTION 1: HERO ==================== -->
+
+<section class="id-hero">
+    <div class="site-container id-hero-grid">
+
+        <div class="id-hero-content">
+
+            <span class="id-eyebrow">
+                <span class="id-eyebrow-dot"></span>
+                YOUR WORLD OF POSSIBILITIES
+            </span>
+
+            <h1>
+                Discover the World,
+                <span>One Journey at a Time.</span>
+            </h1>
+
+            <p>
+                From vibrant international cities and tropical island
+                escapes to breathtaking alpine landscapes, discover
+                extraordinary holidays designed around your travel dreams.
+            </p>
+
+            <div class="id-hero-actions">
+                <a href="#international-packages" class="btn btn-primary">
+                    Explore Packages
+                    <span aria-hidden="true">→</span>
+                </a>
+
+                <a href="contact.html" class="btn btn-outline">
+                    Plan Your Trip
+                </a>
+            </div>
+
+            <div class="id-hero-points">
+
+                <div class="id-hero-point">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="9"/>
+                        <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/>
+                    </svg>
+                    <span>Global Destinations</span>
+                </div>
+
+                <div class="id-hero-point">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 3 14.8 9l6.2.8-4.5 4.3 1.1 6.1-5.6-3-5.6 3 1.1-6.1L3 9.8 9.2 9z"/>
+                    </svg>
+                    <span>Unforgettable Experiences</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="id-hero-visual">
+            <div class="id-hero-image-frame">
+                <img
+                    src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
+                    alt="Dubai skyline illuminated by the evening sun"
+                    fetchpriority="high">
+
+                <div class="id-hero-image-overlay"></div>
+
+                <div class="id-hero-image-caption">
+                    <span>EXPLORE BEYOND BORDERS</span>
+                    <h2>Your Next Adventure Awaits</h2>
+                </div>
+            </div>
+
+            <div class="id-hero-floating-card">
+                <span class="id-floating-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/>
+                        <circle cx="12" cy="10" r="2.5"/>
+                    </svg>
+                </span>
+                <span>
+                    <small>Your next destination</small>
+                    <strong>Somewhere Wonderful</strong>
+                </span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ==================== SECTION 2: SIX PACKAGES ==================== -->
+
+<section class="section id-packages" id="international-packages">
+
+    <div class="site-container">
+
+        <div class="section-heading id-section-heading">
+            <span class="section-eyebrow">FIND YOUR NEXT GETAWAY</span>
+            <h2>Explore Our International Packages</h2>
+            <p>
+                Discover six incredible destinations, each offering
+                its own unforgettable experiences and beautiful scenery.
+            </p>
+        </div>
+
+        <div class="id-package-grid">
+
+            <!-- DUBAI -->
+
+            <article class="id-package-card">
+                <div class="id-package-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                        alt="Dubai skyline and modern skyscrapers"
+                        loading="lazy">
+                    <span class="id-package-number">01</span>
+                </div>
+
+                <div class="id-package-content">
+                    <span class="id-package-region">UNITED ARAB EMIRATES</span>
+                    <h3>Dubai Getaway</h3>
+                    <p>
+                        Experience spectacular skyscrapers, desert safaris,
+                        luxury shopping and memorable city attractions.
+                    </p>
+
+                    <div class="id-package-meta">
+                        <span>
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9"/>
+                                <path d="M12 7v5l3 2"/>
+                            </svg>
+                            5 Days / 4 Nights
+                        </span>
+                    </div>
+
+                    <div class="id-package-price">
+                        <span>Starting from</span>
+                        <strong>₹39,999 <small>/ person</small></strong>
+                    </div>
+
+                    <a href="contact.html?destination=dubai"
+                       class="btn btn-primary id-package-btn">
+                        Enquire Now <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- BALI -->
+
+            <article class="id-package-card">
+                <div class="id-package-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                        alt="Bali tropical landscape and lush greenery"
+                        loading="lazy">
+                    <span class="id-package-number">02</span>
+                </div>
+
+                <div class="id-package-content">
+                    <span class="id-package-region">INDONESIA</span>
+                    <h3>Bali Escape</h3>
+                    <p>
+                        Enjoy tropical beaches, peaceful temples, green
+                        rice terraces and beautiful island retreats.
+                    </p>
+
+                    <div class="id-package-meta">
+                        <span>
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9"/>
+                                <path d="M12 7v5l3 2"/>
+                            </svg>
+                            6 Days / 5 Nights
+                        </span>
+                    </div>
+
+                    <div class="id-package-price">
+                        <span>Starting from</span>
+                        <strong>₹44,999 <small>/ person</small></strong>
+                    </div>
+
+                    <a href="contact.html?destination=bali"
+                       class="btn btn-primary id-package-btn">
+                        Enquire Now <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- THAILAND -->
+
+            <article class="id-package-card">
+                <div class="id-package-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                        alt="Traditional Thai architecture and tropical scenery"
+                        loading="lazy">
+                    <span class="id-package-number">03</span>
+                </div>
+
+                <div class="id-package-content">
+                    <span class="id-package-region">SOUTHEAST ASIA</span>
+                    <h3>Thailand Adventure</h3>
+                    <p>
+                        Explore lively markets, tropical islands, cultural
+                        landmarks and beautiful coastal scenery.
+                    </p>
+
+                    <div class="id-package-meta">
+                        <span>
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9"/>
+                                <path d="M12 7v5l3 2"/>
+                            </svg>
+                            5 Days / 4 Nights
+                        </span>
+                    </div>
+
+                    <div class="id-package-price">
+                        <span>Starting from</span>
+                        <strong>₹34,999 <small>/ person</small></strong>
+                    </div>
+
+                    <a href="contact.html?destination=thailand"
+                       class="btn btn-primary id-package-btn">
+                        Enquire Now <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- SINGAPORE -->
+
+            <article class="id-package-card">
+                <div class="id-package-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                        alt="Singapore waterfront skyline and city architecture"
+                        loading="lazy">
+                    <span class="id-package-number">04</span>
+                </div>
+
+                <div class="id-package-content">
+                    <span class="id-package-region">SOUTHEAST ASIA</span>
+                    <h3>Singapore Discovery</h3>
+                    <p>
+                        Discover waterfront attractions, futuristic gardens,
+                        impressive architecture and exciting city life.
+                    </p>
+
+                    <div class="id-package-meta">
+                        <span>
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9"/>
+                                <path d="M12 7v5l3 2"/>
+                            </svg>
+                            5 Days / 4 Nights
+                        </span>
+                    </div>
+
+                    <div class="id-package-price">
+                        <span>Starting from</span>
+                        <strong>₹49,999 <small>/ person</small></strong>
+                    </div>
+
+                    <a href="contact.html?destination=singapore"
+                       class="btn btn-primary id-package-btn">
+                        Enquire Now <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- MALDIVES -->
+
+            <article class="id-package-card">
+                <div class="id-package-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                        alt="Maldives island resort surrounded by turquoise water"
+                        loading="lazy">
+                    <span class="id-package-number">05</span>
+                </div>
+
+                <div class="id-package-content">
+                    <span class="id-package-region">INDIAN OCEAN</span>
+                    <h3>Maldives Retreat</h3>
+                    <p>
+                        Relax beside turquoise lagoons, enjoy island scenery
+                        and discover the beauty of tropical beaches.
+                    </p>
+
+                    <div class="id-package-meta">
+                        <span>
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9"/>
+                                <path d="M12 7v5l3 2"/>
+                            </svg>
+                            4 Days / 3 Nights
+                        </span>
+                    </div>
+
+                    <div class="id-package-price">
+                        <span>Starting from</span>
+                        <strong>₹54,999 <small>/ person</small></strong>
+                    </div>
+
+                    <a href="contact.html?destination=maldives"
+                       class="btn btn-primary id-package-btn">
+                        Enquire Now <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- SWITZERLAND -->
+
+            <article class="id-package-card">
+                <div class="id-package-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                        alt="Beautiful Swiss alpine mountain landscape"
+                        loading="lazy">
+                    <span class="id-package-number">06</span>
+                </div>
+
+                <div class="id-package-content">
+                    <span class="id-package-region">EUROPE</span>
+                    <h3>Switzerland Escape</h3>
+                    <p>
+                        Admire alpine mountains, scenic villages, peaceful
+                        lakes and breathtaking European landscapes.
+                    </p>
+
+                    <div class="id-package-meta">
+                        <span>
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9"/>
+                                <path d="M12 7v5l3 2"/>
+                            </svg>
+                            7 Days / 6 Nights
+                        </span>
+                    </div>
+
+                    <div class="id-package-price">
+                        <span>Starting from</span>
+                        <strong>₹1,29,999 <small>/ person</small></strong>
+                    </div>
+
+                    <a href="contact.html?destination=switzerland"
+                       class="btn btn-primary id-package-btn">
+                        Enquire Now <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+
+        <p class="id-price-note">
+            Prices shown are illustrative starting estimates per person,
+            not confirmed travel quotations. Final prices depend on travel
+            dates, flights, accommodation, availability and inclusions.
+        </p>
+
+    </div>
+</section>
+
+
+<!-- ==================== SECTION 3: DESTINATION HIGHLIGHTS ==================== -->
+
+<section class="section id-highlights">
+    <div class="site-container">
+
+        <div class="section-heading id-section-heading">
+            <span class="section-eyebrow">EXPERIENCES AROUND THE WORLD</span>
+            <h2>Discover What Makes Each Destination Special</h2>
+            <p>
+                Every country offers a different way to explore,
+                relax and create unforgettable memories.
+            </p>
+        </div>
+
+        <div class="id-highlight-grid">
+
+            <article class="id-highlight-card">
+                <div class="id-highlight-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-7h6v7"/>
+                        <path d="M9 10h.01M15 10h.01"/>
+                    </svg>
+                </div>
+                <h3>Dubai</h3>
+                <p>Iconic skyscrapers, desert safaris, shopping and modern attractions.</p>
+            </article>
+
+            <article class="id-highlight-card">
+                <div class="id-highlight-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-7h6v7"/>
+                        <path d="M2 8h20"/>
+                    </svg>
+                </div>
+                <h3>Bali</h3>
+                <p>Tropical beaches, traditional temples, rice terraces and island retreats.</p>
+            </article>
+
+            <article class="id-highlight-card">
+                <div class="id-highlight-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="m3 21 9-18 9 18M7 13h10M5 17h14"/>
+                    </svg>
+                </div>
+                <h3>Thailand</h3>
+                <p>Island adventures, vibrant markets, cultural landmarks and local cuisine.</p>
+            </article>
+
+            <article class="id-highlight-card">
+                <div class="id-highlight-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 21h18M5 21V8l7-5 7 5v13"/>
+                        <path d="M9 21v-6h6v6M9 9h.01M15 9h.01"/>
+                    </svg>
+                </div>
+                <h3>Singapore</h3>
+                <p>Futuristic gardens, waterfront attractions and a vibrant city atmosphere.</p>
+            </article>
+
+            <article class="id-highlight-card">
+                <div class="id-highlight-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M2 17q5-5 10 0t10 0M2 21q5-5 10 0t10 0"/>
+                        <path d="M12 3v9M8 7l4-4 4 4"/>
+                    </svg>
+                </div>
+                <h3>Maldives</h3>
+                <p>Turquoise lagoons, coral reefs, peaceful beaches and romantic escapes.</p>
+            </article>
+
+            <article class="id-highlight-card">
+                <div class="id-highlight-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="m2 20 7-15 4 8 3-5 6 12z"/>
+                        <path d="m7 20 4-5 4 5"/>
+                    </svg>
+                </div>
+                <h3>Switzerland</h3>
+                <p>Alpine villages, scenic rail journeys, mountain views and peaceful lakes.</p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ==================== SECTION 4: ITINERARY & INCLUSIONS ==================== -->
+
+<section class="section id-itinerary">
+    <div class="site-container">
+
+        <div class="section-heading id-section-heading">
+            <span class="section-eyebrow">PLAN WITH CONFIDENCE</span>
+            <h2>What's Included in Your Journey?</h2>
+            <p>
+                Understand your travel plan and package arrangements
+                before confirming your international holiday.
+            </p>
+        </div>
+
+        <div class="id-itinerary-grid">
+
+            <div class="id-itinerary-content">
+
+                <h3>A Holiday Planned Around You</h3>
+
+                <p>
+                    Each itinerary can be tailored to your destination,
+                    travel dates, interests and preferred pace. Discuss
+                    your requirements with Travelora before booking.
+                </p>
+
+                <div class="id-itinerary-list">
+
+                    <div class="id-itinerary-item">
+                        <span class="id-list-icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <h4>Accommodation</h4>
+                            <p>Hotel options based on your selected package and budget.</p>
+                        </div>
+                    </div>
+
+                    <div class="id-itinerary-item">
+                        <span class="id-list-icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M2 16l20-8-8 14-3-7-9 1z"/>
+                                <path d="m11 15 5-5"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <h4>Flights and Transfers</h4>
+                            <p>International flights and local transfers when included in your quotation.</p>
+                        </div>
+                    </div>
+
+                    <div class="id-itinerary-item">
+                        <span class="id-list-icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9"/>
+                                <path d="M3 12h18M12 3a15 15 0 0 1 0 18"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <h4>Sightseeing Experiences</h4>
+                            <p>Selected attractions, activities and tours listed in your itinerary.</p>
+                        </div>
+                    </div>
+
+                    <div class="id-itinerary-item">
+                        <span class="id-list-icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/>
+                                <path d="m9 12 2 2 4-4"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <h4>Travel Preparation</h4>
+                            <p>Guidance on travel documents and destination requirements.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a href="contact.html" class="btn btn-primary">
+                    Request a Custom Itinerary
+                    <span aria-hidden="true">→</span>
+                </a>
+
+            </div>
+
+            <div class="id-inclusions-card">
+
+                <div class="id-inclusions-heading">
+                    <span class="id-inclusions-symbol" aria-hidden="true">✓</span>
+                    <div>
+                        <span class="section-eyebrow">PACKAGE CHECKLIST</span>
+                        <h3>Inclusions &amp; Exclusions</h3>
+                    </div>
+                </div>
+
+                <h4 class="id-included-title">May Be Included</h4>
+
+                <ul class="id-check-list">
+                    <li>Hotel accommodation</li>
+                    <li>Daily breakfast or meals as specified</li>
+                    <li>Airport transfers where specified</li>
+                    <li>Selected sightseeing tours</li>
+                    <li>Activities listed in the final itinerary</li>
+                </ul>
+
+                <h4 class="id-excluded-title">Usually Excluded Unless Stated</h4>
+
+                <ul class="id-cross-list">
+                    <li>International flights</li>
+                    <li>Visa fees and travel insurance</li>
+                    <li>Personal expenses and optional activities</li>
+                    <li>Meals not listed in the itinerary</li>
+                    <li>Additional taxes or surcharges, if applicable</li>
+                </ul>
+
+                <p class="id-inclusions-note">
+                    Actual inclusions and exclusions vary by package.
+                    Confirm the final written quotation before booking.
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ==================== SECTION 5: TRAVEL GUIDE & FAQS ==================== -->
+
+<section class="section id-travel-guide">
+    <div class="site-container">
+
+        <div class="section-heading id-section-heading">
+            <span class="section-eyebrow">BE READY FOR YOUR JOURNEY</span>
+            <h2>International Travel Guide</h2>
+            <p>
+                A little preparation can make your overseas holiday
+                smoother, more comfortable and more enjoyable.
+            </p>
+        </div>
+
+        <div class="id-guide-grid">
+
+            <article class="id-guide-card">
+                <span class="id-guide-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="4" y="3" width="16" height="18" rx="2"/>
+                        <path d="M8 7h8M8 11h8M8 15h5"/>
+                    </svg>
+                </span>
+                <h3>Passport &amp; Visa</h3>
+                <p>
+                    Check passport validity and the latest visa and entry
+                    requirements for your destination before departure.
+                </p>
+            </article>
+
+            <article class="id-guide-card">
+                <span class="id-guide-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="9"/>
+                        <path d="M12 7v5l3 2"/>
+                    </svg>
+                </span>
+                <h3>Best Time to Travel</h3>
+                <p>
+                    Research seasonal weather, local festivals and
+                    peak travel periods before choosing your dates.
+                </p>
+            </article>
+
+            <article class="id-guide-card">
+                <span class="id-guide-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="6" width="18" height="14" rx="2"/>
+                        <path d="M7 6V4h10v2M3 11h18"/>
+                    </svg>
+                </span>
+                <h3>Money &amp; Packing</h3>
+                <p>
+                    Check currency exchange options, baggage allowances,
+                    local customs and essential travel items.
+                </p>
+            </article>
+
+        </div>
+
+        <div class="id-faq-wrapper">
+
+            <div class="id-faq-heading">
+                <span class="section-eyebrow">NEED TO KNOW?</span>
+                <h3>Frequently Asked Questions</h3>
+            </div>
+
+            <details class="id-faq-item">
+                <summary>Are the package prices fixed?</summary>
+                <p>
+                    No. Prices on this page are sample starting estimates.
+                    Actual prices depend on travel dates, availability,
+                    flights, hotel choices and package inclusions.
+                </p>
+            </details>
+
+            <details class="id-faq-item">
+                <summary>Are international flights included?</summary>
+                <p>
+                    Flights are included only when specifically stated
+                    in the final package quotation. Confirm this before booking.
+                </p>
+            </details>
+
+            <details class="id-faq-item">
+                <summary>Will I need a visa for my destination?</summary>
+                <p>
+                    Entry requirements depend on your passport, destination
+                    and travel dates. Check current official requirements
+                    before making travel arrangements.
+                </p>
+            </details>
+
+            <details class="id-faq-item">
+                <summary>Can I customise my package?</summary>
+                <p>
+                    You can contact Travelora to discuss preferred travel
+                    dates, hotel options, sightseeing interests and your budget.
+                    Customisation is subject to availability and confirmation.
+                </p>
+            </details>
+
+            <details class="id-faq-item">
+                <summary>How do I enquire about a package?</summary>
+                <p>
+                    Select Enquire Now on your preferred destination card
+                    or visit the Contact page to share your travel requirements.
+                </p>
+            </details>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ==================== SECTION 6: FINAL CTA ==================== -->
+
+<section class="id-final-cta">
+    <div class="site-container id-final-cta-inner">
+
+        <div class="id-final-cta-content">
+            <span class="id-cta-eyebrow">YOUR NEXT ADVENTURE STARTS HERE</span>
+
+            <h2>Ready to Explore the World?</h2>
+
+            <p>
+                Tell us where you dream of going. Let's plan an
+                international holiday filled with incredible places,
+                new experiences and lasting memories.
+            </p>
+        </div>
+
+        <div class="id-final-cta-actions">
+            <a href="contact.html" class="btn btn-light">
+                Plan Your International Trip
+                <span aria-hidden="true">→</span>
+            </a>
+
+            <a href="international-packages.html" class="btn btn-cta-outline">
+                Back to Packages
+            </a>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+
+<!-- ==================== FOOTER ==================== -->
+
+<footer class="site-footer">
+    <div class="site-container footer-container">
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="footer-logo" aria-label="Travelora Home">
+                <img src="logo.png" alt="Travelora logo" width="52" height="52">
+
+                <span class="footer-logo-text">
+                    <span class="footer-brand-name">
+                        <span class="travelora-primary">Travel</span><span class="travelora-secondary">ora</span>
+                    </span>
+                    <span class="footer-tagline">EXPLORE THE WORLD</span>
+                </span>
+            </a>
+
+            <p class="footer-description">
+                Discover remarkable destinations, exciting adventures
+                and memorable holidays with Travelora. Your next journey
+                begins with inspiration.
+            </p>
+
+            <div class="social-links" aria-label="Social media">
+
+                <a href="https://www.facebook.com/"
+                   class="social-icon" aria-label="Facebook"
+                   title="Facebook" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M14 8h3V4h-3c-3 0-5 2-5 5v2H6v4h3v5h4v-5h3l1-4h-4V9c0-.7.3-1 1-1z"/>
+                    </svg>
+                </a>
+
+                <a href="https://www.instagram.com/"
+                   class="social-icon" aria-label="Instagram"
+                   title="Instagram" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="3" width="18" height="18" rx="5"
+                              fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="12" cy="12" r="4"
+                                fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+                    </svg>
+                </a>
+
+                <a href="https://www.linkedin.com/"
+                   class="social-icon" aria-label="LinkedIn"
+                   title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M5 8H2V21H5V8zM3.5 3C2.4 3 2 3.8 2 4.6S2.4 6 3.5 6 5 5.2 5 4.4 4.6 3 3.5 3zM8 8h3v1.8h.1C11.5 8.7 12.7 7.5 15 7.5c3 0 4 2 4 5.2V21h-3v-7.3c0-1.7 0-3.8-2.3-3.8-2.3 0-2.7 1.8-2.7 3.7V21H8V8z"/>
+                    </svg>
+                </a>
+
+                <a href="https://www.youtube.com/"
+                   class="social-icon" aria-label="YouTube"
+                   title="YouTube" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M21 7.2a2.8 2.8 0 0 0-2-2C17.3 4.7 12 4.7 12 4.7s-5.3 0-7 .5a2.8 2.8 0 0 0-2 2C2.5 8.9 2.5 12 2.5 12s0 3.1.5 4.8a2.8 2.8 0 0 0 2 2c1.7.5 7 .5 7 .5s5.3 0 7-.5a2.8 2.8 0 0 0 2-2c.5-1.7.5-4.8.5-4.8s0-3.1-.5-4.8zM10 15.5v-7l6 3.5-6 3.5z"/>
+                    </svg>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="domestic-packages.html">Domestic Packages</a>
+            <a href="international-packages.html">International Packages</a>
+            <a href="honeymoon-family.html">Honeymoon &amp; Family Tours</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- INFORMATION -->
+
+        <div class="footer-column">
+            <h3>Information</h3>
+            <a href="destinations.html">Popular Destinations</a>
+            <a href="travel-experiences.html">Travel Experiences</a>
+            <a href="travel-guide.html">Travel Guide</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="login.html">Login</a>
+        </div>
+
+        <!-- CONTACT -->
+
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+
+            <p class="footer-contact-description">
+                Have questions about your next trip? Get in touch with us.
+            </p>
+
+            <div class="contact-item">
+                <span class="contact-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+                    </svg>
+                </span>
+                <span>Hyderabad, India</span>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6.6 2.5 9.2 2l2 4.8-2.3 1.8a15.8 15.8 0 0 0 6.5 6.5l1.8-2.3 4.8 2 .5 2.6c.2 1-.6 2-1.6 2C11.5 21.4 2.6 12.5 2.6 3.1c0-1 .9-1.8 2-1.6l2 .9z"/>
+                    </svg>
+                </span>
+                <a href="tel:+919876543210">+91 98765 43210</a>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm9 7 8-5H4l8 5zm0 2L4 9v8h16V9l-8 5z"/>
+                    </svg>
+                </span>
+                <a href="mailto:info@travelora.com">info@travelora.com</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+        <div class="site-container footer-bottom-container">
+
+            <p>© 2026 Travelora. All Rights Reserved.</p>
+
+            <div class="footer-bottom-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms &amp; Conditions</a>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

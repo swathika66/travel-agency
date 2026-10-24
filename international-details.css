@@ -1,0 +1,1851 @@
+/* =========================================================
+   TRAVELORA — INTERNATIONAL DETAILS PAGE
+   Matches international-details.html
+   Theme: Charcoal + Teal + Orange
+   Responsive | Dark Mode | RTL | SVG Icons
+========================================================= */
+
+/* ==================== 1. VARIABLES ==================== */
+
+:root {
+    --id-primary: #009C9A;
+    --id-primary-dark: #007F7D;
+    --id-primary-deep: #006967;
+    --id-primary-light: #E6F7F6;
+
+    --id-orange: #FF8A00;
+    --id-orange-dark: #E87800;
+    --id-orange-light: #FFF2E0;
+
+    --id-heading: #34434E;
+    --id-text: #25343B;
+    --id-muted: #687A80;
+
+    --id-bg: #FFFFFF;
+    --id-soft: #F5F8FA;
+    --id-border: #E3EAED;
+
+    --id-radius: 20px;
+    --id-radius-lg: 28px;
+
+    --id-shadow: 0 10px 30px rgba(37, 52, 59, 0.07);
+    --id-shadow-hover: 0 18px 42px rgba(37, 52, 59, 0.13);
+
+    --id-transition: 0.3s ease;
+}
+
+/* ==================== 2. GENERAL ==================== */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+}
+
+#main-content {
+    overflow: hidden;
+}
+
+#main-content section {
+    position: relative;
+}
+
+#main-content .site-container {
+    width: min(1180px, calc(100% - 48px));
+    margin-inline: auto;
+}
+
+#main-content h1,
+#main-content h2,
+#main-content h3,
+#main-content h4 {
+    color: var(--id-heading);
+    line-height: 1.2;
+    letter-spacing: -0.035em;
+    font-weight: 750;
+}
+
+#main-content p {
+    color: var(--id-muted);
+    line-height: 1.8;
+}
+
+#main-content a {
+    text-decoration: none;
+}
+
+#main-content svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#main-content .section {
+    padding: 85px 0;
+}
+
+#main-content .section-heading {
+    max-width: 760px;
+    margin: 0 auto 44px;
+    text-align: center;
+}
+
+#main-content .section-heading h2 {
+    margin: 12px 0;
+    font-size: clamp(2rem, 3.5vw, 2.85rem);
+}
+
+#main-content .section-heading p {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+#main-content .section-eyebrow {
+    display: inline-block;
+    color: var(--id-primary-dark);
+    font-size: 0.77rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* Consistent heading colours */
+
+#main-content h1 span,
+#main-content h2 span {
+    color: var(--id-primary);
+}
+
+/* ==================== 3. HERO ==================== */
+
+#main-content .id-hero {
+    padding: 75px 0 80px;
+    background:
+        radial-gradient(
+            circle at 92% 12%,
+            rgba(0, 156, 154, 0.09),
+            transparent 28%
+        ),
+        var(--id-bg);
+}
+
+#main-content .id-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.94fr;
+    align-items: center;
+    gap: 65px;
+}
+
+#main-content .id-hero-content {
+    max-width: 590px;
+    animation: idFadeUp 0.7s ease both;
+}
+
+#main-content .id-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 23px;
+    padding: 11px 17px;
+    border-radius: 50px;
+    background: var(--id-primary-light);
+    color: var(--id-primary-dark);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.075em;
+}
+
+#main-content .id-eyebrow-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--id-orange);
+    box-shadow: 0 0 0 4px rgba(255, 138, 0, 0.12);
+}
+
+#main-content .id-hero-content h1 {
+    margin: 0 0 22px;
+    font-size: clamp(2.8rem, 5vw, 4.25rem);
+    line-height: 1.12;
+}
+
+#main-content .id-hero-content h1 span {
+    display: block;
+    margin-top: 5px;
+}
+
+#main-content .id-hero-content > p {
+    max-width: 550px;
+    margin: 0 0 27px;
+    font-size: 1.04rem;
+}
+
+#main-content .id-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 30px;
+}
+
+/* Shared button system: uses existing HTML btn classes */
+
+#main-content .btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    min-height: 51px;
+    padding: 14px 25px;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 0.94rem;
+    font-weight: 750;
+    line-height: 1.3;
+    text-align: center;
+    cursor: pointer;
+    transition:
+        color var(--id-transition),
+        background var(--id-transition),
+        border-color var(--id-transition),
+        transform var(--id-transition),
+        box-shadow var(--id-transition);
+}
+
+#main-content .btn-primary {
+    background: var(--id-orange);
+    border-color: var(--id-orange);
+    color: #FFFFFF;
+    box-shadow: 0 7px 18px rgba(255, 138, 0, 0.18);
+}
+
+#main-content .btn-primary:hover {
+    background: var(--id-orange-dark);
+    border-color: var(--id-orange-dark);
+    color: #FFFFFF;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(255, 138, 0, 0.25);
+}
+
+#main-content .btn-outline {
+    background: transparent;
+    border-color: #D5E0E3;
+    color: var(--id-primary-dark);
+}
+
+#main-content .btn-outline:hover {
+    background: var(--id-primary-light);
+    border-color: var(--id-primary);
+    color: var(--id-primary-deep);
+    transform: translateY(-3px);
+}
+
+#main-content .id-hero-actions .btn svg,
+#main-content .id-hero-actions .btn span[aria-hidden="true"] {
+    transition: transform var(--id-transition);
+}
+
+#main-content .id-hero-actions .btn:hover span[aria-hidden="true"] {
+    transform: translateX(4px);
+}
+
+#main-content .id-hero-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+#main-content .id-hero-point {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--id-muted);
+    font-size: 0.85rem;
+    font-weight: 650;
+}
+
+#main-content .id-hero-point svg {
+    width: 21px;
+    height: 21px;
+    color: var(--id-primary);
+}
+
+/* Hero image: rounded rectangle */
+
+#main-content .id-hero-visual {
+    position: relative;
+    min-width: 0;
+    padding: 0 12px 15px 0;
+    animation: idFadeUp 0.85s ease both;
+}
+
+#main-content .id-hero-image-frame {
+    position: relative;
+    overflow: hidden;
+    height: 485px;
+    border-radius: 27px;
+    background: var(--id-soft);
+    box-shadow: var(--id-shadow);
+}
+
+#main-content .id-hero-image-frame > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.7s ease;
+}
+
+#main-content .id-hero-image-frame:hover > img {
+    transform: scale(1.045);
+}
+
+#main-content .id-hero-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        transparent 35%,
+        rgba(12, 29, 34, 0.18) 55%,
+        rgba(12, 29, 34, 0.82) 100%
+    );
+    pointer-events: none;
+}
+
+#main-content .id-hero-image-caption {
+    position: absolute;
+    right: 27px;
+    bottom: 27px;
+    left: 27px;
+    z-index: 1;
+}
+
+#main-content .id-hero-image-caption > span {
+    display: inline-block;
+    margin-bottom: 9px;
+    color: #FFFFFF;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+#main-content .id-hero-image-caption h2 {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: clamp(1.45rem, 2.5vw, 2rem);
+    letter-spacing: -0.025em;
+}
+
+#main-content .id-hero-floating-card {
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 270px;
+    padding: 17px 20px;
+    border: 1px solid var(--id-border);
+    border-radius: 17px;
+    background: var(--id-bg);
+    box-shadow: var(--id-shadow);
+}
+
+#main-content .id-floating-icon {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    border-radius: 13px;
+    background: var(--id-primary-light);
+    color: var(--id-primary-dark);
+}
+
+#main-content .id-floating-icon svg {
+    width: 23px;
+    height: 23px;
+}
+
+#main-content .id-hero-floating-card small {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--id-muted);
+    font-size: 0.76rem;
+}
+
+#main-content .id-hero-floating-card strong {
+    display: block;
+    color: var(--id-heading);
+    font-size: 0.91rem;
+}
+
+/* ==================== 4. SIX PACKAGES ==================== */
+
+#main-content .id-packages {
+    background: var(--id-soft);
+}
+
+#main-content .id-package-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+#main-content .id-package-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--id-border);
+    border-radius: 19px;
+    background: var(--id-bg);
+    box-shadow: var(--id-shadow);
+    transition:
+        transform var(--id-transition),
+        box-shadow var(--id-transition),
+        border-color var(--id-transition);
+}
+
+#main-content .id-package-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(0, 156, 154, 0.45);
+    box-shadow: var(--id-shadow-hover);
+}
+
+#main-content .id-package-image {
+    position: relative;
+    overflow: hidden;
+    height: 225px;
+    background: var(--id-soft);
+}
+
+#main-content .id-package-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.55s ease;
+}
+
+#main-content .id-package-card:hover .id-package-image img {
+    transform: scale(1.06);
+}
+
+#main-content .id-package-number {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: grid;
+    place-items: center;
+    min-width: 43px;
+    height: 36px;
+    padding: 0 10px;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.94);
+    color: var(--id-primary-deep);
+    font-size: 0.8rem;
+    font-weight: 850;
+    backdrop-filter: blur(8px);
+}
+
+#main-content .id-package-content {
+    padding: 24px;
+}
+
+#main-content .id-package-region {
+    display: block;
+    margin-bottom: 9px;
+    color: var(--id-primary-dark);
+    font-size: 0.69rem;
+    font-weight: 850;
+    letter-spacing: 0.09em;
+}
+
+#main-content .id-package-content h3 {
+    margin: 0 0 10px;
+    font-size: 1.35rem;
+}
+
+#main-content .id-package-content > p {
+    min-height: 76px;
+    margin: 0 0 17px;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+#main-content .id-package-meta {
+    display: flex;
+    align-items: center;
+    padding: 13px 0;
+    border-top: 1px solid var(--id-border);
+    border-bottom: 1px solid var(--id-border);
+}
+
+#main-content .id-package-meta > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--id-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+#main-content .id-package-meta svg {
+    width: 19px;
+    height: 19px;
+    color: var(--id-primary);
+}
+
+#main-content .id-package-price {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 18px 0;
+}
+
+#main-content .id-package-price > span {
+    color: var(--id-muted);
+    font-size: 0.78rem;
+}
+
+#main-content .id-package-price > strong {
+    color: var(--id-primary-dark);
+    font-size: clamp(1.35rem, 2vw, 1.65rem);
+    font-weight: 850;
+    letter-spacing: -0.04em;
+}
+
+#main-content .id-package-price > strong small {
+    color: var(--id-muted);
+    font-size: 0.76rem;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+#main-content .id-package-btn {
+    width: 100%;
+    min-height: 47px;
+    padding: 12px 18px;
+    font-size: 0.9rem;
+}
+
+#main-content .id-price-note {
+    margin: 28px 0 0;
+    padding: 16px 20px;
+    border-left: 4px solid var(--id-orange);
+    border-radius: 9px;
+    background: var(--id-orange-light);
+    color: var(--id-text);
+    font-size: 0.88rem;
+    line-height: 1.75;
+}
+
+#main-content .id-price-note::before {
+    content: "Price note: ";
+    color: var(--id-heading);
+    font-weight: 800;
+}
+
+/* ==================== 5. DESTINATION HIGHLIGHTS ==================== */
+
+#main-content .id-highlights {
+    background: var(--id-bg);
+}
+
+#main-content .id-highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+#main-content .id-highlight-card {
+    padding: 28px 25px;
+    border: 1px solid var(--id-border);
+    border-radius: 19px;
+    background: var(--id-bg);
+    transition:
+        transform var(--id-transition),
+        border-color var(--id-transition),
+        box-shadow var(--id-transition);
+}
+
+#main-content .id-highlight-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 156, 154, 0.5);
+    box-shadow: var(--id-shadow);
+}
+
+#main-content .id-highlight-icon {
+    display: grid;
+    place-items: center;
+    width: 53px;
+    height: 53px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    background: var(--id-primary-light);
+    color: var(--id-primary-dark);
+}
+
+#main-content .id-highlight-icon svg {
+    width: 26px;
+    height: 26px;
+}
+
+#main-content .id-highlight-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.18rem;
+}
+
+#main-content .id-highlight-card p {
+    margin: 0;
+    font-size: 0.91rem;
+}
+
+/* ==================== 6. ITINERARY & INCLUSIONS ==================== */
+
+#main-content .id-itinerary {
+    background: var(--id-soft);
+}
+
+#main-content .id-itinerary-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: start;
+    gap: 50px;
+}
+
+#main-content .id-itinerary-content > h3 {
+    margin: 0 0 15px;
+    font-size: 1.7rem;
+}
+
+#main-content .id-itinerary-content > p {
+    margin: 0 0 27px;
+}
+
+#main-content .id-itinerary-list {
+    display: grid;
+    gap: 22px;
+    margin-bottom: 28px;
+}
+
+#main-content .id-itinerary-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+#main-content .id-list-icon {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    border-radius: 14px;
+    background: var(--id-primary-light);
+    color: var(--id-primary-dark);
+}
+
+#main-content .id-list-icon svg {
+    width: 23px;
+    height: 23px;
+}
+
+#main-content .id-itinerary-item h4 {
+    margin: 2px 0 6px;
+    font-size: 1.04rem;
+}
+
+#main-content .id-itinerary-item p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+#main-content .id-inclusions-card {
+    padding: 30px;
+    border: 1px solid var(--id-border);
+    border-radius: 22px;
+    background: var(--id-bg);
+    box-shadow: var(--id-shadow);
+}
+
+#main-content .id-inclusions-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 25px;
+}
+
+#main-content .id-inclusions-symbol {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    border-radius: 14px;
+    background: var(--id-primary-light);
+    color: var(--id-primary-dark);
+    font-size: 1.45rem;
+    font-weight: 850;
+}
+
+#main-content .id-inclusions-heading .section-eyebrow {
+    margin-bottom: 5px;
+    font-size: 0.68rem;
+}
+
+#main-content .id-inclusions-heading h3 {
+    margin: 0;
+    font-size: 1.35rem;
+}
+
+#main-content .id-inclusions-card > h4 {
+    margin: 22px 0 14px;
+    font-size: 0.98rem;
+    letter-spacing: -0.01em;
+}
+
+#main-content .id-included-title {
+    color: var(--id-primary-dark);
+}
+
+#main-content .id-excluded-title {
+    color: var(--id-orange-dark);
+}
+
+#main-content .id-check-list,
+#main-content .id-cross-list {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#main-content .id-check-list li,
+#main-content .id-cross-list li {
+    position: relative;
+    padding-inline-start: 28px;
+    color: var(--id-muted);
+    font-size: 0.89rem;
+    line-height: 1.65;
+}
+
+#main-content .id-check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: grid;
+    place-items: center;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background: var(--id-primary-light);
+    color: var(--id-primary-dark);
+    font-size: 0.72rem;
+    font-weight: 900;
+}
+
+#main-content .id-cross-list li::before {
+    content: "–";
+    position: absolute;
+    left: 5px;
+    top: 0;
+    color: var(--id-orange-dark);
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+#main-content .id-inclusions-note {
+    margin: 22px 0 0;
+    padding-top: 17px;
+    border-top: 1px solid var(--id-border);
+    font-size: 0.82rem;
+}
+
+/* ==================== 7. TRAVEL GUIDE ==================== */
+
+#main-content .id-travel-guide {
+    background: var(--id-bg);
+}
+
+#main-content .id-guide-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 23px;
+}
+
+#main-content .id-guide-card {
+    padding: 27px;
+    border: 1px solid var(--id-border);
+    border-radius: 19px;
+    background: var(--id-bg);
+    transition:
+        transform var(--id-transition),
+        box-shadow var(--id-transition);
+}
+
+#main-content .id-guide-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--id-shadow);
+}
+
+#main-content .id-guide-icon {
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 19px;
+    border-radius: 15px;
+    background: var(--id-primary-light);
+    color: var(--id-primary-dark);
+}
+
+#main-content .id-guide-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+#main-content .id-guide-card h3 {
+    margin: 0 0 11px;
+    font-size: 1.15rem;
+}
+
+#main-content .id-guide-card p {
+    margin: 0;
+    font-size: 0.91rem;
+}
+
+/* ==================== 8. FAQ ==================== */
+
+#main-content .id-faq-wrapper {
+    max-width: 850px;
+    margin: 65px auto 0;
+}
+
+#main-content .id-faq-heading {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#main-content .id-faq-heading h3 {
+    margin: 10px 0 0;
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+}
+
+#main-content .id-faq-item {
+    margin-bottom: 13px;
+    overflow: hidden;
+    border: 1px solid var(--id-border);
+    border-radius: 14px;
+    background: var(--id-bg);
+    transition: border-color var(--id-transition);
+}
+
+#main-content .id-faq-item[open] {
+    border-color: rgba(0, 156, 154, 0.55);
+}
+
+#main-content .id-faq-item summary {
+    position: relative;
+    padding: 20px 52px 20px 22px;
+    color: var(--id-heading);
+    font-size: 0.98rem;
+    font-weight: 750;
+    line-height: 1.55;
+    cursor: pointer;
+    list-style: none;
+}
+
+#main-content .id-faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+#main-content .id-faq-item summary::after {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 21px;
+    transform: translateY(-50%);
+    color: var(--id-primary-dark);
+    font-size: 1.55rem;
+    font-weight: 500;
+}
+
+#main-content .id-faq-item[open] summary::after {
+    content: "−";
+    color: var(--id-orange-dark);
+}
+
+#main-content .id-faq-item > p {
+    margin: 0;
+    padding: 0 22px 21px;
+    font-size: 0.91rem;
+}
+
+/* ==================== 9. FINAL CTA ==================== */
+
+#main-content .id-final-cta {
+    padding: 25px 0 85px;
+    background: var(--id-bg);
+}
+
+#main-content .id-final-cta-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    overflow: hidden;
+    padding: 57px 55px;
+    border-radius: 28px;
+    background:
+        radial-gradient(
+            circle at 90% 5%,
+            rgba(255, 255, 255, 0.14),
+            transparent 28%
+        ),
+        var(--id-primary);
+}
+
+#main-content .id-final-cta-content {
+    max-width: 650px;
+}
+
+#main-content .id-cta-eyebrow {
+    display: inline-block;
+    margin-bottom: 13px;
+    color: #FFFFFF;
+    font-size: 0.73rem;
+    font-weight: 850;
+    letter-spacing: 0.1em;
+}
+
+#main-content .id-final-cta-content h2 {
+    margin: 0 0 14px;
+    color: #FFFFFF;
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+}
+
+#main-content .id-final-cta-content p {
+    max-width: 620px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.91);
+}
+
+#main-content .id-final-cta-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+#main-content .btn-light {
+    background: #FFFFFF;
+    border-color: #FFFFFF;
+    color: var(--id-primary-deep);
+}
+
+#main-content .btn-light:hover {
+    background: var(--id-primary-light);
+    border-color: var(--id-primary-light);
+    color: var(--id-primary-deep);
+    transform: translateY(-3px);
+}
+
+#main-content .btn-cta-outline {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.75);
+    color: #FFFFFF;
+}
+
+#main-content .btn-cta-outline:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+    transform: translateY(-3px);
+}
+
+/* ==================== 10. ANIMATIONS ==================== */
+
+@keyframes idFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==================== 11. DARK MODE ==================== */
+
+body.dark-mode,
+html[data-theme="dark"] body,
+body[data-theme="dark"] {
+    --id-heading: #F1FAF9;
+    --id-text: #DDE9E9;
+    --id-muted: #A7B9BC;
+    --id-bg: #101B20;
+    --id-soft: #142329;
+    --id-border: #2B4047;
+    --id-primary-light: #193D3D;
+    --id-orange-light: #392B1B;
+}
+
+body.dark-mode #main-content,
+html[data-theme="dark"] body #main-content,
+body[data-theme="dark"] #main-content {
+    background: var(--id-bg);
+    color: var(--id-text);
+}
+
+body.dark-mode #main-content .id-hero,
+body.dark-mode #main-content .id-highlights,
+body.dark-mode #main-content .id-travel-guide,
+body.dark-mode #main-content .id-final-cta,
+html[data-theme="dark"] body #main-content .id-hero,
+html[data-theme="dark"] body #main-content .id-highlights,
+html[data-theme="dark"] body #main-content .id-travel-guide,
+html[data-theme="dark"] body #main-content .id-final-cta,
+body[data-theme="dark"] #main-content .id-hero,
+body[data-theme="dark"] #main-content .id-highlights,
+body[data-theme="dark"] #main-content .id-travel-guide,
+body[data-theme="dark"] #main-content .id-final-cta {
+    background-color: var(--id-bg);
+}
+
+body.dark-mode #main-content .id-packages,
+body.dark-mode #main-content .id-itinerary,
+html[data-theme="dark"] body #main-content .id-packages,
+html[data-theme="dark"] body #main-content .id-itinerary,
+body[data-theme="dark"] #main-content .id-packages,
+body[data-theme="dark"] #main-content .id-itinerary {
+    background-color: var(--id-soft);
+}
+
+body.dark-mode #main-content .id-package-card,
+body.dark-mode #main-content .id-highlight-card,
+body.dark-mode #main-content .id-guide-card,
+body.dark-mode #main-content .id-inclusions-card,
+body.dark-mode #main-content .id-faq-item,
+body.dark-mode #main-content .id-hero-floating-card,
+html[data-theme="dark"] body #main-content .id-package-card,
+html[data-theme="dark"] body #main-content .id-highlight-card,
+html[data-theme="dark"] body #main-content .id-guide-card,
+html[data-theme="dark"] body #main-content .id-inclusions-card,
+html[data-theme="dark"] body #main-content .id-faq-item,
+html[data-theme="dark"] body #main-content .id-hero-floating-card,
+body[data-theme="dark"] #main-content .id-package-card,
+body[data-theme="dark"] #main-content .id-highlight-card,
+body[data-theme="dark"] #main-content .id-guide-card,
+body[data-theme="dark"] #main-content .id-inclusions-card,
+body[data-theme="dark"] #main-content .id-faq-item,
+body[data-theme="dark"] #main-content .id-hero-floating-card {
+    background-color: #18282D;
+    border-color: var(--id-border);
+}
+
+body.dark-mode #main-content .id-price-note,
+html[data-theme="dark"] body #main-content .id-price-note,
+body[data-theme="dark"] #main-content .id-price-note {
+    background: #34291D;
+    color: #F4E5D1;
+}
+
+body.dark-mode #main-content .btn-outline,
+html[data-theme="dark"] body #main-content .btn-outline,
+body[data-theme="dark"] #main-content .btn-outline {
+    border-color: #426164;
+    color: #73D5D0;
+}
+
+body.dark-mode #main-content .id-hero-image-caption h2,
+body.dark-mode #main-content .id-final-cta-content h2 {
+    color: #FFFFFF;
+}
+
+/* ==================== 12. RTL SUPPORT ==================== */
+
+html[dir="rtl"] #main-content .id-hero-floating-card {
+    right: auto;
+    left: -10px;
+}
+
+html[dir="rtl"] #main-content .id-package-number {
+    left: auto;
+    right: 15px;
+}
+
+html[dir="rtl"] #main-content .id-price-note {
+    border-left: 0;
+    border-right: 4px solid var(--id-orange);
+}
+
+html[dir="rtl"] #main-content .id-check-list li::before {
+    left: auto;
+    right: 0;
+}
+
+html[dir="rtl"] #main-content .id-cross-list li::before {
+    left: auto;
+    right: 5px;
+}
+
+html[dir="rtl"] #main-content .id-faq-item summary {
+    padding-right: 22px;
+    padding-left: 52px;
+}
+
+html[dir="rtl"] #main-content .id-faq-item summary::after {
+    right: auto;
+    left: 21px;
+}
+
+html[dir="rtl"] #main-content .id-hero-actions .btn:hover span[aria-hidden="true"] {
+    transform: translateX(-4px);
+}
+
+/* ==================== 13. TABLET ==================== */
+
+@media (max-width: 1024px) {
+    #main-content .section {
+        padding: 70px 0;
+    }
+
+    #main-content .id-hero-grid {
+        gap: 35px;
+    }
+
+    #main-content .id-hero-content h1 {
+        font-size: clamp(2.5rem, 5vw, 3.4rem);
+    }
+
+    #main-content .id-hero-image-frame {
+        height: 420px;
+    }
+
+    #main-content .id-package-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #main-content .id-highlight-grid,
+    #main-content .id-guide-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #main-content .id-itinerary-grid {
+        gap: 30px;
+    }
+
+    #main-content .id-final-cta-inner {
+        padding: 45px 35px;
+    }
+
+    #main-content .id-hero-floating-card {
+        right: 0;
+    }
+
+    html[dir="rtl"] #main-content .id-hero-floating-card {
+        right: auto;
+        left: 0;
+    }
+}
+
+/* ==================== 14. MOBILE ==================== */
+
+@media (max-width: 700px) {
+    #main-content .site-container {
+        width: calc(100% - 32px);
+    }
+
+    #main-content .section {
+        padding: 55px 0;
+    }
+
+    #main-content .id-hero {
+        padding: 45px 0 55px;
+    }
+
+    #main-content .id-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    #main-content .id-hero-content {
+        max-width: none;
+    }
+
+    #main-content .id-hero-content h1 {
+        font-size: clamp(2.45rem, 9vw, 3.4rem);
+    }
+
+    #main-content .id-hero-content > p {
+        font-size: 0.98rem;
+    }
+
+    #main-content .id-hero-points {
+        gap: 14px 20px;
+    }
+
+    #main-content .id-hero-point {
+        font-size: 0.8rem;
+    }
+
+    #main-content .id-hero-visual {
+        margin-right: 8px;
+    }
+
+    #main-content .id-hero-image-frame {
+        height: 350px;
+        border-radius: 23px;
+    }
+
+    #main-content .id-hero-floating-card {
+        right: -5px;
+        max-width: 245px;
+        padding: 13px 15px;
+    }
+
+    html[dir="rtl"] #main-content .id-hero-floating-card {
+        right: auto;
+        left: -5px;
+    }
+
+    #main-content .section-heading {
+        margin-bottom: 30px;
+    }
+
+    #main-content .section-heading h2 {
+        font-size: clamp(1.85rem, 7vw, 2.4rem);
+    }
+
+    #main-content .id-package-grid,
+    #main-content .id-highlight-grid,
+    #main-content .id-guide-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #main-content .id-package-image {
+        height: 235px;
+    }
+
+    #main-content .id-package-content > p {
+        min-height: 0;
+    }
+
+    #main-content .id-itinerary-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    #main-content .id-inclusions-card {
+        padding: 24px;
+    }
+
+    #main-content .id-final-cta {
+        padding: 10px 0 55px;
+    }
+
+    #main-content .id-final-cta-inner {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 40px 24px;
+        border-radius: 23px;
+    }
+
+    #main-content .id-final-cta-content h2 {
+        font-size: 2rem;
+    }
+
+    #main-content .id-final-cta-actions {
+        width: 100%;
+    }
+
+    #main-content .id-final-cta-actions .btn {
+        width: 100%;
+    }
+
+    #main-content .id-faq-wrapper {
+        margin-top: 45px;
+    }
+}
+
+/* ==================== 15. SMALL MOBILE ==================== */
+
+@media (max-width: 380px) {
+    #main-content .site-container {
+        width: calc(100% - 24px);
+    }
+
+    #main-content .id-hero-content h1 {
+        font-size: 2.25rem;
+    }
+
+    #main-content .id-hero-actions {
+        flex-direction: column;
+    }
+
+    #main-content .id-hero-actions .btn {
+        width: 100%;
+    }
+
+    #main-content .id-hero-image-frame {
+        height: 290px;
+    }
+
+    #main-content .id-hero-image-caption {
+        right: 18px;
+        bottom: 20px;
+        left: 18px;
+    }
+
+    #main-content .id-package-content {
+        padding: 20px;
+    }
+
+    #main-content .id-faq-item summary {
+        font-size: 0.9rem;
+    }
+}
+
+/* ==================== 16. ACCESSIBILITY ==================== */
+
+#main-content a:focus-visible,
+#main-content button:focus-visible,
+#main-content summary:focus-visible {
+    outline: 3px solid var(--id-orange);
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    #main-content *,
+    #main-content *::before,
+    #main-content *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* =====================================================
+   TRAVELORA — ORANGE HORIZONTAL LINES FOR SECTION HEADINGS
+   Excludes the Hero section
+===================================================== */
+
+/* Common section heading layout */
+.id-section-heading {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+/* Orange horizontal line below section headings */
+.id-section-heading h2 {
+    position: relative;
+    display: table;
+    margin: 0 auto 18px;
+    padding-bottom: 16px;
+    color: var(--heading);
+}
+
+/* Orange line */
+.id-section-heading h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 72px;
+    height: 3px;
+    background: var(--secondary);
+    border-radius: 10px;
+    transform: translateX(-50%);
+}
+
+/* Keep section descriptions centered */
+.id-section-heading p {
+    max-width: 680px;
+    margin: 0 auto;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+/* Ensure the line remains orange in dark mode */
+body.dark-mode .id-section-heading h2::after,
+html[data-theme="dark"] .id-section-heading h2::after,
+body[data-theme="dark"] .id-section-heading h2::after {
+    background: var(--secondary);
+}
+
+/* Responsive adjustment */
+@media (max-width: 600px) {
+    .id-section-heading {
+        margin-bottom: 30px;
+    }
+
+    .id-section-heading h2 {
+        padding-bottom: 13px;
+    }
+
+    .id-section-heading h2::after {
+        width: 58px;
+        height: 3px;
+    }
+}
+
+/* ==========================================
+   ORANGE LINE BEFORE SECTION TAGLINES
+   Excludes the Hero
+========================================== */
+
+.id-section-heading {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+/* Remove the previous line below section headings */
+.id-section-heading h2::after {
+    content: none;
+}
+
+/* Orange line before the tagline */
+.id-section-heading .section-eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    color: var(--primary);
+}
+
+/* Horizontal orange line */
+.id-section-heading .section-eyebrow::before {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 3px;
+    flex: 0 0 42px;
+    background: var(--secondary);
+    border-radius: 10px;
+}
+
+/* Keep headings consistent */
+.id-section-heading h2 {
+    color: var(--heading);
+    margin-bottom: 14px;
+}
+
+/* Description styling */
+.id-section-heading p {
+    max-width: 680px;
+    margin: 0 auto;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .id-section-heading {
+        margin-bottom: 30px;
+    }
+
+    .id-section-heading .section-eyebrow::before {
+        width: 30px;
+        flex-basis: 30px;
+    }
+}
+
+/* ==========================================
+   ORANGE LINE BEFORE SECTION TAGLINES
+   Excludes the Hero
+========================================== */
+
+.id-section-heading {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+/* Remove the previous line below section headings */
+.id-section-heading h2::after {
+    content: none;
+}
+
+/* Orange line before the tagline */
+.id-section-heading .section-eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    color: var(--primary);
+}
+
+/* Horizontal orange line */
+.id-section-heading .section-eyebrow::before {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 3px;
+    flex: 0 0 42px;
+    background: var(--secondary);
+    border-radius: 10px;
+}
+
+/* Keep headings consistent */
+.id-section-heading h2 {
+    color: var(--heading);
+    margin-bottom: 14px;
+}
+
+/* Description styling */
+.id-section-heading p {
+    max-width: 680px;
+    margin: 0 auto;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .id-section-heading {
+        margin-bottom: 30px;
+    }
+
+    .id-section-heading .section-eyebrow::before {
+        width: 30px;
+        flex-basis: 30px;
+    }
+}
+
+/* =====================================================
+   INTERNATIONAL DETAILS — FINAL OVERRIDES
+   Orange lines before section taglines, including CTA
+   Orange primary button with dark teal text
+===================================================== */
+
+/* SECTION TAGLINES — sections 2–5 only */
+#main-content .id-section-heading .section-eyebrow {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: row !important;
+    gap: 12px !important;
+    margin: 0 auto 16px !important;
+    color: #007F7D !important;
+    text-align: center !important;
+}
+
+/* Orange line BEFORE each section tagline */
+#main-content .id-section-heading .section-eyebrow::before,
+#main-content .id-cta-eyebrow::before {
+    content: "" !important;
+    display: inline-block !important;
+    position: static !important;
+    flex: 0 0 42px !important;
+    width: 42px !important;
+    min-width: 42px !important;
+    height: 3px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 10px !important;
+    background: #FF8A00 !important;
+    transform: none !important;
+}
+
+/* Remove the old line below section headings */
+#main-content .id-section-heading h2::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Consistent section heading colours */
+#main-content .id-section-heading h2 {
+    color: var(--id-heading) !important;
+}
+
+/* FINAL CTA — line before tagline */
+#main-content .id-final-cta .id-cta-eyebrow {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex-direction: row !important;
+    gap: 12px !important;
+    margin-bottom: 13px !important;
+    color: #FFFFFF !important;
+}
+
+/* HERO — preserve its existing dot; no horizontal line */
+#main-content .id-hero .id-eyebrow {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+#main-content .id-hero .id-eyebrow::before {
+    content: none !important;
+}
+
+/* HERO PRIMARY BUTTON — orange background, dark teal text */
+#main-content .id-hero .id-hero-actions a.btn.btn-primary {
+    background: #FF8A00 !important;
+    background-color: #FF8A00 !important;
+    color: #006967 !important;
+    border: 2px solid #FF8A00 !important;
+    box-shadow: 0 7px 18px rgba(255, 138, 0, 0.18) !important;
+}
+
+/* Arrow/text inside primary button */
+#main-content .id-hero .id-hero-actions a.btn.btn-primary span,
+#main-content .id-hero .id-hero-actions a.btn.btn-primary svg {
+    color: #006967 !important;
+    stroke: currentColor;
+}
+
+/* Button hover */
+#main-content .id-hero .id-hero-actions a.btn.btn-primary:hover {
+    background: #E87800 !important;
+    background-color: #E87800 !important;
+    border-color: #E87800 !important;
+    color: #FFFFFF !important;
+}
+
+#main-content .id-hero .id-hero-actions a.btn.btn-primary:hover span,
+#main-content .id-hero .id-hero-actions a.btn.btn-primary:hover svg {
+    color: #FFFFFF !important;
+}
+
+/* Mobile sizing */
+@media (max-width: 600px) {
+    #main-content .id-section-heading .section-eyebrow::before,
+    #main-content .id-cta-eyebrow::before {
+        flex-basis: 28px !important;
+        width: 28px !important;
+        min-width: 28px !important;
+    }
+
+    #main-content .id-section-heading .section-eyebrow,
+    #main-content .id-final-cta .id-cta-eyebrow {
+        gap: 8px !important;
+    }
+}
+
+/* FINAL CTA — PRIMARY BUTTON */
+.id-final-cta .id-final-cta-actions .btn-light {
+    background: #FF8A00 !important;
+    color: #FFFFFF !important;
+    border: 2px solid #FF8A00 !important;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.id-final-cta .id-final-cta-actions .btn-light:hover {
+    background: #E87800 !important;
+    border-color: #E87800 !important;
+    color: #FFFFFF !important;
+    transform: translateY(-3px);
+}
+
+/* SECONDARY CTA — NO HOVER COLOR CHANGE */
+.id-final-cta .btn-cta-outline,
+.id-final-cta .btn-cta-outline:hover,
+.id-final-cta .btn-cta-outline:focus {
+    background: transparent !important;
+    color: #FFFFFF !important;
+    border: 2px solid #FFFFFF !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* SECONDARY CTA — SUBTLE HOVER */
+.id-final-cta .btn-cta-outline {
+    background: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.id-final-cta .btn-cta-outline:hover {
+    background: transparent;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* SMALL ORANGE LINE BEFORE SECTION TAGLINES */
+
+#main-content .id-packages .section-eyebrow,
+#main-content .id-highlights .section-eyebrow,
+#main-content .id-itinerary .section-heading .section-eyebrow,
+#main-content .id-travel-guide .section-heading .section-eyebrow,
+#main-content .id-travel-guide .id-faq-heading .section-eyebrow {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: auto !important;
+    max-width: 100% !important;
+}
+
+/* Fixed small line — never stretch */
+#main-content .id-packages .section-eyebrow::before,
+#main-content .id-highlights .section-eyebrow::before,
+#main-content .id-itinerary .section-heading .section-eyebrow::before,
+#main-content .id-travel-guide .section-heading .section-eyebrow::before,
+#main-content .id-travel-guide .id-faq-heading .section-eyebrow::before {
+    content: "" !important;
+    display: block !important;
+    width: 24px !important;
+    min-width: 24px !important;
+    max-width: 24px !important;
+    height: 3px !important;
+    min-height: 3px !important;
+    flex: 0 0 24px !important;
+    background: #FF8A00 !important;
+    border: none !important;
+    border-radius: 3px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: static !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* CTA SECTION — SMALL ORANGE LINE BEFORE TAGLINE */
+
+.id-final-cta .id-cta-eyebrow {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    width: auto !important;
+}
+
+/* Fixed-size orange line */
+.id-final-cta .id-cta-eyebrow::before {
+    content: "" !important;
+    display: inline-block !important;
+    width: 24px !important;
+    min-width: 24px !important;
+    max-width: 24px !important;
+    height: 3px !important;
+    min-height: 3px !important;
+    flex: 0 0 24px !important;
+    background: #FF8A00 !important;
+    border: 0 !important;
+    border-radius: 3px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: static !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+
+/* FINAL CTA — FIXED SMALL ORANGE LINE */
+
+#main-content .id-final-cta .id-cta-eyebrow {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    width: auto !important;
+    margin-bottom: 13px !important;
+    padding: 0 !important;
+    color: #FFFFFF !important;
+    font-size: 0.73rem !important;
+    line-height: 1.5 !important;
+}
+
+/* Prevent the line from stretching */
+#main-content .id-final-cta .id-cta-eyebrow::before {
+    content: "" !important;
+    display: block !important;
+    position: static !important;
+    box-sizing: border-box !important;
+    width: 24px !important;
+    min-width: 24px !important;
+    max-width: 24px !important;
+    height: 3px !important;
+    min-height: 3px !important;
+    max-height: 3px !important;
+    flex: 0 0 24px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 3px !important;
+    background: #FF8A00 !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* CTA Secondary Button — Subtle Hover */
+
+#main-content .id-final-cta .btn-secondary {
+    transition: transform 0.25s ease,
+                background-color 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+#main-content .id-final-cta .btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+#main-content .id-final-cta .btn-secondary:focus-visible {
+    outline: 2px solid #FF8A00;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #main-content .id-final-cta .btn-secondary {
+        transition: none;
+    }
+
+    #main-content .id-final-cta .btn-secondary:hover {
+        transform: none;
+    }
+}
+
+/* FINAL CTA — SECONDARY BUTTON HOVER */
+
+#main-content .id-final-cta .id-final-cta-actions a.btn-cta-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease,
+                background-color 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease !important;
+}
+
+#main-content .id-final-cta .id-final-cta-actions a.btn-cta-outline:hover {
+    transform: translateY(-3px) !important;
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border-color: #FFFFFF !important;
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.16) !important;
+    cursor: pointer;
+}
+
+#main-content .id-final-cta .id-final-cta-actions a.btn-cta-outline:active {
+    transform: translateY(-1px) !important;
+}

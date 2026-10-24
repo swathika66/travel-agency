@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#009C9A">
-    <meta name="description" content="Explore the Manali Mountain Escape holiday package with Travelora.">
+    <meta name="description" content="Explore detailed domestic holiday packages with Travelora, including Manali, Goa, Rajasthan, Uttarakhand, Kerala and the Golden Triangle.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>Manali Mountain Escape | Travelora</title>
     <link rel="icon" type="image/png" href="favicon2.png">
-
     <link rel="preconnect" href="https://images.unsplash.com">
+
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="packages-details.css">
+    <link rel="stylesheet" href="package-details.css">
+
+    <title>Package Details | Travelora</title>
 </head>
 
 <body>
 
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<!-- ==================== HEADER ==================== -->
+<!-- ==================== HEADER — PRESERVED ==================== -->
 
 <header class="site-header">
     <div class="site-container header-container">
@@ -90,507 +91,728 @@
     </div>
 </header>
 
+
 <main id="main-content">
 
-<!-- ==================== BREADCRUMB ==================== -->
+    <!-- ==================== PACKAGE HERO ==================== -->
 
-<section class="package-breadcrumb">
-    <div class="site-container">
-        <nav aria-label="Breadcrumb">
-            <a href="index.html">Home</a>
-            <span aria-hidden="true">/</span>
-            <a href="domestic-packages.html">Domestic Packages</a>
-            <span aria-hidden="true">/</span>
-            <span aria-current="page">Manali Mountain Escape</span>
-        </nav>
-    </div>
-</section>
+    <section class="pd-hero-section">
+        <div class="site-container">
 
-<!-- ==================== PACKAGE HERO ==================== -->
+           
+            <div class="pd-hero-grid">
 
-<section class="package-hero">
-    <div class="site-container">
+                <div class="pd-hero-content">
 
-        <div class="package-hero-grid">
+                    <span class="pd-eyebrow" id="packageEyebrow">
+                        DISCOVER INDIA WITH TRAVELORA
+                    </span>
 
-            <div class="package-hero-content">
+                    <h1 id="packageTitle">Manali Mountain Escape</h1>
 
-                <span class="section-eyebrow">
-                    YOUR NEXT ADVENTURE STARTS HERE
-                </span>
+                    <p id="packageDescription">
+                        Discover beautiful mountain scenery, peaceful valleys
+                        and memorable experiences on your next Indian holiday.
+                    </p>
 
-                <h1>Manali Mountain Escape</h1>
+                    <div class="pd-location">
+                        <span aria-hidden="true">⌖</span>
+                        <span id="packageLocation">Manali, Himachal Pradesh</span>
+                    </div>
 
-                <p class="package-hero-description">
-                    Discover the beauty of the Himalayas with scenic
-                    mountain views, peaceful valleys and unforgettable
-                    experiences in Manali.
-                </p>
+                    <div class="pd-quick-info">
 
-                <div class="package-quick-info">
-                    <span>📍 Manali, Himachal Pradesh</span>
-                    <span>🗓️ 5 Days / 4 Nights</span>
-                    <span>🏔️ Mountain Adventure</span>
+                        <div class="pd-info-item">
+                            <span class="pd-info-icon" aria-hidden="true">▦</span>
+                            <div>
+                                <span>Duration</span>
+                                <strong id="packageDuration">5 Days / 4 Nights</strong>
+                            </div>
+                        </div>
+
+                        <div class="pd-info-item">
+                            <span class="pd-info-icon" aria-hidden="true">♙</span>
+                            <div>
+                                <span>Ideal For</span>
+                                <strong id="packageIdealFor">Families &amp; Couples</strong>
+                            </div>
+                        </div>
+
+                        <div class="pd-info-item">
+                            <span class="pd-info-icon" aria-hidden="true">✧</span>
+                            <div>
+                                <span>Experience</span>
+                                <strong id="packageExperience">Mountain Escape</strong>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="pd-hero-actions">
+                        <a href="#package-enquiry" class="btn btn-primary">
+                            Enquire Now <span aria-hidden="true">→</span>
+                        </a>
+
+                        <a href="#package-itinerary" class="btn btn-outline">
+                            View Itinerary
+                        </a>
+                    </div>
+
                 </div>
 
-                <div class="package-hero-actions">
+                <div class="pd-hero-image-wrap">
 
-                    <a href="#itinerary" class="btn btn-primary">
-                        View Itinerary
-                        <span aria-hidden="true">→</span>
-                    </a>
+                    <img
+                        id="packageHeroImage"
+                        class="pd-hero-image"
+                        src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1200&q=85"
+                        alt="Scenic mountains in Manali"
+                        fetchpriority="high">
 
-                    <a href="#booking-enquiry" class="btn btn-outline">
-                        Enquire Now
-                    </a>
+                    <div class="pd-image-badge">
+                        <span class="pd-badge-icon">✦</span>
+                        <div>
+                            <strong id="imageBadgeTitle">Space to Explore</strong>
+                            <span id="imageBadgeSubtitle">Your next adventure starts here</span>
+                        </div>
+                    </div>
 
-                    <button
-                        type="button"
-                        class="btn btn-outline"
-                        id="savePackageBtn"
-                        aria-pressed="false">
+                </div>
 
-                        <span id="savePackageIcon" aria-hidden="true">♡</span>
-                        <span id="savePackageText">Save Package</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==================== PACKAGE OVERVIEW ==================== -->
+
+    <section class="section pd-overview-section">
+        <div class="site-container pd-overview-grid">
+
+            <div class="pd-overview-content">
+                <span class="pd-eyebrow">ABOUT YOUR JOURNEY</span>
+
+                <h2 id="overviewTitle">
+                    Discover the Beauty of Manali
+                </h2>
+
+                <p id="packageOverview">
+                    Surrounded by beautiful mountain landscapes and lush
+                    valleys, Manali is a wonderful destination for travellers
+                    looking to enjoy nature, sightseeing and a refreshing break.
+                </p>
+
+                <p id="packageOverviewExtra">
+                    Explore local attractions, enjoy the surrounding scenery
+                    and create memories with a holiday tailored to your travel
+                    preferences.
+                </p>
+            </div>
+
+            <div class="pd-overview-card">
+                <span class="pd-overview-icon" aria-hidden="true">✈</span>
+
+                <h3 id="overviewCardTitle">Your Journey, Your Way</h3>
+
+                <p id="overviewCardText">
+                    Plan a memorable getaway with a destination and itinerary
+                    that match your interests.
+                </p>
+
+                <a href="#package-enquiry" class="pd-text-link">
+                    Plan Your Trip <span aria-hidden="true">→</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ==================== PACKAGE HIGHLIGHTS ==================== -->
+
+    <section class="section pd-highlights-section">
+      <!-- ==================== PACKAGE HIGHLIGHTS ==================== -->
+
+<section class="section pd-highlights-section">
+    <div class="site-container">
+
+        <div class="section-heading">
+            <span class="pd-eyebrow">TRIP HIGHLIGHTS</span>
+            <h2>Highlights of Your Journey</h2>
+            <p>Explore the experiences that make this destination special.</p>
+        </div>
+
+        <div class="pd-highlights-grid" id="packageHighlights">
+
+            <!-- Scenic Landscapes -->
+            <article class="pd-highlight-card">
+                <div class="pd-highlight-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.5 20L9 7L13 14L16 9L21.5 20H2.5Z"
+                              stroke="currentColor" stroke-width="1.7"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.5 20L12 12L17.5 20"
+                              stroke="currentColor" stroke-width="1.7"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3>Scenic Landscapes</h3>
+                <p>Discover beautiful mountain views and natural surroundings.</p>
+            </article>
+
+            <!-- Local Sightseeing -->
+            <article class="pd-highlight-card">
+                <div class="pd-highlight-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 20H21M5 20V10M19 20V10M3 10H21"
+                              stroke="currentColor" stroke-width="1.7"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 3L2.5 9H21.5L12 3Z"
+                              stroke="currentColor" stroke-width="1.7"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 13V17M12 13V17M15 13V17"
+                              stroke="currentColor" stroke-width="1.7"
+                              stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>Local Sightseeing</h3>
+                <p>Explore well-known attractions and memorable places.</p>
+            </article>
+
+            <!-- Nature Experiences -->
+            <article class="pd-highlight-card">
+                <div class="pd-highlight-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.5 3.5C12 3.5 5 6.5 5 13
+                                 C5 16.5 7.5 19 11 19
+                                 C17.5 19 20.5 12 20.5 3.5Z"
+                              stroke="currentColor" stroke-width="1.7"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3 21C7 15 11 11 17 7"
+                              stroke="currentColor" stroke-width="1.7"
+                              stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>Nature Experiences</h3>
+                <p>Enjoy refreshing scenery and time away from busy routines.</p>
+            </article>
+
+            <!-- Memorable Moments -->
+            <article class="pd-highlight-card">
+                <div class="pd-highlight-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.8 4.8C18.7 2.7 15.3 2.7 13.2 4.8
+                                 L12 6L10.8 4.8C8.7 2.7 5.3 2.7 3.2 4.8
+                                 C1.1 6.9 1.1 10.3 3.2 12.4L12 21
+                                 L20.8 12.4C22.9 10.3 22.9 6.9 20.8 4.8Z"
+                              stroke="currentColor" stroke-width="1.7"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3>Memorable Moments</h3>
+                <p>Make your holiday special with friends or family.</p>
+            </article>
+
+        </div>
+    </div>
+</section>
+    </section>
+
+
+    <!-- ==================== ITINERARY ==================== -->
+
+    <section class="section pd-itinerary-section" id="package-itinerary">
+        <div class="site-container">
+
+            <div class="section-heading">
+                <span class="pd-eyebrow">YOUR TRAVEL PLAN</span>
+                <h2>Day-by-Day Itinerary</h2>
+                <p>See how your holiday could unfold from arrival to departure.</p>
+            </div>
+
+            <div class="pd-timeline" id="itineraryList">
+
+                <article class="pd-day-card">
+                    <div class="pd-day-number">01</div>
+                    <div class="pd-day-content">
+                        <span class="pd-day-label">DAY 01</span>
+                        <h3>Arrival in Manali</h3>
+                        <p>Arrive, settle into your accommodation and enjoy time at leisure.</p>
+                    </div>
+                </article>
+
+                <article class="pd-day-card">
+                    <div class="pd-day-number">02</div>
+                    <div class="pd-day-content">
+                        <span class="pd-day-label">DAY 02</span>
+                        <h3>Explore Local Attractions</h3>
+                        <p>Discover local sights and enjoy the mountain surroundings.</p>
+                    </div>
+                </article>
+
+                <article class="pd-day-card">
+                    <div class="pd-day-number">03</div>
+                    <div class="pd-day-content">
+                        <span class="pd-day-label">DAY 03</span>
+                        <h3>Scenic Excursion</h3>
+                        <p>Spend the day exploring the destination and its natural beauty.</p>
+                    </div>
+                </article>
+
+                <article class="pd-day-card">
+                    <div class="pd-day-number">04</div>
+                    <div class="pd-day-content">
+                        <span class="pd-day-label">DAY 04</span>
+                        <h3>Leisure and Discovery</h3>
+                        <p>Enjoy additional sightseeing or spend time at your own pace.</p>
+                    </div>
+                </article>
+
+                <article class="pd-day-card">
+                    <div class="pd-day-number">05</div>
+                    <div class="pd-day-content">
+                        <span class="pd-day-label">DAY 05</span>
+                        <h3>Departure</h3>
+                        <p>Complete your holiday and depart according to your travel arrangements.</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <p class="pd-itinerary-note">
+                <strong>Please note:</strong> Activities, travel times and
+                sightseeing arrangements depend on the final confirmed itinerary,
+                weather and local conditions.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- ==================== INCLUSIONS & EXCLUSIONS ==================== -->
+
+    <section class="section pd-inclusions-section">
+        <div class="site-container">
+
+            <div class="section-heading">
+                <span class="pd-eyebrow">TRAVEL INFORMATION</span>
+                <h2>What's Included?</h2>
+                <p>Review the proposed package details before confirming your trip.</p>
+            </div>
+
+            <div class="pd-inclusion-grid">
+
+                <div class="pd-inclusion-card">
+                    <div class="pd-inclusion-heading">
+                        <span class="pd-inclusion-symbol included-symbol">✓</span>
+                        <h3>Inclusions</h3>
+                    </div>
+
+                    <ul id="packageInclusions">
+                        <li>Accommodation according to the confirmed booking</li>
+                        <li>Sightseeing specified in the final itinerary</li>
+                        <li>Travel assistance as agreed in the package</li>
+                        <li>Other services listed in the confirmed quotation</li>
+                    </ul>
+                </div>
+
+                <div class="pd-inclusion-card">
+                    <div class="pd-inclusion-heading">
+                        <span class="pd-inclusion-symbol excluded-symbol">×</span>
+                        <h3>Exclusions</h3>
+                    </div>
+
+                    <ul id="packageExclusions">
+                        <li>Flights or train tickets unless specified</li>
+                        <li>Personal expenses and shopping</li>
+                        <li>Optional activities not listed in the package</li>
+                        <li>Meals or services not included in the final quotation</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <p class="pd-inclusion-note">
+                Final inclusions and exclusions will be confirmed in your
+                quotation before booking.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- ==================== ENQUIRY SECTION ==================== -->
+
+    <section class="section pd-booking-section" id="package-enquiry">
+        <div class="site-container">
+
+            <div class="pd-booking-card">
+
+                <div class="pd-booking-content">
+                    <span class="pd-eyebrow">START PLANNING</span>
+
+                    <h2>Ready to Explore <span id="bookingPackageName">Manali</span>?</h2>
+
+                    <p>
+                        Share your travel preferences with us to discuss
+                        availability, dates and package options.
+                    </p>
+
+                    <div class="pd-booking-benefits">
+                        <span>✓ Personalised enquiry</span>
+                        <span>✓ Flexible travel planning</span>
+                        <span>✓ Assistance with your trip</span>
+                    </div>
+
+                </div>
+
+                <form class="pd-booking-form" id="packageEnquiryForm"
+                      action="contact.html" method="get">
+
+                    <h3>Send an Enquiry</h3>
+
+                    <div class="pd-form-group">
+                        <label for="enquiryName">Full Name</label>
+                        <input type="text" id="enquiryName" name="name"
+                               placeholder="Enter your name" autocomplete="name" required>
+                    </div>
+
+                    <div class="pd-form-group">
+                        <label for="enquiryEmail">Email Address</label>
+                        <input type="email" id="enquiryEmail" name="email"
+                               placeholder="Enter your email" autocomplete="email" required>
+                    </div>
+
+                    <div class="pd-form-group">
+                        <label for="enquiryPhone">Phone Number</label>
+                        <input type="tel" id="enquiryPhone" name="phone"
+                               placeholder="Enter your phone number" autocomplete="tel">
+                    </div>
+
+                    <div class="pd-form-group">
+                        <label for="enquiryPackage">Selected Package</label>
+                        <select id="enquiryPackage" name="package" required>
+                            <option value="manali">Manali Mountain Escape</option>
+                            <option value="goa">Goa Beach Holiday</option>
+                            <option value="rajasthan">Royal Rajasthan Tour</option>
+                            <option value="uttarakhand">Uttarakhand Nature Tour</option>
+                            <option value="kerala">Kerala Backwater Retreat</option>
+                            <option value="golden-triangle">Golden Triangle Discovery</option>
+                        </select>
+                    </div>
+
+                    <div class="pd-form-group">
+                        <label for="enquiryDate">Preferred Travel Date</label>
+                        <input type="date" id="enquiryDate" name="travelDate">
+                    </div>
+
+                    <div class="pd-form-group">
+                        <label for="enquiryTravellers">Number of Travellers</label>
+                        <select id="enquiryTravellers" name="travellers">
+                            <option value="1">1 Traveller</option>
+                            <option value="2" selected>2 Travellers</option>
+                            <option value="3-4">3–4 Travellers</option>
+                            <option value="5-8">5–8 Travellers</option>
+                            <option value="9+">9 or more</option>
+                        </select>
+                    </div>
+
+                    <div class="pd-form-group">
+                        <label for="enquiryMessage">Additional Requirements</label>
+                        <textarea id="enquiryMessage" name="message" rows="3"
+                                  placeholder="Tell us about your travel plans"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary pd-submit-btn">
+                        Continue Enquiry <span aria-hidden="true">→</span>
                     </button>
 
-                </div>
+                    <p class="pd-form-note">
+                        Your enquiry details need to be connected to a form handler
+                        or processed by your contact page.
+                    </p>
 
-                <p id="savePackageMessage"
-                   role="status"
-                   aria-live="polite"></p>
+                </form>
 
             </div>
+        </div>
+    </section>
 
-            <div class="package-hero-image">
+
+    <!-- ==================== RELATED PACKAGES ==================== -->
+<!-- ==================== DOMESTIC PACKAGE CARDS ==================== -->
+
+<section class="section pd-related-section" id="domestic-packages">
+    <div class="site-container">
+
+        <div class="section-heading">
+            <span class="pd-eyebrow">EXPLORE INDIA</span>
+            <h2>Our Domestic Holiday Packages</h2>
+            <p>Discover beautiful destinations with thoughtfully planned holiday packages.</p>
+        </div>
+
+        <div class="pd-related-grid" id="relatedPackages">
+
+            <!-- 1. MANALI -->
+            <article class="pd-related-card" data-package="manali">
                 <img
-                    src="https://images.unsplash.com/photo-1593181629936-11c609b8db9b?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
-                    alt="Beautiful mountain landscape near Manali"
-                    fetchpriority="high">
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- ==================== PACKAGE OVERVIEW ==================== -->
-
-<section class="section package-overview">
-    <div class="site-container">
-
-        <div class="section-heading">
-            <span class="section-eyebrow">DISCOVER MANALI</span>
-            <h2>Package Overview</h2>
-            <p>
-                Enjoy a refreshing Himalayan getaway filled with natural
-                beauty, local attractions and time to relax.
-            </p>
-        </div>
-
-        <div class="package-overview-grid">
-
-            <article class="overview-card">
-                <span class="overview-icon" aria-hidden="true">🏔️</span>
-                <h3>Mountain Scenery</h3>
-                <p>Enjoy spectacular mountain views and beautiful landscapes.</p>
-            </article>
-
-            <article class="overview-card">
-                <span class="overview-icon" aria-hidden="true">🏨</span>
-                <h3>Comfortable Stay</h3>
-                <p>Discuss accommodation options to suit your travel plans.</p>
-            </article>
-
-            <article class="overview-card">
-                <span class="overview-icon" aria-hidden="true">🚗</span>
-                <h3>Local Sightseeing</h3>
-                <p>Discover local attractions and the charm of the region.</p>
-            </article>
-
-            <article class="overview-card">
-                <span class="overview-icon" aria-hidden="true">📅</span>
-                <h3>Flexible Planning</h3>
-                <p>Ask our team about travel dates and package options.</p>
-            </article>
-
-        </div>
-    </div>
-</section>
-
-<!-- ==================== GALLERY ==================== -->
-
-<section class="section package-gallery">
-    <div class="site-container">
-
-        <div class="section-heading">
-            <span class="section-eyebrow">GET INSPIRED</span>
-            <h2>Explore Manali</h2>
-            <p>Picture yourself surrounded by the beauty of the mountains.</p>
-        </div>
-
-        <div class="package-gallery-grid">
-
-            <img
-                src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
-                alt="Himalayan mountain landscape"
-                loading="lazy">
-
-            <img
-                src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
-                alt="Mountain peaks beneath a beautiful sky"
-                loading="lazy">
-
-            <img
-                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
-                alt="Scenic mountain ranges"
-                loading="lazy">
-
-        </div>
-    </div>
-</section>
-
-<!-- ==================== ITINERARY ==================== -->
-
-<section class="section package-itinerary" id="itinerary">
-    <div class="site-container">
-
-        <div class="section-heading">
-            <span class="section-eyebrow">YOUR JOURNEY</span>
-            <h2>5 Days / 4 Nights Itinerary</h2>
-            <p>A sample itinerary for your Manali getaway.</p>
-        </div>
-
-        <div class="itinerary-list">
-
-            <article class="itinerary-item">
-                <span class="itinerary-day">Day 1</span>
-                <div>
-                    <h3>Arrival in Manali</h3>
-                    <p>
-                        Arrive in Manali, check in to your accommodation
-                        and enjoy some free time exploring the surroundings.
-                    </p>
-                </div>
-            </article>
-
-            <article class="itinerary-item">
-                <span class="itinerary-day">Day 2</span>
-                <div>
-                    <h3>Manali Sightseeing</h3>
-                    <p>
-                        Explore local attractions, markets and scenic
-                        places around Manali.
-                    </p>
-                </div>
-            </article>
-
-            <article class="itinerary-item">
-                <span class="itinerary-day">Day 3</span>
-                <div>
-                    <h3>Mountain Excursion</h3>
-                    <p>
-                        Enjoy mountain views and sightseeing, depending
-                        on the season, weather and road conditions.
-                    </p>
-                </div>
-            </article>
-
-            <article class="itinerary-item">
-                <span class="itinerary-day">Day 4</span>
-                <div>
-                    <h3>Leisure and Exploration</h3>
-                    <p>
-                        Enjoy optional activities, local shopping or
-                        additional sightseeing at your own pace.
-                    </p>
-                </div>
-            </article>
-
-            <article class="itinerary-item">
-                <span class="itinerary-day">Day 5</span>
-                <div>
-                    <h3>Departure</h3>
-                    <p>
-                        Check out and depart after your Manali mountain holiday.
-                    </p>
-                </div>
-            </article>
-
-        </div>
-
-        <p class="itinerary-note">
-            This is a sample itinerary. Final activities and timings
-            depend on the confirmed package, season and local conditions.
-        </p>
-
-    </div>
-</section>
-
-<!-- ==================== INCLUSIONS ==================== -->
-
-<section class="section package-inclusions">
-    <div class="site-container">
-
-        <div class="section-heading">
-            <span class="section-eyebrow">PACKAGE DETAILS</span>
-            <h2>What's Included?</h2>
-            <p>Confirm the final inclusions with Travelora before booking.</p>
-        </div>
-
-        <div class="inclusions-grid">
-
-            <article class="inclusions-card">
-                <h3>Inclusions</h3>
-                <ul>
-                    <li>Accommodation as confirmed in your booking</li>
-                    <li>Meals as specified in the final package</li>
-                    <li>Sightseeing as listed in the confirmed itinerary</li>
-                    <li>Transport only if included in your package</li>
-                    <li>Assistance with trip planning</li>
-                </ul>
-            </article>
-
-            <article class="exclusions-card">
-                <h3>Exclusions</h3>
-                <ul>
-                    <li>Travel to and from Manali unless specified</li>
-                    <li>Personal expenses and shopping</li>
-                    <li>Optional activities not listed in the package</li>
-                    <li>Additional meals not included in the booking</li>
-                    <li>Travel insurance unless specified</li>
-                </ul>
-            </article>
-
-        </div>
-    </div>
-</section>
-
-<!-- ==================== TRAVEL INFORMATION ==================== -->
-
-<section class="section travel-information">
-    <div class="site-container">
-
-        <div class="section-heading">
-            <span class="section-eyebrow">BEFORE YOU TRAVEL</span>
-            <h2>Travel Information</h2>
-        </div>
-
-        <div class="travel-info-grid">
-
-            <article class="travel-info-card">
-                <h3>Best Time to Visit</h3>
-                <p>
-                    Manali offers different experiences across seasons.
-                    Choose your travel dates based on the weather and
-                    activities you prefer.
-                </p>
-            </article>
-
-            <article class="travel-info-card">
-                <h3>What to Pack</h3>
-                <p>
-                    Bring suitable layers, comfortable footwear and
-                    weather-appropriate clothing.
-                </p>
-            </article>
-
-            <article class="travel-info-card">
-                <h3>Travel Planning</h3>
-                <p>
-                    Check local conditions and transport arrangements
-                    before your departure.
-                </p>
-            </article>
-
-        </div>
-    </div>
-</section>
-
-<!-- ==================== BOOKING ENQUIRY ==================== -->
-
-<section class="section booking-enquiry" id="booking-enquiry">
-    <div class="site-container">
-
-        <div class="booking-enquiry-grid">
-
-            <div class="booking-enquiry-content">
-                <span class="section-eyebrow">LET'S PLAN YOUR TRIP</span>
-                <h2>Enquire About Manali Mountain Escape</h2>
-                <p>
-                    Share your travel preferences and contact details.
-                    Our team can help you discuss availability and package
-                    arrangements.
-                </p>
-
-                <div class="booking-contact-info">
-                    <p><strong>Destination:</strong> Manali, Himachal Pradesh</p>
-                    <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
-                </div>
-            </div>
-
-            <form class="booking-enquiry-form"
-                  action="contact.html"
-                  method="get">
-
-                <div class="form-group">
-                    <label for="travellerName">Full Name</label>
-                    <input type="text"
-                           id="travellerName"
-                           name="name"
-                           placeholder="Enter your full name"
-                           autocomplete="name"
-                           required>
-                </div>
-
-                <div class="form-group">
-                    <label for="travellerEmail">Email Address</label>
-                    <input type="email"
-                           id="travellerEmail"
-                           name="email"
-                           placeholder="Enter your email"
-                           autocomplete="email"
-                           required>
-                </div>
-
-                <div class="form-group">
-                    <label for="travellerPhone">Phone Number</label>
-                    <input type="tel"
-                           id="travellerPhone"
-                           name="phone"
-                           placeholder="Enter your phone number"
-                           autocomplete="tel"
-                           required>
-                </div>
-
-                <div class="form-group">
-                    <label for="travelDate">Preferred Travel Date</label>
-                    <input type="date"
-                           id="travelDate"
-                           name="travelDate">
-                </div>
-
-                <div class="form-group">
-                    <label for="travellerCount">Number of Travellers</label>
-                    <select id="travellerCount" name="travellers" required>
-                        <option value="">Select travellers</option>
-                        <option value="1">1 Traveller</option>
-                        <option value="2">2 Travellers</option>
-                        <option value="3-4">3–4 Travellers</option>
-                        <option value="5-8">5–8 Travellers</option>
-                        <option value="9+">9+ Travellers</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="enquiryMessage">Additional Requirements</label>
-                    <textarea id="enquiryMessage"
-                              name="message"
-                              rows="4"
-                              placeholder="Tell us about your travel preferences"></textarea>
-                </div>
-
-                <input type="hidden"
-                       name="package"
-                       value="Manali Mountain Escape">
-
-                <button type="submit" class="btn btn-primary">
-                    Submit Enquiry
-                    <span aria-hidden="true">→</span>
-                </button>
-
-            </form>
-
-        </div>
-    </div>
-</section>
-
-<!-- ==================== RELATED PACKAGES ==================== -->
-
-<section class="section related-packages">
-    <div class="site-container">
-
-        <div class="section-heading">
-            <span class="section-eyebrow">MORE TO EXPLORE</span>
-            <h2>Explore Other Holidays</h2>
-            <p>Discover more destinations for your next getaway.</p>
-        </div>
-
-        <div class="related-packages-grid">
-
-            <article class="related-package-card">
-                <img
-                    src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&amp;fit=crop&amp;w=800&amp;q=85"
-                    alt="Rajasthan heritage architecture"
+                    src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=85"
+                    alt="Beautiful mountain scenery in Manali"
                     loading="lazy">
-                <div class="related-package-content">
-                    <h3>Royal Rajasthan Tour</h3>
-                    <p>Discover forts, heritage and colourful cities.</p>
-                    <a href="domestic-packages.html" class="text-link">
-                        Explore Packages →
+
+                <div class="pd-related-content">
+                    <span class="pd-card-location">Himachal Pradesh</span>
+                    <h3>Manali Mountain Escape</h3>
+
+                    <p class="pd-card-duration">5 Days / 4 Nights</p>
+
+                    <div class="pd-card-price">
+                        <span>Starting from</span>
+                        <strong>₹12,999</strong>
+                        <small>per person</small>
+                    </div>
+
+                    <div class="pd-card-inclusions">
+                        <h4>Package Includes</h4>
+                        <ul>
+                            <li>Accommodation as per plan</li>
+                            <li>Local sightseeing</li>
+                            <li>Transfers as per itinerary</li>
+                            <li>Meals as specified in the quote</li>
+                        </ul>
+                    </div>
+
+                    <a href="package-details.html?package=manali#package-enquiry"
+                       class="btn btn-primary pd-card-button">
+                        Enquire Now <span aria-hidden="true">→</span>
                     </a>
                 </div>
             </article>
 
-            <article class="related-package-card">
+            <!-- 2. GOA -->
+            <article class="pd-related-card" data-package="goa">
                 <img
-                    src="https://images.unsplash.com/photo-1560179406-1c6c60e0dc76?auto=format&amp;fit=crop&amp;w=800&amp;q=85"
-                    alt="Coastal beach holiday"
+                    src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&q=85"
+                    alt="Goa beach and coastline"
                     loading="lazy">
-                <div class="related-package-content">
+
+                <div class="pd-related-content">
+                    <span class="pd-card-location">Goa, India</span>
                     <h3>Goa Beach Holiday</h3>
-                    <p>Enjoy a relaxing coastal escape.</p>
-                    <a href="domestic-packages.html" class="text-link">
-                        Explore Packages →
+
+                    <p class="pd-card-duration">4 Days / 3 Nights</p>
+
+                    <div class="pd-card-price">
+                        <span>Starting from</span>
+                        <strong>₹9,999</strong>
+                        <small>per person</small>
+                    </div>
+
+                    <div class="pd-card-inclusions">
+                        <h4>Package Includes</h4>
+                        <ul>
+                            <li>Accommodation as per plan</li>
+                            <li>Beach and local sightseeing</li>
+                            <li>Transfers as per itinerary</li>
+                            <li>Meals as specified in the quote</li>
+                        </ul>
+                    </div>
+
+                    <a href="package-details.html?package=goa#package-enquiry"
+                       class="btn btn-primary pd-card-button">
+                        Enquire Now <span aria-hidden="true">→</span>
                     </a>
                 </div>
             </article>
 
-            <article class="related-package-card">
+            <!-- 3. RAJASTHAN -->
+            <article class="pd-related-card" data-package="rajasthan">
                 <img
-                    src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&amp;fit=crop&amp;w=800&amp;q=85"
-                    alt="Himalayan landscape"
+                    src="https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?auto=format&fit=crop&w=800&q=85"
+                    alt="Rajasthan heritage palace architecture"
                     loading="lazy">
-                <div class="related-package-content">
+
+                <div class="pd-related-content">
+                    <span class="pd-card-location">Rajasthan, India</span>
+                    <h3>Royal Rajasthan Tour</h3>
+
+                    <p class="pd-card-duration">6 Days / 5 Nights</p>
+
+                    <div class="pd-card-price">
+                        <span>Starting from</span>
+                        <strong>₹16,999</strong>
+                        <small>per person</small>
+                    </div>
+
+                    <div class="pd-card-inclusions">
+                        <h4>Package Includes</h4>
+                        <ul>
+                            <li>Accommodation as per plan</li>
+                            <li>Heritage and city sightseeing</li>
+                            <li>Transfers as per itinerary</li>
+                            <li>Meals as specified in the quote</li>
+                        </ul>
+                    </div>
+
+                    <a href="package-details.html?package=rajasthan#package-enquiry"
+                       class="btn btn-primary pd-card-button">
+                        Enquire Now <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 4. UTTARAKHAND -->
+            <article class="pd-related-card" data-package="uttarakhand">
+                <img
+                    src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=85"
+                    alt="Himalayan mountain scenery in Uttarakhand"
+                    loading="lazy">
+
+                <div class="pd-related-content">
+                    <span class="pd-card-location">Uttarakhand, India</span>
                     <h3>Uttarakhand Nature Tour</h3>
-                    <p>Explore mountain landscapes and nature.</p>
-                    <a href="domestic-packages.html" class="text-link">
-                        Explore Packages →
+
+                    <p class="pd-card-duration">5 Days / 4 Nights</p>
+
+                    <div class="pd-card-price">
+                        <span>Starting from</span>
+                        <strong>₹13,999</strong>
+                        <small>per person</small>
+                    </div>
+
+                    <div class="pd-card-inclusions">
+                        <h4>Package Includes</h4>
+                        <ul>
+                            <li>Accommodation as per plan</li>
+                            <li>Nature and local sightseeing</li>
+                            <li>Transfers as per itinerary</li>
+                            <li>Meals as specified in the quote</li>
+                        </ul>
+                    </div>
+
+                    <a href="package-details.html?package=uttarakhand#package-enquiry"
+                       class="btn btn-primary pd-card-button">
+                        Enquire Now <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 5. KERALA -->
+            <article class="pd-related-card" data-package="kerala">
+                <img
+                    src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=85"
+                    alt="Kerala backwaters and tropical greenery"
+                    loading="lazy">
+
+                <div class="pd-related-content">
+                    <span class="pd-card-location">Kerala, India</span>
+                    <h3>Kerala Backwater Retreat</h3>
+
+                    <p class="pd-card-duration">5 Days / 4 Nights</p>
+
+                    <div class="pd-card-price">
+                        <span>Starting from</span>
+                        <strong>₹15,999</strong>
+                        <small>per person</small>
+                    </div>
+
+                    <div class="pd-card-inclusions">
+                        <h4>Package Includes</h4>
+                        <ul>
+                            <li>Accommodation as per plan</li>
+                            <li>Backwater and local sightseeing</li>
+                            <li>Transfers as per itinerary</li>
+                            <li>Meals as specified in the quote</li>
+                        </ul>
+                    </div>
+
+                    <a href="package-details.html?package=kerala#package-enquiry"
+                       class="btn btn-primary pd-card-button">
+                        Enquire Now <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 6. GOLDEN TRIANGLE -->
+            <article class="pd-related-card" data-package="golden-triangle">
+                <img
+                    src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=800&q=85"
+                    alt="Taj Mahal in Agra"
+                    loading="lazy">
+
+                <div class="pd-related-content">
+                    <span class="pd-card-location">Delhi, Agra &amp; Jaipur</span>
+                    <h3>Golden Triangle Discovery</h3>
+
+                    <p class="pd-card-duration">6 Days / 5 Nights</p>
+
+                    <div class="pd-card-price">
+                        <span>Starting from</span>
+                        <strong>₹18,999</strong>
+                        <small>per person</small>
+                    </div>
+
+                    <div class="pd-card-inclusions">
+                        <h4>Package Includes</h4>
+                        <ul>
+                            <li>Accommodation as per plan</li>
+                            <li>Monument and city sightseeing</li>
+                            <li>Transfers as per itinerary</li>
+                            <li>Meals as specified in the quote</li>
+                        </ul>
+                    </div>
+
+                    <a href="package-details.html?package=golden-triangle#package-enquiry"
+                       class="btn btn-primary pd-card-button">
+                        Enquire Now <span aria-hidden="true">→</span>
                     </a>
                 </div>
             </article>
 
         </div>
+
+        
     </div>
 </section>
 
-<!-- ==================== FINAL CTA ==================== -->
+<!-- ==================== PACKAGE DETAILS CTA ==================== -->
 
-<section class="final-cta">
-    <div class="site-container final-cta-inner">
+<section class="pd-final-cta" id="plan-your-trip">
+    <div class="pd-final-cta-container">
 
-        <div class="final-cta-content">
-            <span class="section-eyebrow">YOUR NEXT JOURNEY AWAITS</span>
-            <h2>Ready to Explore Manali?</h2>
+        <div class="pd-final-cta-content">
+            <span class="pd-final-cta-label">YOUR NEXT ADVENTURE STARTS HERE</span>
+
+            <h2>Ready for Your Next Adventure?</h2>
+
             <p>
-                Start planning your mountain escape with Travelora.
+                Let us help you plan a memorable holiday tailored to your
+                interests, travel style and budget.
             </p>
+
+            <a href="#package-enquiry" class="pd-final-cta-button">
+                Plan Your Trip
+                <span aria-hidden="true">→</span>
+            </a>
         </div>
 
-        <div class="final-cta-actions">
-            <a href="#booking-enquiry" class="btn btn-light">
-                Enquire Now
-            </a>
-            <a href="domestic-packages.html" class="btn btn-cta-outline">
-                More Packages
-            </a>
+        <div class="pd-final-cta-decoration" aria-hidden="true">
+            <span class="pd-cta-circle pd-cta-circle-one"></span>
+            <span class="pd-cta-circle pd-cta-circle-two"></span>
+            <span class="pd-cta-plane">✈</span>
         </div>
 
     </div>
 </section>
 
-</main>
+<!-- ==================== END PACKAGE DETAILS CTA ==================== -->
+    
 
-<!-- ==================== FOOTER ==================== -->
+<!-- ==================== FOOTER — PRESERVED ==================== -->
 
 <footer class="site-footer">
     <div class="site-container footer-container">
@@ -617,22 +839,16 @@
             <div class="social-links" aria-label="Social media">
 
                 <a href="https://www.facebook.com/"
-                   class="social-icon"
-                   aria-label="Facebook"
-                   title="Facebook"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                   class="social-icon" aria-label="Facebook"
+                   title="Facebook" target="_blank" rel="noopener noreferrer">
                     <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M14 8h3V4h-3c-3 0-5 2-5 5v2H6v4h3v5h4v-5h3l1-4h-4V9c0-.7.3-1 1-1z"/>
                     </svg>
                 </a>
 
                 <a href="https://www.instagram.com/"
-                   class="social-icon"
-                   aria-label="Instagram"
-                   title="Instagram"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                   class="social-icon" aria-label="Instagram"
+                   title="Instagram" target="_blank" rel="noopener noreferrer">
                     <svg viewBox="0 0 24 24" aria-hidden="true">
                         <rect x="3" y="3" width="18" height="18" rx="5"
                               fill="none" stroke="currentColor" stroke-width="2"/>
@@ -643,22 +859,16 @@
                 </a>
 
                 <a href="https://www.linkedin.com/"
-                   class="social-icon"
-                   aria-label="LinkedIn"
-                   title="LinkedIn"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                   class="social-icon" aria-label="LinkedIn"
+                   title="LinkedIn" target="_blank" rel="noopener noreferrer">
                     <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M5 8H2V21H5V8zM3.5 3C2.4 3 2 3.8 2 4.6S2.4 6 3.5 6 5 5.2 5 4.4 4.6 3 3.5 3zM8 8h3v1.8h.1C11.5 8.7 12.7 7.5 15 7.5c3 0 4 2 4 5.2V21h-3v-7.3c0-1.7 0-3.8-2.3-3.8-2.3 0-2.7 1.8-2.7 3.7V21H8V8z"/>
                     </svg>
                 </a>
 
                 <a href="https://www.youtube.com/"
-                   class="social-icon"
-                   aria-label="YouTube"
-                   title="YouTube"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                   class="social-icon" aria-label="YouTube"
+                   title="YouTube" target="_blank" rel="noopener noreferrer">
                     <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M21 7.2a2.8 2.8 0 0 0-2-2C17.3 4.7 12 4.7 12 4.7s-5.3 0-7 .5a2.8 2.8 0 0 0-2 2C2.5 8.9 2.5 12 2.5 12s0 3.1.5 4.8a2.8 2.8 0 0 0 2 2c1.7.5 7 .5 7 .5s5.3 0 7-.5a2.8 2.8 0 0 0 2-2c.5-1.7.5-4.8.5-4.8s0-3.1-.5-4.8zM10 15.5v-7l6 3.5-6 3.5z"/>
                     </svg>
@@ -694,17 +904,29 @@
             </p>
 
             <div class="contact-item">
-                <span class="contact-icon" aria-hidden="true">⌖</span>
+                <span class="contact-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+                    </svg>
+                </span>
                 <span>Hyderabad, India</span>
             </div>
 
             <div class="contact-item">
-                <span class="contact-icon" aria-hidden="true">☎</span>
+                <span class="contact-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6.6 2.5 9.2 2l2 4.8-2.3 1.8a15.8 15.8 0 0 0 6.5 6.5l1.8-2.3 4.8 2 .5 2.6c.2 1-.6 2-1.6 2C11.5 21.4 2.6 12.5 2.6 3.1c0-1 .9-1.8 2-1.6l2 .9z"/>
+                    </svg>
+                </span>
                 <a href="tel:+919876543210">+91 98765 43210</a>
             </div>
 
             <div class="contact-item">
-                <span class="contact-icon" aria-hidden="true">✉</span>
+                <span class="contact-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm9 7 8-5H4l8 5zm0 2L4 9v8h16V9l-8 5z"/>
+                    </svg>
+                </span>
                 <a href="mailto:info@travelora.com">info@travelora.com</a>
             </div>
         </div>
@@ -725,97 +947,11 @@
     </div>
 </footer>
 
-<!-- ==================== EXISTING WEBSITE SCRIPT ==================== -->
+
+<!-- ==================== SCRIPTS ==================== -->
 
 <script src="script.js"></script>
-
-<!-- ==================== SAVE PACKAGE FUNCTIONALITY ==================== -->
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const saveButton = document.getElementById("savePackageBtn");
-    const saveIcon = document.getElementById("savePackageIcon");
-    const saveText = document.getElementById("savePackageText");
-    const saveMessage = document.getElementById("savePackageMessage");
-
-    if (!saveButton || !saveIcon || !saveText) return;
-
-    const packageData = {
-        id: "manali-mountain-escape",
-        name: "Manali Mountain Escape",
-        duration: "5 Days / 4 Nights",
-        destination: "Manali, Himachal Pradesh",
-        image: "https://images.unsplash.com/photo-1593181629936-11c609b8db9b?auto=format&fit=crop&w=1200&q=85",
-        url: "packages-details.html"
-    };
-
-    const storageKey = "traveloraSavedPackages";
-
-    function getSavedPackages() {
-        try {
-            const packages = JSON.parse(
-                localStorage.getItem(storageKey) || "[]"
-            );
-
-            return Array.isArray(packages) ? packages : [];
-        } catch (error) {
-            return [];
-        }
-    }
-
-    function updateButton() {
-        const saved = getSavedPackages().some(
-            item => item.id === packageData.id
-        );
-
-        saveButton.setAttribute("aria-pressed", String(saved));
-        saveButton.classList.toggle("is-saved", saved);
-
-        saveIcon.textContent = saved ? "♥" : "♡";
-        saveText.textContent = saved ? "Saved Package" : "Save Package";
-    }
-
-    saveButton.addEventListener("click", function () {
-        const savedPackages = getSavedPackages();
-
-        const alreadySaved = savedPackages.some(
-            item => item.id === packageData.id
-        );
-
-        let updatedPackages;
-
-        if (alreadySaved) {
-            updatedPackages = savedPackages.filter(
-                item => item.id !== packageData.id
-            );
-        } else {
-            updatedPackages = [...savedPackages, packageData];
-        }
-
-        try {
-            localStorage.setItem(
-                storageKey,
-                JSON.stringify(updatedPackages)
-            );
-
-            updateButton();
-
-            if (saveMessage) {
-                saveMessage.textContent = alreadySaved
-                    ? "Manali Mountain Escape has been removed from your saved packages."
-                    : "Manali Mountain Escape has been added to your saved packages.";
-            }
-        } catch (error) {
-            if (saveMessage) {
-                saveMessage.textContent =
-                    "Unable to save this package in your browser.";
-            }
-        }
-    });
-
-    updateButton();
-});
-</script>
+<script src="package-details.js"></script>
 
 </body>
 </html>
