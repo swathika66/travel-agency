@@ -216,3 +216,23 @@ button:focus-visible {
     display: none !important;
     content: none !important;
 }
+
+/* Primary buttons — Orange by default */
+.btn-primary,
+.details-hero-actions .btn-primary,
+.package-enquire {
+    background-color: #FF8A00;
+    border: 2px solid #FF8A00;
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+}
+
+/* Primary buttons — Stay orange on hover */
+.btn-primary:hover,
+.details-hero-actions .btn-primary:hover,
+.package-enquire:hover {
+    background-color: #FF8A00;
+    border-color: #FF8A00;
+    color: #FFFFFF;
+    transform: translateY(-3px);
+}
