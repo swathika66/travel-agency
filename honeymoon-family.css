@@ -1892,9 +1892,406 @@ html[dir="rtl"] .destination-link:hover > span {
     }
 }
 
-/* ==========================================================
-   END OF HONEYMOON-FAMILY.CSS
 
-   Footer styles are intentionally excluded.
-   Shared style.css controls the header and footer.
-========================================================== */
+/* Honeymoon Page — Secondary Buttons */
+.btn-outline,
+.btn-cta-outline {
+    background-color: transparent;
+    color: #009C9A;
+    border: 1px solid #009C9A;
+    transition: all 0.3s ease;
+}
+
+/* Hover — Orange */
+.btn-outline:hover,
+.btn-cta-outline:hover {
+    background-color: #FF8A00 !important;
+    color: #FFFFFF !important;
+    border-color: #FF8A00 !important;
+    box-shadow: none;
+    transform: none;
+}
+
+/* HERO + CTA — Secondary Buttons: No Hover Change */
+
+.hero .btn-outline,
+.hero .btn-cta-outline,
+.final-cta .btn-outline,
+.final-cta .btn-cta-outline,
+.hero .btn-outline:hover,
+.hero .btn-cta-outline:hover,
+.final-cta .btn-outline:hover,
+.final-cta .btn-cta-outline:hover,
+.hero .btn-outline:focus,
+.hero .btn-cta-outline:focus,
+.final-cta .btn-outline:focus,
+.final-cta .btn-cta-outline:focus {
+    background: transparent !important;
+    color: #009C9A !important;
+    border: 1px solid #009C9A !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+/* =========================================
+   HONEYMOON & FAMILY TOURS
+   HERO + FINAL CTA SECONDARY BUTTONS
+   Teal border and text — no hover change
+========================================= */
+
+.hero-section .hero-actions .btn-outline,
+.hero-section .hero-actions .btn-outline:hover,
+.hero-section .hero-actions .btn-outline:focus,
+.final-cta .final-cta-actions .btn-cta-outline,
+.final-cta .final-cta-actions .btn-cta-outline:hover,
+.final-cta .final-cta-actions .btn-cta-outline:focus {
+    background: transparent !important;
+    color: #009C9A !important;
+    border: 1px solid #009C9A !important;
+    box-shadow: none !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+/* =========================================
+   HERO SECONDARY BUTTON
+   Teal style with subtle hover effect
+========================================= */
+
+.hero-section .hero-actions .btn-outline {
+    background: transparent;
+    color: #009C9A;
+    border: 1px solid #009C9A;
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.hero-section .hero-actions .btn-outline:hover,
+.hero-section .hero-actions .btn-outline:focus {
+    background: #009C9A;
+    color: #FFFFFF;
+    border-color: #009C9A;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   FINAL CTA SECONDARY BUTTON
+   White text + teal border
+========================================= */
+
+.final-cta .final-cta-actions .btn-cta-outline {
+    background: transparent !important;
+    color: #FFFFFF !important;
+    border: 1px solid #009C9A !important;
+    transition: background-color 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.final-cta .final-cta-actions .btn-cta-outline:hover,
+.final-cta .final-cta-actions .btn-cta-outline:focus {
+    background: #009C9A !important;
+    color: #FFFFFF !important;
+    border-color: #009C9A !important;
+    transform: translateY(-2px);
+}
+
+/* FINAL CTA SECONDARY BUTTON — SAME ON HOVER */
+
+.final-cta .final-cta-actions .btn-cta-outline,
+.final-cta .final-cta-actions .btn-cta-outline:hover,
+.final-cta .final-cta-actions .btn-cta-outline:focus,
+.final-cta .final-cta-actions .btn-cta-outline:active {
+    background: transparent !important;
+    color: #FFFFFF !important;
+    border: 1px solid #009C9A !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+/* =========================================
+   HERO SECONDARY BUTTON
+   Teal border + hover effect
+========================================= */
+
+.hero-section .hero-actions .btn-outline,
+.hero-section .hero-actions .btn-outline:focus {
+    background: transparent !important;
+    color: #009C9A !important;
+    border: 1px solid #009C9A !important;
+    transition: all 0.3s ease;
+}
+
+.hero-section .hero-actions .btn-outline:hover {
+    background: #009C9A !important;
+    color: #FFFFFF !important;
+    border-color: #009C9A !important;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   FINAL CTA SECONDARY BUTTON
+   White text + teal border + hover effect
+========================================= */
+
+.final-cta .final-cta-actions .btn-cta-outline {
+    background: transparent !important;
+    color: #FFFFFF !important;
+    border: 1px solid #009C9A !important;
+    transition: all 0.3s ease;
+}
+
+.final-cta .final-cta-actions .btn-cta-outline:hover,
+.final-cta .final-cta-actions .btn-cta-outline:focus {
+    background: #009C9A !important;
+    color: #FFFFFF !important;
+    border: 1px solid #009C9A !important;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   HERO SECONDARY BUTTON
+   Teal text + border
+   Slight lift on hover only
+========================================= */
+
+.hero-section .hero-actions .btn-outline {
+    background: transparent !important;
+    color: #009C9A !important;
+    border: 1px solid #009C9A !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-section .hero-actions .btn-outline:hover,
+.hero-section .hero-actions .btn-outline:focus {
+    background: transparent !important;
+    color: #009C9A !important;
+    border-color: #009C9A !important;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 156, 154, 0.15);
+}
+
+
+/* =========================================
+   FINAL CTA SECONDARY BUTTON
+   White background + teal text and border
+   Slight lift on hover only
+========================================= */
+
+.final-cta .final-cta-actions .btn-cta-outline {
+    background: #FFFFFF !important;
+    color: #009C9A !important;
+    border: 1px solid #009C9A !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.final-cta .final-cta-actions .btn-cta-outline:hover,
+.final-cta .final-cta-actions .btn-cta-outline:focus {
+    background: #FFFFFF !important;
+    color: #009C9A !important;
+    border-color: #009C9A !important;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 156, 154, 0.15);
+}
+
+/* HERO SECONDARY BUTTON */
+
+.hero-section .hero-actions .btn-outline,
+.hero-section .hero-actions .btn-outline:hover,
+.hero-section .hero-actions .btn-outline:focus {
+    background: transparent !important;
+    color: #009C9A !important;
+    border: 1px solid #009C9A !important;
+    box-shadow: none;
+}
+
+.hero-section .hero-actions .btn-outline {
+    transition: transform 0.3s ease;
+}
+
+.hero-section .hero-actions .btn-outline:hover {
+    transform: translateY(-3px);
+}
+
+
+/* FINAL CTA SECONDARY BUTTON */
+
+.final-cta .final-cta-actions .btn-cta-outline,
+.final-cta .final-cta-actions .btn-cta-outline:hover,
+.final-cta .final-cta-actions .btn-cta-outline:focus {
+    background: transparent !important;
+    color: #009C9A !important;
+    border: 1px solid #009C9A !important;
+    box-shadow: none !important;
+}
+
+.final-cta .final-cta-actions .btn-cta-outline {
+    transition: transform 0.3s ease;
+}
+
+.final-cta .final-cta-actions .btn-cta-outline:hover {
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   HERO SECONDARY BUTTON
+   Transparent + teal border
+========================================= */
+
+.hero-section .hero-actions .btn-outline {
+    background: transparent !important;
+    color: #009C9A !important;
+    border: 1px solid #009C9A !important;
+    box-shadow: none !important;
+    transition: transform 0.3s ease !important;
+}
+
+.hero-section .hero-actions .btn-outline:hover,
+.hero-section .hero-actions .btn-outline:focus-visible {
+    background: transparent !important;
+    color: #009C9A !important;
+    border-color: #009C9A !important;
+    box-shadow: none !important;
+    transform: translateY(-3px) !important;
+}
+
+
+/* =========================================
+   FINAL CTA SECONDARY BUTTON
+   Transparent + white text + teal border
+========================================= */
+
+.final-cta .final-cta-actions .btn-cta-outline {
+    background: transparent !important;
+    color: #FFFFFF !important;
+    border: 1px solid #009C9A !important;
+    box-shadow: none !important;
+    transition: transform 0.3s ease !important;
+}
+
+.final-cta .final-cta-actions .btn-cta-outline:hover,
+.final-cta .final-cta-actions .btn-cta-outline:focus-visible {
+    background: transparent !important;
+    color: #FFFFFF !important;
+    border-color: #009C9A !important;
+    box-shadow: none !important;
+    transform: translateY(-3px) !important;
+}
+
+/* FINAL CTA — SECONDARY BUTTON */
+
+.final-cta .final-cta-actions .btn-cta-outline {
+    background: #FFFFFF !important;
+    color: #009C9A !important;
+    border: 1px solid #FFFFFF !important;
+    border-radius: 50px;
+    box-shadow: none !important;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.final-cta .final-cta-actions .btn-cta-outline:hover,
+.final-cta .final-cta-actions .btn-cta-outline:focus-visible {
+    background: #FFFFFF !important;
+    color: #009C9A !important;
+    border-color: #FFFFFF !important;
+    box-shadow: none !important;
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   HONEYMOON & FAMILY TOURS — GLOBAL TYPOGRAPHY
+   Match Home 1 and Home 2
+   Header and footer remain unchanged
+========================================= */
+
+main {
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* Main hero heading */
+main .hero-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Section headings */
+main .intro-content h2,
+main .section-heading h2,
+main .why-content h2,
+main .inspiration-content h2,
+main .final-cta-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+/* Holiday and feature card headings */
+main .destination-content h3,
+main .experience-content h3,
+main .why-feature h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* Paragraphs */
+main p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+/* Small section labels */
+main .section-eyebrow {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Hero eyebrow */
+main .hero-eyebrow {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Buttons and text links */
+main .btn,
+main a.btn,
+main .text-link,
+main .destination-link {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Mobile typography */
+@media (max-width: 768px) {
+
+    main .hero-text h1 {
+        font-size: 36px;
+    }
+
+    main .intro-content h2,
+    main .section-heading h2,
+    main .why-content h2,
+    main .inspiration-content h2,
+    main .final-cta-content h2 {
+        font-size: 28px;
+    }
+
+    main .destination-content h3,
+    main .experience-content h3,
+    main .why-feature h3 {
+        font-size: 21px;
+    }
+}
+/* Hide card number labels */
+.faq-number,
+.destination-number,
+.experience-number,
+.card-number {
+    display: none !important;
+}

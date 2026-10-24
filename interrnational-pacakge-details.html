@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#009C9A">
+    <meta name="description" content="Explore Travelora's international holiday packages for Dubai, Bali, Thailand, Singapore, Maldives and Switzerland.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>International Package Details | Travelora</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="international-package-details.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="site-container header-container">
+
+        <a href="index.html" class="brand" aria-label="Travelora Home">
+            <img src="logo.png" alt="Travelora logo" width="52" height="52">
+
+            <span class="brand-text">
+                <span class="brand-name">
+                    <span class="travelora-primary">Travel</span><span class="travelora-secondary">ora</span>
+                </span>
+                <span class="brand-tagline">EXPLORE THE WORLD</span>
+            </span>
+        </a>
+
+        <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+
+            <div class="home-dropdown">
+                <a href="index.html" class="home-link"
+                   aria-haspopup="true" aria-expanded="false"
+                   id="homeDropdownToggle">
+                    Home <span class="dropdown-arrow" aria-hidden="true">▾</span>
+                </a>
+
+                <div class="home-dropdown-menu">
+                    <a href="index.html">Home 1</a>
+                    <a href="home2.html">Home 2</a>
+                </div>
+            </div>
+
+            <a href="about.html">About Us</a>
+            <a href="domestic-packages.html">Domestic Packages</a>
+            <a href="international-packages.html" class="active" aria-current="page">International Packages</a>
+            <a href="honeymoon-family.html">Honeymoon &amp; Family Tours</a>
+            <a href="contact.html">Contact</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+
+        <div class="header-actions">
+            <button id="rtlBtn" class="header-icon-btn" type="button"
+                    title="Toggle RTL" aria-label="Toggle right-to-left layout"
+                    aria-pressed="false">
+                <span aria-hidden="true">⇄</span>
+            </button>
+
+            <button id="themeBtn" class="header-icon-btn" type="button"
+                    title="Toggle dark mode" aria-label="Toggle dark mode"
+                    aria-pressed="false">
+                <span aria-hidden="true">☾</span>
+            </button>
+
+            <a href="login.html" class="login-btn">Login</a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" type="button"
+                    aria-label="Open navigation menu" aria-expanded="false"
+                    aria-controls="mainNav">
+                <span aria-hidden="true">☰</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main id="main-content">
+
+    <!-- HERO SECTION -->
+    <section class="details-hero">
+        <div class="site-container details-hero-grid">
+
+            <div class="details-hero-copy">
+                <span class="details-eyebrow">TRAVELORA · INTERNATIONAL HOLIDAYS</span>
+
+                <h1>Explore the World, <span>One Journey at a Time.</span></h1>
+
+                <p>
+                    Discover our international holiday ideas, compare destination
+                    highlights and find inspiration for your next adventure abroad.
+                </p>
+
+                <div class="details-hero-actions">
+                    <a href="#all-packages" class="btn btn-primary">
+                        Explore Packages <span aria-hidden="true">→</span>
+                    </a>
+
+                    <a href="contact.html" class="btn btn-outline">Plan Your Trip</a>
+                </div>
+
+                <div class="details-hero-points">
+                    <span>✓ Island escapes</span>
+                    <span>✓ City discoveries</span>
+                    <span>✓ Scenic adventures</span>
+                </div>
+            </div>
+
+            <div class="details-hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1100&q=85"
+                    alt="Travel essentials ready for an international holiday"
+                    fetchpriority="high">
+
+                <div class="details-image-label">
+                    <strong>Your next story starts here</strong>
+                    <span>Find a destination that inspires you.</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- INTRODUCTION AND DESTINATION LINKS -->
+    <section class="details-intro section">
+        <div class="site-container details-intro-inner">
+
+            <span class="section-eyebrow">FIND YOUR NEXT GETAWAY</span>
+
+            <h2>International Packages</h2>
+
+            <p>
+                From glittering skylines to quiet tropical shores and dramatic
+                mountain scenery, explore six destination ideas. Itineraries below
+                are suggestions and can be adjusted to your dates and preferences.
+            </p>
+
+            <nav class="destination-jump-links" aria-label="Jump to a destination">
+                <a href="#dubai">Dubai</a>
+                <a href="#bali">Bali</a>
+                <a href="#thailand">Thailand</a>
+                <a href="#singapore">Singapore</a>
+                <a href="#maldives">Maldives</a>
+                <a href="#switzerland">Switzerland</a>
+            </nav>
+
+        </div>
+    </section>
+
+    <!-- ALL PACKAGE DETAILS -->
+    <section class="package-details-list section" id="all-packages">
+        <div class="site-container">
+
+            <!-- DUBAI -->
+            <article class="package-detail" id="dubai" data-destination="dubai">
+
+                <div class="package-detail-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1000&q=85"
+                        alt="Dubai skyline and modern skyscrapers"
+                        loading="lazy">
+
+                    <span class="package-image-tag">CITY &amp; DESERT</span>
+                </div>
+
+                <div class="package-detail-content">
+                    <span class="section-eyebrow">UNITED ARAB EMIRATES</span>
+
+                    <h2>Dubai Getaway</h2>
+
+                    <p>
+                        Experience a striking mix of modern architecture, lively
+                        shopping districts, desert landscapes and memorable city views.
+                    </p>
+
+                    <div class="package-facts">
+                        <span><b>Suggested duration</b> 4–5 days</span>
+                        <span><b>Best for</b> Families, couples, friends</span>
+                    </div>
+
+                    <h3>Highlights</h3>
+                    <ul class="package-highlights">
+                        <li>Burj Khalifa and Downtown Dubai</li>
+                        <li>Desert safari experience</li>
+                        <li>Dubai Marina and waterfront views</li>
+                        <li>Shopping and local dining</li>
+                    </ul>
+
+                    <h3>Suggested itinerary</h3>
+                    <ol class="itinerary-list">
+                        <li><b>Day 1:</b> Arrive, settle in and explore the nearby area.</li>
+                        <li><b>Day 2:</b> Visit Downtown Dubai and enjoy city sightseeing.</li>
+                        <li><b>Day 3:</b> Experience a desert safari and sunset views.</li>
+                        <li><b>Day 4:</b> Explore the marina, markets or shopping districts.</li>
+                        <li><b>Day 5:</b> Enjoy free time before departure.</li>
+                    </ol>
+
+                    <a class="btn btn-primary package-enquire"
+                       href="contact.html?destination=Dubai">
+                        Enquire About Dubai <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- BALI -->
+            <article class="package-detail package-detail-reverse"
+                     id="bali" data-destination="bali">
+
+                <div class="package-detail-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1000&q=85"
+                        alt="Lush tropical landscape in Bali"
+                        loading="lazy">
+
+                    <span class="package-image-tag">TROPICAL ESCAPE</span>
+                </div>
+
+                <div class="package-detail-content">
+                    <span class="section-eyebrow">INDONESIA</span>
+
+                    <h2>Bali Escape</h2>
+
+                    <p>
+                        Slow down among tropical beaches, lush rice terraces,
+                        beautiful temples and relaxing island scenery.
+                    </p>
+
+                    <div class="package-facts">
+                        <span><b>Suggested duration</b> 5–6 days</span>
+                        <span><b>Best for</b> Couples, friends, nature lovers</span>
+                    </div>
+
+                    <h3>Highlights</h3>
+                    <ul class="package-highlights">
+                        <li>Ubud and green rice terraces</li>
+                        <li>Traditional temples and local culture</li>
+                        <li>Beach sunsets and coastal cafés</li>
+                        <li>Optional wellness and adventure activities</li>
+                    </ul>
+
+                    <h3>Suggested itinerary</h3>
+                    <ol class="itinerary-list">
+                        <li><b>Day 1:</b> Arrive and enjoy a relaxed evening.</li>
+                        <li><b>Day 2:</b> Explore Ubud, its markets and nearby landscapes.</li>
+                        <li><b>Day 3:</b> Visit temples and scenic countryside.</li>
+                        <li><b>Day 4:</b> Enjoy beach time or optional water activities.</li>
+                        <li><b>Day 5:</b> Choose a relaxed day for cafés, shopping or wellness.</li>
+                        <li><b>Day 6:</b> Depart after breakfast.</li>
+                    </ol>
+
+                    <a class="btn btn-primary package-enquire"
+                       href="contact.html?destination=Bali">
+                        Enquire About Bali <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- THAILAND -->
+            <article class="package-detail"
+                     id="thailand" data-destination="thailand">
+
+                <div class="package-detail-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=1000&q=85"
+                        alt="Traditional Thai architecture and temple"
+                        loading="lazy">
+
+                    <span class="package-image-tag">CULTURE &amp; COAST</span>
+                </div>
+
+                <div class="package-detail-content">
+                    <span class="section-eyebrow">THAILAND</span>
+
+                    <h2>Thailand Adventure</h2>
+
+                    <p>
+                        Combine vibrant city life, cultural landmarks, lively markets
+                        and the tropical beauty of Thailand's coast and islands.
+                    </p>
+
+                    <div class="package-facts">
+                        <span><b>Suggested duration</b> 5–7 days</span>
+                        <span><b>Best for</b> Friends, couples, explorers</span>
+                    </div>
+
+                    <h3>Highlights</h3>
+                    <ul class="package-highlights">
+                        <li>Temples and cultural landmarks</li>
+                        <li>Street food and colourful markets</li>
+                        <li>Optional island and boat excursions</li>
+                        <li>Coastal scenery and local experiences</li>
+                    </ul>
+
+                    <h3>Suggested itinerary</h3>
+                    <ol class="itinerary-list">
+                        <li><b>Day 1:</b> Arrive and explore the local area.</li>
+                        <li><b>Day 2:</b> Visit cultural landmarks and temples.</li>
+                        <li><b>Day 3:</b> Discover local markets and Thai food.</li>
+                        <li><b>Day 4:</b> Enjoy a coastal or island excursion.</li>
+                        <li><b>Day 5:</b> Relax or explore more of the destination.</li>
+                        <li><b>Days 6–7:</b> Add activities or enjoy a relaxed departure day.</li>
+                    </ol>
+
+                    <a class="btn btn-primary package-enquire"
+                       href="contact.html?destination=Thailand">
+                        Enquire About Thailand <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- SINGAPORE -->
+            <article class="package-detail package-detail-reverse"
+                     id="singapore" data-destination="singapore">
+
+                <div class="package-detail-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1000&q=85"
+                        alt="Singapore skyline and waterfront"
+                        loading="lazy">
+
+                    <span class="package-image-tag">CITY DISCOVERY</span>
+                </div>
+
+                <div class="package-detail-content">
+                    <span class="section-eyebrow">SINGAPORE</span>
+
+                    <h2>Singapore Discovery</h2>
+
+                    <p>
+                        Explore a modern city known for its waterfront skyline,
+                        green spaces, cultural neighbourhoods and diverse food scene.
+                    </p>
+
+                    <div class="package-facts">
+                        <span><b>Suggested duration</b> 3–5 days</span>
+                        <span><b>Best for</b> Families, couples, city explorers</span>
+                    </div>
+
+                    <h3>Highlights</h3>
+                    <ul class="package-highlights">
+                        <li>Marina Bay waterfront</li>
+                        <li>Gardens and green spaces</li>
+                        <li>Neighbourhoods and cultural districts</li>
+                        <li>Local food and shopping</li>
+                    </ul>
+
+                    <h3>Suggested itinerary</h3>
+                    <ol class="itinerary-list">
+                        <li><b>Day 1:</b> Arrive and take an evening waterfront walk.</li>
+                        <li><b>Day 2:</b> Explore Marina Bay and nearby attractions.</li>
+                        <li><b>Day 3:</b> Visit gardens and cultural neighbourhoods.</li>
+                        <li><b>Day 4:</b> Enjoy optional family attractions or shopping.</li>
+                        <li><b>Day 5:</b> Have a relaxed morning before departure.</li>
+                    </ol>
+
+                    <a class="btn btn-primary package-enquire"
+                       href="contact.html?destination=Singapore">
+                        Enquire About Singapore <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- MALDIVES -->
+            <article class="package-detail"
+                     id="maldives" data-destination="maldives">
+
+                <div class="package-detail-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=1000&q=85"
+                        alt="Maldives island surrounded by turquoise water"
+                        loading="lazy">
+
+                    <span class="package-image-tag">ISLAND RETREAT</span>
+                </div>
+
+                <div class="package-detail-content">
+                    <span class="section-eyebrow">MALDIVES</span>
+
+                    <h2>Maldives Retreat</h2>
+
+                    <p>
+                        Unwind beside clear turquoise waters, discover colourful
+                        marine life and enjoy the calm of an island holiday.
+                    </p>
+
+                    <div class="package-facts">
+                        <span><b>Suggested duration</b> 3–5 days</span>
+                        <span><b>Best for</b> Couples, honeymooners, relaxation</span>
+                    </div>
+
+                    <h3>Highlights</h3>
+                    <ul class="package-highlights">
+                        <li>White-sand beaches and lagoon views</li>
+                        <li>Optional snorkelling and water activities</li>
+                        <li>Sunset moments by the sea</li>
+                        <li>Leisure time at your chosen resort or island</li>
+                    </ul>
+
+                    <h3>Suggested itinerary</h3>
+                    <ol class="itinerary-list">
+                        <li><b>Day 1:</b> Arrive and transfer to your selected island stay.</li>
+                        <li><b>Day 2:</b> Enjoy the beach and explore the island.</li>
+                        <li><b>Day 3:</b> Choose optional snorkelling or a boat excursion.</li>
+                        <li><b>Day 4:</b> Relax and enjoy the island scenery.</li>
+                        <li><b>Day 5:</b> Depart according to your transfer schedule.</li>
+                    </ol>
+
+                    <a class="btn btn-primary package-enquire"
+                       href="contact.html?destination=Maldives">
+                        Enquire About Maldives <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- SWITZERLAND -->
+            <article class="package-detail package-detail-reverse"
+                     id="switzerland" data-destination="switzerland">
+
+                <div class="package-detail-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=1000&q=85"
+                        alt="Scenic mountain landscape in Switzerland"
+                        loading="lazy">
+
+                    <span class="package-image-tag">ALPINE ADVENTURE</span>
+                </div>
+
+                <div class="package-detail-content">
+                    <span class="section-eyebrow">SWITZERLAND</span>
+
+                    <h2>Switzerland Escape</h2>
+
+                    <p>
+                        Discover dramatic alpine scenery, peaceful lakes,
+                        charming villages and memorable mountain journeys.
+                    </p>
+
+                    <div class="package-facts">
+                        <span><b>Suggested duration</b> 5–7 days</span>
+                        <span><b>Best for</b> Nature lovers, couples, families</span>
+                    </div>
+
+                    <h3>Highlights</h3>
+                    <ul class="package-highlights">
+                        <li>Swiss alpine villages and viewpoints</li>
+                        <li>Scenic lakes and mountain landscapes</li>
+                        <li>Optional mountain railways and cable cars</li>
+                        <li>Local cuisine and relaxed village walks</li>
+                    </ul>
+
+                    <h3>Suggested itinerary</h3>
+                    <ol class="itinerary-list">
+                        <li><b>Day 1:</b> Arrive and settle into your chosen city or village.</li>
+                        <li><b>Day 2:</b> Explore the town and nearby lakeside scenery.</li>
+                        <li><b>Day 3:</b> Take a scenic mountain excursion.</li>
+                        <li><b>Day 4:</b> Visit a traditional village or enjoy a scenic rail journey.</li>
+                        <li><b>Day 5:</b> Enjoy free time for walks and local experiences.</li>
+                        <li><b>Days 6–7:</b> Add another region if desired, then depart.</li>
+                    </ol>
+
+                    <a class="btn btn-primary package-enquire"
+                       href="contact.html?destination=Switzerland">
+                        Enquire About Switzerland <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="details-note section">
+        <div class="site-container details-note-inner">
+
+            <div>
+                <span class="section-eyebrow">LET'S PLAN YOUR HOLIDAY</span>
+
+                <h2>Your trip, shaped around you.</h2>
+
+                <p>
+                    Travel duration, accommodation, activities and transport can
+                    be discussed when you enquire. Prices and inclusions are
+                    confirmed based on your travel dates and preferences.
+                </p>
+            </div>
+
+            <a href="contact.html" class="btn btn-primary">
+                Plan Your Trip <span aria-hidden="true">→</span>
+            </a>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="site-container footer-container">
+
+        <div class="footer-brand">
+            <a href="index.html" class="footer-logo" aria-label="Travelora Home">
+                <img src="logo.png" alt="Travelora logo" width="52" height="52">
+
+                <span class="footer-logo-text">
+                    <span class="footer-brand-name">
+                        <span class="travelora-primary">Travel</span><span class="travelora-secondary">ora</span>
+                    </span>
+                    <span class="footer-tagline">EXPLORE THE WORLD</span>
+                </span>
+            </a>
+
+            <p class="footer-description">
+                Discover remarkable destinations, exciting adventures and
+                memorable holidays with Travelora. Your next journey begins
+                with inspiration.
+            </p>
+
+            <div class="social-links" aria-label="Social media">
+                <a href="https://www.facebook.com/" class="social-icon"
+                   aria-label="Facebook" title="Facebook"
+                   target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M14 8h3V4h-3c-3 0-5 2-5 5v2H6v4h3v5h4v-5h3l1-4h-4V9c0-.7.3-1 1-1z"/>
+                    </svg>
+                </a>
+
+                <a href="https://www.instagram.com/" class="social-icon"
+                   aria-label="Instagram" title="Instagram"
+                   target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="3" width="18" height="18" rx="5"
+                              fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="12" cy="12" r="4"
+                                fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+                    </svg>
+                </a>
+
+                <a href="https://www.linkedin.com/" class="social-icon"
+                   aria-label="LinkedIn" title="LinkedIn"
+                   target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M5 8H2V21H5V8zM3.5 3C2.4 3 2 3.8 2 4.6S2.4 6 3.5 6 5 5.2 5 4.4 4.6 3 3.5 3zM8 8h3v1.8h.1C11.5 8.7 12.7 7.5 15 7.5c3 0 4 2 4 5.2V21h-3v-7.3c0-1.7 0-3.8-2.3-3.8-2.3 0-2.7 1.8-2.7 3.7V21H8V8z"/>
+                    </svg>
+                </a>
+
+                <a href="https://www.youtube.com/" class="social-icon"
+                   aria-label="YouTube" title="YouTube"
+                   target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M21 7.2a2.8 2.8 0 0 0-2-2C17.3 4.7 12 4.7 12 4.7s-5.3 0-7 .5a2.8 2.8 0 0 0-2 2C2.5 8.9 2.5 12 2.5 12s0 3.1.5 4.8a2.8 2.8 0 0 0 2 2c1.7.5 7 .5 7 .5s5.3 0 7-.5a2.8 2.8 0 0 0 2-2c.5-1.7.5-4.8.5-4.8s0-3.1-.5-4.8zM10 15.5v-7l6 3.5-6 3.5z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="domestic-packages.html">Domestic Packages</a>
+            <a href="international-packages.html" aria-current="page">International Packages</a>
+            <a href="honeymoon-family.html">Honeymoon &amp; Family Tours</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Information</h3>
+            <a href="destinations.html">Popular Destinations</a>
+            <a href="travel-experiences.html">Travel Experiences</a>
+            <a href="travel-guide.html">Travel Guide</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="login.html">Login</a>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+
+            <p class="footer-contact-description">
+                Have questions about your next trip? Get in touch with us.
+            </p>
+
+            <div class="contact-item">
+                <span class="contact-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+                    </svg>
+                </span>
+                <span>Hyderabad, India</span>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6.6 2.5 9.2 2l2 4.8-2.3 1.8a15.8 15.8 0 0 0 6.5 6.5l1.8-2.3 4.8 2 .5 2.6c.2 1-.6 2-1.6 2C11.5 21.4 2.6 12.5 2.6 3.1c0-1 .9-1.8 2-1.6l2 .9z"/>
+                    </svg>
+                </span>
+                <a href="tel:+919876543210">+91 98765 43210</a>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm9 7 8-5H4l8 5zm0 2L4 9v8h16V9l-8 5z"/>
+                    </svg>
+                </span>
+                <a href="mailto:info@travelora.com">info@travelora.com</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <div class="site-container footer-bottom-container">
+            <p>© 2026 Travelora. All Rights Reserved.</p>
+
+            <div class="footer-bottom-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms &amp; Conditions</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const destination = params.get("destination");
+
+    if (destination) {
+        const target = document.getElementById(
+            destination.toLowerCase().replace(/\s+/g, "-")
+        );
+
+        if (target) {
+            window.setTimeout(() => {
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }, 150);
+        }
+    }
+});
+</script>
+
+</body>
+</html>

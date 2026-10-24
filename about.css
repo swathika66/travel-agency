@@ -2119,358 +2119,882 @@ body .about-page * {
     font-style: normal !important;
 }
 
-/* =========================================
-   ABOUT PAGE — MATCH HOME 2 TYPOGRAPHY
-========================================= */
+/* ============================================
+   TRAVELORA | ABOUT PAGE
+   OUR HISTORY - PREMIUM IMAGE CARD DESIGN
+============================================ */
 
-/* Main text, buttons and form elements */
-body .about-page,
-body .about-page p,
-body .about-page a,
-body .about-page span,
-body .about-page button,
-body .about-page strong,
-body .about-page div {
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-}
-
-/* Main headings — match Home 2 */
-body .about-page h1,
-body .about-page h2,
-body .about-page h3,
-body .about-page h4,
-body .about-page h5,
-body .about-page h6 {
-    font-family: 'Dancing Script', cursive !important;
-    font-weight: 700;
-    font-style: normal;
-}
-
-/* Keep headings readable and properly spaced */
-body .about-page h1 {
-    line-height: 1.25;
-}
-
-body .about-page h2,
-body .about-page h3 {
-    line-height: 1.35;
-}
-
-/* Keep section labels in the regular website font */
-body .about-page .section-eyebrow,
-body .about-page .about-card-kicker,
-body .about-page .about-audience-label {
-    font-family: 'Poppins', sans-serif !important;
-    font-style: normal !important;
-}
-
-/* Fix About hero heading font */
-body main.about-page .about-hero-content h1,
-body main.about-page .about-hero-content h1 span {
-    font-family: 'Dancing Script', cursive !important;
-    font-style: normal !important;
-    font-weight: 700 !important;
-}
-
-/* =========================================
-   ABOUT PAGE — OUR HISTORY
-========================================= */
-
-.about-history {
+.about-page .about-history {
     position: relative;
+    padding: 90px 0;
     overflow: hidden;
-    background: var(--bg-soft, #F5F9FA);
+    background: #F4FAFA;
 }
 
-.about-history .section-heading {
-    max-width: 760px;
-    margin: 0 auto 42px;
+.about-page .about-history .container {
+    width:  min(1180px, 92%);
+    margin: 0 auto;
+}
+
+/* ---------- SECTION HEADING ---------- */
+
+.about-page .history-heading {
+    max-width: 740px;
+    margin: 0 auto 48px;
     text-align: center;
 }
 
-.about-history .section-heading h2 {
-    color: var(--heading, #123448);
+.about-page .history-heading .section-eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #009C9A;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
 }
 
-.history-intro {
-    max-width: 850px;
-    margin: 0 auto 55px;
-    padding: 28px 32px;
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    background: var(--surface, #FFFFFF);
-    border: 1px solid rgba(0, 156, 154, 0.16);
-    border-radius: 18px;
-    box-shadow: 0 12px 35px rgba(7, 84, 119, 0.06);
+.about-page .history-heading h2 {
+    margin: 0 0 16px;
+    color: #173C46;
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.8px;
 }
 
-.history-intro-icon {
-    flex: 0 0 48px;
-    width: 48px;
-    height: 48px;
-    display: grid;
-    place-items: center;
-    border-radius: 15px;
-    background: #DDF7F5;
-    color: #007E7C;
-    font-size: 25px;
-}
-
-.history-intro p {
-    margin: 0;
-    color: var(--text, #263B49);
+.about-page .history-heading p {
+    max-width: 680px;
+    margin: 0 auto;
+    color: #65777D;
     font-size: 15px;
     line-height: 1.9;
 }
 
-.history-timeline {
-    position: relative;
-    width: min(850px, 100%);
-    margin: 0 auto;
-    padding: 5px 0;
-}
+/* ---------- HISTORY GRID ---------- */
 
-.history-timeline::before {
-    content: "";
-    position: absolute;
-    top: 20px;
-    bottom: 20px;
-    left: 27px;
-    width: 2px;
-    background: linear-gradient(
-        to bottom,
-        #009C9A,
-        #FF9418,
-        #009C9A
-    );
-}
-
-.history-item {
-    position: relative;
+.about-page .history-grid {
     display: grid;
-    grid-template-columns: 56px minmax(0, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
     gap: 24px;
-    margin-bottom: 30px;
 }
 
-.history-item:last-child {
-    margin-bottom: 0;
-}
+/* ---------- HISTORY CARD ---------- */
 
-.history-marker {
+.about-page .history-card {
     position: relative;
-    z-index: 1;
-    width: 56px;
-    height: 56px;
-    display: grid;
-    place-items: center;
-    border: 4px solid var(--bg-soft, #F5F9FA);
-    border-radius: 50%;
-    background: #009C9A;
-    color: #FFFFFF;
-    box-shadow: 0 0 0 2px #009C9A;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.history-item:nth-child(even) .history-marker {
-    background: #FF9418;
-    box-shadow: 0 0 0 2px #FF9418;
-    color: #FFFFFF;
-}
-
-.history-card {
-    padding: 27px 30px;
-    background: var(--surface, #FFFFFF);
-    border: 1px solid var(--border, #E4ECEF);
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    background: #FFFFFF;
+    border: 1px solid #E1ECEB;
     border-radius: 18px;
-    box-shadow: 0 8px 25px rgba(7, 84, 119, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease,
-                border-color 0.3s ease;
+    box-shadow: 0 8px 28px rgba(23, 60, 70, 0.07);
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
 }
 
-.history-card:hover {
-    transform: translateY(-5px);
-    border-color: #009C9A;
-    box-shadow: 0 16px 35px rgba(0, 126, 124, 0.12);
+.about-page .history-card:hover {
+    transform: translateY(-7px);
+    border-color: #80D4D0;
+    box-shadow: 0 18px 40px rgba(23, 60, 70, 0.13);
 }
 
-.history-label {
-    display: inline-block;
-    margin-bottom: 10px;
-    color: #007E7C;
-    font-family: "Poppins", sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1.4px;
+/* Orange top accent */
+
+.about-page .history-card::before {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: #FF8A00;
+    content: "";
+    transition: width 0.35s ease;
 }
 
-.history-card h3 {
-    margin: 0 0 12px;
-    color: var(--heading, #123448);
-    font-family: "Dancing Script", cursive;
-    font-size: clamp(24px, 3vw, 31px);
-    font-weight: 700;
-    line-height: 1.35;
+.about-page .history-card:hover::before {
+    width: 100%;
 }
 
-.history-card p {
-    margin: 0;
-    color: var(--muted, #697D89);
+/* ---------- HISTORY IMAGES ---------- */
+
+.about-page .history-image {
+    position: relative;
+    height: 235px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: #DFF3F1;
+}
+
+.about-page .history-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.6s ease;
+}
+
+.about-page .history-card:hover .history-image img {
+    transform: scale(1.06);
+}
+
+/* Image overlay */
+
+.about-page .history-image::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(15, 42, 45, 0.35),
+        transparent 55%
+    );
+    content: "";
+    pointer-events: none;
+}
+
+/* Number badge */
+
+.about-page .history-number {
+    position: absolute;
+    z-index: 1;
+    bottom: 16px;
+    left: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    color: #FFFFFF;
+    background: #009C9A;
+    border: 2px solid #FFFFFF;
+    border-radius: 12px;
     font-size: 14px;
+    font-weight: 800;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.about-page .history-card:hover .history-number {
+    background: #FF8A00;
+    transform: translateY(-3px);
+}
+
+/* ---------- CARD CONTENT ---------- */
+
+.about-page .history-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px 23px 27px;
+}
+
+.about-page .history-label {
+    display: inline-block;
+    margin-bottom: 11px;
+    color: #008785;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    line-height: 1.6;
+}
+
+.about-page .history-content h3 {
+    margin: 0 0 12px;
+    color: #173C46;
+    font-size: 21px;
+    font-weight: 750;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.about-page .history-card:hover .history-content h3 {
+    color: #008F8D;
+}
+
+.about-page .history-content p {
+    margin: 0;
+    color: #65777D;
+    font-size: 13.5px;
     line-height: 1.9;
 }
 
-.history-bottom {
-    max-width: 700px;
-    margin: 55px auto 0;
-    padding: 35px 25px;
-    text-align: center;
-    background: var(--surface, #FFFFFF);
-    border: 1px solid rgba(255, 148, 24, 0.3);
-    border-radius: 22px;
-}
+/* ---------- CLOSING LINE ---------- */
 
-.history-bottom-icon {
-    display: inline-grid;
-    place-items: center;
-    width: 52px;
-    height: 52px;
-    margin-bottom: 12px;
-    border-radius: 50%;
-    background: #FFF0DC;
-    color: #E77D08;
-    font-size: 26px;
-}
-
-.history-bottom h3 {
-    margin: 0 0 10px;
-    color: var(--heading, #123448);
-    font-family: "Dancing Script", cursive;
-    font-size: clamp(25px, 3vw, 34px);
-    font-weight: 700;
-}
-
-.history-bottom p {
-    margin: 0 0 22px;
-    color: var(--muted, #697D89);
-    font-size: 14px;
-    line-height: 1.8;
-}
-
-.history-bottom .btn {
-    display: inline-flex;
+.about-page .history-footer {
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 9px;
+    gap: 16px;
+    margin-top: 38px;
+    text-align: center;
 }
 
-/* Dark mode */
-body.dark-mode .about-history {
-    background: var(--bg-soft, #14232E);
+.about-page .history-footer p {
+    margin: 0;
+    color: #008F8D;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.7;
 }
 
-body.dark-mode .history-intro,
-body.dark-mode .history-card,
-body.dark-mode .history-bottom {
-    background: var(--surface, #172631);
-    border-color: var(--border, #2D424E);
+.about-page .history-footer-line {
+    display: block;
+    width: 38px;
+    height: 2px;
+    flex-shrink: 0;
+    background: #FF8A00;
+    border-radius: 5px;
 }
 
-body.dark-mode .history-intro p,
-body.dark-mode .history-card p,
-body.dark-mode .history-bottom p {
-    color: var(--muted, #A8BBC6);
+/* ---------- TABLET ---------- */
+
+@media (max-width: 900px) {
+    .about-page .about-history {
+        padding: 75px 0;
+    }
+
+    .about-page .history-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .about-page .history-card:last-child {
+        grid-column: 1 / -1;
+        width: calc(50% - 11px);
+        justify-self: center;
+    }
+
+    .about-page .history-image {
+        height: 220px;
+    }
 }
 
-body.dark-mode .history-card h3,
-body.dark-mode .history-bottom h3,
-body.dark-mode .about-history .section-heading h2 {
-    color: var(--heading, #F3F7FA);
-}
+/* ---------- MOBILE ---------- */
 
-body.dark-mode .history-marker {
-    border-color: var(--bg-soft, #14232E);
-}
-
-/* RTL support */
-html[dir="rtl"] .history-timeline::before {
-    left: auto;
-    right: 27px;
-}
-
-html[dir="rtl"] .history-item {
-    grid-template-columns: minmax(0, 1fr) 56px;
-}
-
-html[dir="rtl"] .history-marker {
-    grid-column: 2;
-    grid-row: 1;
-}
-
-html[dir="rtl"] .history-card {
-    grid-column: 1;
-    grid-row: 1;
-    text-align: right;
-}
-
-html[dir="rtl"] .history-intro {
-    text-align: right;
-}
-
-/* Responsive */
 @media (max-width: 600px) {
-    .history-intro {
-        padding: 22px 18px;
-        gap: 14px;
-        margin-bottom: 38px;
+    .about-page .about-history {
+        padding: 55px 0;
     }
 
-    .history-intro-icon {
-        flex-basis: 40px;
-        width: 40px;
-        height: 40px;
+    .about-page .about-history .container {
+        width: 90%;
     }
 
-    .history-timeline::before {
-        left: 21px;
+    .about-page .history-heading {
+        margin-bottom: 30px;
     }
 
-    .history-item {
-        grid-template-columns: 44px minmax(0, 1fr);
-        gap: 15px;
-        margin-bottom: 22px;
+    .about-page .history-heading h2 {
+        font-size: 29px;
+        letter-spacing: -0.5px;
     }
 
-    .history-marker {
-        width: 44px;
-        height: 44px;
+    .about-page .history-heading p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .about-page .history-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-page .history-card:last-child {
+        grid-column: auto;
+        width: 100%;
+    }
+
+    .about-page .history-image {
+        height: 230px;
+    }
+
+    .about-page .history-content {
+        padding: 23px 21px 25px;
+    }
+
+    .about-page .history-content h3 {
+        font-size: 20px;
+    }
+
+    .about-page .history-content p {
+        font-size: 14px;
+    }
+
+    .about-page .history-footer {
+        gap: 9px;
+        margin-top: 28px;
+    }
+
+    .about-page .history-footer p {
         font-size: 12px;
     }
 
-    .history-card {
-        padding: 22px 18px;
-    }
-
-    html[dir="rtl"] .history-timeline::before {
-        left: auto;
-        right: 21px;
-    }
-
-    html[dir="rtl"] .history-item {
-        grid-template-columns: minmax(0, 1fr) 44px;
+    .about-page .history-footer-line {
+        width: 18px;
     }
 }
 
+/* ---------- DARK MODE ---------- */
+
+.dark-mode .about-page .about-history {
+    background: #172A2C;
+}
+
+.dark-mode .about-page .history-card {
+    background: #203638;
+    border-color: #304B4D;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode .about-page .history-card:hover {
+    border-color: #398E8B;
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.25);
+}
+
+.dark-mode .about-page .history-heading h2,
+.dark-mode .about-page .history-content h3 {
+    color: #F3FAFA;
+}
+
+.dark-mode .about-page .history-heading p,
+.dark-mode .about-page .history-content p {
+    color: #B6C8CA;
+}
+
+.dark-mode .about-page .history-heading .section-eyebrow,
+.dark-mode .about-page .history-label,
+.dark-mode .about-page .history-footer p {
+    color: #35CECA;
+}
+
+/* ---------- REDUCED MOTION ---------- */
+
 @media (prefers-reduced-motion: reduce) {
-    .history-card {
+    .about-page .history-card,
+    .about-page .history-image img,
+    .about-page .history-number,
+    .about-page .history-card::before,
+    .about-page .history-content h3 {
         transition: none;
     }
 
-    .history-card:hover {
+    .about-page .history-card:hover,
+    .about-page .history-card:hover .history-image img,
+    .about-page .history-card:hover .history-number {
         transform: none;
     }
 }
 
+/* Remove History Card Numbers */
+
+.about-page .history-number {
+    display: none !important;
+}
+
+/* History Section Eyebrow Alignment */
+
+.about-page .history-heading .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto 16px;
+    line-height: 1.5;
+    vertical-align: middle;
+}
+
+.about-page .history-heading .section-eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 42px;
+    height: 3px;
+    flex-shrink: 0;
+    background: #FF8A00;
+    border-radius: 3px;
+}
+
+.about-page .history-heading .section-eyebrow::after {
+    content: none;
+}
+
+
+
+
+/* Primary CTA button */
+.about-page .about-final-cta .btn-light {
+    background: #FF8A00;
+    color: #FFFFFF;
+    border: 1.5px solid #FF8A00;
+    border-radius: 50px;
+    padding: 13px 28px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.about-page .about-final-cta .btn-light:hover {
+    background: #E77E00;
+    border-color: #E77E00;
+    transform: translateY(-2px);
+}
+
+/* Secondary CTA button */
+.about-page .about-final-cta .btn-cta-outline {
+    background: transparent;
+    color: #007E7C;
+    border: 1.5px solid #007E7C;
+    border-radius: 50px;
+    padding: 13px 28px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.about-page .about-final-cta .btn-cta-outline:hover {
+    background: #007E7C;
+    color: #FFFFFF;
+    border-color: #007E7C;
+    transform: translateY(-2px);
+}
+
+
+/* ABOUT PAGE — FINAL CTA BUTTONS */
+
+/* Primary button: orange pill */
+.about-page .about-final-cta .btn-light {
+    background: #FF8A00;
+    color: #FFFFFF;
+    border: 1.5px solid #FF8A00;
+    border-radius: 50px;
+    padding: 13px 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.about-page .about-final-cta .btn-light:hover {
+    background: #E77E00;
+    border-color: #E77E00;
+    transform: translateY(-2px);
+}
+
+/* Secondary button: white pill with teal text */
+.about-page .about-final-cta .btn-cta-outline {
+    background: #FFFFFF;
+    color: #007E7C;
+    border: 1.5px solid #FFFFFF;
+    border-radius: 50px;
+    padding: 13px 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.about-page .about-final-cta .btn-cta-outline:hover {
+    background: #E2F7F5;
+    color: #007E7C;
+    border-color: #E2F7F5;
+    transform: translateY(-2px);
+}
+/* =========================================
+   TRAVELORA ABOUT PAGE — FINAL CTA BUTTONS
+   ========================================= */
+
+/* Keep both buttons the same pill shape */
+main.about-page section.about-final-cta .final-cta-actions .btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    min-height: 48px;
+    padding: 13px 28px !important;
+    border-radius: 50px !important;
+    font-family: "DM Sans", sans-serif !important;
+    font-size: 14px;
+    font-weight: 700 !important;
+    line-height: 1.4;
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+/* PRIMARY — ORANGE PILL */
+main.about-page section.about-final-cta .final-cta-actions a.btn-light {
+    background: #FF8A00 !important;
+    color: #FFFFFF !important;
+    border: 2px solid #FF8A00 !important;
+}
+
+/* Primary hover */
+main.about-page section.about-final-cta .final-cta-actions a.btn-light:hover {
+    background: #E77E00 !important;
+    color: #FFFFFF !important;
+    border-color: #E77E00 !important;
+    transform: translateY(-2px);
+}
+
+/* SECONDARY — WHITE PILL, TEAL TEXT */
+main.about-page section.about-final-cta .final-cta-actions a.btn-cta-outline {
+    background: #FFFFFF !important;
+    color: #007E7C !important;
+    border: 2px solid #FFFFFF !important;
+}
+
+/* Secondary hover */
+main.about-page section.about-final-cta .final-cta-actions a.btn-cta-outline:hover {
+    background: #E2F7F5 !important;
+    color: #007E7C !important;
+    border-color: #E2F7F5 !important;
+    transform: translateY(-2px);
+}
+
+/* Secondary CTA button */
+main.about-page section.about-final-cta
+.final-cta-actions a.btn-cta-outline {
+    background: #FFFFFF !important;
+    color: #007E7C !important;
+    border: 2px solid #FFFFFF !important;
+    border-radius: 50px !important;
+    transition: transform 0.3s ease !important;
+}
+
+/* Hover: keep the same colors */
+main.about-page section.about-final-cta
+.final-cta-actions a.btn-cta-outline:hover {
+    background: #FFFFFF !important;
+    color: #007E7C !important;
+    border-color: #FFFFFF !important;
+    box-shadow: none !important;
+    transform: translateY(-2px);
+}
+
+/* Hide numbers on audience cards */
+.about-page .about-audience-index {
+    display: none !important;
+}
+
+/* =========================================
+   TRAVELORA ABOUT PAGE — CONSISTENT DM SANS
+   ========================================= */
+
+main.about-page,
+main.about-page * {
+    font-family: "DM Sans", sans-serif;
+    font-style: normal;
+}
+
+/* Main headings */
+main.about-page h1,
+main.about-page h2 {
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+/* Card and smaller headings */
+main.about-page h3,
+main.about-page h4,
+main.about-page h5,
+main.about-page h6 {
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* Paragraphs */
+main.about-page p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.85;
+}
+
+/* Small labels */
+main.about-page .section-eyebrow,
+main.about-page .history-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Navigation and buttons */
+main.about-page a,
+main.about-page button {
+    font-weight: 600;
+}
+
+/* Mobile typography */
+@media (max-width: 600px) {
+    main.about-page h1 {
+        font-size: clamp(32px, 9vw, 42px);
+    }
+
+    main.about-page h2 {
+        font-size: clamp(26px, 7vw, 34px);
+    }
+
+    main.about-page p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+}
+/* Match About page typography with Home 1 */
+main.about-page,
+main.about-page * {
+    font-family: "DM Sans", sans-serif;
+}
+
+main.about-page h1,
+main.about-page h2,
+main.about-page h3 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+}
+
+/* =========================================
+   TRAVELORA ABOUT PAGE — HOME 1 TYPOGRAPHY
+   ========================================= */
+
+main.about-page,
+main.about-page * {
+    font-family: "DM Sans", sans-serif;
+    font-style: normal;
+}
+
+main.about-page h1,
+main.about-page h2,
+main.about-page h3,
+main.about-page h4,
+main.about-page h5,
+main.about-page h6 {
+    font-weight: 700;
+}
+
+main.about-page h1,
+main.about-page h2 {
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+main.about-page p {
+    font-weight: 400;
+    line-height: 1.85;
+}
+
+main.about-page a,
+main.about-page button {
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    main.about-page h1 {
+        font-size: clamp(32px, 9vw, 42px);
+    }
+
+    main.about-page h2 {
+        font-size: clamp(26px, 7vw, 34px);
+    }
+
+    main.about-page p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+}
+
+/* =========================================
+   ABOUT PAGE — MATCH TRAVELORA TYPOGRAPHY
+   Header and footer remain unchanged
+========================================= */
+
+.about-page {
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* Main hero heading */
+.about-page .about-hero-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Section headings */
+.about-page .about-story-content h2,
+.about-page .history-heading h2,
+.about-page .section-heading h2,
+.about-page .about-audience-heading h2,
+.about-page .about-difference-content h2,
+.about-page .final-cta-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+/* Card headings */
+.about-page .history-content h3,
+.about-page .about-purpose-card h3,
+.about-page .about-value-card h3,
+.about-page .about-audience-content h3,
+.about-page .about-difference-item h3,
+.about-page .about-process-card h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* Hero image caption */
+.about-page .about-hero-image-caption h2 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Paragraphs */
+.about-page p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+/* Section labels and eyebrow text */
+.about-page .section-eyebrow,
+.about-page .history-label,
+.about-page .about-card-kicker,
+.about-page .about-audience-label {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Buttons and text links */
+.about-page .btn,
+.about-page a.btn,
+.about-page .text-link {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Mobile typography */
+@media (max-width: 768px) {
+    .about-page .about-hero-content h1 {
+        font-size: 36px;
+    }
+
+    .about-page .about-story-content h2,
+    .about-page .history-heading h2,
+    .about-page .section-heading h2,
+    .about-page .about-audience-heading h2,
+    .about-page .about-difference-content h2,
+    .about-page .final-cta-content h2 {
+        font-size: 28px;
+    }
+
+    .about-page .history-content h3,
+    .about-page .about-purpose-card h3,
+    .about-page .about-value-card h3,
+    .about-page .about-audience-content h3,
+    .about-page .about-difference-item h3,
+    .about-page .about-process-card h3 {
+        font-size: 21px;
+    }
+
+    .about-page .about-hero-image-caption h2 {
+        font-size: 18px;
+    }
+}
+
+/* ==========================================
+   TRAVELORA ABOUT PAGE — TYPOGRAPHY
+   ========================================== */
+
+body main#main-content.about-page {
+    font-family: 'DM Sans', sans-serif !important;
+}
+
+/* H1 — Main heading */
+body main#main-content.about-page h1 {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 48px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+}
+
+/* H2 — Section headings */
+body main#main-content.about-page h2 {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+}
+
+/* H3 — Card and feature headings */
+body main#main-content.about-page h3 {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+}
+
+/* Paragraphs */
+body main#main-content.about-page p {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.7 !important;
+}
+
+/* Section labels and card labels */
+body main#main-content.about-page .section-eyebrow,
+body main#main-content.about-page .history-label,
+body main#main-content.about-page .about-card-kicker,
+body main#main-content.about-page .about-audience-label,
+body main#main-content.about-page .about-value-number,
+body main#main-content.about-page .about-process-number,
+body main#main-content.about-page .history-number,
+body main#main-content.about-page .about-audience-index {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+}
+
+/* Buttons and text links */
+body main#main-content.about-page .btn,
+body main#main-content.about-page a.btn,
+body main#main-content.about-page .text-link {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+}
+
+/* Mobile typography */
+@media (max-width: 768px) {
+    body main#main-content.about-page h1 {
+        font-size: 36px !important;
+    }
+
+    body main#main-content.about-page h2 {
+        font-size: 28px !important;
+    }
+
+    body main#main-content.about-page h3 {
+        font-size: 21px !important;
+    }
+}

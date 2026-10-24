@@ -1,0 +1,852 @@
+/* =========================================================
+   TRAVELORA — MANALI PACKAGE DETAILS PAGE
+   Matches packages-details.html
+   Teal + Orange | Responsive | RTL compatible
+========================================================= */
+
+/* ---------- PAGE COLORS ---------- */
+:root {
+    --pd-teal: #009C9A;
+    --pd-teal-dark: #007F7D;
+    --pd-orange: #FF8A00;
+    --pd-heading: #153A3C;
+    --pd-text: #526467;
+    --pd-background: #FFFFFF;
+    --pd-light: #F5F9F9;
+    --pd-border: #DCE7E7;
+    --pd-radius: 14px;
+    --pd-shadow: 0 8px 25px rgba(21, 58, 60, 0.08);
+}
+
+/* ---------- GENERAL ---------- */
+main {
+    overflow: hidden;
+}
+
+main .site-container {
+    width: min(1180px, 92%);
+    margin-inline: auto;
+}
+
+.package-details-page {
+    color: var(--pd-text);
+    background: var(--pd-background);
+}
+
+main .section {
+    padding: 80px 0;
+}
+
+main h1,
+main h2,
+main h3,
+main h4 {
+    color: var(--pd-heading);
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+main h1 {
+    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+}
+
+main h2 {
+    font-size: clamp(1.7rem, 3vw, 2.35rem);
+}
+
+main h3 {
+    font-size: 1.2rem;
+}
+
+main p {
+    line-height: 1.8;
+}
+
+/* ---------- SECTION HEADINGS ---------- */
+.section-heading {
+    max-width: 740px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin: 10px 0 14px;
+}
+
+.section-heading p {
+    margin: 0;
+    color: var(--pd-text);
+}
+
+.section-eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--pd-teal);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+}
+
+/* ---------- BREADCRUMB ---------- */
+.package-breadcrumb {
+    padding: 16px 0;
+    background: var(--pd-light);
+    border-bottom: 1px solid var(--pd-border);
+}
+
+.package-breadcrumb nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.package-breadcrumb a {
+    color: var(--pd-teal);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.package-breadcrumb a:hover {
+    color: var(--pd-orange);
+}
+
+.package-breadcrumb span {
+    color: var(--pd-text);
+}
+
+/* ---------- BUTTONS ---------- */
+/* Primary: teal background, orange hover */
+main .btn.btn-primary {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    min-height: 48px;
+    padding: 12px 24px;
+    background: var(--pd-teal);
+    color: #FFFFFF;
+    border: 2px solid var(--pd-teal);
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.25s ease,
+                color 0.25s ease,
+                border-color 0.25s ease,
+                transform 0.25s ease;
+}
+
+main .btn.btn-primary:hover {
+    background: var(--pd-orange);
+    color: #FFFFFF;
+    border-color: var(--pd-orange);
+    transform: translateY(-2px);
+}
+
+/* Secondary: teal outline, orange hover */
+main .btn.btn-outline {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    min-height: 48px;
+    padding: 12px 24px;
+    background: transparent;
+    color: var(--pd-teal);
+    border: 2px solid var(--pd-teal);
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.25s ease,
+                color 0.25s ease,
+                border-color 0.25s ease,
+                transform 0.25s ease;
+}
+
+main .btn.btn-outline:hover {
+    background: var(--pd-orange);
+    color: #FFFFFF;
+    border-color: var(--pd-orange);
+    transform: translateY(-2px);
+}
+
+main .btn:focus-visible {
+    outline: 3px solid rgba(255, 138, 0, 0.35);
+    outline-offset: 3px;
+}
+
+/* ---------- PACKAGE HERO ---------- */
+.package-hero {
+    padding: 70px 0;
+    background: var(--pd-light);
+}
+
+.package-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.95fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.package-hero-content h1 {
+    margin: 0 0 20px;
+    color: var(--pd-heading);
+}
+
+.package-hero-description {
+    max-width: 590px;
+    margin-bottom: 24px;
+    color: var(--pd-text);
+    font-size: 1.05rem;
+}
+
+.package-quick-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.package-quick-info span {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    background: #FFFFFF;
+    border: 1px solid var(--pd-border);
+    border-radius: 7px;
+    color: var(--pd-heading);
+    font-size: 0.88rem;
+}
+
+.package-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.package-hero-image {
+    overflow: hidden;
+    min-height: 390px;
+    border-radius: 20px;
+    box-shadow: var(--pd-shadow);
+}
+
+.package-hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 390px;
+    object-fit: cover;
+}
+
+#savePackageMessage {
+    min-height: 24px;
+    margin-top: 12px;
+    color: var(--pd-teal-dark);
+    font-size: 0.9rem;
+}
+
+/* Saved package button */
+#savePackageBtn.is-saved {
+    background: var(--pd-teal);
+    color: #FFFFFF;
+    border-color: var(--pd-teal);
+}
+
+#savePackageBtn.is-saved:hover {
+    background: var(--pd-orange);
+    border-color: var(--pd-orange);
+}
+
+/* ---------- OVERVIEW CARDS ---------- */
+.package-overview {
+    background: #FFFFFF;
+}
+
+.package-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.overview-card {
+    padding: 28px 22px;
+    background: #FFFFFF;
+    border: 1px solid var(--pd-border);
+    border-radius: var(--pd-radius);
+    box-shadow: var(--pd-shadow);
+    transition: transform 0.25s ease,
+                border-color 0.25s ease;
+}
+
+.overview-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--pd-teal);
+}
+
+.overview-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 18px;
+    background: rgba(0, 156, 154, 0.1);
+    border-radius: 12px;
+    font-size: 1.6rem;
+}
+
+.overview-card h3 {
+    margin: 0 0 10px;
+}
+
+.overview-card p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ---------- GALLERY ---------- */
+.package-gallery {
+    background: var(--pd-light);
+}
+
+.package-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.package-gallery-grid img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: var(--pd-radius);
+    transition: transform 0.3s ease;
+}
+
+.package-gallery-grid img:hover {
+    transform: translateY(-4px);
+}
+
+/* ---------- ITINERARY ---------- */
+.package-itinerary {
+    background: #FFFFFF;
+}
+
+.itinerary-list {
+    display: grid;
+    gap: 18px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.itinerary-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 24px;
+    align-items: start;
+    padding: 25px;
+    background: var(--pd-light);
+    border: 1px solid var(--pd-border);
+    border-radius: var(--pd-radius);
+}
+
+.itinerary-day {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 8px 12px;
+    background: var(--pd-teal);
+    color: #FFFFFF;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.itinerary-item h3 {
+    margin: 3px 0 8px;
+}
+
+.itinerary-item p {
+    margin: 0;
+}
+
+.itinerary-note {
+    max-width: 900px;
+    margin: 24px auto 0;
+    padding: 16px 20px;
+    background: #FFF5E8;
+    border-left: 4px solid var(--pd-orange);
+    border-radius: 6px;
+    font-size: 0.92rem;
+}
+
+/* ---------- INCLUSIONS AND EXCLUSIONS ---------- */
+.package-inclusions {
+    background: var(--pd-light);
+}
+
+.inclusions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.inclusions-card,
+.exclusions-card {
+    padding: 30px;
+    background: #FFFFFF;
+    border: 1px solid var(--pd-border);
+    border-radius: var(--pd-radius);
+    box-shadow: var(--pd-shadow);
+}
+
+.inclusions-card h3,
+.exclusions-card h3 {
+    margin: 0 0 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--pd-border);
+}
+
+.inclusions-card h3 {
+    color: var(--pd-teal-dark);
+}
+
+.exclusions-card h3 {
+    color: var(--pd-heading);
+}
+
+.inclusions-card ul,
+.exclusions-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.inclusions-card li,
+.exclusions-card li {
+    position: relative;
+    padding: 10px 0 10px 30px;
+    border-bottom: 1px solid #EDF1F1;
+    line-height: 1.6;
+}
+
+.inclusions-card li:last-child,
+.exclusions-card li:last-child {
+    border-bottom: 0;
+}
+
+.inclusions-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--pd-teal);
+    font-weight: 800;
+}
+
+.exclusions-card li::before {
+    content: "×";
+    position: absolute;
+    left: 0;
+    color: var(--pd-orange);
+    font-weight: 800;
+}
+
+/* ---------- TRAVEL INFORMATION ---------- */
+.travel-information {
+    background: #FFFFFF;
+}
+
+.travel-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.travel-info-card {
+    padding: 26px;
+    background: var(--pd-light);
+    border: 1px solid var(--pd-border);
+    border-radius: var(--pd-radius);
+}
+
+.travel-info-card h3 {
+    margin: 0 0 12px;
+}
+
+.travel-info-card p {
+    margin: 0;
+}
+
+/* ---------- BOOKING ENQUIRY ---------- */
+.booking-enquiry {
+    background: var(--pd-light);
+}
+
+.booking-enquiry-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: start;
+    gap: 55px;
+}
+
+.booking-enquiry-content h2 {
+    margin: 8px 0 18px;
+}
+
+.booking-contact-info {
+    margin-top: 25px;
+    padding: 20px;
+    background: #FFFFFF;
+    border: 1px solid var(--pd-border);
+    border-radius: var(--pd-radius);
+}
+
+.booking-contact-info p {
+    margin: 5px 0;
+}
+
+.booking-contact-info strong {
+    color: var(--pd-heading);
+}
+
+.booking-enquiry-form {
+    padding: 32px;
+    background: #FFFFFF;
+    border: 1px solid var(--pd-border);
+    border-radius: var(--pd-radius);
+    box-shadow: var(--pd-shadow);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--pd-heading);
+    font-size: 0.94rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    background: #FFFFFF;
+    color: var(--pd-heading);
+    border: 1px solid #CBDADA;
+    border-radius: 8px;
+    font: inherit;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--pd-teal);
+    box-shadow: 0 0 0 3px rgba(0, 156, 154, 0.12);
+}
+
+.booking-enquiry-form > .btn {
+    width: 100%;
+}
+
+/* ---------- RELATED PACKAGES ---------- */
+.related-packages {
+    background: #FFFFFF;
+}
+
+.related-packages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.related-package-card {
+    overflow: hidden;
+    background: #FFFFFF;
+    border: 1px solid var(--pd-border);
+    border-radius: var(--pd-radius);
+    box-shadow: var(--pd-shadow);
+    transition: transform 0.25s ease;
+}
+
+.related-package-card:hover {
+    transform: translateY(-5px);
+}
+
+.related-package-card img {
+    display: block;
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+}
+
+.related-package-content {
+    padding: 24px;
+}
+
+.related-package-content h3 {
+    margin: 0 0 10px;
+}
+
+.related-package-content p {
+    margin: 0 0 18px;
+}
+
+.related-package-content .text-link {
+    color: var(--pd-teal);
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.related-package-content .text-link:hover {
+    color: var(--pd-orange);
+}
+
+/* ---------- FINAL CTA ---------- */
+.final-cta {
+    padding: 65px 0;
+    background: var(--pd-heading);
+}
+
+.final-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.final-cta-content {
+    max-width: 650px;
+}
+
+.final-cta h2 {
+    margin: 8px 0 12px;
+    color: #FFFFFF;
+}
+
+.final-cta p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.final-cta .section-eyebrow {
+    color: #FFFFFF;
+}
+
+.final-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Light button: white normally, orange hover */
+main .btn.btn-light {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 24px;
+    background: #FFFFFF;
+    color: var(--pd-teal-dark);
+    border: 2px solid #FFFFFF;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+main .btn.btn-light:hover {
+    background: var(--pd-orange);
+    color: #FFFFFF;
+    border-color: var(--pd-orange);
+}
+
+/* CTA outline button: white outline on dark CTA */
+main .btn.btn-cta-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 24px;
+    background: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+main .btn.btn-cta-outline:hover {
+    background: var(--pd-orange);
+    color: #FFFFFF;
+    border-color: var(--pd-orange);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+    main .section {
+        padding: 65px 0;
+    }
+
+    .package-hero-grid {
+        gap: 30px;
+    }
+
+    .package-overview-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .booking-enquiry-grid {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    main .section {
+        padding: 52px 0;
+    }
+
+    .package-hero {
+        padding: 50px 0;
+    }
+
+    .package-hero-grid,
+    .booking-enquiry-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .package-hero-image {
+        min-height: 300px;
+    }
+
+    .package-hero-image img {
+        min-height: 300px;
+        max-height: 400px;
+    }
+
+    .package-gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .package-gallery-grid img {
+        height: 220px;
+    }
+
+    .inclusions-grid,
+    .travel-info-grid,
+    .related-packages-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .final-cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 520px) {
+    .package-hero-actions,
+    .final-cta-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .package-hero-actions .btn,
+    .final-cta-actions .btn {
+        width: 100%;
+    }
+
+    .package-quick-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .package-overview-grid,
+    .package-gallery-grid,
+    .inclusions-grid,
+    .travel-info-grid,
+    .related-packages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .package-gallery-grid img {
+        height: 230px;
+    }
+
+    .itinerary-item {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 20px;
+    }
+
+    .itinerary-day {
+        justify-self: start;
+    }
+
+    .booking-enquiry-form {
+        padding: 22px;
+    }
+
+    .package-hero-content h1 {
+        font-size: 2.1rem;
+    }
+}
+
+/* ---------- RTL SUPPORT ---------- */
+[dir="rtl"] .package-breadcrumb nav {
+    direction: rtl;
+}
+
+[dir="rtl"] .inclusions-card li,
+[dir="rtl"] .exclusions-card li {
+    padding: 10px 30px 10px 0;
+}
+
+[dir="rtl"] .inclusions-card li::before,
+[dir="rtl"] .exclusions-card li::before {
+    left: auto;
+    right: 0;
+}
+
+[dir="rtl"] .itinerary-note {
+    border-left: 0;
+    border-right: 4px solid var(--pd-orange);
+}
+
+/* ---------- ACCESSIBILITY ---------- */
+@media (prefers-reduced-motion: reduce) {
+    .package-details-page *,
+    .package-details-page *::before,
+    .package-details-page *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

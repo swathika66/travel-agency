@@ -3030,111 +3030,484 @@ html[dir="rtl"] .home-dropdown-menu {
     transform: scaleX(1);
 }
 
-/* =========================================
-   TRAVELORA — FONT STYLE UPDATE
-========================================= */
-
 body {
-    font-family: "Poppins", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-button,
-input,
-select,
-textarea {
-    font-family: "Poppins", sans-serif;
-}
-
-/* =========================================
-   SECONDARY BUTTONS — PRIMARY TEAL COLORS
-========================================= */
-
-.btn-outline,
-.btn-secondary,
-button.btn-outline,
-a.btn-outline {
-    background-color: transparent;
-    color: #009C9A;
-    border: 2px solid #009C9A;
-    transition: all 0.3s ease;
-}
-
-.btn-outline:hover,
-.btn-secondary:hover,
-button.btn-outline:hover,
-a.btn-outline:hover {
-    background-color: #009C9A;
-    color: #FFFFFF;
-    border-color: #009C9A;
-    transform: translateY(-2px);
-}
-
-/* Keyboard accessibility */
-.btn-outline:focus-visible,
-.btn-secondary:focus-visible {
-    outline: 2px solid #007F7D;
-    outline-offset: 3px;
-}
-
-
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
-
-/* Main website font */
-body,
-button,
-input,
-textarea,
-select {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Headings */
+h1, h2 {
+    font-weight: 700;
+}
+
+h3, h4 {
+    font-weight: 600;
+}
+
+button,
+nav,
+.btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+}
+
+/* Secondary Buttons — Teal Outline, No Hover Change */
+.btn-outline,
+.btn-cta-outline {
+    background-color: transparent;
+    color: #009C9A;
+    border: 1px solid #009C9A;
+    box-shadow: none;
+    transform: none;
+    transition: none;
+}
+
+.btn-outline:hover,
+.btn-cta-outline:hover {
+    background-color: transparent !important;
+    color: #009C9A !important;
+    border-color: #009C9A !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+/* Secondary Buttons — Teal Outline with Subtle Lift */
+.btn-outline,
+.btn-cta-outline {
+    background-color: transparent;
+    color: #009C9A;
+    border: 1px solid #009C9A;
+    box-shadow: none;
+    transform: translateY(0);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-outline:hover,
+.btn-cta-outline:hover {
+    background-color: transparent !important;
+    color: #009C9A !important;
+    border-color: #009C9A !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 5px 12px rgba(0, 156, 154, 0.15) !important;
+}
+
+/* CTA Section — Visible Secondary Button */
+.final-cta-actions .btn-cta-outline {
+    background-color: #FFFFFF;
+    color: #009C9A;
+    border: 2px solid #009C9A;
+    box-shadow: none;
+    transform: translateY(0);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.final-cta-actions .btn-cta-outline:hover {
+    background-color: #FFFFFF !important;
+    color: #009C9A !important;
+    border-color: #009C9A !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 5px 12px rgba(0, 156, 154, 0.18) !important;
+}
+
+/* =========================================
+   TRAVELORA — RECTANGULAR IMAGE LAYOUTS
+   Sections between Hero and CTA
+========================================= */
+
+/* Intro section image */
+.intro-image-wrap {
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.intro-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+/* Destination cards */
+.destination-card {
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+/* Experience section images */
+.experience-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.experience-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    transition: transform 0.35s ease;
+}
+
+.experience-card:hover .experience-image img {
+    transform: scale(1.04);
+}
+
+/* Why Travelora image */
+.why-image-wrap {
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.why-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+/* Inspiration section image */
+.inspiration-image {
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.inspiration-image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 14px;
+    transition: transform 0.35s ease;
+}
+
+.inspiration-image:hover img {
+    transform: scale(1.04);
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .experience-image img,
+    .inspiration-image img {
+        transition: none;
+    }
+}
+
+/* =========================================================
+   HOME 2 — SECONDARY BUTTONS
+   Rounded pill style matching Home 1
+========================================================= */
+
+.h2-hero .btn-outline,
+.h2-featured .btn-outline,
+.h2-holiday-packages .btn-outline {
+    background: transparent;
+    color: #009C9A;
+    border: 1.5px solid #009C9A;
+    border-radius: 50px;
+    box-shadow: none;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease;
+}
+
+/* Hover effect */
+.h2-hero .btn-outline:hover,
+.h2-featured .btn-outline:hover,
+.h2-holiday-packages .btn-outline:hover {
+    background: #009C9A;
+    color: #FFFFFF;
+    border-color: #009C9A;
+    box-shadow: none;
+}
+
+/* =========================================
+   TRAVELORA — DM SANS TYPOGRAPHY
+========================================= */
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+}
+
 h1,
-h2,
+h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+}
+
 h3,
 h4,
 h5,
 h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+}
+
+button,
+nav,
+.btn {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+}
+
+/* TRAVELORA — COMMON TYPOGRAPHY */
+
+body {
+    font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+h1, h2, h3, h4 {
+    font-family: inherit;
+    line-height: 1.2;
+    letter-spacing: -0.035em;
+}
+
+h1 {
+    font-size: clamp(43px, 4.8vw, 65px);
+    font-weight: 850;
+}
+
+h2 {
+    font-size: clamp(30px, 3.6vw, 43px);
+    font-weight: 750;
+}
+
+h3, h4 {
+    font-weight: 750;
+}
+
+button, .btn {
+    font-family: inherit;
+    font-weight: 750;
+}
+
+/* =====================================
+   TRAVELORA — GLOBAL TYPOGRAPHY
+   ===================================== */
+
+body {
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(43px, 4.8vw, 65px);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+}
+
+h2 {
+    font-size: clamp(30px, 3.6vw, 43px);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+}
+
+h3, h4, h5, h6 {
     font-weight: 700;
 }
 
-/* Match Home 1 heading fonts */
-.hero-text h1,
-.hero-image-caption h2,
-.intro-content h2,
-.section-heading h2,
-.why-content h2,
-.inspiration-content h2,
-.final-cta h2 {
-    font-family: 'Dancing Script', cursive !important;
+button,
+input,
+select,
+textarea,
+.btn,
+a {
+    font-family: "DM Sans", sans-serif;
+}
+
+button,
+.btn {
     font-weight: 700;
 }
 
-/* Same fonts for Home 1 and Home 2 */
+/* Travelora - Global Typography */
+
 body,
 button,
 input,
 textarea,
 select {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'DM Sans', sans-serif;
 }
 
-.hero-text h1,
-.hero-image-caption h2,
-.intro-content h2,
-.section-heading h2,
-.why-content h2,
-.inspiration-content h2,
-.final-cta h2 {
-    font-family: 'Dancing Script', cursive !important;
+/* Main headings */
+h1 {
+    font-size: 48px;
     font-weight: 700;
+    line-height: 1.2;
 }
 
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Paragraphs */
+p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+/* Navigation */
+nav a {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* Buttons */
+button,
+.btn,
+a.btn {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Small text */
+small,
+.section-eyebrow {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Mobile heading sizes */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 21px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+}
+
+.hero-memory-card {
+    display: none !important;
+}
+
+/* ==========================================
+   TRAVELORA HOME 1 — TYPOGRAPHY STANDARD
+   Font: DM Sans
+   ========================================== */
+
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* H1 — Main hero heading */
+body main#main-content .hero-text h1 {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 48px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+}
+
+/* H2 — Section headings and hero image caption */
+body main#main-content h2 {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+}
+
+/* H3 — Cards and feature headings */
+body main#main-content h3 {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+}
+
+/* Paragraphs */
+body main#main-content p {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.7 !important;
+}
+
+/* Small section labels */
+body main#main-content .section-eyebrow,
+body main#main-content .hero-eyebrow,
+body main#main-content .destination-tag {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+}
+
+/* Buttons and text links */
+body main#main-content .btn,
+body main#main-content a.btn,
+body main#main-content .destination-link,
+body main#main-content .text-link {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+}
+
+/* Highlight text */
+body main#main-content .hero-highlight,
+body main#main-content .intro-point strong,
+body main#main-content .why-feature h3 {
+    font-family: 'DM Sans', sans-serif !important;
+}
+
+/* Mobile typography */
+@media (max-width: 768px) {
+    body main#main-content .hero-text h1 {
+        font-size: 36px !important;
+    }
+
+    body main#main-content h2 {
+        font-size: 28px !important;
+    }
+
+    body main#main-content h3 {
+        font-size: 21px !important;
+    }
+}

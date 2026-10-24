@@ -1119,3 +1119,287 @@ body:has(.hero-image-wrap) .hero-image {
         transition: none;
     }
 }
+
+/* =========================================
+   PACKAGES DETAILS — FONT STYLE
+   Matching International Packages Page
+========================================= */
+
+body {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+/* All headings */
+h1,
+h2,
+h3,
+h4 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.4px;
+}
+
+/* Hero title */
+.package-hero-content h1 {
+    font-size: clamp(2.3rem, 4vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+/* Section titles */
+.section-heading h2,
+.booking-enquiry-content h2,
+.final-cta-content h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+/* Card titles */
+.overview-card h3,
+.itinerary-item h3,
+.inclusions-card h3,
+.exclusions-card h3,
+.related-package-content h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* Body paragraphs */
+p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+/* Small uppercase labels */
+.section-eyebrow {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Breadcrumb text */
+.package-breadcrumb {
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+
+/* Buttons */
+.package-details-page .btn,
+.package-hero-actions .btn,
+.booking-enquiry-form .btn,
+.final-cta-actions .btn {
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+}
+
+/* Form labels */
+.booking-enquiry-form label {
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+/* Form fields */
+.booking-enquiry-form input,
+.booking-enquiry-form select,
+.booking-enquiry-form textarea {
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+/* Mobile font sizes */
+@media (max-width: 600px) {
+    .package-hero-content h1 {
+        font-size: 2.15rem;
+        line-height: 1.2;
+    }
+
+    .section-heading h2,
+    .booking-enquiry-content h2,
+    .final-cta-content h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Move floating card upward */
+.hero-memory-card {
+    bottom: 40px;
+}
+
+.hero-memory-card {
+    bottom: 40px;
+}
+
+.hero-memory-card {
+    display: none !important;
+}
+
+.destination-number {
+    display: none !important;
+}
+
+.experience-number {
+    display: none !important;
+}
+
+
+
+/* ===== SAME TYPOGRAPHY AS PREVIOUS PAGE ===== */
+
+main {
+    font-family: 'DM Sans', sans-serif;
+}
+
+main h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+main h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+main h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+main h4 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+main p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+main .section-eyebrow,
+main .hero-eyebrow {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+main .btn,
+main a.btn,
+main .text-link,
+main .destination-link {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    main h1 {
+        font-size: 36px;
+    }
+
+    main h2 {
+        font-size: 28px;
+    }
+
+    main h3 {
+        font-size: 21px;
+    }
+
+    main h4 {
+        font-size: 18px;
+    }
+}
+
+/* =========================================
+   INTERNATIONAL PACKAGES — GLOBAL TYPOGRAPHY
+   Match Home 1 and Home 2
+   Header and footer remain unchanged
+========================================= */
+
+main {
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* Main hero heading */
+main .hero-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Section headings */
+main .intro-content h2,
+main .section-heading h2,
+main .why-content h2,
+main .inspiration-content h2,
+main .final-cta-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+/* Destination and package card headings */
+main .destination-content h3,
+main .experience-content h3,
+main .why-feature h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* Paragraphs */
+main p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+/* Small section labels */
+main .section-eyebrow {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Buttons and text links */
+main .btn,
+main a.btn,
+main .text-link,
+main .destination-link {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Mobile typography */
+@media (max-width: 768px) {
+    main .hero-text h1 {
+        font-size: 36px;
+    }
+
+    main .intro-content h2,
+    main .section-heading h2,
+    main .why-content h2,
+    main .inspiration-content h2,
+    main .final-cta-content h2 {
+        font-size: 28px;
+    }
+
+    main .destination-content h3,
+    main .experience-content h3,
+    main .why-feature h3 {
+        font-size: 21px;
+    }
+}

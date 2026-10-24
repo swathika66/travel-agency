@@ -2346,7 +2346,6 @@ a.btn-outline:hover {
     outline-offset: 3px;
 }
 
-
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
 
@@ -2543,6 +2542,7 @@ select {
     height: 175px;
     transform: rotate(-4deg);
 }
+
 
 /* Floating white information card */
 .h2-photo-collage .h2-floating-top {
@@ -3052,4 +3052,1098 @@ body.dark-mode .h2-hero-content > .section-eyebrow {
     background: #007E7C !important;
     border-color: #007E7C !important;
     color: #FFFFFF !important;
+}
+
+/* =========================
+   TRAVELORA — DM SANS FONT
+========================= */
+
+html,
+body,
+button,
+input,
+textarea,
+select {
+    font-family: "DM Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+li,
+label,
+summary {
+    font-family: "DM Sans", sans-serif;
+}
+
+/* =========================
+   SECONDARY OUTLINE BUTTON
+========================= */
+
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 12px 24px;
+
+    background: transparent;
+    color: #009C9A;
+    border: 1.5px solid #009C9A;
+    border-radius: 10px;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+.btn-outline:hover {
+    background: #009C9A;
+    color: #FFFFFF;
+    border-color: #009C9A;
+    box-shadow: 0 6px 18px rgba(0, 156, 154, 0.18);
+    transform: translateY(-2px);
+}
+
+.btn-outline:focus-visible {
+    outline: 3px solid rgba(255, 138, 0, 0.55);
+    outline-offset: 3px;
+}
+
+.btn-outline:active {
+    transform: translateY(0);
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .btn-outline {
+        transition: none;
+    }
+
+    .btn-outline:hover {
+        transform: none;
+    }
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+}
+
+
+/* HOME 2 — FORCE DM SANS ON HERO HEADING */
+
+.h2-hero .h2-hero-content h1,
+.h2-hero .h2-hero-content h1 span {
+    font-family: 'DM Sans', sans-serif !important;
+    font-weight: 500 !important;
+    font-style: normal !important;
+    letter-spacing: -1.5px;
+}
+
+.h2-hero .h2-hero-content h1,
+.h2-hero .h2-hero-content h1 span {
+    font-family: 'DM Sans', sans-serif !important;
+    font-weight: 700 !important;
+    font-style: normal !important;
+}
+
+/* =====================================================
+   TRAVELORA HOME 2 — CONSISTENT DM SANS TYPOGRAPHY
+   Matches Home 1
+===================================================== */
+
+body,
+button,
+input,
+textarea,
+select {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+}
+
+/* All headings throughout Home 2 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+}
+
+/* Hero heading */
+.h2-hero h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+}
+
+/* Section headings */
+.section-heading h2,
+.h2-featured-heading h2,
+.h2-process-intro h2,
+.h2-holiday-heading h2,
+.h2-faq-intro h2,
+.final-cta h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+}
+
+/* Card headings */
+.h2-category-card h3,
+.h2-featured-card h3,
+.h2-benefit-card h3,
+.h2-process-step h3,
+.h2-holiday-card h3,
+.h2-faq-item summary {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+}
+
+/* Paragraphs and descriptive text */
+p,
+.h2-category-label,
+.h2-holiday-location,
+.h2-holiday-tag,
+.h2-holiday-highlights,
+.h2-hero-trust,
+.h2-featured-info > span {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+}
+
+/* Navigation, buttons and links */
+.main-nav a,
+.login-btn,
+.btn,
+.text-link,
+.h2-holiday-link,
+.h2-featured-info a,
+.final-cta a {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+}
+
+/* Small section taglines */
+.section-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+}
+
+/* Hero tagline */
+.h2-hero .section-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+}
+
+/* Footer typography */
+.site-footer,
+.site-footer h3,
+.site-footer a,
+.site-footer p {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.site-footer h3 {
+    font-weight: 600;
+}
+
+/* HOME 2 — REMAINING SECTIONS FONT FIX */
+
+.h2-categories,
+.h2-featured,
+.h2-benefits,
+.h2-process,
+.h2-holiday-packages,
+.h2-faq,
+.final-cta {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.h2-categories h2,
+.h2-featured h2,
+.h2-benefits h2,
+.h2-process h2,
+.h2-holiday-packages h2,
+.h2-faq h2,
+.final-cta h2,
+.h2-categories h3,
+.h2-featured h3,
+.h2-benefits h3,
+.h2-process h3,
+.h2-holiday-packages h3,
+.h2-faq summary {
+    font-family: 'DM Sans', sans-serif !important;
+    font-weight: 500;
+}
+
+.h2-categories p,
+.h2-featured p,
+.h2-benefits p,
+.h2-process p,
+.h2-holiday-packages p,
+.h2-faq p,
+.final-cta p {
+    font-family: 'DM Sans', sans-serif !important;
+    font-weight: 400;
+}
+
+.h2-categories a,
+.h2-featured a,
+.h2-benefits a,
+.h2-process a,
+.h2-holiday-packages a,
+.h2-faq a,
+.final-cta a {
+    font-family: 'DM Sans', sans-serif !important;
+}
+
+/* HOME 2 — CTA SECTION SECONDARY BUTTON */
+
+.final-cta .btn-cta-outline {
+    background: transparent;
+    color: #009C9A;
+    border: 1.5px solid #009C9A;
+    border-radius: 50px;
+    box-shadow: none;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.final-cta .btn-cta-outline:hover {
+    background: #009C9A;
+    color: #FFFFFF;
+    border-color: #009C9A;
+    box-shadow: none;
+}
+
+/* FINAL CTA — CONTACT US SECONDARY BUTTON */
+
+.final-cta .final-cta-actions a.btn.btn-cta-outline {
+    background: transparent !important;
+    color: #FFFFFF !important;
+    border: 1.5px solid #FFFFFF !important;
+    border-radius: 50px !important;
+    box-shadow: none !important;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.final-cta .final-cta-actions a.btn.btn-cta-outline:hover {
+    background: #FFFFFF !important;
+    color: #009C9A !important;
+    border-color: #FFFFFF !important;
+}
+
+/* FINAL CTA — CONTACT US SECONDARY BUTTON */
+
+.final-cta .final-cta-actions a.btn.btn-cta-outline,
+.final-cta .final-cta-actions a.btn.btn-cta-outline:hover,
+.final-cta .final-cta-actions a.btn.btn-cta-outline:focus,
+.final-cta .final-cta-actions a.btn.btn-cta-outline:active {
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    color: #009C9A !important;
+    border: 1.5px solid #009C9A !important;
+    border-radius: 50px !important;
+    box-shadow: none !important;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    transition: none;
+}
+
+/* =========================================
+   HOME 2 — HERO TAGLINE
+   Matching the Domestic Packages hero style
+========================================= */
+
+.h2-hero .h2-hero-content > .section-eyebrow {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+
+    margin-bottom: 25px !important;
+    padding: 9px 14px !important;
+
+    background: #E5F7F6 !important;
+    color: #007E7C !important;
+
+    border: none !important;
+    border-radius: 50px !important;
+    box-shadow: none !important;
+
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 10px !important;
+    font-weight: 800 !important;
+    letter-spacing: 1.5px !important;
+    line-height: 1.6 !important;
+    text-transform: uppercase !important;
+}
+
+/* Orange dot with a soft, visible outer ring */
+.h2-hero .h2-hero-content > .section-eyebrow::before {
+    content: "" !important;
+    display: inline-block !important;
+
+    width: 9px !important;
+    height: 9px !important;
+    min-width: 9px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    background: #FF8A00 !important;
+    border: none !important;
+    border-radius: 50% !important;
+    box-shadow: 0 0 0 5px rgba(255, 138, 0, 0.12) !important;
+}
+
+/* Remove any unwanted line or extra decoration */
+.h2-hero .h2-hero-content > .section-eyebrow::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* HOME 2 — MATCH HOME 1 TAGLINE SIZE */
+
+.h2-hero .h2-hero-content > .section-eyebrow {
+    font-size: 0.76rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 1.5px !important;
+}
+
+@media (max-width: 600px) {
+    .h2-hero .h2-hero-content > .section-eyebrow {
+        font-size: 9px !important;
+        letter-spacing: 0.08em !important;
+        padding: 8px 11px !important;
+    }
+}
+
+/* Home 2 hero tagline — matching Home 1 */
+.h2-hero .section-eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+/* Orange dot */
+.h2-hero .section-eyebrow::before {
+    width: 8px;
+    height: 8px;
+    background: #FF8A00;
+    box-shadow: 0 0 8px rgba(255, 138, 0, 0.3);
+}
+
+/* Reduce space between header and hero */
+.h2-hero {
+    padding: 35px 0 70px;
+}
+
+@media (max-width: 1000px) {
+    .h2-hero {
+        padding: 30px 0 55px;
+    }
+}
+
+@media (max-width: 600px) {
+    .h2-hero {
+        padding: 20px 0 40px;
+    }
+}
+
+.final-cta .section-eyebrow {
+    color: #FFFFFF !important;
+}
+
+ /* TRAVELORA HOME 2 — MATCH HOME 1 TYPOGRAPHY */
+/* Header and footer remain unchanged */
+
+/* Hero heading */
+.h2-hero-content h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Main section headings */
+.h2-categories h2,
+.h2-featured h2,
+.h2-benefits h2,
+.h2-process h2,
+.h2-holiday-packages h2,
+.h2-faq h2,
+.final-cta h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+/* Card headings */
+.h2-hero-image-caption h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.h2-category-card h3,
+.h2-featured-card h3,
+.h2-benefit-card h3,
+.h2-holiday-card h3,
+.h2-process-step h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* Paragraphs */
+.h2-hero-content p,
+.h2-categories p,
+.h2-featured p,
+.h2-benefits p,
+.h2-process p,
+.h2-holiday-packages p,
+.h2-faq p,
+.final-cta p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+/* Small section labels */
+.h2-hero-content .section-eyebrow,
+.h2-categories .section-eyebrow,
+.h2-featured .section-eyebrow,
+.h2-benefits .section-eyebrow,
+.h2-process .section-eyebrow,
+.h2-holiday-packages .section-eyebrow,
+.h2-faq .section-eyebrow,
+.final-cta .section-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Mobile typography */
+@media (max-width: 768px) {
+    .h2-hero-content h1 {
+        font-size: 36px;
+    }
+
+    .h2-categories h2,
+    .h2-featured h2,
+    .h2-benefits h2,
+    .h2-process h2,
+    .h2-holiday-packages h2,
+    .h2-faq h2,
+    .final-cta h2,
+    .h2-hero-image-caption h2 {
+        font-size: 28px;
+    }
+
+    .h2-category-card h3,
+    .h2-featured-card h3,
+    .h2-benefit-card h3,
+    .h2-holiday-card h3,
+    .h2-process-step h3 {
+        font-size: 21px;
+    }
+}
+
+
+/* HOME 2 — SAME FONT SIZES AS HOME 1 */
+/* Header and footer remain unchanged */
+
+.h2-hero-content h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.h2-categories h2,
+.h2-featured h2,
+.h2-benefits h2,
+.h2-process h2,
+.h2-holiday-packages h2,
+.h2-faq h2,
+.final-cta h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.h2-category-card h3,
+.h2-featured-card h3,
+.h2-benefit-card h3,
+.h2-holiday-card h3,
+.h2-process-step h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.h2-hero-image-caption h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.h2-hero-content p,
+.h2-categories p,
+.h2-featured p,
+.h2-benefits p,
+.h2-process p,
+.h2-holiday-packages p,
+.h2-faq p,
+.final-cta p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.h2-hero-content .section-eyebrow,
+.h2-categories .section-eyebrow,
+.h2-featured .section-eyebrow,
+.h2-benefits .section-eyebrow,
+.h2-process .section-eyebrow,
+.h2-holiday-packages .section-eyebrow,
+.h2-faq .section-eyebrow,
+.final-cta .section-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .h2-hero-content h1 {
+        font-size: 36px;
+    }
+
+    .h2-categories h2,
+    .h2-featured h2,
+    .h2-benefits h2,
+    .h2-process h2,
+    .h2-holiday-packages h2,
+    .h2-faq h2,
+    .final-cta h2 {
+        font-size: 28px;
+    }
+
+    .h2-category-card h3,
+    .h2-featured-card h3,
+    .h2-benefit-card h3,
+    .h2-holiday-card h3,
+    .h2-process-step h3 {
+        font-size: 21px;
+    }
+
+    .h2-hero-image-caption h2 {
+        font-size: 18px;
+    }
+}
+/* Remove shadow/background around the hero tagline */
+#main-content .h2-hero .h2-hero-content > .section-eyebrow {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+/* Keep the horizontal line, but remove its shadow */
+#main-content .h2-hero .h2-hero-content > .section-eyebrow::before,
+#main-content .h2-hero .h2-hero-content > .section-eyebrow::after {
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+
+
+/* ==========================================
+   HOME 2 — SECTION TAGLINE EFFECT
+   Teal text + orange dot + soft glow
+========================================== */
+
+.h2-hero .section-eyebrow,
+.h2-categories .section-eyebrow,
+.h2-featured .section-eyebrow,
+.h2-benefits .section-eyebrow,
+.h2-process .section-eyebrow,
+.h2-holiday-packages .section-eyebrow,
+.h2-faq .section-eyebrow,
+.final-cta .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 0;
+    margin-bottom: 16px;
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    color: #009C9A;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+/* Orange dot with soft glow */
+.h2-hero .section-eyebrow::before,
+.h2-categories .section-eyebrow::before,
+.h2-featured .section-eyebrow::before,
+.h2-benefits .section-eyebrow::before,
+.h2-process .section-eyebrow::before,
+.h2-holiday-packages .section-eyebrow::before,
+.h2-faq .section-eyebrow::before,
+.final-cta .section-eyebrow::before {
+    content: "";
+    display: inline-block;
+    flex: 0 0 7px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #FF8A00;
+    box-shadow: 0 0 0 4px rgba(255, 138, 0, 0.15);
+}
+
+/* Remove the horizontal line */
+.h2-hero .section-eyebrow::after,
+.h2-categories .section-eyebrow::after,
+.h2-featured .section-eyebrow::after,
+.h2-benefits .section-eyebrow::after,
+.h2-process .section-eyebrow::after,
+.h2-holiday-packages .section-eyebrow::after,
+.h2-faq .section-eyebrow::after,
+.final-cta .section-eyebrow::after {
+    content: none;
+    display: none;
+}
+
+/* Only Home 2 hero tagline */
+.h2-hero .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+    padding: 10px 18px;
+
+    border: 1px solid rgba(0, 156, 154, 0.08);
+    border-radius: 50px;
+    background: rgba(0, 156, 154, 0.07);
+
+    color: #009C9A;
+    font-size: 0.76rem;
+    font-weight: 800;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Orange dot with teal soft shadow */
+.h2-hero .section-eyebrow::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    flex: 0 0 9px;
+    border-radius: 50%;
+    background: #FF8A00;
+    box-shadow:
+        0 0 0 5px rgba(0, 156, 154, 0.18),
+        0 0 12px rgba(0, 156, 154, 0.25);
+}
+
+/* Remove horizontal line */
+.h2-hero .section-eyebrow::after {
+    content: none;
+    display: none;
+}
+
+@media (max-width: 560px) {
+    .h2-hero .section-eyebrow {
+        gap: 10px;
+        margin-bottom: 18px;
+        padding: 8px 14px;
+        font-size: 0.70rem;
+        letter-spacing: 1px;
+    }
+}
+
+.h2-hero .section-eyebrow::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    flex: 0 0 9px;
+    border-radius: 50%;
+    background: #FF8A00;
+    box-shadow: 0 0 0 4px rgba(255, 138, 0, 0.12);
+}
+/* HERO TAGLINE — TEAL PILL WITH OUTER RING */
+.h2-hero .h2-hero-content > .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    width: fit-content;
+    margin-bottom: 24px;
+    padding: 9px 16px 9px 30px;
+
+    background: #DDF5F3;
+    color: #007E7C;
+
+    border: 1px solid #009C9A;
+    border-radius: 50px;
+
+    box-shadow: 0 0 0 3px rgba(0, 156, 154, 0.15);
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+/* ORANGE DOT */
+.h2-hero .h2-hero-content > .section-eyebrow::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 7px;
+    height: 7px;
+    background: #FF8A00;
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 3px rgba(255, 138, 0, 0.18);
+}
+
+/* OUTER PULSING RING AROUND DOT */
+.h2-hero .h2-hero-content > .section-eyebrow::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 50%;
+
+    width: 7px;
+    height: 7px;
+
+    border: 2px solid #FF8A00;
+    border-radius: 50%;
+
+    transform: translateY(-50%) scale(1);
+    animation: heroDotPulse 1.5s ease-out infinite;
+    pointer-events: none;
+}
+
+@keyframes heroDotPulse {
+    0% {
+        transform: translateY(-50%) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-50%) scale(3);
+        opacity: 0;
+    }
+}
+/* FINAL FIX — HOME 2 HERO TAGLINE */
+#main-content .h2-hero .h2-hero-content > .section-eyebrow {
+    display: inline-flex !important;
+    align-items: center !important;
+    position: relative !important;
+    width: fit-content !important;
+    box-sizing: border-box !important;
+    gap: 10px !important;
+    padding: 9px 16px 9px 30px !important;
+    margin: 0 0 24px !important;
+
+    background: #DDF5F3 !important;
+    background-color: #DDF5F3 !important;
+    color: #007E7C !important;
+
+    border: 1px solid #009C9A !important;
+    border-radius: 50px !important;
+    box-shadow: 0 0 0 3px rgba(0, 156, 154, 0.18) !important;
+    filter: none !important;
+
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    line-height: 1.5 !important;
+    text-transform: uppercase !important;
+}
+
+/* Orange dot */
+#main-content .h2-hero .h2-hero-content > .section-eyebrow::before {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    left: 12px !important;
+    top: 50% !important;
+    width: 7px !important;
+    height: 7px !important;
+    min-width: 7px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #FF8A00 !important;
+    border: none !important;
+    border-radius: 50% !important;
+    box-shadow: 0 0 0 3px rgba(255, 138, 0, 0.2) !important;
+    transform: translateY(-50%) !important;
+}
+
+/* Pulsing orange outer ring */
+#main-content .h2-hero .h2-hero-content > .section-eyebrow::after {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    left: 10px !important;
+    top: 50% !important;
+    width: 11px !important;
+    height: 11px !important;
+    padding: 0 !important;
+    border: 1px solid #FF8A00 !important;
+    border-radius: 50% !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    pointer-events: none !important;
+    animation: traveloraTaglinePulse 1.5s ease-out infinite !important;
+}
+
+@keyframes traveloraTaglinePulse {
+    0% {
+        transform: translateY(-50%) scale(0.7);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateY(-50%) scale(2.5);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    #main-content .h2-hero .h2-hero-content > .section-eyebrow {
+        padding: 8px 12px 8px 26px !important;
+        font-size: 9px !important;
+        letter-spacing: 0.7px !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #main-content .h2-hero .h2-hero-content > .section-eyebrow::after {
+        animation: none !important;
+    }
+}
+
+.h2-hero .h2-hero-content > .section-eyebrow {
+    border: 1px solid #b2e8e3 !important;
+    border-radius: 999px;
+}
+
+/* HOME 2 — HERO TAGLINE PILL */
+.h2-hero .h2-hero-content > .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 13px;
+    color: #007E7C;
+    background: #E5F7F6;
+    border: 1px solid #B2E8E3;
+    border-radius: 50px;
+    box-shadow: 0 0 0 4px rgba(0, 156, 154, 0.08);
+}
+
+/* Orange dot */
+.h2-hero .h2-hero-content > .section-eyebrow::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #FF8A00;
+    box-shadow: 0 0 0 4px rgba(255, 138, 0, 0.14);
+    animation: h2TaglinePulse 1.8s ease-in-out infinite;
+}
+
+@keyframes h2TaglinePulse {
+    0%, 100% {
+        box-shadow: 0 0 0 4px rgba(255, 138, 0, 0.14);
+    }
+    50% {
+        box-shadow: 0 0 0 7px rgba(255, 138, 0, 0.06);
+    }
+}
+
+/* HOME 2 HERO TAGLINE PILL */
+#main-content .h2-hero .h2-hero-content > .section-eyebrow {
+    display: inline-flex !important;
+    align-items: center !important;
+    position: relative !important;
+    width: fit-content !important;
+    box-sizing: border-box !important;
+
+    padding: 9px 16px 9px 30px !important;
+    margin: 0 0 24px !important;
+
+    color: #007E7C !important;
+    background: #DDF5F3 !important;
+    border: 1px solid #B2E8E3 !important;
+    border-radius: 50px !important;
+    box-shadow: none !important;
+
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    line-height: 1.5 !important;
+    text-transform: uppercase !important;
+}
+
+/* Orange dot */
+#main-content .h2-hero .h2-hero-content > .section-eyebrow::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 12px !important;
+    top: 50% !important;
+
+    width: 7px !important;
+    height: 7px !important;
+    min-width: 7px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #FF8A00 !important;
+    border: none !important;
+    border-radius: 50% !important;
+    box-shadow: none !important;
+
+    transform: translateY(-50%) !important;
+}
+
+/* Pulsing orange ring */
+#main-content .h2-hero .h2-hero-content > .section-eyebrow::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 10px !important;
+    top: 50% !important;
+
+    width: 11px !important;
+    height: 11px !important;
+    padding: 0 !important;
+
+    border: 1px solid #FF8A00 !important;
+    border-radius: 50% !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    pointer-events: none !important;
+
+    animation: traveloraTaglinePulse 1.5s ease-out infinite !important;
+}
+
+@keyframes traveloraTaglinePulse {
+    0% {
+        transform: translateY(-50%) scale(0.7);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translateY(-50%) scale(2.5);
+        opacity: 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    #main-content .h2-hero .h2-hero-content > .section-eyebrow {
+        padding: 8px 12px 8px 26px !important;
+        font-size: 9px !important;
+        letter-spacing: 0.7px !important;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    #main-content .h2-hero .h2-hero-content > .section-eyebrow::after {
+        animation: none !important;
+    }
+}
+
+/* SMALL HORIZONTAL LINE BEFORE OTHER SECTION TAGLINES */
+#main-content .section-eyebrow:not(.h2-hero .section-eyebrow) {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#main-content .section-eyebrow:not(.h2-hero .section-eyebrow)::before {
+    content: "";
+    display: inline-block;
+    position: static;
+    width: 26px;
+    min-width: 26px;
+    height: 2px;
+    padding: 0;
+    margin: 0;
+    background: #FF8A00;
+    border: none;
+    border-radius: 3px;
+    box-shadow: none;
+    transform: none;
+    animation: none;
 }

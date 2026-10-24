@@ -1,0 +1,178 @@
+/* =========================================
+   TRAVELORA — PACKAGE DETAILS
+   Consistent Teal + Orange Colour Theme
+========================================= */
+
+:root {
+    --intl-primary: #009C9A;
+    --intl-primary-dark: #007F7D;
+    --intl-primary-deep: #006967;
+    --intl-primary-light: #E6F7F6;
+
+    --intl-accent: #FF8A00;
+    --intl-accent-dark: #E87800;
+    --intl-accent-light: #FFF2E0;
+
+    --intl-text: #243434;
+    --intl-muted: #687878;
+    --intl-white: #FFFFFF;
+    --intl-bg: #F7FAFA;
+    --intl-border: #E2EBEB;
+}
+
+/* Base text */
+body {
+    color: var(--intl-text);
+}
+
+/* All main headings */
+h1,
+h2,
+h3,
+h4,
+.details-hero-copy h1,
+.details-intro h2,
+.package-detail-content h2,
+.package-detail-content h3,
+.details-note h2 {
+    color: var(--intl-text);
+}
+
+/* Highlighted hero heading text */
+.details-hero-copy h1 span {
+    color: var(--intl-primary);
+}
+
+/* Eyebrow labels */
+.details-eyebrow,
+.section-eyebrow {
+    color: var(--intl-primary-dark);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* Paragraphs */
+.details-hero-copy p,
+.details-intro p,
+.package-detail-content p,
+.details-note p {
+    color: var(--intl-muted);
+}
+
+/* Primary buttons — teal */
+.btn-primary,
+.details-hero-actions .btn-primary,
+.package-enquire {
+    color: var(--intl-white);
+    background-color: var(--intl-primary);
+    border: 2px solid var(--intl-primary);
+    transition: all 0.3s ease;
+}
+
+/* Primary button hover — orange */
+.btn-primary:hover,
+.details-hero-actions .btn-primary:hover,
+.package-enquire:hover {
+    color: var(--intl-white);
+    background-color: var(--intl-accent);
+    border-color: var(--intl-accent);
+    transform: translateY(-3px);
+}
+
+/* Secondary button — teal outline */
+.btn-outline {
+    color: var(--intl-primary-dark);
+    background-color: transparent;
+    border: 2px solid var(--intl-primary);
+    transition: all 0.3s ease;
+}
+
+/* Secondary button hover — orange */
+.btn-outline:hover {
+    color: var(--intl-white);
+    background-color: var(--intl-accent);
+    border-color: var(--intl-accent);
+    transform: translateY(-3px);
+}
+
+/* Destination jump links */
+.destination-jump-links a {
+    color: var(--intl-primary-dark);
+    border: 1px solid var(--intl-border);
+    transition: all 0.3s ease;
+}
+
+.destination-jump-links a:hover {
+    color: var(--intl-white);
+    background-color: var(--intl-accent);
+    border-color: var(--intl-accent);
+}
+
+/* Package images */
+.package-image-tag {
+    color: var(--intl-accent-dark);
+    background-color: var(--intl-accent-light);
+}
+
+/* Package facts */
+.package-facts b {
+    color: var(--intl-primary-dark);
+}
+
+/* Highlight lists */
+.package-highlights li::marker {
+    color: var(--intl-primary);
+}
+
+/* Itinerary emphasis */
+.itinerary-list li b {
+    color: var(--intl-primary-dark);
+}
+
+/* Hero background */
+.details-hero {
+    background: linear-gradient(
+        120deg,
+        var(--intl-primary-light),
+        var(--intl-white) 68%
+    );
+}
+
+/* Package section backgrounds */
+.details-intro,
+.package-details-list {
+    background-color: var(--intl-white);
+}
+
+/* Alternating package cards */
+.package-detail {
+    border-color: var(--intl-border);
+}
+
+/* Final CTA section */
+.details-note {
+    color: var(--intl-white);
+    background-color: var(--intl-primary-dark);
+}
+
+.details-note h2 {
+    color: var(--intl-white);
+}
+
+.details-note p {
+    color: rgba(255, 255, 255, 0.86);
+}
+
+/* CTA button hover */
+.details-note .btn-primary:hover {
+    color: var(--intl-white);
+    background-color: var(--intl-accent);
+    border-color: var(--intl-accent);
+}
+
+/* Keyboard accessibility */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--intl-accent);
+    outline-offset: 4px;
+}

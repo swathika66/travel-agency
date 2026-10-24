@@ -1355,3 +1355,383 @@ transition-duration: .01ms !important;
     background: #FF8A00;
     box-shadow: 0 0 0 5px rgba(255, 138, 0, 0.12);
 }
+
+/* CONTACT PAGE TYPOGRAPHY */
+#main-content {
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* Hero Heading */
+.contact-hero-content h1 {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1.3px;
+    color: #25343B;
+}
+
+.contact-hero-content h1 span {
+    display: block;
+    color: #009C9A;
+}
+
+/* Section Headings */
+.section-heading h2,
+.contact-form-intro h2,
+.final-cta-content h2 {
+    font-size: clamp(26px, 3vw, 34px);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.7px;
+    color: #25343B;
+}
+
+.section-heading h2 span,
+.contact-form-intro h2 span {
+    color: #009C9A;
+}
+
+/* Card Headings */
+.contact-detail-card h3,
+.contact-benefit h3,
+.contact-form-heading h3,
+.contact-faq-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: -0.2px;
+    color: #25343B;
+}
+
+/* Body Text */
+.contact-hero-content p,
+.section-heading p,
+.contact-form-intro > p,
+.contact-detail-card p,
+.contact-benefit p,
+.contact-faq-card p,
+.contact-form-heading p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.75;
+    color: #687A80;
+}
+
+/* Taglines */
+.section-eyebrow,
+.form-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    line-height: 1.5;
+}
+
+/* Form Labels */
+.contact-form-card label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #25343B;
+}
+
+/* Form Inputs */
+.contact-form-card input,
+.contact-form-card select,
+.contact-form-card textarea {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Buttons */
+.contact-hero-actions .btn,
+.contact-submit-btn,
+.final-cta-actions .btn {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Links */
+.contact-detail-card > a,
+.contact-form-card a {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .contact-hero-content h1 {
+        font-size: 32px;
+        letter-spacing: -0.7px;
+    }
+
+    .section-heading h2,
+    .contact-form-intro h2,
+    .final-cta-content h2 {
+        font-size: 26px;
+    }
+
+    .contact-detail-card h3,
+    .contact-benefit h3,
+    .contact-form-heading h3,
+    .contact-faq-card h3 {
+        font-size: 17px;
+    }
+}
+
+/* Hero Section - Travelora Style */
+
+.contact-hero-content h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+    color: #25343B;
+    margin-bottom: 22px;
+}
+
+.contact-hero-content h1 span {
+    display: block;
+    color: #009C9A;
+}
+
+.contact-hero-content p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #687A80;
+    max-width: 650px;
+    margin-bottom: 28px;
+}
+
+/* Primary Orange Button */
+.contact-hero-actions .btn-primary {
+    background: #FF8A00;
+    color: #FFFFFF;
+    border: 1px solid #FF8A00;
+    border-radius: 50px;
+    padding: 14px 28px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-hero-actions .btn-primary:hover {
+    background: #E87900;
+    border-color: #E87900;
+    transform: translateY(-2px);
+}
+
+/* Secondary Outlined Button */
+.contact-hero-actions .btn-secondary {
+    background: transparent;
+    color: #009C9A;
+    border: 1px solid #009C9A;
+    border-radius: 50px;
+    padding: 14px 28px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-hero-actions .btn-secondary:hover {
+    background: #E6F7F6;
+    color: #007F7D;
+    transform: translateY(-2px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .contact-hero-content h1 {
+        font-size: 34px;
+        letter-spacing: -0.8px;
+    }
+
+    .contact-hero-content p {
+        font-size: 14px;
+    }
+
+    .contact-hero-actions .btn {
+        padding: 12px 20px;
+        font-size: 13px;
+    }
+}
+
+/* Secondary Button - Hover Without Color Changes */
+
+.contact-hero-actions .btn-secondary,
+.final-cta-actions .btn-secondary {
+    background: transparent;
+    color: #009C9A;
+    border: 1px solid #009C9A;
+    border-radius: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-hero-actions .btn-secondary:hover,
+.final-cta-actions .btn-secondary:hover {
+    background: transparent;
+    color: #009C9A;
+    border-color: #009C9A;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 156, 154, 0.12);
+}
+
+.contact-hero-actions .btn-secondary,
+.final-cta-actions .btn-secondary {
+    background-color: transparent !important;
+    color: #009C9A !important;
+    border: 1px solid #009C9A !important;
+    border-radius: 50px !important;
+    padding: 14px 28px !important;
+    box-shadow: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-hero-actions .btn-secondary:hover,
+.final-cta-actions .btn-secondary:hover {
+    background-color: transparent !important;
+    color: #009C9A !important;
+    border-color: #009C9A !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 156, 154, 0.12);
+}
+
+/* Contact Hero Secondary Button */
+.contact-hero-actions .btn-outline {
+    background: transparent !important;
+    color: #009C9A !important;
+    border: 1px solid #009C9A !important;
+    border-radius: 50px !important;
+    padding: 14px 28px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-hero-actions .btn-outline:hover {
+    background: transparent !important;
+    color: #009C9A !important;
+    border-color: #009C9A !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 156, 154, 0.12);
+}
+
+/* CTA Section - Secondary Button */
+.contact-final-cta .btn-cta-outline {
+    background: #FFFFFF !important;
+    color: #009C9A !important;
+    border: 1px solid #FFFFFF !important;
+    border-radius: 50px !important;
+    padding: 14px 28px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-final-cta .btn-cta-outline:hover {
+    background: #FFFFFF !important;
+    color: #009C9A !important;
+    border-color: #FFFFFF !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Primary Buttons - Pill Shape */
+.contact-hero-actions .btn-primary,
+.contact-submit-btn,
+.contact-final-cta .btn-primary,
+.contact-final-cta .btn-light {
+    border-radius: 50px !important;
+}
+
+.contact-form-intro h2 span {
+    color: #FF8A00 !important;
+}
+
+/* CONTACT PAGE TYPOGRAPHY FIX */
+
+body main#main-content {
+    font-family: 'DM Sans', sans-serif !important;
+}
+
+/* Hero heading */
+body main#main-content .contact-hero-content h1 {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 48px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+}
+
+/* Main section headings */
+body main#main-content .section-heading h2,
+body main#main-content .contact-form-intro h2,
+body main#main-content .final-cta-content h2 {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+}
+
+/* Card headings */
+body main#main-content .contact-detail-card h3,
+body main#main-content .contact-benefit h3,
+body main#main-content .contact-form-heading h3,
+body main#main-content .contact-faq-card h3 {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+}
+
+/* Paragraphs */
+body main#main-content p {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.7 !important;
+}
+
+/* Small labels */
+body main#main-content .section-eyebrow,
+body main#main-content .form-eyebrow {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+}
+
+/* Buttons and links */
+body main#main-content .btn,
+body main#main-content a.btn,
+body main#main-content .contact-detail-card > a {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    body main#main-content .contact-hero-content h1 {
+        font-size: 36px !important;
+    }
+
+    body main#main-content .section-heading h2,
+    body main#main-content .contact-form-intro h2,
+    body main#main-content .final-cta-content h2 {
+        font-size: 28px !important;
+    }
+
+    body main#main-content .contact-detail-card h3,
+    body main#main-content .contact-benefit h3,
+    body main#main-content .contact-form-heading h3,
+    body main#main-content .contact-faq-card h3 {
+        font-size: 21px !important;
+    }
+}
