@@ -3511,3 +3511,85 @@ body main#main-content .why-feature h3 {
         font-size: 21px !important;
     }
 }
+
+/* HOME 1 HERO TAGLINE — STATIC HALO, NO ANIMATION */
+.hero-section .hero-eyebrow,
+.hero-section .hero-eyebrow-dot {
+    animation: none !important;
+    transition: none !important;
+}
+
+.hero-section .hero-eyebrow {
+    box-shadow: none !important;
+}
+
+.hero-section .hero-eyebrow-dot {
+    background: #FF8A00 !important;
+    border: none !important;
+    border-radius: 50% !important;
+
+    /* Keep the soft, static orange halo */
+    box-shadow:
+        0 0 0 3px rgba(255, 138, 0, 0.14),
+        0 0 9px 3px rgba(255, 138, 0, 0.22) !important;
+
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    filter: none !important;
+    outline: none !important;
+}
+
+/* HOME 1 HERO TAGLINE — STATIC HALO, NO ANIMATION */
+.hero-section .hero-eyebrow,
+.hero-section .hero-eyebrow-dot {
+    animation: none !important;
+    transition: none !important;
+}
+
+.hero-section .hero-eyebrow {
+    box-shadow: none !important;
+}
+
+.hero-section .hero-eyebrow-dot {
+    background: #FF8A00 !important;
+    border: none !important;
+    border-radius: 50% !important;
+
+    /* Keep the soft, static orange halo */
+    box-shadow:
+        0 0 0 3px rgba(255, 138, 0, 0.14),
+        0 0 9px 3px rgba(255, 138, 0, 0.22) !important;
+
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    filter: none !important;
+    outline: none !important;
+}
+
+/* FINAL FIX — REMOVE THE PULSING CIRCLE */
+.hero-section .hero-eyebrow-dot::before,
+.hero-section .hero-eyebrow-dot::after {
+    content: none !important;
+    display: none !important;
+    animation: none !important;
+    border: none !important;
+}
+
+/* Keep the orange dot and static halo */
+.hero-section .hero-eyebrow-dot {
+    position: relative !important;
+    width: 8px !important;
+    height: 8px !important;
+    flex: 0 0 8px !important;
+    border: none !important;
+    border-radius: 50% !important;
+    background: #FF8A00 !important;
+    box-shadow:
+        0 0 0 3px rgba(255, 138, 0, 0.14),
+        0 0 9px 3px rgba(255, 138, 0, 0.22) !important;
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+}

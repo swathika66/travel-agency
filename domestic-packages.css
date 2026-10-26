@@ -1676,3 +1676,44 @@ main .destination-link {
     background: none !important;
     box-shadow: none !important;
 }
+
+/* ==========================================
+   DOMESTIC HERO TAGLINE
+   Orange Dot + Soft Halo
+========================================== */
+
+.hero-section .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.hero-section .hero-eyebrow-dot {
+    display: inline-block;
+    width: 7px !important;
+    height: 7px !important;
+    min-width: 7px !important;
+    min-height: 7px !important;
+    flex: 0 0 7px !important;
+
+    background: #FF8A00 !important;
+    border: none !important;
+    border-radius: 50% !important;
+
+    /* Soft orange halo */
+    box-shadow: 0 0 0 4px rgba(255, 138, 0, 0.12) !important;
+
+    outline: none !important;
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+}
+
+/* Prevent extra decorative circles */
+.hero-section .hero-eyebrow-dot::before,
+.hero-section .hero-eyebrow-dot::after {
+    content: none !important;
+    display: none !important;
+    box-shadow: none !important;
+    animation: none !important;
+}

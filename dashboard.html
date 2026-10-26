@@ -6,17 +6,14 @@
     <meta name="theme-color" content="#009C9A">
     <meta name="description" content="Manage your Travelora saved packages, bookings, itineraries, tickets and invoices.">
 
- <!-- DM Sans Font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Travelora | Traveler Dashboard</title>
     <link rel="icon" type="image/png" href="favicon2.png">
-
     <link rel="preconnect" href="https://images.unsplash.com">
 
-    <!-- Shared website styles first; dashboard styles second -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="dashboard.css">
 
@@ -70,426 +67,501 @@
 
         <div class="header-actions">
 
-            <button id="rtlBtn"
-                    class="header-icon-btn"
-                    type="button"
-                    title="Toggle RTL"
-                    aria-label="Toggle right-to-left layout"
-                    aria-pressed="false">
-                ⇄
-            </button>
+            <button id="rtlBtn" class="header-icon-btn" type="button"
+                    title="Toggle RTL" aria-label="Toggle right-to-left layout"
+                    aria-pressed="false">⇄</button>
 
-            <button id="themeBtn"
-                    class="header-icon-btn"
-                    type="button"
-                    title="Toggle dark mode"
-                    aria-label="Toggle dark mode"
-                    aria-pressed="false">
-                ☾
-            </button>
+            <button id="themeBtn" class="header-icon-btn" type="button"
+                    title="Toggle dark mode" aria-label="Toggle dark mode"
+                    aria-pressed="false">☾</button>
 
             <a href="login.html" class="login-btn">Login</a>
 
-            <button class="mobile-menu-btn"
-                    id="mobileMenuBtn"
-                    type="button"
-                    aria-label="Open navigation menu"
-                    aria-expanded="false"
-                    aria-controls="mainNav">
-                ☰
-            </button>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" type="button"
+                    aria-label="Open navigation menu" aria-expanded="false"
+                    aria-controls="mainNav">☰</button>
 
         </div>
     </div>
 </header>
 
-<!-- ================= DASHBOARD ================= -->
+<!-- ================= DASHBOARD CONTENT ================= -->
 <main id="main-content" class="dashboard-page">
 
-    <!-- Welcome banner -->
-    <section class="dashboard-welcome-section">
-        <div class="site-container">
-            <div class="dashboard-welcome">
+    <div class="site-container dashboard-layout">
 
-                <div class="dashboard-welcome-content">
-                    <span class="section-eyebrow">YOUR TRAVEL SPACE</span>
+        <!-- SIDEBAR -->
+        <aside class="dashboard-sidebar" aria-label="Dashboard menu">
 
-                    <h1>Welcome to Your <span>Dashboard</span></h1>
-
-                    <p>
-                        Manage your saved holidays, bookings and travel
-                        documents in one place.
-                    </p>
+            <div class="dashboard-sidebar-profile">
+                <div class="dashboard-avatar">
+                    <i data-lucide="user-round" aria-hidden="true"></i>
                 </div>
-
-                <div class="dashboard-date">
-                    <i data-lucide="calendar-days" aria-hidden="true"></i>
-                    <span id="dashboardDate">Your Travel Planner</span>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Travel statistics -->
-    <section class="dashboard-stats-section">
-        <div class="site-container">
-            <div class="dashboard-stats">
-
-                <article class="dashboard-stat">
-                    <div class="dashboard-stat-icon">
-                        <i data-lucide="plane" aria-hidden="true"></i>
-                    </div>
-                    <div>
-                        <span class="dashboard-stat-label">Upcoming Trips</span>
-                        <strong id="upcomingTripsCount">0</strong>
-                        <small>Confirmed future trips</small>
-                    </div>
-                </article>
-
-                <article class="dashboard-stat">
-                    <div class="dashboard-stat-icon">
-                        <i data-lucide="heart" aria-hidden="true"></i>
-                    </div>
-                    <div>
-                        <span class="dashboard-stat-label">Saved Packages</span>
-                        <strong id="savedPackagesCount">0</strong>
-                        <small>Holiday wish list</small>
-                    </div>
-                </article>
-
-                <article class="dashboard-stat">
-                    <div class="dashboard-stat-icon">
-                        <i data-lucide="circle-check" aria-hidden="true"></i>
-                    </div>
-                    <div>
-                        <span class="dashboard-stat-label">Completed Trips</span>
-                        <strong id="completedTripsCount">0</strong>
-                        <small>Past holidays</small>
-                    </div>
-                </article>
-
-                <article class="dashboard-stat">
-                    <div class="dashboard-stat-icon">
-                        <i data-lucide="map" aria-hidden="true"></i>
-                    </div>
-                    <div>
-                        <span class="dashboard-stat-label">Travel Interests</span>
-                        <strong id="travelInterestsCount">0</strong>
-                        <small>Selected experiences</small>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Quick actions -->
-    <section class="dashboard-section quick-actions-section">
-        <div class="site-container">
-
-            <div class="dashboard-section-heading">
                 <div>
-                    <span class="section-eyebrow">GET STARTED</span>
-                    <h2>Quick Actions</h2>
-                    <p>Find your next holiday or get help planning your trip.</p>
+                    <h2>My Travel Space</h2>
+                    <p>Welcome, Traveler!</p>
                 </div>
             </div>
 
-            <div class="quick-actions-grid">
+            <span class="dashboard-sidebar-label">MENU</span>
 
-                <a href="domestic-packages.html" class="quick-action-card">
-                    <span class="quick-action-icon">
-                        <i data-lucide="mountain" aria-hidden="true"></i>
-                    </span>
-                    <h3>Domestic Packages</h3>
-                    <p>Discover memorable holidays across India.</p>
-                    <span class="dashboard-text-link">Explore Packages →</span>
+            <nav class="dashboard-sidebar-nav" aria-label="Traveler dashboard">
+
+                <a href="#overview" class="dashboard-sidebar-link active">
+                    <i data-lucide="layout-dashboard" aria-hidden="true"></i>
+                    <span>Overview</span>
                 </a>
 
-                <a href="international-packages.html" class="quick-action-card">
-                    <span class="quick-action-icon">
-                        <i data-lucide="globe" aria-hidden="true"></i>
-                    </span>
-                    <h3>International Packages</h3>
-                    <p>Explore destinations around the world.</p>
-                    <span class="dashboard-text-link">Discover More →</span>
-                </a>
-
-                <a href="honeymoon-family.html" class="quick-action-card">
-                    <span class="quick-action-icon">
-                        <i data-lucide="heart" aria-hidden="true"></i>
-                    </span>
-                    <h3>Honeymoon &amp; Family Tours</h3>
-                    <p>Find special getaways for couples and families.</p>
-                    <span class="dashboard-text-link">View Tours →</span>
-                </a>
-
-                <a href="contact.html" class="quick-action-card">
-                    <span class="quick-action-icon">
-                        <i data-lucide="message-circle" aria-hidden="true"></i>
-                    </span>
-                    <h3>Plan with Travelora</h3>
-                    <p>Contact our team for help with your travel plans.</p>
-                    <span class="dashboard-text-link">Contact Us →</span>
-                </a>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Saved packages -->
-    <section class="dashboard-section saved-packages-section" id="savedPackages">
-        <div class="site-container">
-
-            <div class="dashboard-section-heading">
-                <div>
-                    <span class="section-eyebrow">YOUR WISH LIST</span>
-                    <h2>Saved Packages</h2>
-                    <p>Keep the holidays you love together in one place.</p>
-                </div>
-
-                <a href="domestic-packages.html" class="dashboard-text-link">
-                    Browse Packages →
-                </a>
-            </div>
-
-            <div class="dashboard-empty-panel">
-                <div class="dashboard-empty-icon">
-                    <i data-lucide="heart" aria-hidden="true"></i>
-                </div>
-
-                <div class="dashboard-empty-content">
-                    <h3>No saved packages yet</h3>
-                    <p>Save holiday packages to access them here later.</p>
-                    <a href="domestic-packages.html" class="dashboard-outline-btn">
-                        Explore Holidays →
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Booking status -->
-    <section class="dashboard-section my-bookings-section" id="myBookings">
-        <div class="site-container">
-
-            <div class="dashboard-section-heading">
-                <div>
-                    <span class="section-eyebrow">YOUR RESERVATIONS</span>
-                    <h2>Booking Status</h2>
-                    <p>Review the status of your holiday reservations.</p>
-                </div>
-
-                <a href="domestic-packages.html" class="btn btn-primary">
-                    Explore Packages
-                </a>
-            </div>
-
-            <div class="dashboard-empty-panel">
-                <div class="dashboard-empty-icon">
+                <a href="#myBookings" class="dashboard-sidebar-link">
                     <i data-lucide="calendar-check" aria-hidden="true"></i>
-                </div>
+                    <span>My Bookings</span>
+                    <span class="sidebar-badge">2</span>
+                </a>
 
-                <div class="dashboard-empty-content">
-                    <h3>No bookings yet</h3>
-                    <p>
-                        Your bookings and their current status will appear
-                        here after you make a reservation.
-                    </p>
-                    <a href="domestic-packages.html" class="dashboard-outline-btn">
-                        Discover Holidays →
-                    </a>
+                <a href="#savedPackages" class="dashboard-sidebar-link">
+                    <i data-lucide="heart" aria-hidden="true"></i>
+                    <span>Saved Packages</span>
+                </a>
+
+                <a href="#myItineraries" class="dashboard-sidebar-link">
+                    <i data-lucide="map" aria-hidden="true"></i>
+                    <span>My Itineraries</span>
+                </a>
+
+                <a href="#ticketsInvoices" class="dashboard-sidebar-link">
+                    <i data-lucide="files" aria-hidden="true"></i>
+                    <span>Tickets &amp; Invoices</span>
+                </a>
+
+                <a href="#myProfile" class="dashboard-sidebar-link">
+                    <i data-lucide="user-round" aria-hidden="true"></i>
+                    <span>My Profile</span>
+                </a>
+
+            </nav>
+
+            <div class="dashboard-sidebar-help">
+                <div class="sidebar-help-icon">
+                    <i data-lucide="headset" aria-hidden="true"></i>
                 </div>
+                <h3>Need assistance?</h3>
+                <p>Let us help you plan your next memorable journey.</p>
+                <a href="contact.html">Contact Travelora <span>→</span></a>
             </div>
 
-        </div>
-    </section>
+            <a href="index.html" class="dashboard-back-link">
+                <i data-lucide="arrow-left" aria-hidden="true"></i>
+                Back to Website
+            </a>
 
-    <!-- Itineraries -->
-    <section class="dashboard-section my-itineraries-section" id="myItineraries">
-        <div class="site-container">
+        </aside>
 
-            <div class="dashboard-section-heading">
-                <div>
-                    <span class="section-eyebrow">YOUR TRAVEL PLANS</span>
-                    <h2>My Itineraries</h2>
-                    <p>Access your travel dates, schedules and trip plans.</p>
-                </div>
-            </div>
+        <!-- MAIN DASHBOARD COLUMN -->
+        <div class="dashboard-main-column">
 
-            <div class="itinerary-empty-panel">
-                <div class="itinerary-empty-visual">
-                    <i data-lucide="map-pinned" aria-hidden="true"></i>
-                </div>
+            <!-- OVERVIEW / WELCOME -->
+            <section class="dashboard-overview" id="overview">
 
-                <div class="itinerary-empty-content">
-                    <span class="itinerary-label">PERSONALISED TRAVEL PLANS</span>
-                    <h3>Your itinerary will appear here</h3>
-                    <p>
-                        View your destinations and day-by-day plans once
-                        your travel arrangements are created.
-                    </p>
-                    <a href="contact.html" class="btn btn-primary">
-                        Plan Your Trip →
-                    </a>
-                </div>
-            </div>
+                <div class="dashboard-welcome">
+                    <div class="dashboard-welcome-content">
+                        <span class="section-eyebrow">YOUR TRAVEL SPACE</span>
+                        <h1>Your next <span>adventure</span> awaits!</h1>
+                        <p>
+                            Manage your favourite holidays, upcoming trips,
+                            bookings and travel documents in one place.
+                        </p>
 
-        </div>
-    </section>
-
-    <!-- Tickets and invoices -->
-    <section class="dashboard-section tickets-invoices-section" id="ticketsInvoices">
-        <div class="site-container">
-
-            <div class="dashboard-section-heading">
-                <div>
-                    <span class="section-eyebrow">YOUR TRAVEL DOCUMENTS</span>
-                    <h2>Tickets &amp; Invoices</h2>
-                    <p>Access available tickets, invoices and payment receipts.</p>
-                </div>
-            </div>
-
-            <div class="dashboard-documents-grid">
-
-                <article class="dashboard-document-card">
-                    <div class="dashboard-document-top">
-                        <div class="dashboard-document-icon ticket-document-icon">
-                            <i data-lucide="ticket" aria-hidden="true"></i>
+                        <div class="dashboard-welcome-actions">
+                            <a href="domestic-packages.html" class="btn btn-primary">
+                                <i data-lucide="compass" aria-hidden="true"></i>
+                                Explore Packages
+                            </a>
+                            <a href="#myBookings" class="dashboard-outline-btn">
+                                View My Bookings
+                                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                            </a>
                         </div>
-                        <span class="document-type-label">TRAVEL DOCUMENTS</span>
                     </div>
 
-                    <h3>Travel Tickets</h3>
-                    <p>Your confirmed travel tickets will be listed here when available.</p>
-
-                    <div class="dashboard-document-footer">
-                        <span class="document-empty-status">No tickets available</span>
+                    <div class="dashboard-welcome-visual">
+                        <img
+                            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                            alt="Beautiful mountain landscape"
+                            fetchpriority="high">
+                        <div class="welcome-image-caption">
+                            <i data-lucide="map-pin" aria-hidden="true"></i>
+                            <span>Discover somewhere new</span>
+                        </div>
                     </div>
-                </article>
+                </div>
 
-                <article class="dashboard-document-card">
-                    <div class="dashboard-document-top">
-                        <div class="dashboard-document-icon invoice-document-icon">
+                <div class="dashboard-date-row">
+                    <span><i data-lucide="calendar-days" aria-hidden="true"></i>
+                        <span id="dashboardDate">Your Travel Planner</span>
+                    </span>
+                    <span class="dashboard-live-label">
+                        <span class="status-dot"></span> Your travel overview
+                    </span>
+                </div>
+
+                <!-- SUMMARY CARDS -->
+                <div class="dashboard-stats">
+
+                    <article class="dashboard-stat">
+                        <div class="dashboard-stat-icon">
+                            <i data-lucide="heart" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <span class="dashboard-stat-label">Saved Packages</span>
+                            <strong id="savedPackagesCount">3</strong>
+                            <small>Your holiday wish list</small>
+                        </div>
+                    </article>
+
+                    <article class="dashboard-stat">
+                        <div class="dashboard-stat-icon">
+                            <i data-lucide="luggage" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <span class="dashboard-stat-label">My Bookings</span>
+                            <strong id="myBookingsCount">2</strong>
+                            <small>Reservations to review</small>
+                        </div>
+                    </article>
+
+                    <article class="dashboard-stat">
+                        <div class="dashboard-stat-icon">
+                            <i data-lucide="calendar-check" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <span class="dashboard-stat-label">Upcoming Trips</span>
+                            <strong id="upcomingTripsCount">1</strong>
+                            <small>Your next getaway</small>
+                        </div>
+                    </article>
+
+                    <article class="dashboard-stat">
+                        <div class="dashboard-stat-icon">
                             <i data-lucide="file-text" aria-hidden="true"></i>
                         </div>
-                        <span class="document-type-label">PAYMENT RECORDS</span>
-                    </div>
+                        <div>
+                            <span class="dashboard-stat-label">Travel Documents</span>
+                            <strong id="travelDocumentsCount">2</strong>
+                            <small>Tickets and invoices</small>
+                        </div>
+                    </article>
 
-                    <h3>Invoices &amp; Receipts</h3>
-                    <p>Your invoices and receipts will appear here after booking confirmation.</p>
-
-                    <div class="dashboard-document-footer">
-                        <span class="document-empty-status">No invoices available</span>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Popular destinations -->
-    <section class="dashboard-section saved-destinations-section" id="popularDestinations">
-        <div class="site-container">
-
-            <div class="dashboard-section-heading">
-                <div>
-                    <span class="section-eyebrow">FIND YOUR INSPIRATION</span>
-                    <h2>Popular Destinations</h2>
-                    <p>Explore places that could be part of your next holiday.</p>
                 </div>
-            </div>
+            </section>
 
-            <div class="saved-destinations-grid">
-
-                <article class="saved-destination-card">
-                    <div class="saved-destination-image">
-                        <img
-                            src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&amp;fit=crop&amp;w=700&amp;q=85"
-                            alt="Taj Mahal in Agra, India"
-                            loading="lazy">
-                        <span class="destination-tag">CULTURE</span>
+            <!-- QUICK ACTIONS -->
+            <section class="dashboard-section quick-actions-section">
+                <div class="dashboard-section-heading">
+                    <div>
+                        <span class="section-eyebrow">YOUR NEXT ADVENTURE</span>
+                        <h2>Quick Actions</h2>
+                        <p>Everything you need to plan your next journey.</p>
                     </div>
+                </div>
 
-                    <div class="saved-destination-content">
-                        <h3>Agra, India</h3>
-                        <p>Discover iconic architecture and rich heritage.</p>
-                        <a href="domestic-packages.html" class="dashboard-text-link">
-                            Explore Packages →
-                        </a>
+                <div class="quick-actions-grid">
+
+                    <a href="domestic-packages.html" class="quick-action-card">
+                        <span class="quick-action-icon">
+                            <i data-lucide="mountain" aria-hidden="true"></i>
+                        </span>
+                        <h3>Domestic Packages</h3>
+                        <p>Discover beautiful destinations across India.</p>
+                        <span class="dashboard-text-link">Explore Packages →</span>
+                    </a>
+
+                    <a href="international-packages.html" class="quick-action-card">
+                        <span class="quick-action-icon">
+                            <i data-lucide="globe" aria-hidden="true"></i>
+                        </span>
+                        <h3>International Packages</h3>
+                        <p>Find exciting adventures around the world.</p>
+                        <span class="dashboard-text-link">Discover More →</span>
+                    </a>
+
+                    <a href="honeymoon-family.html" class="quick-action-card">
+                        <span class="quick-action-icon">
+                            <i data-lucide="heart" aria-hidden="true"></i>
+                        </span>
+                        <h3>Honeymoon &amp; Family Tours</h3>
+                        <p>Explore special holidays with your loved ones.</p>
+                        <span class="dashboard-text-link">View Tours →</span>
+                    </a>
+
+                    <a href="contact.html" class="quick-action-card">
+                        <span class="quick-action-icon">
+                            <i data-lucide="message-circle" aria-hidden="true"></i>
+                        </span>
+                        <h3>Plan with Travelora</h3>
+                        <p>Get help planning a journey that suits you.</p>
+                        <span class="dashboard-text-link">Contact Us →</span>
+                    </a>
+
+                </div>
+            </section>
+
+            <!-- SAVED PACKAGES -->
+            <section class="dashboard-section saved-packages-section" id="savedPackages">
+                <div class="dashboard-section-heading">
+                    <div>
+                        <span class="section-eyebrow">YOUR WISH LIST</span>
+                        <h2>Saved Packages</h2>
+                        <p>Keep your favourite holiday destinations close at hand.</p>
                     </div>
-                </article>
-
-                <article class="saved-destination-card">
-                    <div class="saved-destination-image">
-                        <img
-                            src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&amp;fit=crop&amp;w=700&amp;q=85"
-                            alt="Peaceful mountain lake"
-                            loading="lazy">
-                        <span class="destination-tag">ADVENTURE</span>
-                    </div>
-
-                    <div class="saved-destination-content">
-                        <h3>Mountain Escapes</h3>
-                        <p>Enjoy fresh air, scenic views and outdoor adventures.</p>
-                        <a href="domestic-packages.html" class="dashboard-text-link">
-                            Explore Packages →
-                        </a>
-                    </div>
-                </article>
-
-                <article class="saved-destination-card">
-                    <div class="saved-destination-image">
-                        <img
-                            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=700&amp;q=85"
-                            alt="Sunny tropical beach"
-                            loading="lazy">
-                        <span class="destination-tag">BEACH ESCAPE</span>
-                    </div>
-
-                    <div class="saved-destination-content">
-                        <h3>Tropical Beaches</h3>
-                        <p>Relax by the sea and enjoy beautiful coastal views.</p>
-                        <a href="international-packages.html" class="dashboard-text-link">
-                            Explore Packages →
-                        </a>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Travel planner call to action -->
-    <section class="dashboard-section travel-planner-section">
-        <div class="site-container">
-
-            <div class="travel-planner-card">
-                <div class="travel-planner-content">
-                    <span class="section-eyebrow">YOUR NEXT CHAPTER</span>
-                    <h2>Ready to Plan Your Next Holiday?</h2>
-                    <p>
-                        Tell us what kind of trip you have in mind and
-                        explore options suited to your travel plans.
-                    </p>
-                    <a href="contact.html" class="btn btn-primary">
-                        Plan Your Journey →
+                    <a href="domestic-packages.html" class="dashboard-text-link">
+                        Browse Packages →
                     </a>
                 </div>
 
-                <div class="travel-planner-image">
-                    <img
-                        src="https://images.unsplash.com/photo-1534777367038-9404f45b869a?auto=format&amp;fit=crop&amp;w=700&amp;q=85"
-                        alt="Traveller enjoying a scenic destination"
-                        loading="lazy">
+                <div class="saved-destinations-grid">
+
+                    <article class="saved-destination-card">
+                        <div class="saved-destination-image">
+                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=700&amp;q=85"
+                                 alt="Tropical beach in Goa" loading="lazy">
+                            <span class="destination-tag">BEACH ESCAPE</span>
+                        </div>
+                        <div class="saved-destination-content">
+                            <h3>Goa Beach Escape</h3>
+                            <p><i data-lucide="map-pin" aria-hidden="true"></i> Goa, India</p>
+                            <p>Golden beaches, coastal sunsets and relaxing seaside experiences.</p>
+                            <a href="domestic-packages.html" class="dashboard-text-link">View Details →</a>
+                        </div>
+                    </article>
+
+                    <article class="saved-destination-card">
+                        <div class="saved-destination-image">
+                            <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&amp;fit=crop&amp;w=700&amp;q=85"
+                                 alt="Himalayan mountain scenery" loading="lazy">
+                            <span class="destination-tag">MOUNTAIN RETREAT</span>
+                        </div>
+                        <div class="saved-destination-content">
+                            <h3>Manali Mountain Retreat</h3>
+                            <p><i data-lucide="map-pin" aria-hidden="true"></i> Himachal Pradesh, India</p>
+                            <p>Mountain views, peaceful valleys and refreshing adventures.</p>
+                            <a href="domestic-packages.html" class="dashboard-text-link">View Details →</a>
+                        </div>
+                    </article>
+
+                    <article class="saved-destination-card">
+                        <div class="saved-destination-image">
+                            <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&amp;fit=crop&amp;w=700&amp;q=85"
+                                 alt="Lush green Kerala backwaters" loading="lazy">
+                            <span class="destination-tag">NATURE ESCAPE</span>
+                        </div>
+                        <div class="saved-destination-content">
+                            <h3>Kerala Backwaters</h3>
+                            <p><i data-lucide="map-pin" aria-hidden="true"></i> Kerala, India</p>
+                            <p>Green landscapes, peaceful waterways and scenic houseboats.</p>
+                            <a href="domestic-packages.html" class="dashboard-text-link">View Details →</a>
+                        </div>
+                    </article>
+
                 </div>
-            </div>
+            </section>
+
+            <!-- BOOKING STATUS -->
+            <section class="dashboard-section my-bookings-section" id="myBookings">
+                <div class="dashboard-section-heading">
+                    <div>
+                        <span class="section-eyebrow">YOUR RESERVATIONS</span>
+                        <h2>Booking Status</h2>
+                        <p>Keep track of your travel arrangements.</p>
+                    </div>
+                    <a href="domestic-packages.html" class="dashboard-text-link">Explore Packages →</a>
+                </div>
+
+                <div class="dashboard-bookings-list">
+
+                    <article class="dashboard-booking-card">
+                        <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&amp;fit=crop&amp;w=400&amp;q=85"
+                             alt="Manali mountain destination" loading="lazy">
+
+                        <div class="dashboard-booking-info">
+                            <span class="booking-reference">BOOKING ID: TRV-20481</span>
+                            <h3>Manali Mountain Retreat</h3>
+                            <p><i data-lucide="map-pin" aria-hidden="true"></i> Himachal Pradesh, India</p>
+                            <p><i data-lucide="calendar-days" aria-hidden="true"></i> 12–16 December 2026</p>
+                        </div>
+
+                        <div class="dashboard-booking-status">
+                            <span class="booking-status-badge confirmed">Confirmed</span>
+                            <a href="#myItineraries" class="dashboard-text-link">View Itinerary →</a>
+                        </div>
+                    </article>
+
+                    <article class="dashboard-booking-card">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=400&amp;q=85"
+                             alt="Goa coastal holiday" loading="lazy">
+
+                        <div class="dashboard-booking-info">
+                            <span class="booking-reference">BOOKING ID: TRV-20482</span>
+                            <h3>Goa Beach Escape</h3>
+                            <p><i data-lucide="map-pin" aria-hidden="true"></i> Goa, India</p>
+                            <p><i data-lucide="calendar-days" aria-hidden="true"></i> 20–24 January 2027</p>
+                        </div>
+
+                        <div class="dashboard-booking-status">
+                            <span class="booking-status-badge pending">Pending</span>
+                            <span class="booking-status-note">Awaiting confirmation</span>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- ITINERARY -->
+            <section class="dashboard-section my-itineraries-section" id="myItineraries">
+                <div class="dashboard-section-heading">
+                    <div>
+                        <span class="section-eyebrow">YOUR TRAVEL PLANS</span>
+                        <h2>My Itineraries</h2>
+                        <p>Preview the plan for your next adventure.</p>
+                    </div>
+                </div>
+
+                <article class="itinerary-empty-panel">
+                    <div class="itinerary-empty-visual">
+                        <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&amp;fit=crop&amp;w=700&amp;q=85"
+                             alt="Scenic Himalayan mountains" loading="lazy">
+                    </div>
+
+                    <div class="itinerary-empty-content">
+                        <span class="itinerary-label">MANALI · 5 DAYS</span>
+                        <h3>Manali Mountain Retreat</h3>
+                        <p>Explore Himalayan scenery, discover local attractions and enjoy a refreshing mountain getaway.</p>
+
+                        <div class="itinerary-timeline">
+                            <div class="itinerary-day">
+                                <span class="itinerary-day-number">01</span>
+                                <div>
+                                    <h4>Arrival &amp; Local Exploration</h4>
+                                    <p>Arrive in Manali, settle in and explore the town.</p>
+                                </div>
+                            </div>
+                            <div class="itinerary-day">
+                                <span class="itinerary-day-number">02</span>
+                                <div>
+                                    <h4>Solang Valley</h4>
+                                    <p>Enjoy mountain scenery and outdoor activities.</p>
+                                </div>
+                            </div>
+                            <div class="itinerary-day">
+                                <span class="itinerary-day-number">03</span>
+                                <div>
+                                    <h4>Local Attractions</h4>
+                                    <p>Discover nearby sights and local experiences.</p>
+                                </div>
+                            </div>
+                            <div class="itinerary-day">
+                                <span class="itinerary-day-number">04</span>
+                                <div>
+                                    <h4>Leisure &amp; Sightseeing</h4>
+                                    <p>Enjoy free time and explore at your own pace.</p>
+                                </div>
+                            </div>
+                            <div class="itinerary-day">
+                                <span class="itinerary-day-number">05</span>
+                                <div>
+                                    <h4>Departure</h4>
+                                    <p>Finish your getaway and prepare for the journey home.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="contact.html" class="btn btn-primary">Plan Another Trip →</a>
+                    </div>
+                </article>
+            </section>
+
+            <!-- TICKETS & INVOICES -->
+            <section class="dashboard-section tickets-invoices-section" id="ticketsInvoices">
+                <div class="dashboard-section-heading">
+                    <div>
+                        <span class="section-eyebrow">YOUR TRAVEL DOCUMENTS</span>
+                        <h2>Tickets &amp; Invoices</h2>
+                        <p>Keep your travel documents organised in one place.</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-documents-grid">
+
+                    <article class="dashboard-document-card">
+                        <div class="dashboard-document-top">
+                            <div class="dashboard-document-icon ticket-document-icon">
+                                <i data-lucide="ticket" aria-hidden="true"></i>
+                            </div>
+                            <span class="document-type-label">TRAVEL DOCUMENT</span>
+                        </div>
+                        <h3>Manali Travel Ticket</h3>
+                        <p>Booking reference: TRV-20481</p>
+                        <div class="dashboard-document-footer">
+                            <span class="document-empty-status">Ticket file to be added</span>
+                        </div>
+                    </article>
+
+                    <article class="dashboard-document-card">
+                        <div class="dashboard-document-top">
+                            <div class="dashboard-document-icon invoice-document-icon">
+                                <i data-lucide="file-text" aria-hidden="true"></i>
+                            </div>
+                            <span class="document-type-label">PAYMENT RECORD</span>
+                        </div>
+                        <h3>Manali Booking Invoice</h3>
+                        <p>Booking reference: TRV-20481</p>
+                        <div class="dashboard-document-footer">
+                            <span class="document-empty-status">Invoice file to be added</span>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- PROFILE -->
+            <section class="dashboard-section dashboard-profile-section" id="myProfile">
+                <div class="dashboard-section-heading">
+                    <div>
+                        <span class="section-eyebrow">ACCOUNT DETAILS</span>
+                        <h2>My Profile</h2>
+                        <p>Access your traveler account.</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-profile-card">
+                    <div class="dashboard-profile-icon">
+                        <i data-lucide="user-round" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h3>Traveler Profile</h3>
+                        <p>Sign in to manage your personal information, bookings and saved holiday packages.</p>
+                    </div>
+                    <a href="login.html" class="btn btn-primary">Sign In</a>
+                </div>
+            </section>
+
+            <!-- FINAL CTA -->
+            <section class="dashboard-section travel-planner-section">
+                <div class="travel-planner-card">
+                    <div class="travel-planner-content">
+                        <span class="section-eyebrow">YOUR NEXT CHAPTER</span>
+                        <h2>Ready to Plan Your Next Holiday?</h2>
+                        <p>Discover new places and create unforgettable memories with Travelora.</p>
+                        <a href="contact.html" class="btn btn-primary">Plan Your Journey →</a>
+                    </div>
+                    <div class="travel-planner-image">
+                        <img src="https://images.unsplash.com/photo-1534777367038-9404f45b869a?auto=format&amp;fit=crop&amp;w=700&amp;q=85"
+                             alt="Traveller enjoying a scenic destination" loading="lazy">
+                    </div>
+                </div>
+            </section>
 
         </div>
-    </section>
-
+    </div>
 </main>
 
 <!-- ================= FOOTER ================= -->
@@ -620,7 +692,7 @@
     </div>
 </footer>
 
-<!-- Shared functionality -->
+<!-- Dashboard and shared functionality -->
 <script src="dashboard.js"></script>
 
 <script>
@@ -636,31 +708,73 @@ document.addEventListener("DOMContentLoaded", () => {
         }).format(new Date());
     }
 
-    const sections = document.querySelectorAll(
-        ".dashboard-page > section"
+    if (window.lucide) {
+        window.lucide.createIcons();
+    }
+
+    // Highlight the selected sidebar link when clicked.
+    const sidebarLinks = document.querySelectorAll(".dashboard-sidebar-link");
+
+    sidebarLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            sidebarLinks.forEach(item => item.classList.remove("active"));
+            link.classList.add("active");
+        });
+    });
+
+    // Update the active link as the visitor scrolls through the dashboard.
+    const observedSections = [
+        ["overview", "overview"],
+        ["savedPackages", "savedPackages"],
+        ["myBookings", "myBookings"],
+        ["myItineraries", "myItineraries"],
+        ["ticketsInvoices", "ticketsInvoices"],
+        ["myProfile", "myProfile"]
+    ];
+
+    if ("IntersectionObserver" in window) {
+        const sectionObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+
+                sidebarLinks.forEach(link => {
+                    link.classList.toggle(
+                        "active",
+                        link.getAttribute("href") === "#" + entry.target.id
+                    );
+                });
+            });
+        }, { rootMargin: "-20% 0px -65% 0px" });
+
+        observedSections.forEach(([id]) => {
+            const section = document.getElementById(id);
+            if (section) sectionObserver.observe(section);
+        });
+    }
+
+    // Reveal dashboard sections when they enter the viewport.
+    const revealSections = document.querySelectorAll(
+        ".dashboard-main-column > section"
     );
 
     if ("IntersectionObserver" in window) {
-        const observer = new IntersectionObserver(entries => {
+        const revealObserver = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add("is-visible");
-                    observer.unobserve(entry.target);
+                    revealObserver.unobserve(entry.target);
                 }
             });
         }, { threshold: 0.08 });
 
-        sections.forEach(section => {
+        revealSections.forEach(section => {
             section.classList.add("reveal-section");
-            observer.observe(section);
+            revealObserver.observe(section);
         });
-    }
-
-    if (window.lucide) {
-        window.lucide.createIcons();
     }
 });
 </script>
+
 <script src="script.js"></script>
 
 </body>

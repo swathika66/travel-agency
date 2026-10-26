@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#009C9A">
+    <meta name="description" content="Explore Travelora honeymoon and family holiday packages, destination highlights, sample itineraries and personalised travel enquiries.">
+
+    <title>Holiday Details | Travelora</title>
+
+    <link rel="icon" type="image/png" href="favicon2.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap">
+    <link rel="preconnect" href="https://images.unsplash.com">
+
+    <!-- Shared website styling -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Page-specific styling -->
+    <link rel="stylesheet" href="honeymoon-family-details.css">
+</head>
+
+<body class="hf-details-page">
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ==================== SHARED HEADER ==================== -->
+
+<header class="site-header">
+    <div class="site-container header-container">
+
+        <a href="index.html" class="brand" aria-label="Travelora Home">
+            <img src="logo.png" alt="Travelora logo" width="52" height="52">
+            <span class="brand-text">
+                <span class="brand-name">
+                    <span class="travelora-primary">Travel</span><span class="travelora-secondary">ora</span>
+                </span>
+                <span class="brand-tagline">EXPLORE THE WORLD</span>
+            </span>
+        </a>
+
+        <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+
+            <div class="home-dropdown">
+                <a href="index.html" class="home-link"
+                   aria-haspopup="true" aria-expanded="false"
+                   id="homeDropdownToggle">
+                    Home <span class="dropdown-arrow" aria-hidden="true">▾</span>
+                </a>
+
+                <div class="home-dropdown-menu">
+                    <a href="index.html">Home 1</a>
+                    <a href="home2.html">Home 2</a>
+                </div>
+            </div>
+
+            <a href="about.html">About Us</a>
+            <a href="domestic-packages.html">Domestic Packages</a>
+            <a href="international-packages.html">International Packages</a>
+            <a href="honeymoon-family.html" class="active" aria-current="page">Honeymoon &amp; Family Tours</a>
+            <a href="contact.html">Contact</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+
+        <div class="header-actions">
+            <button id="rtlBtn" class="header-icon-btn"
+                    type="button" title="Toggle RTL"
+                    aria-label="Toggle right-to-left layout"
+                    aria-pressed="false">
+                <span aria-hidden="true">⇄</span>
+            </button>
+
+            <button id="themeBtn" class="header-icon-btn"
+                    type="button" title="Toggle dark mode"
+                    aria-label="Toggle dark mode"
+                    aria-pressed="false">
+                <span aria-hidden="true">☾</span>
+            </button>
+
+            <a href="login.html" class="login-btn">Login</a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn"
+                    type="button" aria-label="Open navigation menu"
+                    aria-expanded="false" aria-controls="mainNav">
+                <span aria-hidden="true">☰</span>
+            </button>
+        </div>
+
+    </div>
+</header>
+
+<main id="main-content">
+
+<!-- ==================== 1. DIFFERENT HERO LAYOUT ==================== -->
+
+<section class="hfd-hero">
+    <div class="site-container hfd-hero-container">
+
+        <!-- Hero content -->
+        <div class="hfd-hero-content">
+
+            <div class="hfd-breadcrumb">
+                <a href="index.html">Home</a>
+                <span aria-hidden="true">/</span>
+                <a href="honeymoon-family.html">Honeymoon &amp; Family Tours</a>
+                <span aria-hidden="true">/</span>
+                <span>Holiday Details</span>
+            </div>
+
+            <span class="hfd-eyebrow">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m12 2 3 6 7 .9-5 4.8 1.2 6.8-6.2-3.3-6.2 3.3L7 13.7 2 8.9 9 8z"/>
+                </svg>
+                YOUR NEXT BEAUTIFUL MEMORY
+            </span>
+
+            <h1 id="hfdHeroTitle">
+                Find Your Perfect Holiday</h1>
+                </span>
+    
+
+            <p id="hfdHeroDescription">
+                Discover romantic escapes, beautiful landscapes and
+                unforgettable experiences with the people you love.
+            </p>
+
+            <div class="hfd-hero-meta">
+
+                <div class="hfd-hero-meta-item">
+                    <span class="hfd-svg-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                            <circle cx="12" cy="10" r="2.5"/>
+                        </svg>
+                    </span>
+                    <span>
+                        <small>DESTINATION</small>
+                        <strong id="hfdHeroLocation">Explore our destinations</strong>
+                    </span>
+                </div>
+
+                <div class="hfd-hero-meta-item">
+                    <span class="hfd-svg-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="9"/>
+                            <path d="M12 7v5l3.5 2"/>
+                        </svg>
+                    </span>
+                    <span>
+                        <small>TRIP DURATION</small>
+                        <strong id="hfdHeroDuration">Flexible duration</strong>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="hfd-hero-actions">
+                <a href="#hfd-enquiry" class="btn btn-primary">
+                    Plan This Holiday
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M5 12h14m-6-6 6 6-6 6"/>
+                    </svg>
+                </a>
+
+                <a href="#hfd-itinerary" class="btn btn-outline">
+                    Explore Itinerary
+                </a>
+            </div>
+
+            <div class="hfd-hero-note">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m12 3 8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/>
+                    <path d="m9 12 2 2 4-4"/>
+                </svg>
+                Personalised travel planning for couples and families
+            </div>
+
+        </div>
+
+        <!-- Hero image composition -->
+        <div class="hfd-hero-visual">
+
+            <div class="hfd-hero-image-main">
+                <img id="hfdHeroImage"
+                     src="https://plus.unsplash.com/premium_photo-1666432045848-3fdbb2c74531?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                     alt="Beautiful tropical beach and turquoise ocean"
+                     fetchpriority="high">
+
+                <div class="hfd-hero-image-caption">
+                    <span class="hfd-svg-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 21s-7-4.5-7-11a7 7 0 1 1 14 0c0 6.5-7 11-7 11Z"/>
+                            <circle cx="12" cy="10" r="2.3"/>
+                        </svg>
+                    </span>
+                    <span>
+                        <small>EXPLORE YOUR NEXT ESCAPE</small>
+                        <strong id="hfdHeroImageTitle">Beautiful Destinations</strong>
+                    </span>
+                </div>
+            </div>
+
+            <div class="hfd-hero-floating-card">
+                <span class="hfd-floating-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 3v3m0 12v3M3 12h3m12 0h3"/>
+                        <circle cx="12" cy="12" r="6"/>
+                        <path d="m9.5 12 1.7 1.7 3.5-3.5"/>
+                    </svg>
+                </span>
+                <span>
+                    <strong>Made for your memories</strong>
+                    <small>Couples · Families · Adventures</small>
+                </span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ==================== 2. SIX OVERVIEW CARDS ==================== -->
+
+<section class="section hfd-overview-section">
+    <div class="site-container">
+
+        <div class="hfd-section-heading">
+            <span class="section-eyebrow">YOUR JOURNEY STARTS HERE</span>
+            <h2 id="hfdOverviewTitle">A Holiday Made for You</h2>
+            <p id="hfdOverviewDescription">
+                Discover beautiful places and experiences designed around you.
+            </p>
+        </div>
+
+        <div class="hfd-overview-grid">
+
+            <article class="hfd-overview-card">
+                <span class="hfd-overview-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/>
+                    </svg>
+                </span>
+                <h3>Holiday Style</h3>
+                <p id="hfdHolidayStyle">Honeymoon &amp; Family</p>
+            </article>
+
+            <article class="hfd-overview-card">
+                <span class="hfd-overview-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="9"/>
+                        <path d="M12 7v5l3 2"/>
+                    </svg>
+                </span>
+                <h3>Duration</h3>
+                <p id="hfdOverviewDuration">Flexible duration</p>
+            </article>
+
+            <article class="hfd-overview-card">
+                <span class="hfd-overview-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                        <circle cx="12" cy="10" r="2.5"/>
+                    </svg>
+                </span>
+                <h3>Destination</h3>
+                <p id="hfdOverviewLocation">Choose a destination</p>
+            </article>
+
+            <article class="hfd-overview-card">
+                <span class="hfd-overview-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="9" cy="8" r="4"/>
+                        <path d="M2 21v-2a7 7 0 0 1 14 0v2M17 4a4 4 0 0 1 0 8m2 3a5 5 0 0 1 3 4v2"/>
+                    </svg>
+                </span>
+                <h3>Best For</h3>
+                <p id="hfdBestFor">Couples &amp; Families</p>
+            </article>
+
+            <article class="hfd-overview-card">
+                <span class="hfd-overview-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 3v18M3 12h18"/>
+                        <circle cx="12" cy="12" r="9"/>
+                    </svg>
+                </span>
+                <h3>Travel Style</h3>
+                <p>Flexible planning</p>
+            </article>
+
+            <article class="hfd-overview-card">
+                <span class="hfd-overview-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 5h16v14H4zM8 9h8M8 13h5"/>
+                        <path d="m8 3 1 2m6-2 1 2"/>
+                    </svg>
+                </span>
+                <h3>Trip Planning</h3>
+                <p>Personalised enquiry</p>
+            </article>
+
+        </div>
+
+        <div class="hfd-overview-content">
+            <div class="hfd-overview-text">
+                <span class="section-eyebrow">ABOUT THIS HOLIDAY</span>
+                <h2 id="hfdAboutTitle">Make Every Moment Meaningful</h2>
+
+                <p id="hfdAboutText">
+                    Whether you are celebrating a special occasion or
+                    planning quality time with your family, choose a
+                    destination that matches your interests and travel style.
+                </p>
+
+                <ul class="hfd-highlight-list" id="hfdHighlights">
+                    <li>Beautiful destination experiences</li>
+                    <li>Flexible holiday planning</li>
+                    <li>Options for couples and families</li>
+                    <li>Personalised travel enquiries</li>
+                </ul>
+
+                <a href="#hfd-enquiry" class="btn btn-primary">
+                    Plan Your Experience
+                </a>
+            </div>
+
+            <div class="hfd-overview-image">
+                <img id="hfdOverviewImage"
+                     src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1000&q=85"
+                     alt="Scenic lake and mountain holiday destination"
+                     loading="lazy">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ==================== 3. ITINERARY ==================== -->
+
+<section class="section hfd-itinerary-section" id="hfd-itinerary">
+    <div class="site-container">
+
+        <div class="hfd-section-heading">
+            <span class="section-eyebrow">YOUR JOURNEY, STEP BY STEP</span>
+            <h2>Explore Your Itinerary</h2>
+            <p>
+                Preview a sample journey. Activities and schedules can be
+                customised according to your destination and travel dates.
+            </p>
+        </div>
+
+        <div class="hfd-itinerary-layout">
+
+            <div class="hfd-itinerary-list" id="hfdItineraryList">
+
+                <details class="hfd-day-card" open>
+                    <summary>
+                        <span class="hfd-day-number">01</span>
+                        <span class="hfd-day-summary">
+                            <strong>Arrival &amp; Welcome</strong>
+                            <span>Arrive and settle into your accommodation.</span>
+                        </span>
+                        <span class="hfd-day-toggle" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="hfd-day-content">
+                        <p>Arrive at your destination, check in and enjoy some time to relax.</p>
+                        <span class="hfd-day-tag">Arrival · Leisure</span>
+                    </div>
+                </details>
+
+                <details class="hfd-day-card">
+                    <summary>
+                        <span class="hfd-day-number">02</span>
+                        <span class="hfd-day-summary">
+                            <strong>Discover the Destination</strong>
+                            <span>Explore local highlights and attractions.</span>
+                        </span>
+                        <span class="hfd-day-toggle" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="hfd-day-content">
+                        <p>Explore selected sights, local culture and beautiful scenery.</p>
+                        <span class="hfd-day-tag">Sightseeing · Exploration</span>
+                    </div>
+                </details>
+
+                <details class="hfd-day-card">
+                    <summary>
+                        <span class="hfd-day-number">03</span>
+                        <span class="hfd-day-summary">
+                            <strong>Experiences &amp; Activities</strong>
+                            <span>Choose experiences that suit your travel style.</span>
+                        </span>
+                        <span class="hfd-day-toggle" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="hfd-day-content">
+                        <p>Consider optional excursions, family activities or leisure experiences.</p>
+                        <span class="hfd-day-tag">Activities · Leisure</span>
+                    </div>
+                </details>
+
+                <details class="hfd-day-card">
+                    <summary>
+                        <span class="hfd-day-number">04</span>
+                        <span class="hfd-day-summary">
+                            <strong>Relax &amp; Enjoy</strong>
+                            <span>Make time for a slower day or extra sightseeing.</span>
+                        </span>
+                        <span class="hfd-day-toggle" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="hfd-day-content">
+                        <p>Enjoy free time or add an optional activity before departure.</p>
+                        <span class="hfd-day-tag">Relaxation · Optional activities</span>
+                    </div>
+                </details>
+
+                <details class="hfd-day-card">
+                    <summary>
+                        <span class="hfd-day-number">05</span>
+                        <span class="hfd-day-summary">
+                            <strong>Departure</strong>
+                            <span>Enjoy your final moments and head home.</span>
+                        </span>
+                        <span class="hfd-day-toggle" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="hfd-day-content">
+                        <p>Check out and proceed with your planned return journey.</p>
+                        <span class="hfd-day-tag">Check-out · Departure</span>
+                    </div>
+                </details>
+
+            </div>
+
+            <aside class="hfd-itinerary-aside">
+                <img id="hfdItineraryImage"
+                     src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=85"
+                     alt="Beautiful mountain and lake scenery"
+                     loading="lazy">
+
+                <div class="hfd-itinerary-aside-content">
+                    <span class="section-eyebrow">YOUR HOLIDAY, YOUR WAY</span>
+                    <h3>Make It Your Own</h3>
+                    <p>Tell us your dates, travel group and interests so your trip can be tailored to you.</p>
+                    <a href="#hfd-enquiry" class="btn btn-primary">Customise My Trip</a>
+                </div>
+            </aside>
+
+        </div>
+
+        <p class="hfd-disclaimer">
+            <strong>Itinerary note:</strong> Activities are examples only.
+            Final schedules and services must be confirmed before booking.
+        </p>
+
+    </div>
+</section>
+
+
+<!-- ==================== 4. INCLUSIONS & EXCLUSIONS ==================== -->
+
+<section class="section hfd-inclusions-section">
+    <div class="site-container">
+
+        <div class="hfd-section-heading">
+            <span class="section-eyebrow">KNOW BEFORE YOU GO</span>
+            <h2>What's Included in Your Holiday?</h2>
+            <p>Check the proposed package details before confirming your trip.</p>
+        </div>
+
+        <div class="hfd-inclusions-grid">
+
+            <article class="hfd-inclusion-card hfd-included">
+                <div class="hfd-inclusion-heading">
+                    <span aria-hidden="true">✓</span>
+                    <h3>Possible Inclusions</h3>
+                </div>
+                <ul>
+                    <li>Accommodation options</li>
+                    <li>Meals specified in the quote</li>
+                    <li>Transfers, if selected</li>
+                    <li>Sightseeing listed in the itinerary</li>
+                    <li>Selected activities, where confirmed</li>
+                    <li>Travel assistance according to the package</li>
+                </ul>
+            </article>
+
+            <article class="hfd-inclusion-card hfd-excluded">
+                <div class="hfd-inclusion-heading">
+                    <span aria-hidden="true">−</span>
+                    <h3>Items to Confirm</h3>
+                </div>
+                <ul>
+                    <li>Flights, unless expressly included</li>
+                    <li>Visa and travel-document costs</li>
+                    <li>Personal shopping and expenses</li>
+                    <li>Optional activities outside the quote</li>
+                    <li>Meals not specified in the itinerary</li>
+                    <li>Travel insurance, unless specified</li>
+                </ul>
+            </article>
+
+        </div>
+
+        <p class="hfd-disclaimer">
+            This is a planning guide, not a confirmed list of inclusions.
+            Check the final quotation and booking terms.
+        </p>
+
+    </div>
+</section>
+
+
+<!-- ==================== 5. DESTINATION GALLERY ==================== -->
+
+<section class="section hfd-gallery-section">
+    <div class="site-container">
+
+        <div class="hfd-section-heading">
+            <span class="section-eyebrow">A GLIMPSE OF YOUR GETAWAY</span>
+            <h2>Destination Inspiration</h2>
+            <p>Explore landscapes and experiences that may inspire your next journey.</p>
+        </div>
+
+        <div class="hfd-gallery" id="hfdGallery">
+
+            <figure class="hfd-gallery-item hfd-gallery-large">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85"
+                     alt="Tropical beach with turquoise water" loading="lazy">
+                <figcaption>Coastal Escapes</figcaption>
+            </figure>
+
+            <figure class="hfd-gallery-item">
+                <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=85"
+                     alt="Lake and mountain landscape" loading="lazy">
+                <figcaption>Nature Retreats</figcaption>
+            </figure>
+
+            <figure class="hfd-gallery-item">
+                <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=85"
+                     alt="Colourful coastal village" loading="lazy">
+                <figcaption>Charming Destinations</figcaption>
+            </figure>
+
+            <figure class="hfd-gallery-item">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=85"
+                     alt="Mountain peaks surrounded by clouds" loading="lazy">
+                <figcaption>Mountain Adventures</figcaption>
+            </figure>
+
+            <figure class="hfd-gallery-item">
+                <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=800&q=85"
+                     alt="Relaxing beachside holiday setting" loading="lazy">
+                <figcaption>Relaxing Holidays</figcaption>
+            </figure>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ==================== 6. FAQ ==================== -->
+
+<section class="section hfd-faq-section">
+    <div class="site-container hfd-faq-container">
+
+        <div class="hfd-faq-intro">
+            <span class="section-eyebrow">NEED TO KNOW MORE?</span>
+            <h2>Frequently Asked Questions</h2>
+            <p>Helpful information before planning your honeymoon or family holiday.</p>
+            <a href="contact.html" class="btn btn-primary">Ask Us a Question</a>
+        </div>
+
+        <div class="hfd-faq-list">
+
+            <details class="hfd-faq-item">
+                <summary>Can I customise the holiday package?</summary>
+                <div><p>Yes. Share your dates, destination, trip duration and interests so your proposed itinerary can be tailored to you.</p></div>
+            </details>
+
+            <details class="hfd-faq-item">
+                <summary>Can families travel with children?</summary>
+                <div><p>Family travel options can be discussed when you enquire. Include the children's ages and any special requirements.</p></div>
+            </details>
+
+            <details class="hfd-faq-item">
+                <summary>Are flights and hotels included?</summary>
+                <div><p>Not automatically. Check the specific quotation for flights, accommodation, meals and transfers before booking.</p></div>
+            </details>
+
+            <details class="hfd-faq-item">
+                <summary>When should I plan my trip?</summary>
+                <div><p>The best time depends on your destination, weather preferences and planned activities. Share your intended travel dates for guidance.</p></div>
+            </details>
+
+            <details class="hfd-faq-item">
+                <summary>How do I enquire about a package?</summary>
+                <div><p>Complete the enquiry form below or use the Contact page. A form service or backend is needed to receive enquiries.</p></div>
+            </details>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ==================== 7. SIX RELATED DESTINATION CARDS ==================== -->
+
+<section class="section hfd-related-section">
+    <div class="site-container">
+
+        <div class="hfd-section-heading">
+            <span class="section-eyebrow">MORE WAYS TO EXPLORE</span>
+            <h2>Find Your Next Favourite Destination</h2>
+            <p>Choose from six honeymoon and family holiday ideas.</p>
+        </div>
+
+        <div class="hfd-destination-grid">
+
+            <article class="hfd-destination-card">
+                <a href="honeymoon-family-details.html?destination=maldives" class="hfd-destination-image" aria-label="View Maldives holiday">
+                    <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=900&q=85" alt="Maldives island resort" loading="lazy">
+                    <span class="hfd-card-category">Honeymoon</span>
+                </a>
+                <div class="hfd-destination-content">
+                    <span class="hfd-card-location">Indian Ocean</span>
+                    <h3>Maldives Romantic Escape</h3>
+                    <p>Island scenery, relaxing resort stays and romantic experiences.</p>
+                    <a href="honeymoon-family-details.html?destination=maldives" class="text-link">View Details →</a>
+                </div>
+            </article>
+
+            <article class="hfd-destination-card">
+                <a href="honeymoon-family-details.html?destination=bali" class="hfd-destination-image" aria-label="View Bali holiday">
+                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=85" alt="Bali tropical landscape" loading="lazy">
+                    <span class="hfd-card-category">Couples</span>
+                </a>
+                <div class="hfd-destination-content">
+                    <span class="hfd-card-location">Indonesia</span>
+                    <h3>Bali Love &amp; Nature</h3>
+                    <p>Tropical scenery, cultural discovery and peaceful retreats.</p>
+                    <a href="honeymoon-family-details.html?destination=bali" class="text-link">View Details →</a>
+                </div>
+            </article>
+
+            <article class="hfd-destination-card">
+                <a href="honeymoon-family-details.html?destination=munnar" class="hfd-destination-image" aria-label="View Munnar holiday">
+                    <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=900&q=85" alt="Green hills and tea plantations in Kerala" loading="lazy">
+                    <span class="hfd-card-category">Nature</span>
+                </a>
+                <div class="hfd-destination-content">
+                    <span class="hfd-card-location">Kerala, India</span>
+                    <h3>Kerala Nature Retreat</h3>
+                    <p>Tea gardens, refreshing scenery and quiet moments together.</p>
+                    <a href="honeymoon-family-details.html?destination=munnar" class="text-link">View Details →</a>
+                </div>
+            </article>
+
+            <article class="hfd-destination-card">
+                <a href="honeymoon-family-details.html?destination=singapore" class="hfd-destination-image" aria-label="View Singapore holiday">
+                    <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=900&q=85" alt="Singapore city skyline" loading="lazy">
+                    <span class="hfd-card-category">Family Fun</span>
+                </a>
+                <div class="hfd-destination-content">
+                    <span class="hfd-card-location">Singapore</span>
+                    <h3>Singapore Family Fun</h3>
+                    <p>City attractions, gardens and activities for families.</p>
+                    <a href="honeymoon-family-details.html?destination=singapore" class="text-link">View Details →</a>
+                </div>
+            </article>
+
+            <article class="hfd-destination-card">
+                <a href="honeymoon-family-details.html?destination=manali" class="hfd-destination-image" aria-label="View Manali holiday">
+                    <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=900&q=85" alt="Himalayan mountain scenery" loading="lazy">
+                    <span class="hfd-card-category">Adventure</span>
+                </a>
+                <div class="hfd-destination-content">
+                    <span class="hfd-card-location">Himachal Pradesh, India</span>
+                    <h3>Manali Mountain Holiday</h3>
+                    <p>Mountain views, nature walks and seasonal experiences.</p>
+                    <a href="honeymoon-family-details.html?destination=manali" class="text-link">View Details →</a>
+                </div>
+            </article>
+
+            <article class="hfd-destination-card">
+                <a href="honeymoon-family-details.html?destination=goa" class="hfd-destination-image" aria-label="View Goa holiday">
+                    <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=900&q=85" alt="Goa beach holiday" loading="lazy">
+                    <span class="hfd-card-category">Beach Holiday</span>
+                </a>
+                <div class="hfd-destination-content">
+                    <span class="hfd-card-location">Goa, India</span>
+                    <h3>Goa Coastal Getaway</h3>
+                    <p>Beach scenery, local exploration and relaxing coastal time.</p>
+                    <a href="honeymoon-family-details.html?destination=goa" class="text-link">View Details →</a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ==================== 8. ENQUIRY FORM ==================== -->
+
+<section class="section hfd-enquiry-section" id="hfd-enquiry">
+    <div class="site-container hfd-enquiry-layout">
+
+        <div class="hfd-enquiry-content">
+            <span class="section-eyebrow">LET'S PLAN SOMETHING SPECIAL</span>
+            <h2>Tell Us About Your Dream Holiday</h2>
+            <p>
+                Share your travel preferences so a suitable holiday proposal
+                can be prepared.
+            </p>
+
+            <div class="hfd-enquiry-benefits">
+                <div><span aria-hidden="true">✓</span> Personalised trip enquiry</div>
+                <div><span aria-hidden="true">✓</span> Flexible travel preferences</div>
+                <div><span aria-hidden="true">✓</span> Package details to review</div>
+            </div>
+
+            <div class="hfd-enquiry-contact">
+                <span>Prefer to contact us directly?</span>
+                <a href="contact.html">Visit our Contact page →</a>
+            </div>
+        </div>
+
+        <form class="hfd-enquiry-form" id="hfdEnquiryForm" action="contact.html" method="get">
+
+            <div class="hfd-form-heading">
+                <span class="section-eyebrow">HOLIDAY ENQUIRY</span>
+                <h3>Plan Your Trip</h3>
+                <p>Fields marked * are required.</p>
+            </div>
+
+            <div class="hfd-form-grid">
+
+                <div class="hfd-form-field">
+                    <label for="hfdName">Full Name *</label>
+                    <input id="hfdName" name="name" type="text" placeholder="Enter your name" autocomplete="name" required>
+                </div>
+
+                <div class="hfd-form-field">
+                    <label for="hfdEmail">Email Address *</label>
+                    <input id="hfdEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+                </div>
+
+                <div class="hfd-form-field">
+                    <label for="hfdPhone">Phone Number *</label>
+                    <input id="hfdPhone" name="phone" type="tel" placeholder="Enter your phone number" autocomplete="tel" required>
+                </div>
+
+                <div class="hfd-form-field">
+                    <label for="hfdDestination">Preferred Destination *</label>
+                    <select id="hfdDestination" name="destination" required>
+                        <option value="">Choose a destination</option>
+                        <option value="Maldives">Maldives</option>
+                        <option value="Bali">Bali, Indonesia</option>
+                        <option value="Munnar">Munnar, Kerala</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="Manali">Manali, India</option>
+                        <option value="Goa">Goa, India</option>
+                        <option value="Flexible">I'm flexible</option>
+                    </select>
+                </div>
+
+                <div class="hfd-form-field">
+                    <label for="hfdTravelType">Holiday Type *</label>
+                    <select id="hfdTravelType" name="travelType" required>
+                        <option value="">Select holiday type</option>
+                        <option value="Honeymoon">Honeymoon</option>
+                        <option value="Couple">Couple getaway</option>
+                        <option value="Family">Family holiday</option>
+                        <option value="Celebration">Special celebration</option>
+                        <option value="Adventure">Adventure holiday</option>
+                    </select>
+                </div>
+
+                <div class="hfd-form-field">
+                    <label for="hfdTravellers">Number of Travellers *</label>
+                    <select id="hfdTravellers" name="travellers" required>
+                        <option value="">Select travellers</option>
+                        <option value="1">1 traveller</option>
+                        <option value="2">2 travellers</option>
+                        <option value="3-4">3–4 travellers</option>
+                        <option value="5-8">5–8 travellers</option>
+                        <option value="9+">9 or more</option>
+                    </select>
+                </div>
+
+                <div class="hfd-form-field">
+                    <label for="hfdStartDate">Preferred Travel Date</label>
+                    <input id="hfdStartDate" name="travelDate" type="date">
+                </div>
+
+                <div class="hfd-form-field">
+                    <label for="hfdBudget">Approximate Budget</label>
+                    <select id="hfdBudget" name="budget">
+                        <option value="">Select budget</option>
+                        <option value="Below ₹25,000">Below ₹25,000</option>
+                        <option value="₹25,000–₹50,000">₹25,000–₹50,000</option>
+                        <option value="₹50,000–₹1,00,000">₹50,000–₹1,00,000</option>
+                        <option value="Above ₹1,00,000">Above ₹1,00,000</option>
+                        <option value="Need advice">Need advice</option>
+                    </select>
+                </div>
+
+                <div class="hfd-form-field hfd-form-full">
+                    <label for="hfdMessage">Additional Preferences</label>
+                    <textarea id="hfdMessage" name="message" rows="4" placeholder="Tell us about your interests or special requirements."></textarea>
+                </div>
+
+            </div>
+
+            <button type="submit" class="btn btn-primary hfd-submit-btn">
+                Submit Enquiry
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14m-6-6 6 6-6 6"/>
+                </svg>
+            </button>
+
+            <p class="hfd-form-note">
+                Demo form: submission redirects to the Contact page with
+                the entered details in the URL. Connect a backend or form
+                service to receive enquiries securely.
+            </p>
+
+        </form>
+    </div>
+</section>
+
+
+<!-- ==================== 9. FINAL CTA ==================== -->
+
+<section class="final-cta hfd-final-cta">
+    <div class="site-container final-cta-inner">
+
+        <div class="final-cta-content">
+            <span class="section-eyebrow">YOUR STORY STARTS HERE</span>
+            <h2>Ready to Create Beautiful Memories?</h2>
+            <p>
+                Whether it is a romantic escape or a family adventure,
+                let us help you explore the possibilities.
+            </p>
+        </div>
+
+        <div class="final-cta-actions">
+            <a href="#hfd-enquiry" class="btn btn-light">Plan Your Holiday</a>
+            <a href="honeymoon-family.html" class="btn btn-cta-outline">Explore All Tours</a>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+
+<!-- ==================== SHARED FOOTER ==================== -->
+
+<footer class="site-footer">
+    <div class="site-container footer-container">
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="footer-logo" aria-label="Travelora Home">
+                <img src="logo.png" alt="Travelora logo" width="52" height="52">
+
+                <span class="footer-logo-text">
+                    <span class="footer-brand-name">
+                        <span class="travelora-primary">Travel</span><span class="travelora-secondary">ora</span>
+                    </span>
+                    <span class="footer-tagline">EXPLORE THE WORLD</span>
+                </span>
+            </a>
+
+            <p class="footer-description">
+                Discover remarkable destinations, exciting adventures
+                and memorable holidays with Travelora. Your next journey
+                begins with inspiration.
+            </p>
+
+            <div class="social-links" aria-label="Social media">
+
+                <a href="https://www.facebook.com/" class="social-icon"
+                   aria-label="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M14 8h3V4h-3c-3 0-5 2-5 5v2H6v4h3v5h4v-5h3l1-4h-4V9c0-.7.3-1 1-1z"/>
+                    </svg>
+                </a>
+
+                <a href="https://www.instagram.com/" class="social-icon"
+                   aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+                    </svg>
+                </a>
+
+                <a href="https://www.linkedin.com/" class="social-icon"
+                   aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M5 8H2V21H5V8zM3.5 3C2.4 3 2 3.8 2 4.6S2.4 6 3.5 6 5 5.2 5 4.4 4.6 3 3.5 3zM8 8h3v1.8h.1C11.5 8.7 12.7 7.5 15 7.5c3 0 4 2 4 5.2V21h-3v-7.3c0-1.7 0-3.8-2.3-3.8-2.3 0-2.7 1.8-2.7 3.7V21H8V8z"/>
+                    </svg>
+                </a>
+
+                <a href="https://www.youtube.com/" class="social-icon"
+                   aria-label="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M21 7.2a2.8 2.8 0 0 0-2-2C17.3 4.7 12 4.7 12 4.7s-5.3 0-7 .5a2.8 2.8 0 0 0-2 2C2.5 8.9 2.5 12 2.5 12s0 3.1.5 4.8a2.8 2.8 0 0 0 2 2c1.7.5 7 .5 7 .5s5.3 0 7-.5a2.8 2.8 0 0 0 2-2c.5-1.7.5-4.8.5-4.8s0-3.1-.5-4.8zM10 15.5v-7l6 3.5-6 3.5z"/>
+                    </svg>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="domestic-packages.html">Domestic Packages</a>
+            <a href="international-packages.html">International Packages</a>
+            <a href="honeymoon-family.html">Honeymoon &amp; Family Tours</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Information</h3>
+            <a href="destinations.html">Popular Destinations</a>
+            <a href="travel-experiences.html">Travel Experiences</a>
+            <a href="travel-guide.html">Travel Guide</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="login.html">Login</a>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+
+            <p class="footer-contact-description">
+                Have questions about your next trip? Get in touch with us.
+            </p>
+
+            <div class="contact-item">
+                <span class="contact-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+                    </svg>
+                </span>
+                <span>Hyderabad, India</span>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6.6 2.5 9.2 2l2 4.8-2.3 1.8a15.8 15.8 0 0 0 6.5 6.5l1.8-2.3 4.8 2 .5 2.6c.2 1-.6 2-1.6 2C11.5 21.4 2.6 12.5 2.6 3.1c0-1 .9-1.8 2-1.6l2 .9z"/>
+                    </svg>
+                </span>
+                <a href="tel:+919876543210">+91 98765 43210</a>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm9 7 8-5H4l8 5zm0 2L4 9v8h16V9l-8 5z"/>
+                    </svg>
+                </span>
+                <a href="mailto:info@travelora.com">info@travelora.com</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="site-container footer-bottom-container">
+            <p>© 2026 Travelora. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms &amp; Conditions</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Shared site behaviours -->
+<script src="script.js"></script>
+
+<!-- ==================== DESTINATION PAGE SCRIPT ==================== -->
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const packages = {
+        maldives: {
+            title: "Maldives Romantic Escape",
+            location: "Maldives",
+            duration: "4 nights / 5 days",
+            type: "Honeymoon",
+            bestFor: "Couples",
+            description: "Enjoy island scenery, peaceful resort stays and memorable experiences by the ocean.",
+            aboutTitle: "A Romantic Island Escape",
+            about: "Discover the beauty of the Maldives with a flexible holiday plan built around relaxation, island views and time together.",
+            heroImage: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=2000&q=90",
+            overviewImage: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1000&q=85",
+            highlights: ["Island and ocean scenery", "Resort stay options", "Optional sunset experiences", "Time to relax by the water"]
+        },
+        bali: {
+            title: "Bali Love & Nature",
+            location: "Bali, Indonesia",
+            duration: "5 nights / 6 days",
+            type: "Couples & Nature",
+            bestFor: "Couples and nature lovers",
+            description: "Discover tropical scenery, cultural landmarks and relaxing resort experiences in Bali.",
+            aboutTitle: "Tropical Beauty & Culture",
+            about: "Explore green landscapes, cultural sites and relaxed island experiences. Your final route can be tailored to your travel dates.",
+            heroImage: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=2000&q=90",
+            overviewImage: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1000&q=85",
+            highlights: ["Tropical landscapes", "Cultural sightseeing options", "Resort and leisure time", "Optional nature experiences"]
+        },
+        munnar: {
+            title: "Kerala Nature Retreat",
+            location: "Munnar, Kerala, India",
+            duration: "3 nights / 4 days",
+            type: "Nature Retreat",
+            bestFor: "Couples and families",
+            description: "Escape to misty hills, green tea gardens and refreshing mountain scenery.",
+            aboutTitle: "A Peaceful Hill-Station Holiday",
+            about: "Enjoy the slower pace of the hills with nature views, local sightseeing and a flexible schedule for couples or families.",
+            heroImage: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=2000&q=90",
+            overviewImage: "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1000&q=85",
+            highlights: ["Tea garden landscapes", "Scenic viewpoints", "Nature and leisure time", "Local sightseeing options"]
+        },
+        singapore: {
+            title: "Singapore Family Fun",
+            location: "Singapore",
+            duration: "4 nights / 5 days",
+            type: "Family Holiday",
+            bestFor: "Families",
+            description: "Enjoy city attractions, beautiful gardens and activities for a memorable family trip.",
+            aboutTitle: "A City Adventure for Families",
+            about: "Plan a family getaway combining city sightseeing, gardens and optional attractions according to the ages and interests of your group.",
+            heroImage: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=2000&q=90",
+            overviewImage: "https://images.unsplash.com/photo-1508964942454-1a56651d54ac?auto=format&fit=crop&w=1000&q=85",
+            highlights: ["City sightseeing", "Gardens and green spaces", "Family attraction options", "Flexible time for exploration"]
+        },
+        manali: {
+            title: "Manali Mountain Holiday",
+            location: "Manali, Himachal Pradesh, India",
+            duration: "4 nights / 5 days",
+            type: "Family Adventure",
+            bestFor: "Families and nature lovers",
+            description: "Explore Himalayan scenery, mountain viewpoints and seasonal outdoor experiences.",
+            aboutTitle: "Discover the Himalayan Landscape",
+            about: "Enjoy a mountain holiday with local sightseeing and outdoor options chosen according to weather, season and traveller preferences.",
+            heroImage: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=2000&q=90",
+            overviewImage: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1000&q=85",
+            highlights: ["Mountain and valley views", "Nature walks where suitable", "Local sightseeing", "Seasonal activities"]
+        },
+        goa: {
+            title: "Goa Coastal Getaway",
+            location: "Goa, India",
+            duration: "3 nights / 4 days",
+            type: "Beach Holiday",
+            bestFor: "Couples and families",
+            description: "Enjoy beach scenery, local exploration and relaxed coastal time in Goa.",
+            aboutTitle: "A Relaxed Coastal Escape",
+            about: "Plan a beachside break with time to explore local places, relax by the coast and choose suitable activities.",
+            heroImage: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=2000&q=90",
+            overviewImage: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85",
+            highlights: ["Coastal scenery", "Local sightseeing options", "Relaxed beach time", "Flexible activities"]
+        }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const requested = (params.get("destination") || "maldives").toLowerCase();
+    const selected = packages[requested] || packages.maldives;
+
+    const setText = (id, value) => {
+        const element = document.getElementById(id);
+        if (element) element.textContent = value;
+    };
+
+    const setImage = (id, src, alt) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.src = src;
+            element.alt = alt;
+        }
+    };
+const heroTitle = document.getElementById("hfdHeroTitle");
+
+if (heroTitle) {
+    heroTitle.replaceChildren();
+
+    const romanticMatch = selected.title.match(/\bRomantic\b/i);
+
+    if (romanticMatch) {
+        const parts = selected.title.split(romanticMatch[0]);
+        heroTitle.append(document.createTextNode(parts[0]));
+
+        const romanticSpan = document.createElement("span");
+        romanticSpan.className = "hfd-title-teal";
+        romanticSpan.textContent = romanticMatch[0];
+
+        heroTitle.append(romanticSpan);
+        heroTitle.append(document.createTextNode(parts[1]));
+    } else {
+        heroTitle.textContent = selected.title;
+    }
+}
+    setText("hfdHeroDescription", selected.description);
+    setText("hfdHeroLocation", selected.location);
+    setText("hfdHeroDuration", selected.duration);
+    setText("hfdHeroImageTitle", selected.title);
+
+    setText("hfdOverviewTitle", selected.title);
+    setText("hfdOverviewDescription", selected.description);
+    setText("hfdHolidayStyle", selected.type);
+    setText("hfdOverviewDuration", selected.duration);
+    setText("hfdOverviewLocation", selected.location);
+    setText("hfdBestFor", selected.bestFor);
+    setText("hfdAboutTitle", selected.aboutTitle);
+    setText("hfdAboutText", selected.about);
+
+    document.title = selected.title + " | Travelora";
+
+    setImage("hfdHeroImage", selected.heroImage, selected.title);
+    setImage("hfdOverviewImage", selected.overviewImage, selected.title);
+    setImage("hfdItineraryImage", selected.heroImage, selected.title);
+
+    const highlights = document.getElementById("hfdHighlights");
+    if (highlights) {
+        highlights.replaceChildren();
+        selected.highlights.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = item;
+            highlights.appendChild(li);
+        });
+    }
+
+    const destinationSelect = document.getElementById("hfdDestination");
+    if (destinationSelect) {
+        const option = [...destinationSelect.options].find(
+            item => item.value.toLowerCase() === requested
+        );
+        if (option) destinationSelect.value = option.value;
+    }
+
+    const itineraryNames = {
+        maldives: [
+            ["Arrival on the Island", "Transfer and settle into your resort."],
+            ["Island Discovery", "Enjoy ocean views and explore your surroundings."],
+            ["Ocean Experiences", "Consider optional water activities, subject to availability."],
+            ["Relaxation Day", "Enjoy resort time and optional sunset experiences."],
+            ["Departure", "Check out and transfer according to your arrangements."]
+        ],
+        bali: [
+            ["Arrival in Bali", "Arrive and settle into your accommodation."],
+            ["Explore Local Culture", "Visit selected cultural sights and local areas."],
+            ["Nature & Scenery", "Explore landscapes or optional nature experiences."],
+            ["Leisure Day", "Enjoy free time or selected optional activities."],
+            ["Final Discoveries", "Explore nearby places and prepare for departure."],
+            ["Departure", "Check out and depart according to your arrangements."]
+        ],
+        munnar: [
+            ["Arrival in Munnar", "Check in and enjoy the hill-station surroundings."],
+            ["Tea Gardens & Viewpoints", "Explore selected tea-growing areas and viewpoints."],
+            ["Nature & Local Sights", "Enjoy local sightseeing and a relaxed schedule."],
+            ["Departure", "Check out and begin your return journey."]
+        ],
+        singapore: [
+            ["Arrival in Singapore", "Arrive and settle into your accommodation."],
+            ["City Highlights", "Explore selected city landmarks."],
+            ["Gardens & Attractions", "Visit gardens or family attractions of your choice."],
+            ["Family Fun Day", "Choose suitable activities for your group."],
+            ["Departure", "Check out and depart according to your arrangements."]
+        ],
+        manali: [
+            ["Arrival in Manali", "Arrive and settle into your accommodation."],
+            ["Local Sightseeing", "Explore selected local sights and viewpoints."],
+            ["Nature & Mountain Views", "Enjoy outdoor scenery subject to local conditions."],
+            ["Leisure & Exploration", "Keep time for local visits or optional activities."],
+            ["Departure", "Check out and begin your return journey."]
+        ],
+        goa: [
+            ["Arrival in Goa", "Check in and enjoy the coastal surroundings."],
+            ["Explore the Coast", "Visit selected beaches and nearby places."],
+            ["Local Experiences", "Enjoy leisure time or optional local activities."],
+            ["Departure", "Check out and begin your return journey."]
+        ]
+    };
+
+    const itinerary = document.getElementById("hfdItineraryList");
+    if (itinerary) {
+        const days = itineraryNames[requested] || itineraryNames.maldives;
+        itinerary.replaceChildren();
+
+        days.forEach((day, index) => {
+            const details = document.createElement("details");
+            details.className = "hfd-day-card";
+            if (index === 0) details.open = true;
+
+            const summary = document.createElement("summary");
+
+            const number = document.createElement("span");
+            number.className = "hfd-day-number";
+            number.textContent = String(index + 1).padStart(2, "0");
+
+            const summaryText = document.createElement("span");
+            summaryText.className = "hfd-day-summary";
+
+            const title = document.createElement("strong");
+            title.textContent = day[0];
+
+            const subtitle = document.createElement("span");
+            subtitle.textContent = day[1];
+
+            summaryText.append(title, subtitle);
+
+            const toggle = document.createElement("span");
+            toggle.className = "hfd-day-toggle";
+            toggle.setAttribute("aria-hidden", "true");
+            toggle.textContent = "+";
+
+            summary.append(number, summaryText, toggle);
+
+            const content = document.createElement("div");
+            content.className = "hfd-day-content";
+
+            const paragraph = document.createElement("p");
+            paragraph.textContent = day[1];
+
+            const tag = document.createElement("span");
+            tag.className = "hfd-day-tag";
+            tag.textContent = "Sample itinerary";
+
+            content.append(paragraph, tag);
+            details.append(summary, content);
+            itinerary.appendChild(details);
+        });
+    }
+
+    const enquiryForm = document.getElementById("hfdEnquiryForm");
+    if (enquiryForm) {
+        enquiryForm.addEventListener("submit", event => {
+            event.preventDefault();
+
+            const formData = new FormData(enquiryForm);
+            const query = new URLSearchParams();
+
+            for (const [key, value] of formData.entries()) {
+                if (String(value).trim()) query.set(key, value);
+            }
+
+            query.set("source", "honeymoon-family-details");
+            window.location.href = "contact.html?" + query.toString();
+        });
+    }
+
+    const dateInput = document.getElementById("hfdStartDate");
+    if (dateInput) {
+        const today = new Date();
+        dateInput.min = [
+            today.getFullYear(),
+            String(today.getMonth() + 1).padStart(2, "0"),
+            String(today.getDate()).padStart(2, "0")
+        ].join("-");
+    }
+
+});
+
+const heroTitle = document.getElementById("hfdHeroTitle");
+
+if (heroTitle) {
+    heroTitle.innerHTML = selected.title.replace(
+        /\bRomantic\b/i,
+        '<span class="hfd-title-teal">Romantic</span>'
+    );
+}
+</script>
+
+</body>
+</html>

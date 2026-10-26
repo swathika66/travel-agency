@@ -3929,8 +3929,7 @@ p,
     line-height: 1.5 !important;
     text-transform: uppercase !important;
 }
-
-/* Orange dot */
+* Orange dot */
 #main-content .h2-hero .h2-hero-content > .section-eyebrow::before {
     content: "" !important;
     display: block !important;
@@ -4054,8 +4053,7 @@ p,
     line-height: 1.5 !important;
     text-transform: uppercase !important;
 }
-
-/* Orange dot */
+* Orange dot */
 #main-content .h2-hero .h2-hero-content > .section-eyebrow::before {
     content: "" !important;
     position: absolute !important;
@@ -4146,4 +4144,84 @@ p,
     box-shadow: none;
     transform: none;
     animation: none;
+}
+
+
+/* DEFINITIVE FIX — REMOVE THE HOME 2 TAGLINE PULSE */
+#main-content .h2-hero .h2-hero-content > .section-eyebrow::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 12px !important;
+    top: 50% !important;
+
+    width: 7px !important;
+    height: 7px !important;
+    min-width: 7px !important;
+
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+
+    background: #FF8A00 !important;
+    border: 0 !important;
+    border-radius: 50% !important;
+    box-shadow: none !important;
+    outline: none !important;
+    filter: none !important;
+
+    animation: none !important;
+    transition: none !important;
+    transform: translateY(-50%) !important;
+}
+
+#main-content .h2-hero .h2-hero-content > .section-eyebrow::after {
+    content: none !important;
+    display: none !important;
+    animation: none !important;
+    transition: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
+}
+
+/* Stop animations applied directly to the tagline */
+#main-content .h2-hero .h2-hero-content > .section-eyebrow {
+    animation: none !important;
+    transition: none !important;
+    box-shadow: none !important;
+}
+
+/* HOME 2 — STATIC ORANGE HALO EFFECT */
+#main-content .h2-hero .h2-hero-content > .section-eyebrow::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 12px !important;
+    top: 50% !important;
+
+    width: 7px !important;
+    height: 7px !important;
+    min-width: 7px !important;
+    display: block !important;
+
+    background: #FF8A00 !important;
+    border: none !important;
+    border-radius: 50% !important;
+
+    /* Soft orange halo — no pulsing */
+    box-shadow:
+        0 0 0 3px rgba(255, 138, 0, 0.14),
+        0 0 9px 3px rgba(255, 138, 0, 0.22) !important;
+
+    animation: none !important;
+    transition: none !important;
+    transform: translateY(-50%) !important;
+}
+
+#main-content .h2-hero .h2-hero-content > .section-eyebrow::after {
+    content: none !important;
+    display: none !important;
+    animation: none !important;
+}
+
+#main-content .h2-hero .h2-hero-content > .section-eyebrow {
+    animation: none !important;
 }

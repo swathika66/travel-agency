@@ -2490,3 +2490,177 @@ body .section-heading .pd-eyebrow:not(.pd-hero .pd-eyebrow) {
 .pd-breadcrumb {
     display: none;
 }
+
+/* ==================== FINAL CTA BUTTON ==================== */
+
+.pd-final-cta-button {
+    background: #FF8A00;
+    color: #FFFFFF;
+    border: 2px solid #FF8A00;
+    transition: none;
+}
+
+.pd-final-cta-button:hover,
+.pd-final-cta-button:focus,
+.pd-final-cta-button:focus-visible,
+.pd-final-cta-button:active {
+    background: #FF8A00;
+    color: #FFFFFF;
+    border-color: #FF8A00;
+    box-shadow: none;
+    transform: none;
+    filter: none;
+}
+
+/* CTA SECTION — PRIMARY BUTTON: SAME COLOUR ON HOVER */
+
+.pd-final-cta .btn-primary,
+.pd-final-cta .btn-primary:hover,
+.pd-final-cta .btn-primary:focus,
+.pd-final-cta .btn-primary:active,
+.pd-final-cta .btn-primary:focus-visible {
+    background: #FF8A00 !important;
+    background-color: #FF8A00 !important;
+    color: #FFFFFF !important;
+    border-color: #FF8A00 !important;
+    box-shadow: none !important;
+    filter: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+}
+
+/* TRAVELORA — CTA PRIMARY BUTTON: FIXED HOVER COLOUR */
+
+body .pd-final-cta .pd-final-cta-content a.pd-final-cta-button,
+body .pd-final-cta .pd-final-cta-content a.pd-final-cta-button:hover,
+body .pd-final-cta .pd-final-cta-content a.pd-final-cta-button:focus,
+body .pd-final-cta .pd-final-cta-content a.pd-final-cta-button:active,
+body .pd-final-cta .pd-final-cta-content a.pd-final-cta-button:visited {
+    background: #FF8A00 !important;
+    background-color: #FF8A00 !important;
+    color: #FFFFFF !important;
+    border: 2px solid #FF8A00 !important;
+    box-shadow: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    text-decoration: none !important;
+    transition: none !important;
+}
+
+/* Keep the CTA arrow white */
+body .pd-final-cta .pd-final-cta-content a.pd-final-cta-button span,
+body .pd-final-cta .pd-final-cta-content a.pd-final-cta-button:hover span {
+    color: #FFFFFF !important;
+}
+
+/* Primary CTA button — subtle lift on hover */
+body .pd-final-cta .pd-final-cta-content a.pd-final-cta-button {
+    background: #FF8A00 !important;
+    background-color: #FF8A00 !important;
+    color: #FFFFFF !important;
+    border: 2px solid #FF8A00 !important;
+    transform: translateY(0);
+    transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+    box-shadow: 0 4px 10px rgba(255, 138, 0, 0.18);
+}
+
+body .pd-final-cta .pd-final-cta-content a.pd-final-cta-button:hover {
+    background: #FF8A00 !important;
+    background-color: #FF8A00 !important;
+    color: #FFFFFF !important;
+    border-color: #FF8A00 !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 7px 16px rgba(255, 138, 0, 0.25) !important;
+}
+
+body .pd-final-cta .pd-final-cta-content a.pd-final-cta-button span {
+    color: #FFFFFF !important;
+}
+
+body .pd-final-cta .pd-final-cta-content a.pd-final-cta-button:focus-visible {
+    outline: 2px solid #FF8A00;
+    outline-offset: 4px;
+}
+
+/* Travelora — Package Details Font */
+
+body,
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* TRAVELORA — PACKAGE DETAILS FONT */
+
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* ==========================================
+   TRAVELORA — PACKAGE DETAILS FONT
+========================================== */
+
+.package-details-page {
+    font-family: "DM Sans", sans-serif;
+}
+
+.package-details-page h1,
+.package-details-page h2,
+.package-details-page h3,
+.package-details-page h4,
+.package-details-page h5,
+.package-details-page h6,
+.package-details-page p,
+.package-details-page span,
+.package-details-page a,
+.package-details-page li,
+.package-details-page label,
+.package-details-page button,
+.package-details-page input,
+.package-details-page select,
+.package-details-page textarea,
+.package-details-page strong,
+.package-details-page small {
+    font-family: "DM Sans", sans-serif;
+}
+
+/* Package Details — DM Sans Font */
+
+.package-details-page {
+    font-family: "DM Sans", sans-serif;
+}
+
+.package-details-page h1,
+.package-details-page h2,
+.package-details-page h3,
+.package-details-page h4,
+.package-details-page p,
+.package-details-page a,
+.package-details-page span,
+.package-details-page li,
+.package-details-page label,
+.package-details-page button,
+.package-details-page input,
+.package-details-page select,
+.package-details-page textarea {
+    font-family: "DM Sans", sans-serif !important;
+}
+
+body.package-details-page {
+    font-family: "Comic Sans MS", cursive !important;
+}
+
+.package-details-page .pd-hero-content h1 {
+    color: #25343B;
+}
+
+.package-details-page .pd-hero-content h1 .teal-text {
+    color: #009C9A;
+}

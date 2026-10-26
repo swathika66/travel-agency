@@ -2998,3 +2998,64 @@ body main#main-content.about-page .text-link {
         font-size: 21px !important;
     }
 }
+
+/* =========================================
+   ABOUT HERO TAGLINE — SMALL ORANGE DOT
+   Subtle halo | No animation | No extra glow
+========================================= */
+
+.about-hero .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Small orange dot */
+.about-hero .section-eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    min-width: 7px;
+    flex: 0 0 7px;
+    background: #FF8A00;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255, 138, 0, 0.12);
+    animation: none;
+    transform: none;
+}
+
+/* Remove any extra pseudo-element glow */
+.about-hero .section-eyebrow::after {
+    content: none;
+    display: none;
+    animation: none;
+    box-shadow: none;
+}
+
+/* ABOUT HERO TAGLINE — EXTRA SMALL ORANGE DOT */
+
+.about-hero .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-hero .section-eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    min-width: 5px;
+    flex: 0 0 5px;
+    background: #FF8A00;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px rgba(255, 138, 0, 0.10);
+    animation: none;
+}
+
+.about-hero .section-eyebrow::after {
+    content: none;
+    display: none;
+}

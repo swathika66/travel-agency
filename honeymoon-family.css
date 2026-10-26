@@ -2295,3 +2295,183 @@ main .destination-link {
 .card-number {
     display: none !important;
 }
+
+/* ==========================================
+   TRAVELORA — HONEYMOON & FAMILY
+   Hero tagline matches Dashboard
+========================================== */
+
+/* HERO TAGLINE */
+.hero-section .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 15px;
+    margin-bottom: 18px;
+
+    color: #009C9A;
+    background: rgba(0, 156, 154, 0.07);
+    border: 1px solid rgba(0, 156, 154, 0.08);
+    border-radius: 50px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+/* Orange dot with static circular halo */
+.hero-section .hero-eyebrow-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    flex: 0 0 7px;
+    border-radius: 50%;
+    background: #FF8A00;
+    box-shadow: 0 0 0 4px rgba(255, 138, 0, 0.12);
+}
+
+/* ORANGE LINES BEFORE OTHER SECTION TAGLINES */
+.intro-section .section-eyebrow,
+.experiences-section .section-eyebrow,
+.destinations-section .section-eyebrow,
+.why-section .section-eyebrow,
+.inspiration-section .section-eyebrow,
+.final-cta .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.intro-section .section-eyebrow::before,
+.experiences-section .section-eyebrow::before,
+.destinations-section .section-eyebrow::before,
+.why-section .section-eyebrow::before,
+.inspiration-section .section-eyebrow::before,
+.final-cta .section-eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    flex: 0 0 20px;
+    background: #FF8A00;
+    border-radius: 2px;
+}
+
+/* Keep the secondary hero button transparent on hover */
+.hero-section .btn-outline {
+    background: transparent !important;
+    color: #009C9A !important;
+    border: 1.5px solid #009C9A !important;
+    box-shadow: none !important;
+    transition: transform 0.25s ease;
+}
+
+.hero-section .btn-outline:hover {
+    background: transparent !important;
+    color: #009C9A !important;
+    border-color: #009C9A !important;
+    box-shadow: none !important;
+    transform: translateY(-2px);
+}
+#main-content .id-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 23px;
+    padding: 11px 17px;
+    border-radius: 50px;
+    background: var(--id-primary-light);
+    color: var(--id-primary-dark);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.075em;
+}
+
+#main-content .id-eyebrow-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--id-orange);
+    box-shadow: 0 0 0 4px rgba(255, 138, 0, 0.12);
+}
+
+/* Remove the extra orange circle/halo from hero tagline */
+#main-content .id-hero .id-eyebrow-dot {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Prevent an extra circle beside the hero tagline */
+#main-content .id-hero .id-eyebrow::before,
+#main-content .id-hero .id-eyebrow-dot::before,
+#main-content .id-hero .id-eyebrow-dot::after {
+    content: none !important;
+    display: none !important;
+    box-shadow: none !important;
+}
+
+/* Fix hero tagline dot */
+.hero-section .hero-eyebrow-dot {
+    background: #FF8A00 !important;
+    box-shadow: none !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* Fix the circle beside the hero tagline */
+.hero-section .hero-eyebrow-dot {
+    width: 7px !important;
+    height: 7px !important;
+    min-width: 7px !important;
+    min-height: 7px !important;
+    background: #FF8A00 !important;
+    border: none !important;
+    border-radius: 50% !important;
+    box-shadow: none !important;
+    outline: none !important;
+    animation: none !important;
+    transform: none !important;
+}
+
+.hero-section .hero-eyebrow::before,
+.hero-section .hero-eyebrow::after,
+.hero-section .hero-eyebrow-dot::before,
+.hero-section .hero-eyebrow-dot::after {
+    content: none !important;
+    display: none !important;
+}
+
+
+/* ==========================================
+   HERO TAGLINE — ORANGE DOT WITH SOFT HALO
+========================================== */
+
+.hero-section .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.hero-section .hero-eyebrow-dot {
+    display: inline-block;
+    width: 7px !important;
+    height: 7px !important;
+    min-width: 7px !important;
+    flex: 0 0 7px !important;
+    border-radius: 50% !important;
+    background: #FF8A00 !important;
+    box-shadow: 0 0 0 4px rgba(255, 138, 0, 0.12) !important;
+    outline: none !important;
+    animation: none !important;
+    transform: none !important;
+}
+
+/* Prevent extra circles around the dot */
+.hero-section .hero-eyebrow-dot::before,
+.hero-section .hero-eyebrow-dot::after {
+    content: none !important;
+    display: none !important;
+}

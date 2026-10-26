@@ -1735,3 +1735,81 @@ body main#main-content .contact-detail-card > a {
         font-size: 21px !important;
     }
 }
+
+/* ==========================================
+   TRAVELORA CONTACT PAGE
+   Hero tagline matches Dashboard
+   Other section taglines use orange lines
+========================================== */
+
+/* HERO TAGLINE — MATCH DASHBOARD */
+.contact-hero .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 15px;
+    margin-bottom: 18px;
+
+    color: #009C9A;
+    background: rgba(0, 156, 154, 0.07);
+    border: 1px solid rgba(0, 156, 154, 0.08);
+    border-radius: 50px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+/* Orange dot with soft circular glow */
+.contact-hero .section-eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    flex: 0 0 7px;
+    border-radius: 50%;
+    background: #FF8A00;
+    box-shadow: 0 0 0 4px rgba(255, 138, 0, 0.12);
+}
+
+/* OTHER SECTION TAGLINES — ORANGE LINE */
+.contact-details-section .section-eyebrow,
+.contact-form-section .section-eyebrow,
+.contact-faq-section .section-eyebrow,
+.contact-final-cta .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.contact-details-section .section-eyebrow::before,
+.contact-form-section .section-eyebrow::before,
+.contact-faq-section .section-eyebrow::before,
+.contact-final-cta .section-eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    flex: 0 0 20px;
+    background: #FF8A00;
+    border-radius: 2px;
+}
+
+/* SECONDARY BUTTON — TEAL OUTLINE ONLY */
+.contact-hero .btn-outline {
+    background: transparent !important;
+    color: #009C9A !important;
+    border: 1.5px solid #009C9A !important;
+    box-shadow: none !important;
+    transition: transform 0.25s ease;
+}
+
+.contact-hero .btn-outline:hover {
+    background: transparent !important;
+    color: #009C9A !important;
+    border-color: #009C9A !important;
+    box-shadow: none !important;
+    transform: translateY(-2px);
+}
