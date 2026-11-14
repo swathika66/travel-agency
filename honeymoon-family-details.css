@@ -1,13 +1,3 @@
-/* ============================================================
-   TRAVELORA — HONEYMOON & FAMILY HOLIDAY DETAILS
-   File: honeymoon-family-details.css
-
-   Brand: Teal #009C9A | Orange #FF8A00
-   Responsive | Light/Dark Mode | RTL | Hover Effects
-   Shared header, footer and global buttons remain in style.css.
-============================================================ */
-
-/* ==================== 1. PAGE VARIABLES ==================== */
 
 .hf-details-page {
     --hfd-primary: var(--primary, #009C9A);
@@ -138,7 +128,6 @@
     font-size: 1rem;
 }
 
-/* ==================== 2. SKIP LINK ==================== */
 
 .hf-details-page .skip-link {
     position: absolute;
@@ -157,7 +146,6 @@
     transform: translateY(0);
 }
 
-/* ==================== 3. HERO — SPLIT LAYOUT ==================== */
 
 .hf-details-page .hfd-hero {
     position: relative;
@@ -358,7 +346,6 @@
     color: var(--hfd-primary);
 }
 
-/* Hero image composition */
 
 .hf-details-page .hfd-hero-visual {
     position: relative;
@@ -494,7 +481,6 @@
     line-height: 1.5;
 }
 
-/* ==================== 4. OVERVIEW CARDS ==================== */
 
 .hf-details-page .hfd-overview-section {
     background: var(--hfd-bg);
@@ -584,7 +570,6 @@
     overflow-wrap: anywhere;
 }
 
-/* Overview text + image */
 
 .hf-details-page .hfd-overview-content {
     display: grid;
@@ -667,7 +652,6 @@
     box-shadow: var(--hfd-shadow-md);
 }
 
-/* ==================== 5. ITINERARY ==================== */
 
 .hf-details-page .hfd-itinerary-section {
     background: var(--hfd-soft);
@@ -834,7 +818,6 @@
     font-size: 0.82rem;
 }
 
-/* ==================== 6. INCLUSIONS / EXCLUSIONS ==================== */
 
 .hf-details-page .hfd-inclusions-section {
     background: var(--hfd-bg);
@@ -917,7 +900,6 @@
     font-size: 1.15rem;
 }
 
-/* ==================== 7. DESTINATION GALLERY ==================== */
 
 .hf-details-page .hfd-gallery-section {
     background: var(--hfd-soft);
@@ -981,7 +963,6 @@
     line-height: 1.4;
 }
 
-/* ==================== 8. FAQ ==================== */
 
 .hf-details-page .hfd-faq-section {
     background: var(--hfd-bg);
@@ -1080,7 +1061,6 @@
     font-size: 0.9rem;
 }
 
-/* ==================== 9. RELATED DESTINATIONS ==================== */
 
 .hf-details-page .hfd-related-section {
     background: var(--hfd-soft);
@@ -1207,7 +1187,6 @@
     color: var(--hfd-secondary-dark);
 }
 
-/* ==================== 10. ENQUIRY SECTION ==================== */
 
 .hf-details-page .hfd-enquiry-section {
     background:
@@ -1489,7 +1468,6 @@
     white-space: nowrap;
 }
 
-/* ==================== 12. FOCUS / ACCESSIBILITY ==================== */
 
 .hf-details-page a:focus-visible,
 .hf-details-page button:focus-visible,
@@ -1507,9 +1485,7 @@
     outline-offset: 4px;
 }
 
-/* ==================== 13. DARK MODE ==================== */
 
-/* Supports common shared stylesheet theme conventions. */
 
 html[data-theme="dark"] .hf-details-page,
 body.dark-mode.hf-details-page,
@@ -1668,7 +1644,6 @@ body[dir="rtl"].hf-details-page .hfd-final-cta::after {
     left: -90px;
 }
 
-/* ==================== 15. ANIMATIONS ==================== */
 
 @keyframes hfd-reveal {
     from {
@@ -1682,7 +1657,6 @@ body[dir="rtl"].hf-details-page .hfd-final-cta::after {
     }
 }
 
-/* ==================== 16. RESPONSIVE — TABLETS ==================== */
 
 @media (max-width: 1024px) {
     .hf-details-page .section {
@@ -2108,7 +2082,6 @@ body[dir="rtl"].hf-details-page .hfd-final-cta::after {
     }
 }
 
-/* ==================== 18. SMALL MOBILE ==================== */
 
 @media (max-width: 420px) {
     .hf-details-page .site-container {
@@ -2211,7 +2184,6 @@ body[dir="rtl"].hf-details-page .hfd-final-cta::after {
     }
 }
 
-/* ==================== 19. RTL RESPONSIVE CORRECTIONS ==================== */
 
 @media (max-width: 760px) {
     html[dir="rtl"] .hf-details-page .hfd-hero-visual,
@@ -2259,7 +2231,6 @@ body[dir="rtl"].hf-details-page .hfd-final-cta::after {
     }
 }
 
-/* ==================== 20. REDUCED MOTION ==================== */
 
 @media (prefers-reduced-motion: reduce) {
     .hf-details-page *,
@@ -2324,7 +2295,6 @@ body[dir="rtl"].hf-details-page .hfd-final-cta::after {
     display: none !important;
 }
 
-/* Make "Romantic" teal in the hero title */
 .hfd-title-teal {
     color: var(--primary, #009C9A);
 }

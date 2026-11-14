@@ -1,11 +1,4 @@
-/* =========================================================
-   TRAVELORA — INTERNATIONAL DETAILS PAGE
-   Matches international-details.html
-   Theme: Charcoal + Teal + Orange
-   Responsive | Dark Mode | RTL | SVG Icons
-========================================================= */
 
-/* ==================== 1. VARIABLES ==================== */
 
 :root {
     --id-primary: #009C9A;
@@ -34,7 +27,6 @@
     --id-transition: 0.3s ease;
 }
 
-/* ==================== 2. GENERAL ==================== */
 
 html {
     scroll-behavior: smooth;
@@ -124,7 +116,6 @@ body {
     color: var(--id-primary);
 }
 
-/* ==================== 3. HERO ==================== */
 
 #main-content .id-hero {
     padding: 75px 0 80px;
@@ -195,7 +186,6 @@ body {
     margin-bottom: 30px;
 }
 
-/* Shared button system: uses existing HTML btn classes */
 
 #main-content .btn {
     display: inline-flex;
@@ -278,7 +268,6 @@ body {
     color: var(--id-primary);
 }
 
-/* Hero image: rounded rectangle */
 
 #main-content .id-hero-visual {
     position: relative;
@@ -390,7 +379,6 @@ body {
     font-size: 0.91rem;
 }
 
-/* ==================== 4. SIX PACKAGES ==================== */
 
 #main-content .id-packages {
     background: var(--id-soft);
@@ -556,7 +544,6 @@ body {
     font-weight: 800;
 }
 
-/* ==================== 5. DESTINATION HIGHLIGHTS ==================== */
 
 #main-content .id-highlights {
     background: var(--id-bg);
@@ -611,7 +598,6 @@ body {
     font-size: 0.91rem;
 }
 
-/* ==================== 6. ITINERARY & INCLUSIONS ==================== */
 
 #main-content .id-itinerary {
     background: var(--id-soft);
@@ -774,7 +760,6 @@ body {
     font-size: 0.82rem;
 }
 
-/* ==================== 7. TRAVEL GUIDE ==================== */
 
 #main-content .id-travel-guide {
     background: var(--id-bg);
@@ -827,7 +812,6 @@ body {
     font-size: 0.91rem;
 }
 
-/* ==================== 8. FAQ ==================== */
 
 #main-content .id-faq-wrapper {
     max-width: 850px;
@@ -894,7 +878,6 @@ body {
     font-size: 0.91rem;
 }
 
-/* ==================== 9. FINAL CTA ==================== */
 
 #main-content .id-final-cta {
     padding: 25px 0 85px;
@@ -978,7 +961,6 @@ body {
     transform: translateY(-3px);
 }
 
-/* ==================== 10. ANIMATIONS ==================== */
 
 @keyframes idFadeUp {
     from {
@@ -992,7 +974,6 @@ body {
     }
 }
 
-/* ==================== 11. DARK MODE ==================== */
 
 body.dark-mode,
 html[data-theme="dark"] body,
@@ -1079,7 +1060,6 @@ body.dark-mode #main-content .id-final-cta-content h2 {
     color: #FFFFFF;
 }
 
-/* ==================== 12. RTL SUPPORT ==================== */
 
 html[dir="rtl"] #main-content .id-hero-floating-card {
     right: auto;
@@ -1120,7 +1100,6 @@ html[dir="rtl"] #main-content .id-hero-actions .btn:hover span[aria-hidden="true
     transform: translateX(-4px);
 }
 
-/* ==================== 13. TABLET ==================== */
 
 @media (max-width: 1024px) {
     #main-content .section {
@@ -1166,7 +1145,6 @@ html[dir="rtl"] #main-content .id-hero-actions .btn:hover span[aria-hidden="true
     }
 }
 
-/* ==================== 14. MOBILE ==================== */
 
 @media (max-width: 700px) {
     #main-content .site-container {
@@ -1285,7 +1263,6 @@ html[dir="rtl"] #main-content .id-hero-actions .btn:hover span[aria-hidden="true
     }
 }
 
-/* ==================== 15. SMALL MOBILE ==================== */
 
 @media (max-width: 380px) {
     #main-content .site-container {
@@ -1323,7 +1300,6 @@ html[dir="rtl"] #main-content .id-hero-actions .btn:hover span[aria-hidden="true
     }
 }
 
-/* ==================== 16. ACCESSIBILITY ==================== */
 
 #main-content a:focus-visible,
 #main-content button:focus-visible,
@@ -1346,18 +1322,13 @@ html[dir="rtl"] #main-content .id-hero-actions .btn:hover span[aria-hidden="true
     }
 }
 
-/* =====================================================
-   TRAVELORA — ORANGE HORIZONTAL LINES FOR SECTION HEADINGS
-   Excludes the Hero section
-===================================================== */
 
-/* Common section heading layout */
+
 .id-section-heading {
     text-align: center;
     margin-bottom: 42px;
 }
 
-/* Orange horizontal line below section headings */
 .id-section-heading h2 {
     position: relative;
     display: table;
@@ -1366,7 +1337,6 @@ html[dir="rtl"] #main-content .id-hero-actions .btn:hover span[aria-hidden="true
     color: var(--heading);
 }
 
-/* Orange line */
 .id-section-heading h2::after {
     content: "";
     position: absolute;
@@ -1379,7 +1349,6 @@ html[dir="rtl"] #main-content .id-hero-actions .btn:hover span[aria-hidden="true
     transform: translateX(-50%);
 }
 
-/* Keep section descriptions centered */
 .id-section-heading p {
     max-width: 680px;
     margin: 0 auto;
@@ -1387,14 +1356,12 @@ html[dir="rtl"] #main-content .id-hero-actions .btn:hover span[aria-hidden="true
     line-height: 1.8;
 }
 
-/* Ensure the line remains orange in dark mode */
 body.dark-mode .id-section-heading h2::after,
 html[data-theme="dark"] .id-section-heading h2::after,
 body[data-theme="dark"] .id-section-heading h2::after {
     background: var(--secondary);
 }
 
-/* Responsive adjustment */
 @media (max-width: 600px) {
     .id-section-heading {
         margin-bottom: 30px;
@@ -1410,22 +1377,16 @@ body[data-theme="dark"] .id-section-heading h2::after {
     }
 }
 
-/* ==========================================
-   ORANGE LINE BEFORE SECTION TAGLINES
-   Excludes the Hero
-========================================== */
 
 .id-section-heading {
     text-align: center;
     margin-bottom: 42px;
 }
 
-/* Remove the previous line below section headings */
 .id-section-heading h2::after {
     content: none;
 }
 
-/* Orange line before the tagline */
 .id-section-heading .section-eyebrow {
     display: flex;
     align-items: center;
@@ -1435,7 +1396,6 @@ body[data-theme="dark"] .id-section-heading h2::after {
     color: var(--primary);
 }
 
-/* Horizontal orange line */
 .id-section-heading .section-eyebrow::before {
     content: "";
     display: block;
@@ -1446,13 +1406,11 @@ body[data-theme="dark"] .id-section-heading h2::after {
     border-radius: 10px;
 }
 
-/* Keep headings consistent */
 .id-section-heading h2 {
     color: var(--heading);
     margin-bottom: 14px;
 }
 
-/* Description styling */
 .id-section-heading p {
     max-width: 680px;
     margin: 0 auto;
@@ -1460,7 +1418,6 @@ body[data-theme="dark"] .id-section-heading h2::after {
     line-height: 1.8;
 }
 
-/* Mobile */
 @media (max-width: 600px) {
     .id-section-heading {
         margin-bottom: 30px;
@@ -1472,22 +1429,16 @@ body[data-theme="dark"] .id-section-heading h2::after {
     }
 }
 
-/* ==========================================
-   ORANGE LINE BEFORE SECTION TAGLINES
-   Excludes the Hero
-========================================== */
 
 .id-section-heading {
     text-align: center;
     margin-bottom: 42px;
 }
 
-/* Remove the previous line below section headings */
 .id-section-heading h2::after {
     content: none;
 }
 
-/* Orange line before the tagline */
 .id-section-heading .section-eyebrow {
     display: flex;
     align-items: center;
@@ -1497,7 +1448,6 @@ body[data-theme="dark"] .id-section-heading h2::after {
     color: var(--primary);
 }
 
-/* Horizontal orange line */
 .id-section-heading .section-eyebrow::before {
     content: "";
     display: block;
@@ -1508,13 +1458,11 @@ body[data-theme="dark"] .id-section-heading h2::after {
     border-radius: 10px;
 }
 
-/* Keep headings consistent */
 .id-section-heading h2 {
     color: var(--heading);
     margin-bottom: 14px;
 }
 
-/* Description styling */
 .id-section-heading p {
     max-width: 680px;
     margin: 0 auto;
@@ -1522,7 +1470,6 @@ body[data-theme="dark"] .id-section-heading h2::after {
     line-height: 1.8;
 }
 
-/* Mobile */
 @media (max-width: 600px) {
     .id-section-heading {
         margin-bottom: 30px;
@@ -1534,13 +1481,7 @@ body[data-theme="dark"] .id-section-heading h2::after {
     }
 }
 
-/* =====================================================
-   INTERNATIONAL DETAILS — FINAL OVERRIDES
-   Orange lines before section taglines, including CTA
-   Orange primary button with dark teal text
-===================================================== */
 
-/* SECTION TAGLINES — sections 2–5 only */
 #main-content .id-section-heading .section-eyebrow {
     display: inline-flex !important;
     align-items: center !important;
@@ -1552,7 +1493,6 @@ body[data-theme="dark"] .id-section-heading h2::after {
     text-align: center !important;
 }
 
-/* Orange line BEFORE each section tagline */
 #main-content .id-section-heading .section-eyebrow::before,
 #main-content .id-cta-eyebrow::before {
     content: "" !important;
@@ -1570,18 +1510,15 @@ body[data-theme="dark"] .id-section-heading h2::after {
     transform: none !important;
 }
 
-/* Remove the old line below section headings */
 #main-content .id-section-heading h2::after {
     content: none !important;
     display: none !important;
 }
 
-/* Consistent section heading colours */
 #main-content .id-section-heading h2 {
     color: var(--id-heading) !important;
 }
 
-/* FINAL CTA — line before tagline */
 #main-content .id-final-cta .id-cta-eyebrow {
     display: inline-flex !important;
     align-items: center !important;
@@ -1592,7 +1529,6 @@ body[data-theme="dark"] .id-section-heading h2::after {
     color: #FFFFFF !important;
 }
 
-/* HERO — preserve its existing dot; no horizontal line */
 #main-content .id-hero .id-eyebrow {
     display: inline-flex !important;
     align-items: center !important;
@@ -1603,7 +1539,6 @@ body[data-theme="dark"] .id-section-heading h2::after {
     content: none !important;
 }
 
-/* HERO PRIMARY BUTTON — orange background, dark teal text */
 #main-content .id-hero .id-hero-actions a.btn.btn-primary {
     background: #FF8A00 !important;
     background-color: #FF8A00 !important;
@@ -1612,14 +1547,12 @@ body[data-theme="dark"] .id-section-heading h2::after {
     box-shadow: 0 7px 18px rgba(255, 138, 0, 0.18) !important;
 }
 
-/* Arrow/text inside primary button */
 #main-content .id-hero .id-hero-actions a.btn.btn-primary span,
 #main-content .id-hero .id-hero-actions a.btn.btn-primary svg {
     color: #006967 !important;
     stroke: currentColor;
 }
 
-/* Button hover */
 #main-content .id-hero .id-hero-actions a.btn.btn-primary:hover {
     background: #E87800 !important;
     background-color: #E87800 !important;
@@ -1632,7 +1565,6 @@ body[data-theme="dark"] .id-section-heading h2::after {
     color: #FFFFFF !important;
 }
 
-/* Mobile sizing */
 @media (max-width: 600px) {
     #main-content .id-section-heading .section-eyebrow::before,
     #main-content .id-cta-eyebrow::before {
@@ -1647,7 +1579,6 @@ body[data-theme="dark"] .id-section-heading h2::after {
     }
 }
 
-/* FINAL CTA — PRIMARY BUTTON */
 .id-final-cta .id-final-cta-actions .btn-light {
     background: #FF8A00 !important;
     color: #FFFFFF !important;
@@ -1664,7 +1595,6 @@ body[data-theme="dark"] .id-section-heading h2::after {
     transform: translateY(-3px);
 }
 
-/* SECONDARY CTA — NO HOVER COLOR CHANGE */
 .id-final-cta .btn-cta-outline,
 .id-final-cta .btn-cta-outline:hover,
 .id-final-cta .btn-cta-outline:focus {
@@ -1675,7 +1605,6 @@ body[data-theme="dark"] .id-section-heading h2::after {
     box-shadow: none !important;
 }
 
-/* SECONDARY CTA — SUBTLE HOVER */
 .id-final-cta .btn-cta-outline {
     background: transparent;
     color: #FFFFFF;
@@ -1691,7 +1620,6 @@ body[data-theme="dark"] .id-section-heading h2::after {
     box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
 }
 
-/* SMALL ORANGE LINE BEFORE SECTION TAGLINES */
 
 #main-content .id-packages .section-eyebrow,
 #main-content .id-highlights .section-eyebrow,
@@ -1705,7 +1633,6 @@ body[data-theme="dark"] .id-section-heading h2::after {
     max-width: 100% !important;
 }
 
-/* Fixed small line — never stretch */
 #main-content .id-packages .section-eyebrow::before,
 #main-content .id-highlights .section-eyebrow::before,
 #main-content .id-itinerary .section-heading .section-eyebrow::before,
@@ -1729,7 +1656,6 @@ body[data-theme="dark"] .id-section-heading h2::after {
     box-shadow: none !important;
 }
 
-/* CTA SECTION — SMALL ORANGE LINE BEFORE TAGLINE */
 
 .id-final-cta .id-cta-eyebrow {
     display: inline-flex !important;
@@ -1739,7 +1665,6 @@ body[data-theme="dark"] .id-section-heading h2::after {
     width: auto !important;
 }
 
-/* Fixed-size orange line */
 .id-final-cta .id-cta-eyebrow::before {
     content: "" !important;
     display: inline-block !important;
@@ -1760,7 +1685,6 @@ body[data-theme="dark"] .id-section-heading h2::after {
 }
 
 
-/* FINAL CTA — FIXED SMALL ORANGE LINE */
 
 #main-content .id-final-cta .id-cta-eyebrow {
     display: inline-flex !important;
@@ -1775,7 +1699,6 @@ body[data-theme="dark"] .id-section-heading h2::after {
     line-height: 1.5 !important;
 }
 
-/* Prevent the line from stretching */
 #main-content .id-final-cta .id-cta-eyebrow::before {
     content: "" !important;
     display: block !important;
@@ -1797,7 +1720,6 @@ body[data-theme="dark"] .id-section-heading h2::after {
     box-shadow: none !important;
 }
 
-/* CTA Secondary Button — Subtle Hover */
 
 #main-content .id-final-cta .btn-secondary {
     transition: transform 0.25s ease,
@@ -1826,7 +1748,6 @@ body[data-theme="dark"] .id-section-heading h2::after {
     }
 }
 
-/* FINAL CTA — SECONDARY BUTTON HOVER */
 
 #main-content .id-final-cta .id-final-cta-actions a.btn-cta-outline {
     display: inline-flex;

@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#009C9A">
+    <meta name="description" content="Access your Travelora travel tickets, booking confirmations and invoices in one place.">
+
+    <title>Tickets &amp; Invoices | Travelora</title>
+
+    <link rel="icon" href="favicon.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="tickets-invoices.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="dashboard-page">
+
+<div class="dashboard-app">
+
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+
+        <div class="sidebar-brand">
+            <a href="index.html" class="brand">
+                <img src="logo.png" alt="Travelora Logo">
+
+                <div class="brand-text">
+                    <span><strong>Travel</strong><b>ora</b></span>
+                    <small>EXPLORE THE WORLD</small>
+                </div>
+            </a>
+
+            <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+
+
+        <div class="sidebar-user">
+            <div class="sidebar-avatar">
+                <i data-lucide="user-round"></i>
+            </div>
+
+            <div>
+                <h3>Traveller</h3>
+                <p>Travel Member</p>
+            </div>
+        </div>
+
+
+        <div class="sidebar-menu">
+
+            <p class="sidebar-label">MAIN MENU</p>
+
+            <a href="dashboard.html" class="sidebar-link">
+                <i data-lucide="layout-dashboard"></i>
+                <span>Overview</span>
+            </a>
+
+            <a href="my-bookings.html" class="sidebar-link">
+                <i data-lucide="calendar-check"></i>
+                <span>My Bookings</span>
+            </a>
+
+            <a href="saved-packages.html" class="sidebar-link">
+                <i data-lucide="heart"></i>
+                <span>Saved Packages</span>
+            </a>
+
+            <a href="my-itineraries.html" class="sidebar-link">
+                <i data-lucide="map"></i>
+                <span>My Itineraries</span>
+            </a>
+
+            <a href="tickets-invoices.html" class="sidebar-link active" aria-current="page">
+                <i data-lucide="ticket"></i>
+                <span>Tickets &amp; Invoices</span>
+            </a>
+
+            <p class="sidebar-label">ACCOUNT</p>
+
+            <a href="my-profile.html" class="sidebar-link">
+                <i data-lucide="user-round"></i>
+                <span>My Profile</span>
+            </a>
+
+        </div>
+
+
+        <div class="sidebar-support">
+
+            <div class="support-icon">
+                <i data-lucide="headset"></i>
+            </div>
+
+            <h4>Need Assistance?</h4>
+
+            <p>Our travel experts are ready to help you.</p>
+
+            <a href="contact.html">
+                Contact Support
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+
+        </div>
+
+
+        <a href="index.html" class="sidebar-back">
+            <i data-lucide="log-out"></i>
+            <span>Back to Website</span>
+        </a>
+
+    </aside>
+
+
+    <main class="dashboard-main">
+
+
+        <div class="dashboard-topbar">
+
+            <div class="topbar-left">
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                    <i data-lucide="menu"></i>
+                </button>
+
+                <div>
+                    <p class="topbar-greeting">YOUR TRAVEL SPACE</p>
+                    <h1>Tickets &amp; Invoices</h1>
+                </div>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <div class="dashboard-search">
+                    <i data-lucide="search"></i>
+                    <input type="search" placeholder="Search anything..." aria-label="Search">
+                </div>
+
+                <button
+                    id="rtlBtn"
+                    class="header-icon-btn"
+                    type="button"
+                    title="Toggle RTL"
+                    aria-label="Toggle right-to-left layout"
+                    aria-pressed="false">
+                    <span aria-hidden="true">⇄</span>
+                </button>
+
+                <button class="topbar-icon" id="themeBtn" aria-label="Toggle dark mode">
+                    <i data-lucide="moon"></i>
+                </button>
+
+                <button class="topbar-icon notification-btn" aria-label="Notifications">
+                    <i data-lucide="bell"></i>
+                    <span class="notification-dot"></span>
+                </button>
+
+
+                <!-- PROFILE DROPDOWN -->
+                <div class="topbar-profile-wrapper">
+
+                    <button
+                        class="topbar-profile"
+                        id="profileDropdownBtn"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="profileDropdown"
+                        aria-label="Open profile menu">
+
+                        <div class="topbar-avatar">
+                            <i data-lucide="user-round"></i>
+                        </div>
+
+                        <div class="topbar-profile-info">
+                            <h4>Traveller</h4>
+                            <p>Member</p>
+                        </div>
+
+                        <i data-lucide="chevron-down" class="profile-chevron"></i>
+
+                    </button>
+
+                    <div class="profile-dropdown" id="profileDropdown">
+
+                        <a href="my-profile.html">
+                            <i data-lucide="user-round"></i>
+                            <span>My Profile</span>
+                        </a>
+
+                        <a href="settings.html">
+                            <i data-lucide="settings"></i>
+                            <span>Settings</span>
+                        </a>
+
+                        <a href="my-bookings.html">
+                            <i data-lucide="calendar-check"></i>
+                            <span>My Bookings</span>
+                        </a>
+
+                        <div class="profile-dropdown-divider"></div>
+
+                        <a href="index.html" class="dropdown-logout">
+                            <i data-lucide="log-out"></i>
+                            <span>Logout</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="tickets-page">
+
+
+            <section class="tickets-welcome">
+
+                <div class="tickets-welcome-content">
+
+                    <span class="section-eyebrow">
+                        YOUR TRAVEL DOCUMENTS
+                    </span>
+
+                    <h1>Tickets &amp; Invoices</h1>
+
+                    <p>
+                        Find all your travel documents in one convenient place.
+                        Access booking confirmations, review invoices and
+                        keep your important trip details organised.
+                    </p>
+
+                </div>
+
+                <div class="tickets-welcome-icon">
+                    <i data-lucide="file-check"></i>
+                </div>
+
+            </section>
+
+
+            <section class="tickets-summary">
+
+                <div class="ticket-summary-card">
+
+                    <div class="ticket-summary-icon">
+                        <i data-lucide="files"></i>
+                    </div>
+
+                    <div>
+                        <h3 id="totalDocuments">04</h3>
+                        <p>Total Documents</p>
+                    </div>
+
+                </div>
+
+
+                <div class="ticket-summary-card">
+
+                    <div class="ticket-summary-icon ticket-icon-orange">
+                        <i data-lucide="ticket"></i>
+                    </div>
+
+                    <div>
+                        <h3 id="totalTickets">02</h3>
+                        <p>Travel Tickets</p>
+                    </div>
+
+                </div>
+
+
+                <div class="ticket-summary-card">
+
+                    <div class="ticket-summary-icon ticket-icon-green">
+                        <i data-lucide="receipt"></i>
+                    </div>
+
+                    <div>
+                        <h3 id="totalInvoices">02</h3>
+                        <p>Invoices</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="tickets-list-section">
+
+
+                <div class="tickets-section-heading">
+
+                    <div>
+                        <span class="section-eyebrow">
+                            YOUR BOOKING RECORDS
+                        </span>
+
+                        <h2>Travel Documents</h2>
+
+                        <p>
+                            View your tickets and invoices whenever you need them.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="tickets-controls">
+
+                    <div class="tickets-search">
+                        <i data-lucide="search"></i>
+
+                        <input
+                            type="search"
+                            id="documentSearch"
+                            placeholder="Search by destination or booking ID..."
+                            aria-label="Search documents">
+                    </div>
+
+
+                    <select id="documentFilter" aria-label="Filter documents">
+                        <option value="all">All Documents</option>
+                        <option value="ticket">Travel Tickets</option>
+                        <option value="invoice">Invoices</option>
+                    </select>
+
+                </div>
+
+
+                <div class="tickets-table-wrapper">
+
+                    <table class="tickets-table">
+
+                        <thead>
+                            <tr>
+                                <th>DOCUMENT</th>
+                                <th>BOOKING ID</th>
+                                <th>ISSUE DATE</th>
+                                <th>AMOUNT</th>
+                                <th>STATUS</th>
+                                <th>ACTION</th>
+                            </tr>
+                        </thead>
+
+
+                        <tbody id="documentsTable">
+
+
+                            <tr class="document-row"
+                                data-type="ticket"
+                                data-search="manali travel ticket trv1025 himachal">
+
+                                <td>
+                                    <div class="document-info">
+
+                                        <div class="document-type-icon ticket-type-icon">
+                                            <i data-lucide="ticket"></i>
+                                        </div>
+
+                                        <div>
+                                            <h4>Manali Travel Ticket</h4>
+                                            <p>Travel Ticket</p>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <span class="booking-id">TRV1025</span>
+                                </td>
+
+                                <td>10 Nov 2026</td>
+
+                                <td class="document-amount">₹25,000</td>
+
+                                <td>
+                                    <span class="document-status status-confirmed">
+                                        Confirmed
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <div class="document-actions">
+
+                                        <button
+                                            type="button"
+                                            class="document-action-btn view-document"
+                                            aria-label="View Manali ticket"
+                                            data-document="Manali Travel Ticket"
+                                            data-booking="TRV1025"
+                                            data-type="Travel Ticket"
+                                            data-amount="₹25,000"
+                                            data-date="10 Nov 2026">
+                                            <i data-lucide="eye"></i>
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="document-action-btn download-document"
+                                            aria-label="Download Manali ticket"
+                                            data-document="Manali Travel Ticket"
+                                            data-booking="TRV1025"
+                                            data-type="Travel Ticket"
+                                            data-amount="₹25,000"
+                                            data-date="10 Nov 2026">
+                                            <i data-lucide="download"></i>
+                                        </button>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+
+
+                            <tr class="document-row"
+                                data-type="invoice"
+                                data-search="paris invoice trv1026 france international">
+
+                                <td>
+                                    <div class="document-info">
+
+                                        <div class="document-type-icon invoice-type-icon">
+                                            <i data-lucide="receipt"></i>
+                                        </div>
+
+                                        <div>
+                                            <h4>Paris Trip Invoice</h4>
+                                            <p>Payment Invoice</p>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <span class="booking-id">TRV1026</span>
+                                </td>
+
+                                <td>08 Nov 2026</td>
+
+                                <td class="document-amount">₹85,000</td>
+
+                                <td>
+                                    <span class="document-status status-paid">
+                                        Paid
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <div class="document-actions">
+
+                                        <button
+                                            type="button"
+                                            class="document-action-btn view-document"
+                                            aria-label="View Paris invoice"
+                                            data-document="Paris Trip Invoice"
+                                            data-booking="TRV1026"
+                                            data-type="Payment Invoice"
+                                            data-amount="₹85,000"
+                                            data-date="08 Nov 2026">
+                                            <i data-lucide="eye"></i>
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="document-action-btn download-document"
+                                            aria-label="Download Paris invoice"
+                                            data-document="Paris Trip Invoice"
+                                            data-booking="TRV1026"
+                                            data-type="Payment Invoice"
+                                            data-amount="₹85,000"
+                                            data-date="08 Nov 2026">
+                                            <i data-lucide="download"></i>
+                                        </button>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+
+
+                            <tr class="document-row"
+                                data-type="ticket"
+                                data-search="kerala travel ticket trv1027 backwaters">
+
+                                <td>
+                                    <div class="document-info">
+
+                                        <div class="document-type-icon ticket-type-icon">
+                                            <i data-lucide="ticket"></i>
+                                        </div>
+
+                                        <div>
+                                            <h4>Kerala Travel Ticket</h4>
+                                            <p>Travel Ticket</p>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <span class="booking-id">TRV1027</span>
+                                </td>
+
+                                <td>05 Oct 2026</td>
+
+                                <td class="document-amount">₹22,000</td>
+
+                                <td>
+                                    <span class="document-status status-completed">
+                                        Completed
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <div class="document-actions">
+
+                                        <button
+                                            type="button"
+                                            class="document-action-btn view-document"
+                                            aria-label="View Kerala ticket"
+                                            data-document="Kerala Travel Ticket"
+                                            data-booking="TRV1027"
+                                            data-type="Travel Ticket"
+                                            data-amount="₹22,000"
+                                            data-date="05 Oct 2026">
+                                            <i data-lucide="eye"></i>
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="document-action-btn download-document"
+                                            aria-label="Download Kerala ticket"
+                                            data-document="Kerala Travel Ticket"
+                                            data-booking="TRV1027"
+                                            data-type="Travel Ticket"
+                                            data-amount="₹22,000"
+                                            data-date="05 Oct 2026">
+                                            <i data-lucide="download"></i>
+                                        </button>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+
+
+                            <tr class="document-row"
+                                data-type="invoice"
+                                data-search="agra invoice trv1028 taj mahal">
+
+                                <td>
+                                    <div class="document-info">
+
+                                        <div class="document-type-icon invoice-type-icon">
+                                            <i data-lucide="receipt"></i>
+                                        </div>
+
+                                        <div>
+                                            <h4>Agra Trip Invoice</h4>
+                                            <p>Payment Invoice</p>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <span class="booking-id">TRV1028</span>
+                                </td>
+
+                                <td>12 Sep 2026</td>
+
+                                <td class="document-amount">₹12,500</td>
+
+                                <td>
+                                    <span class="document-status status-paid">
+                                        Paid
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <div class="document-actions">
+
+                                        <button
+                                            type="button"
+                                            class="document-action-btn view-document"
+                                            aria-label="View Agra invoice"
+                                            data-document="Agra Trip Invoice"
+                                            data-booking="TRV1028"
+                                            data-type="Payment Invoice"
+                                            data-amount="₹12,500"
+                                            data-date="12 Sep 2026">
+                                            <i data-lucide="eye"></i>
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            class="document-action-btn download-document"
+                                            aria-label="Download Agra invoice"
+                                            data-document="Agra Trip Invoice"
+                                            data-booking="TRV1028"
+                                            data-type="Payment Invoice"
+                                            data-amount="₹12,500"
+                                            data-date="12 Sep 2026">
+                                            <i data-lucide="download"></i>
+                                        </button>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <div class="tickets-empty" id="ticketsEmpty" hidden>
+
+                    <i data-lucide="file-search"></i>
+
+                    <h3>No Documents Found</h3>
+
+                    <p>
+                        We couldn't find any matching documents.
+                        Try changing your search or filter.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="tickets-info">
+
+                <div class="tickets-info-icon">
+                    <i data-lucide="info"></i>
+                </div>
+
+                <div>
+                    <h3>Keep Your Travel Documents Handy</h3>
+
+                    <p>
+                        Keep your booking confirmations and invoices accessible
+                        when preparing for your journey. For assistance with
+                        any document, please contact our support team.
+                    </p>
+
+                    <a href="contact.html">
+                        Contact Support
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+
+            </section>
+
+
+            <footer class="dashboard-footer">
+                © 2026 Travelora. All rights reserved.
+            </footer>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+<div class="document-modal" id="documentModal" hidden>
+
+    <div class="document-modal-backdrop" id="modalBackdrop"></div>
+
+    <div class="document-modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+
+        <button
+            type="button"
+            class="document-modal-close"
+            id="closeDocumentModal"
+            aria-label="Close preview">
+            <i data-lucide="x"></i>
+        </button>
+
+        <div class="document-modal-icon">
+            <i data-lucide="file-check"></i>
+        </div>
+
+        <span class="section-eyebrow">DOCUMENT PREVIEW</span>
+
+        <h2 id="modalTitle">Document Details</h2>
+
+        <div class="document-preview-details">
+
+            <div>
+                <span>Document</span>
+                <strong id="previewDocument">-</strong>
+            </div>
+
+            <div>
+                <span>Booking ID</span>
+                <strong id="previewBooking">-</strong>
+            </div>
+
+            <div>
+                <span>Document Type</span>
+                <strong id="previewType">-</strong>
+            </div>
+
+            <div>
+                <span>Issue Date</span>
+                <strong id="previewDate">-</strong>
+            </div>
+
+            <div>
+                <span>Amount</span>
+                <strong id="previewAmount">-</strong>
+            </div>
+
+        </div>
+
+        <p class="document-preview-note">
+            This is a sample document preview for demonstration purposes.
+        </p>
+
+    </div>
+
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    if (window.lucide) {
+        lucide.createIcons();
+    }
+
+
+    const sidebar = document.getElementById("dashboardSidebar");
+    const menuToggle = document.getElementById("menuToggle");
+    const sidebarClose = document.getElementById("sidebarClose");
+    const overlay = document.getElementById("sidebarOverlay");
+
+    function openSidebar() {
+        sidebar?.classList.add("sidebar-open");
+        overlay?.classList.add("active");
+    }
+
+    function closeSidebar() {
+        sidebar?.classList.remove("sidebar-open");
+        overlay?.classList.remove("active");
+    }
+
+    menuToggle?.addEventListener("click", openSidebar);
+    sidebarClose?.addEventListener("click", closeSidebar);
+    overlay?.addEventListener("click", closeSidebar);
+
+
+    const profileBtn = document.getElementById("profileDropdownBtn");
+    const profileDropdown = document.getElementById("profileDropdown");
+
+    profileBtn?.addEventListener("click", function (event) {
+        event.stopPropagation();
+
+        const isOpen = profileDropdown.classList.toggle("show");
+
+        profileBtn.setAttribute("aria-expanded", isOpen);
+    });
+
+    document.addEventListener("click", function (event) {
+        if (
+            !profileDropdown?.contains(event.target) &&
+            !profileBtn?.contains(event.target)
+        ) {
+            profileDropdown?.classList.remove("show");
+            profileBtn?.setAttribute("aria-expanded", "false");
+        }
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            profileDropdown?.classList.remove("show");
+            profileBtn?.setAttribute("aria-expanded", "false");
+        }
+    });
+
+
+    const themeBtn = document.getElementById("themeBtn");
+
+    if (localStorage.getItem("travelora-theme") === "dark") {
+        document.body.classList.add("dark-mode");
+    }
+
+    function updateThemeIcon() {
+        const icon = themeBtn?.querySelector("i");
+
+        if (icon && window.lucide) {
+            icon.setAttribute(
+                "data-lucide",
+                document.body.classList.contains("dark-mode") ? "sun" : "moon"
+            );
+
+            lucide.createIcons();
+        }
+    }
+
+    themeBtn?.addEventListener("click", function () {
+
+        document.body.classList.toggle("dark-mode");
+
+        localStorage.setItem(
+            "travelora-theme",
+            document.body.classList.contains("dark-mode") ? "dark" : "light"
+        );
+
+        updateThemeIcon();
+    });
+
+    updateThemeIcon();
+
+
+    const rtlBtn = document.getElementById("rtlBtn");
+
+    if (localStorage.getItem("travelora-direction") === "rtl") {
+        document.documentElement.dir = "rtl";
+    }
+
+    function updateRTLButton() {
+        rtlBtn?.setAttribute(
+            "aria-pressed",
+            document.documentElement.dir === "rtl"
+        );
+    }
+
+    rtlBtn?.addEventListener("click", function () {
+
+        document.documentElement.dir =
+            document.documentElement.dir === "rtl" ? "ltr" : "rtl";
+
+        localStorage.setItem(
+            "travelora-direction",
+            document.documentElement.dir
+        );
+
+        updateRTLButton();
+    });
+
+    updateRTLButton();
+
+
+    const searchInput = document.getElementById("documentSearch");
+    const filterSelect = document.getElementById("documentFilter");
+    const tableBody = document.getElementById("documentsTable");
+    const emptyState = document.getElementById("ticketsEmpty");
+
+    const documentRows = Array.from(
+        tableBody.querySelectorAll(".document-row")
+    );
+
+    function filterDocuments() {
+
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        const selectedType = filterSelect.value;
+
+        let visibleCount = 0;
+
+        documentRows.forEach(function (row) {
+
+            const searchData = (row.dataset.search || "").toLowerCase();
+            const type = row.dataset.type;
+
+            const matchesSearch = searchData.includes(searchTerm);
+
+            const matchesType =
+                selectedType === "all" || type === selectedType;
+
+            const shouldShow = matchesSearch && matchesType;
+
+            row.hidden = !shouldShow;
+
+            if (shouldShow) {
+                visibleCount++;
+            }
+
+        });
+
+        emptyState.hidden = visibleCount !== 0;
+        tableBody.closest(".tickets-table-wrapper").hidden = visibleCount === 0;
+
+    }
+
+    searchInput?.addEventListener("input", filterDocuments);
+    filterSelect?.addEventListener("change", filterDocuments);
+
+
+    function updateDocumentSummary() {
+
+        const tickets = documentRows.filter(
+            row => row.dataset.type === "ticket"
+        ).length;
+
+        const invoices = documentRows.filter(
+            row => row.dataset.type === "invoice"
+        ).length;
+
+        document.getElementById("totalDocuments").textContent =
+            String(documentRows.length).padStart(2, "0");
+
+        document.getElementById("totalTickets").textContent =
+            String(tickets).padStart(2, "0");
+
+        document.getElementById("totalInvoices").textContent =
+            String(invoices).padStart(2, "0");
+
+    }
+
+    updateDocumentSummary();
+
+
+    const modal = document.getElementById("documentModal");
+    const closeModalBtn = document.getElementById("closeDocumentModal");
+    const modalBackdrop = document.getElementById("modalBackdrop");
+
+    function closeModal() {
+        modal.hidden = true;
+        document.body.classList.remove("modal-open");
+    }
+
+    document.querySelectorAll(".view-document").forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            document.getElementById("modalTitle").textContent =
+                this.dataset.document || "Document Details";
+
+            document.getElementById("previewDocument").textContent =
+                this.dataset.document || "-";
+
+            document.getElementById("previewBooking").textContent =
+                this.dataset.booking || "-";
+
+            document.getElementById("previewType").textContent =
+                this.dataset.type || "-";
+
+            document.getElementById("previewDate").textContent =
+                this.dataset.date || "-";
+
+            document.getElementById("previewAmount").textContent =
+                this.dataset.amount || "-";
+
+            modal.hidden = false;
+            document.body.classList.add("modal-open");
+
+        });
+
+    });
+
+    closeModalBtn?.addEventListener("click", closeModal);
+    modalBackdrop?.addEventListener("click", closeModal);
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && !modal.hidden) {
+            closeModal();
+        }
+    });
+
+
+    document.querySelectorAll(".download-document").forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            const documentName = this.dataset.document || "Travel Document";
+            const bookingId = this.dataset.booking || "-";
+            const documentType = this.dataset.type || "-";
+            const amount = this.dataset.amount || "-";
+            const issueDate = this.dataset.date || "-";
+
+            const content = [
+                "TRAVELORA",
+                "EXPLORE THE WORLD",
+                "",
+                "SAMPLE DOCUMENT",
+                "------------------------------",
+                "Document: " + documentName,
+                "Booking ID: " + bookingId,
+                "Document Type: " + documentType,
+                "Issue Date: " + issueDate,
+                "Amount: " + amount,
+                "",
+                "This is a sample document for website demonstration.",
+                "It is not a valid travel ticket or tax invoice."
+            ].join("\n");
+
+            const blob = new Blob([content], {
+                type: "text/plain;charset=utf-8"
+            });
+
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement("a");
+
+            link.href = url;
+            link.download = bookingId + "-sample-document.txt";
+
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+
+            URL.revokeObjectURL(url);
+
+        });
+
+    });
+
+});
+</script>
+
+</body>
+</html>

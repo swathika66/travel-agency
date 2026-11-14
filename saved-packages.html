@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#009C9A">
+    <meta name="description" content="View and manage your saved Travelora holiday packages and favourite destinations.">
+
+    <title>Saved Packages | Travelora</title>
+
+    <link rel="icon" href="favicon.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="saved-packages.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="dashboard-page">
+
+<div class="dashboard-app">
+
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+
+        <div class="sidebar-brand">
+            <a href="index.html" class="brand">
+                <img src="logo.png" alt="Travelora Logo">
+
+                <div class="brand-text">
+                    <span><strong>Travel</strong><b>ora</b></span>
+                    <small>EXPLORE THE WORLD</small>
+                </div>
+            </a>
+
+            <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+
+        <div class="sidebar-user">
+            <div class="sidebar-avatar">
+                <i data-lucide="user-round"></i>
+            </div>
+
+            <div>
+                <h3>Traveller</h3>
+                <p>Travel Member</p>
+            </div>
+        </div>
+
+        <div class="sidebar-menu">
+
+            <p class="sidebar-label">MAIN MENU</p>
+
+            <a href="dashboard.html" class="sidebar-link">
+                <i data-lucide="layout-dashboard"></i>
+                <span>Overview</span>
+            </a>
+
+            <a href="my-bookings.html" class="sidebar-link">
+                <i data-lucide="calendar-check"></i>
+                <span>My Bookings</span>
+            </a>
+
+            <a href="saved-packages.html" class="sidebar-link active" aria-current="page">
+                <i data-lucide="heart"></i>
+                <span>Saved Packages</span>
+            </a>
+
+            <a href="my-itineraries.html" class="sidebar-link">
+                <i data-lucide="map"></i>
+                <span>My Itineraries</span>
+            </a>
+
+            <a href="tickets-invoices.html" class="sidebar-link">
+                <i data-lucide="ticket"></i>
+                <span>Tickets &amp; Invoices</span>
+            </a>
+
+            <p class="sidebar-label">ACCOUNT</p>
+
+            <a href="my-profile.html" class="sidebar-link">
+                <i data-lucide="user-round"></i>
+                <span>My Profile</span>
+            </a>
+
+        </div>
+
+        <div class="sidebar-support">
+
+            <div class="support-icon">
+                <i data-lucide="headset"></i>
+            </div>
+
+            <h4>Need Assistance?</h4>
+
+            <p>Our travel experts are ready to help you.</p>
+
+            <a href="contact.html">
+                Contact Support
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+
+        </div>
+
+        <a href="index.html" class="sidebar-back">
+            <i data-lucide="log-out"></i>
+            <span>Back to Website</span>
+        </a>
+
+    </aside>
+
+
+    <main class="dashboard-main">
+
+        <div class="dashboard-topbar">
+
+            <div class="topbar-left">
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                    <i data-lucide="menu"></i>
+                </button>
+
+                <div>
+                    <p class="topbar-greeting">YOUR TRAVEL SPACE</p>
+                    <h1>Saved Packages</h1>
+                </div>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="dashboard-search">
+                    <i data-lucide="search"></i>
+                    <input type="search" placeholder="Search anything..." aria-label="Search">
+                </div>
+
+                <button
+                    id="rtlBtn"
+                    class="header-icon-btn"
+                    type="button"
+                    title="Toggle RTL"
+                    aria-label="Toggle right-to-left layout"
+                    aria-pressed="false">
+                    <span aria-hidden="true">⇄</span>
+                </button>
+
+                <button class="topbar-icon" id="themeBtn" aria-label="Toggle dark mode">
+                    <i data-lucide="moon"></i>
+                </button>
+
+                <button class="topbar-icon notification-btn" aria-label="Notifications">
+                    <i data-lucide="bell"></i>
+                    <span class="notification-dot"></span>
+                </button>
+
+
+                <div class="topbar-profile-wrapper">
+
+                    <button
+                        class="topbar-profile"
+                        id="profileDropdownBtn"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="profileDropdown">
+
+                        <div class="topbar-avatar">
+                            <i data-lucide="user-round"></i>
+                        </div>
+
+                        <div class="topbar-profile-info">
+                            <h4>Traveller</h4>
+                            <p>Member</p>
+                        </div>
+
+                        <i data-lucide="chevron-down" class="profile-chevron"></i>
+
+                    </button>
+
+                    <div class="profile-dropdown" id="profileDropdown">
+
+                        <a href="my-profile.html">
+                            <i data-lucide="user-round"></i>
+                            <span>My Profile</span>
+                        </a>
+
+                        <a href="settings.html">
+                            <i data-lucide="settings"></i>
+                            <span>Settings</span>
+                        </a>
+
+                        <a href="my-bookings.html">
+                            <i data-lucide="calendar-check"></i>
+                            <span>My Bookings</span>
+                        </a>
+
+                        <div class="profile-dropdown-divider"></div>
+
+                        <a href="index.html" class="dropdown-logout">
+                            <i data-lucide="log-out"></i>
+                            <span>Logout</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="saved-packages-page">
+
+            <section class="saved-welcome">
+
+                <div class="saved-welcome-content">
+
+                    <span class="section-eyebrow">YOUR FAVOURITES</span>
+
+                    <h2>Your Saved Packages</h2>
+
+                    <p>
+                        Keep your favourite destinations close.
+                        Explore your saved holiday packages whenever you're ready
+                        for your next adventure.
+                    </p>
+
+                </div>
+
+                <a href="domestic-packages.html" class="saved-explore-btn">
+                    <i data-lucide="compass"></i>
+                    Explore Packages
+                    <i data-lucide="arrow-right"></i>
+                </a>
+
+            </section>
+
+
+            <section class="saved-summary">
+
+                <div class="saved-summary-card">
+
+                    <div class="saved-summary-icon total">
+                        <i data-lucide="heart"></i>
+                    </div>
+
+                    <div class="saved-summary-info">
+                        <h3 id="totalSaved">06</h3>
+                        <p>Total Saved</p>
+                        <small>Your favourite packages</small>
+                    </div>
+
+                </div>
+
+                <div class="saved-summary-card">
+
+                    <div class="saved-summary-icon domestic">
+                        <i data-lucide="mountain"></i>
+                    </div>
+
+                    <div class="saved-summary-info">
+                        <h3 id="domesticSaved">03</h3>
+                        <p>Domestic Trips</p>
+                        <small>Explore India</small>
+                    </div>
+
+                </div>
+
+                <div class="saved-summary-card">
+
+                    <div class="saved-summary-icon international">
+                        <i data-lucide="globe"></i>
+                    </div>
+
+                    <div class="saved-summary-info">
+                        <h3 id="internationalSaved">03</h3>
+                        <p>International Trips</p>
+                        <small>Discover the world</small>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="saved-list-section">
+
+                <div class="saved-list-header">
+
+                    <div>
+                        <span class="section-eyebrow">YOUR TRAVEL COLLECTION</span>
+
+                        <h2>Favourite Destinations</h2>
+
+                        <p>
+                            View and manage the destinations
+                            you've saved for your future holidays.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="saved-controls">
+
+                    <div class="saved-search">
+                        <i data-lucide="search"></i>
+
+                        <input
+                            type="search"
+                            id="savedSearch"
+                            placeholder="Search destinations..."
+                            aria-label="Search saved packages">
+                    </div>
+
+                    <select id="savedCategory" aria-label="Filter saved packages">
+                        <option value="all">All Packages</option>
+                        <option value="domestic">Domestic</option>
+                        <option value="international">International</option>
+                        <option value="honeymoon">Honeymoon</option>
+                        <option value="family">Family</option>
+                    </select>
+
+                </div>
+
+
+                <div class="saved-packages-grid" id="savedPackagesGrid">
+
+
+                    <article class="saved-package-card"
+                        data-category="domestic"
+                        data-search="manali himachal mountain snow adventure">
+
+                        <div class="saved-package-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=900&q=85"
+                                alt="Snow-covered mountains in Manali"
+                                loading="lazy">
+
+                            <span class="saved-package-tag">DOMESTIC</span>
+
+                            <button class="saved-heart-btn"
+                                type="button"
+                                aria-label="Remove Manali from saved packages">
+                                <i data-lucide="heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="saved-package-content">
+
+                            <div class="saved-location">
+                                <i data-lucide="map-pin"></i>
+                                Himachal Pradesh, India
+                            </div>
+
+                            <h3>Manali Mountain Escape</h3>
+
+                            <p>
+                                Experience beautiful mountain views,
+                                snow adventures and peaceful landscapes.
+                            </p>
+
+                            <div class="saved-package-meta">
+
+                                <span>
+                                    <i data-lucide="clock"></i>
+                                    5 Nights / 6 Days
+                                </span>
+
+                                <span>
+                                    <i data-lucide="users"></i>
+                                    Couple / Family
+                                </span>
+
+                            </div>
+
+                            <div class="saved-package-footer">
+
+                                <div class="saved-price">
+                                    <small>Starting from</small>
+                                    <strong>₹25,000</strong>
+                                    <span>/ person</span>
+                                </div>
+
+                                <a href="domestic-packages.html" class="saved-view-btn">
+                                    View Package
+                                    <i data-lucide="arrow-right"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="saved-package-card"
+                        data-category="international"
+                        data-search="paris france europe city romance">
+
+                        <div class="saved-package-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=85"
+                                alt="Eiffel Tower in Paris"
+                                loading="lazy">
+
+                            <span class="saved-package-tag international-tag">INTERNATIONAL</span>
+
+                            <button class="saved-heart-btn"
+                                type="button"
+                                aria-label="Remove Paris from saved packages">
+                                <i data-lucide="heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="saved-package-content">
+
+                            <div class="saved-location">
+                                <i data-lucide="map-pin"></i>
+                                Paris, France
+                            </div>
+
+                            <h3>Paris City Experience</h3>
+
+                            <p>
+                                Discover iconic landmarks, charming streets
+                                and unforgettable European experiences.
+                            </p>
+
+                            <div class="saved-package-meta">
+
+                                <span>
+                                    <i data-lucide="clock"></i>
+                                    6 Nights / 7 Days
+                                </span>
+
+                                <span>
+                                    <i data-lucide="users"></i>
+                                    Couple / Friends
+                                </span>
+
+                            </div>
+
+                            <div class="saved-package-footer">
+
+                                <div class="saved-price">
+                                    <small>Starting from</small>
+                                    <strong>₹85,000</strong>
+                                    <span>/ person</span>
+                                </div>
+
+                                <a href="international-packages.html" class="saved-view-btn">
+                                    View Package
+                                    <i data-lucide="arrow-right"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="saved-package-card"
+                        data-category="domestic family"
+                        data-search="agra taj mahal heritage india family">
+
+                        <div class="saved-package-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=900&q=85"
+                                alt="Taj Mahal in Agra"
+                                loading="lazy">
+
+                            <span class="saved-package-tag">DOMESTIC</span>
+
+                            <button class="saved-heart-btn"
+                                type="button"
+                                aria-label="Remove Agra from saved packages">
+                                <i data-lucide="heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="saved-package-content">
+
+                            <div class="saved-location">
+                                <i data-lucide="map-pin"></i>
+                                Agra, Uttar Pradesh
+                            </div>
+
+                            <h3>Agra Heritage Tour</h3>
+
+                            <p>
+                                Explore India's rich history and admire
+                                the beauty of its iconic heritage sites.
+                            </p>
+
+                            <div class="saved-package-meta">
+
+                                <span>
+                                    <i data-lucide="clock"></i>
+                                    2 Nights / 3 Days
+                                </span>
+
+                                <span>
+                                    <i data-lucide="users"></i>
+                                    Family / Friends
+                                </span>
+
+                            </div>
+
+                            <div class="saved-package-footer">
+
+                                <div class="saved-price">
+                                    <small>Starting from</small>
+                                    <strong>₹12,500</strong>
+                                    <span>/ person</span>
+                                </div>
+
+                                <a href="domestic-packages.html" class="saved-view-btn">
+                                    View Package
+                                    <i data-lucide="arrow-right"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="saved-package-card"
+                        data-category="international honeymoon"
+                        data-search="bali indonesia beach honeymoon island">
+
+                        <div class="saved-package-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=85"
+                                alt="Tropical Bali island landscape"
+                                loading="lazy">
+
+                            <span class="saved-package-tag international-tag">INTERNATIONAL</span>
+
+                            <button class="saved-heart-btn"
+                                type="button"
+                                aria-label="Remove Bali from saved packages">
+                                <i data-lucide="heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="saved-package-content">
+
+                            <div class="saved-location">
+                                <i data-lucide="map-pin"></i>
+                                Bali, Indonesia
+                            </div>
+
+                            <h3>Bali Tropical Paradise</h3>
+
+                            <p>
+                                Relax on beautiful beaches, discover
+                                tropical landscapes and enjoy island life.
+                            </p>
+
+                            <div class="saved-package-meta">
+
+                                <span>
+                                    <i data-lucide="clock"></i>
+                                    5 Nights / 6 Days
+                                </span>
+
+                                <span>
+                                    <i data-lucide="users"></i>
+                                    Couples
+                                </span>
+
+                            </div>
+
+                            <div class="saved-package-footer">
+
+                                <div class="saved-price">
+                                    <small>Starting from</small>
+                                    <strong>₹55,000</strong>
+                                    <span>/ person</span>
+                                </div>
+
+                                <a href="international-packages.html" class="saved-view-btn">
+                                    View Package
+                                    <i data-lucide="arrow-right"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="saved-package-card"
+                        data-category="domestic family"
+                        data-search="kerala backwaters nature family india">
+
+                        <div class="saved-package-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=900&q=85"
+                                alt="Kerala backwaters and greenery"
+                                loading="lazy">
+
+                            <span class="saved-package-tag">DOMESTIC</span>
+
+                            <button class="saved-heart-btn"
+                                type="button"
+                                aria-label="Remove Kerala from saved packages">
+                                <i data-lucide="heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="saved-package-content">
+
+                            <div class="saved-location">
+                                <i data-lucide="map-pin"></i>
+                                Kerala, India
+                            </div>
+
+                            <h3>Kerala Nature Retreat</h3>
+
+                            <p>
+                                Enjoy peaceful backwaters, green hills
+                                and relaxing nature experiences.
+                            </p>
+
+                            <div class="saved-package-meta">
+
+                                <span>
+                                    <i data-lucide="clock"></i>
+                                    4 Nights / 5 Days
+                                </span>
+
+                                <span>
+                                    <i data-lucide="users"></i>
+                                    Family / Friends
+                                </span>
+
+                            </div>
+
+                            <div class="saved-package-footer">
+
+                                <div class="saved-price">
+                                    <small>Starting from</small>
+                                    <strong>₹22,000</strong>
+                                    <span>/ person</span>
+                                </div>
+
+                                <a href="domestic-packages.html" class="saved-view-btn">
+                                    View Package
+                                    <i data-lucide="arrow-right"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="saved-package-card"
+                        data-category="international honeymoon"
+                        data-search="switzerland alps europe mountains honeymoon">
+
+                        <div class="saved-package-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=900&q=85"
+                                alt="Swiss Alps mountain scenery"
+                                loading="lazy">
+
+                            <span class="saved-package-tag international-tag">INTERNATIONAL</span>
+
+                            <button class="saved-heart-btn"
+                                type="button"
+                                aria-label="Remove Switzerland from saved packages">
+                                <i data-lucide="heart"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="saved-package-content">
+
+                            <div class="saved-location">
+                                <i data-lucide="map-pin"></i>
+                                Switzerland
+                            </div>
+
+                            <h3>Swiss Alps Adventure</h3>
+
+                            <p>
+                                Discover breathtaking alpine views,
+                                scenic train journeys and mountain villages.
+                            </p>
+
+                            <div class="saved-package-meta">
+
+                                <span>
+                                    <i data-lucide="clock"></i>
+                                    6 Nights / 7 Days
+                                </span>
+
+                                <span>
+                                    <i data-lucide="users"></i>
+                                    Couples / Friends
+                                </span>
+
+                            </div>
+
+                            <div class="saved-package-footer">
+
+                                <div class="saved-price">
+                                    <small>Starting from</small>
+                                    <strong>₹1,25,000</strong>
+                                    <span>/ person</span>
+                                </div>
+
+                                <a href="international-packages.html" class="saved-view-btn">
+                                    View Package
+                                    <i data-lucide="arrow-right"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="saved-empty" id="savedEmpty" hidden>
+
+                    <div class="saved-empty-icon">
+                        <i data-lucide="heart"></i>
+                    </div>
+
+                    <h3>No Saved Packages Found</h3>
+
+                    <p>
+                        Try another search or explore our packages
+                        to find your next favourite destination.
+                    </p>
+
+                    <a href="domestic-packages.html" class="saved-explore-btn">
+                        Explore Packages
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <section class="saved-inspiration">
+
+                <div class="saved-inspiration-content">
+
+                    <span>YOUR NEXT ADVENTURE AWAITS</span>
+
+                    <h2>Dream It. Save It. Experience It.</h2>
+
+                    <p>
+                        Your favourite destinations are just the beginning.
+                        Find more places to explore and make memories that last.
+                    </p>
+
+                    <a href="international-packages.html">
+                        Discover More Destinations
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+
+                </div>
+
+                <div class="saved-inspiration-icon">
+                    <i data-lucide="plane"></i>
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    if (window.lucide) {
+        lucide.createIcons();
+    }
+
+
+    const sidebar = document.getElementById("dashboardSidebar");
+    const menuToggle = document.getElementById("menuToggle");
+    const sidebarClose = document.getElementById("sidebarClose");
+    const overlay = document.getElementById("sidebarOverlay");
+
+    function openSidebar() {
+        sidebar?.classList.add("sidebar-open");
+        overlay?.classList.add("active");
+    }
+
+    function closeSidebar() {
+        sidebar?.classList.remove("sidebar-open");
+        overlay?.classList.remove("active");
+    }
+
+    menuToggle?.addEventListener("click", openSidebar);
+    sidebarClose?.addEventListener("click", closeSidebar);
+    overlay?.addEventListener("click", closeSidebar);
+
+
+    const themeBtn = document.getElementById("themeBtn");
+
+    if (localStorage.getItem("travelora-theme") === "dark") {
+        document.body.classList.add("dark-mode");
+    }
+
+    function updateThemeIcon() {
+        const icon = themeBtn?.querySelector("i");
+
+        if (icon) {
+            icon.setAttribute(
+                "data-lucide",
+                document.body.classList.contains("dark-mode") ? "sun" : "moon"
+            );
+
+            lucide?.createIcons();
+        }
+    }
+
+    themeBtn?.addEventListener("click", function () {
+
+        document.body.classList.toggle("dark-mode");
+
+        localStorage.setItem(
+            "travelora-theme",
+            document.body.classList.contains("dark-mode") ? "dark" : "light"
+        );
+
+        updateThemeIcon();
+
+    });
+
+    updateThemeIcon();
+
+
+    const rtlBtn = document.getElementById("rtlBtn");
+
+    if (localStorage.getItem("travelora-direction") === "rtl") {
+        document.documentElement.dir = "rtl";
+    }
+
+    function updateRTLButton() {
+        rtlBtn?.setAttribute(
+            "aria-pressed",
+            document.documentElement.dir === "rtl"
+        );
+    }
+
+    rtlBtn?.addEventListener("click", function () {
+
+        document.documentElement.dir =
+            document.documentElement.dir === "rtl" ? "ltr" : "rtl";
+
+        localStorage.setItem(
+            "travelora-direction",
+            document.documentElement.dir
+        );
+
+        updateRTLButton();
+
+    });
+
+    updateRTLButton();
+
+
+    const profileBtn = document.getElementById("profileDropdownBtn");
+    const profileDropdown = document.getElementById("profileDropdown");
+
+    profileBtn?.addEventListener("click", function (event) {
+
+        event.stopPropagation();
+
+        const isOpen = profileDropdown.classList.toggle("show");
+
+        profileBtn.setAttribute("aria-expanded", isOpen);
+
+    });
+
+    document.addEventListener("click", function (event) {
+
+        if (!event.target.closest(".topbar-profile-wrapper")) {
+
+            profileDropdown?.classList.remove("show");
+            profileBtn?.setAttribute("aria-expanded", "false");
+
+        }
+
+    });
+
+
+    const savedSearch = document.getElementById("savedSearch");
+    const savedCategory = document.getElementById("savedCategory");
+    const packageGrid = document.getElementById("savedPackagesGrid");
+    const savedEmpty = document.getElementById("savedEmpty");
+
+    const totalSaved = document.getElementById("totalSaved");
+    const domesticSaved = document.getElementById("domesticSaved");
+    const internationalSaved = document.getElementById("internationalSaved");
+
+    function updateSavedPackages() {
+
+        const searchValue = savedSearch.value.toLowerCase().trim();
+        const categoryValue = savedCategory.value;
+
+        const cards = packageGrid.querySelectorAll(".saved-package-card");
+
+        let visibleCount = 0;
+        let domesticCount = 0;
+        let internationalCount = 0;
+
+        cards.forEach(function (card) {
+
+            const searchData = card.dataset.search.toLowerCase();
+            const categories = card.dataset.category.split(" ");
+
+            const matchesSearch = searchData.includes(searchValue);
+
+            const matchesCategory =
+                categoryValue === "all" ||
+                categories.includes(categoryValue);
+
+            const visible = matchesSearch && matchesCategory;
+
+            card.hidden = !visible;
+
+            if (visible) {
+                visibleCount++;
+            }
+
+            if (visible && categories.includes("domestic")) {
+                domesticCount++;
+            }
+
+            if (visible && categories.includes("international")) {
+                internationalCount++;
+            }
+
+        });
+
+        totalSaved.textContent = String(visibleCount).padStart(2, "0");
+        domesticSaved.textContent = String(domesticCount).padStart(2, "0");
+        internationalSaved.textContent = String(internationalCount).padStart(2, "0");
+
+        savedEmpty.hidden = visibleCount !== 0;
+
+    }
+
+    savedSearch?.addEventListener("input", updateSavedPackages);
+    savedCategory?.addEventListener("change", updateSavedPackages);
+
+
+    packageGrid?.addEventListener("click", function (event) {
+
+        const removeBtn = event.target.closest(".saved-heart-btn");
+
+        if (!removeBtn) return;
+
+        const card = removeBtn.closest(".saved-package-card");
+
+        if (card) {
+            card.remove();
+            updateSavedPackages();
+        }
+
+    });
+
+
+    updateSavedPackages();
+
+});
+</script>
+
+</body>
+</html>

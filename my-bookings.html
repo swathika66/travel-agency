@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#009C9A">
+    <meta name="description" content="View and manage your Travelora bookings, upcoming holidays and completed trips.">
+
+    <title>My Bookings | Travelora</title>
+
+    <link rel="icon" href="favicon.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="my-bookings.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="dashboard-page">
+
+<div class="dashboard-app">
+
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+
+        <div class="sidebar-brand">
+            <a href="index.html" class="brand">
+                <img src="logo.png" alt="Travelora Logo">
+
+                <div class="brand-text">
+                    <span><strong>Travel</strong><b>ora</b></span>
+                    <small>EXPLORE THE WORLD</small>
+                </div>
+            </a>
+
+            <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+
+        <div class="sidebar-user">
+            <div class="sidebar-avatar">
+                <i data-lucide="user-round"></i>
+            </div>
+
+            <div>
+                <h3>Traveller</h3>
+                <p>Travel Member</p>
+            </div>
+        </div>
+
+        <div class="sidebar-menu">
+
+            <p class="sidebar-label">MAIN MENU</p>
+
+            <a href="dashboard.html" class="sidebar-link">
+                <i data-lucide="layout-dashboard"></i>
+                <span>Overview</span>
+            </a>
+
+            <a href="my-bookings.html" class="sidebar-link active" aria-current="page">
+                <i data-lucide="calendar-check"></i>
+                <span>My Bookings</span>
+            </a>
+
+            <a href="saved-packages.html" class="sidebar-link">
+                <i data-lucide="heart"></i>
+                <span>Saved Packages</span>
+            </a>
+
+            <a href="my-itineraries.html" class="sidebar-link">
+                <i data-lucide="map"></i>
+                <span>My Itineraries</span>
+            </a>
+
+            <a href="tickets-invoices.html" class="sidebar-link">
+                <i data-lucide="ticket"></i>
+                <span>Tickets &amp; Invoices</span>
+            </a>
+
+            <p class="sidebar-label">ACCOUNT</p>
+
+            <a href="my-profile.html" class="sidebar-link">
+                <i data-lucide="user-round"></i>
+                <span>My Profile</span>
+            </a>
+
+        </div>
+
+        <div class="sidebar-support">
+
+            <div class="support-icon">
+                <i data-lucide="headset"></i>
+            </div>
+
+            <h4>Need Assistance?</h4>
+            <p>Our travel experts are ready to help you.</p>
+
+            <a href="contact.html">
+                Contact Support
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+
+        </div>
+
+        <a href="index.html" class="sidebar-back">
+            <i data-lucide="log-out"></i>
+            <span>Back to Website</span>
+        </a>
+
+    </aside>
+
+
+    <main class="dashboard-main">
+
+        <div class="dashboard-topbar">
+
+            <div class="topbar-left">
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                    <i data-lucide="menu"></i>
+                </button>
+
+                <div>
+                    <p class="topbar-greeting">YOUR TRAVEL SPACE</p>
+                    <h1>My Bookings</h1>
+                </div>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="dashboard-search">
+                    <i data-lucide="search"></i>
+                    <input
+                        type="search"
+                        placeholder="Search anything..."
+                        aria-label="Search">
+                </div>
+
+                <button
+                    id="rtlBtn"
+                    class="header-icon-btn"
+                    type="button"
+                    title="Toggle RTL"
+                    aria-label="Toggle right-to-left layout"
+                    aria-pressed="false">
+                    <span aria-hidden="true">⇄</span>
+                </button>
+
+                <button class="topbar-icon" id="themeBtn" aria-label="Toggle dark mode">
+                    <i data-lucide="moon"></i>
+                </button>
+
+                <button class="topbar-icon notification-btn" aria-label="Notifications">
+                    <i data-lucide="bell"></i>
+                    <span class="notification-dot"></span>
+                </button>
+
+
+                <div class="topbar-profile-wrapper">
+
+                    <button
+                        class="topbar-profile"
+                        id="profileDropdownBtn"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="profileDropdown">
+
+                        <div class="topbar-avatar">
+                            <i data-lucide="user-round"></i>
+                        </div>
+
+                        <div class="topbar-profile-info">
+                            <h4>Traveller</h4>
+                            <p>Member</p>
+                        </div>
+
+                        <i data-lucide="chevron-down" class="profile-chevron"></i>
+
+                    </button>
+
+                    <div class="profile-dropdown" id="profileDropdown">
+
+                        <a href="my-profile.html">
+                            <i data-lucide="user-round"></i>
+                            <span>My Profile</span>
+                        </a>
+
+                        <a href="settings.html">
+                            <i data-lucide="settings"></i>
+                            <span>Settings</span>
+                        </a>
+
+                        <a href="my-bookings.html">
+                            <i data-lucide="calendar-check"></i>
+                            <span>My Bookings</span>
+                        </a>
+
+                        <div class="profile-dropdown-divider"></div>
+
+                        <a href="index.html" class="dropdown-logout">
+                            <i data-lucide="log-out"></i>
+                            <span>Logout</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="my-bookings-page">
+
+            <section class="bookings-welcome">
+
+                <div class="bookings-welcome-content">
+
+                    <span class="section-eyebrow">
+                        <span></span>
+                        YOUR TRAVEL JOURNEY
+                    </span>
+
+                    <h2>Manage Your Bookings</h2>
+
+                    <p>
+                        Keep track of your upcoming adventures,
+                        confirmed holidays and completed trips
+                        all in one place.
+                    </p>
+
+                </div>
+
+                <a href="domestic-packages.html" class="bookings-primary-btn">
+                    Explore Packages
+                    <i data-lucide="arrow-right"></i>
+                </a>
+
+            </section>
+
+
+            <section class="booking-overview">
+
+                <div class="booking-overview-card">
+
+                    <div class="booking-overview-icon upcoming">
+                        <i data-lucide="calendar-days"></i>
+                    </div>
+
+                    <div>
+                        <h3>02</h3>
+                        <p>Upcoming Trips</p>
+                        <small>Your next adventures</small>
+                    </div>
+
+                </div>
+
+                <div class="booking-overview-card">
+
+                    <div class="booking-overview-icon confirmed">
+                        <i data-lucide="calendar-check"></i>
+                    </div>
+
+                    <div>
+                        <h3>02</h3>
+                        <p>Confirmed Bookings</p>
+                        <small>Ready for your journey</small>
+                    </div>
+
+                </div>
+
+                <div class="booking-overview-card">
+
+                    <div class="booking-overview-icon completed">
+                        <i data-lucide="circle-check"></i>
+                    </div>
+
+                    <div>
+                        <h3>04</h3>
+                        <p>Completed Trips</p>
+                        <small>Memories made</small>
+                    </div>
+
+                </div>
+
+                <div class="booking-overview-card">
+
+                    <div class="booking-overview-icon cancelled">
+                        <i data-lucide="calendar-x"></i>
+                    </div>
+
+                    <div>
+                        <h3>00</h3>
+                        <p>Cancelled Trips</p>
+                        <small>No cancelled bookings</small>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="bookings-list-section">
+
+                <div class="bookings-list-header">
+
+                    <div>
+                        <span class="section-eyebrow">YOUR TRAVEL PLANS</span>
+                        <h2>All Bookings</h2>
+                        <p>View and manage your travel reservations.</p>
+                    </div>
+
+                    <div class="booking-controls">
+
+                        <div class="booking-search">
+                            <i data-lucide="search"></i>
+
+                            <input
+                                type="search"
+                                id="bookingSearch"
+                                placeholder="Search destination..."
+                                aria-label="Search bookings">
+                        </div>
+
+                        <select id="bookingStatusFilter" aria-label="Filter bookings">
+                            <option value="all">All Bookings</option>
+                            <option value="confirmed">Confirmed</option>
+                            <option value="upcoming">Upcoming</option>
+                            <option value="completed">Completed</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <article
+                    class="booking-item"
+                    data-status="confirmed upcoming"
+                    data-search="manali mountain retreat india">
+
+                    <div class="booking-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=600&q=85"
+                            alt="Beautiful mountain landscape in Manali">
+                    </div>
+
+                    <div class="booking-details">
+
+                        <div class="booking-title-row">
+
+                            <div>
+                                <span class="booking-category">DOMESTIC PACKAGE</span>
+                                <h3>Manali Mountain Escape</h3>
+                            </div>
+
+                            <span class="booking-status confirmed-status">
+                                <i data-lucide="check-circle"></i>
+                                Confirmed
+                            </span>
+
+                        </div>
+
+                        <div class="booking-meta">
+
+                            <span>
+                                <i data-lucide="calendar-days"></i>
+                                08 Jan – 13 Jan 2027
+                            </span>
+
+                            <span>
+                                <i data-lucide="users"></i>
+                                4 Travellers
+                            </span>
+
+                            <span>
+                                <i data-lucide="clock"></i>
+                                5 Nights / 6 Days
+                            </span>
+
+                        </div>
+
+                        <div class="booking-footer">
+
+                            <div class="booking-price">
+                                <small>Total Amount</small>
+                                <strong>₹25,000</strong>
+                            </div>
+
+                            <a href="tickets-invoices.html" class="booking-view-btn">
+                                View Details
+                                <i data-lucide="arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="booking-item"
+                    data-status="confirmed upcoming"
+                    data-search="paris europe international city tour">
+
+                    <div class="booking-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=85"
+                            alt="Eiffel Tower in Paris">
+                    </div>
+
+                    <div class="booking-details">
+
+                        <div class="booking-title-row">
+
+                            <div>
+                                <span class="booking-category">INTERNATIONAL PACKAGE</span>
+                                <h3>Paris City Experience</h3>
+                            </div>
+
+                            <span class="booking-status confirmed-status">
+                                <i data-lucide="check-circle"></i>
+                                Confirmed
+                            </span>
+
+                        </div>
+
+                        <div class="booking-meta">
+
+                            <span>
+                                <i data-lucide="calendar-days"></i>
+                                15 Mar – 21 Mar 2027
+                            </span>
+
+                            <span>
+                                <i data-lucide="users"></i>
+                                2 Travellers
+                            </span>
+
+                            <span>
+                                <i data-lucide="clock"></i>
+                                6 Nights / 7 Days
+                            </span>
+
+                        </div>
+
+                        <div class="booking-footer">
+
+                            <div class="booking-price">
+                                <small>Total Amount</small>
+                                <strong>₹85,000</strong>
+                            </div>
+
+                            <a href="tickets-invoices.html" class="booking-view-btn">
+                                View Details
+                                <i data-lucide="arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="booking-item"
+                    data-status="completed"
+                    data-search="agra taj mahal heritage india">
+
+                    <div class="booking-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=600&q=85"
+                            alt="Taj Mahal in Agra">
+                    </div>
+
+                    <div class="booking-details">
+
+                        <div class="booking-title-row">
+
+                            <div>
+                                <span class="booking-category">DOMESTIC PACKAGE</span>
+                                <h3>Agra Heritage Tour</h3>
+                            </div>
+
+                            <span class="booking-status completed-status">
+                                <i data-lucide="circle-check"></i>
+                                Completed
+                            </span>
+
+                        </div>
+
+                        <div class="booking-meta">
+
+                            <span>
+                                <i data-lucide="calendar-days"></i>
+                                10 Oct – 12 Oct 2026
+                            </span>
+
+                            <span>
+                                <i data-lucide="users"></i>
+                                2 Travellers
+                            </span>
+
+                            <span>
+                                <i data-lucide="clock"></i>
+                                2 Nights / 3 Days
+                            </span>
+
+                        </div>
+
+                        <div class="booking-footer">
+
+                            <div class="booking-price">
+                                <small>Total Amount</small>
+                                <strong>₹12,500</strong>
+                            </div>
+
+                            <a href="tickets-invoices.html" class="booking-view-btn">
+                                View Details
+                                <i data-lucide="arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <p class="booking-empty-message" id="bookingEmptyMessage" hidden>
+                    No bookings found. Try another search or filter.
+                </p>
+
+            </section>
+
+
+            <section class="booking-help-section">
+
+                <div class="booking-help-content">
+
+                    <div class="booking-help-icon">
+                        <i data-lucide="headset"></i>
+                    </div>
+
+                    <div>
+                        <h3>Need Help With Your Booking?</h3>
+
+                        <p>
+                            Have questions about your trip?
+                            Our travel support team is happy to assist you.
+                        </p>
+                    </div>
+
+                </div>
+
+                <a href="contact.html" class="booking-help-btn">
+                    Contact Support
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    if (window.lucide) {
+        lucide.createIcons();
+    }
+
+
+    const sidebar = document.getElementById("dashboardSidebar");
+    const menuToggle = document.getElementById("menuToggle");
+    const sidebarClose = document.getElementById("sidebarClose");
+    const overlay = document.getElementById("sidebarOverlay");
+
+    function openSidebar() {
+        sidebar?.classList.add("sidebar-open");
+        overlay?.classList.add("active");
+    }
+
+    function closeSidebar() {
+        sidebar?.classList.remove("sidebar-open");
+        overlay?.classList.remove("active");
+    }
+
+    menuToggle?.addEventListener("click", openSidebar);
+    sidebarClose?.addEventListener("click", closeSidebar);
+    overlay?.addEventListener("click", closeSidebar);
+
+
+    const themeBtn = document.getElementById("themeBtn");
+
+    if (localStorage.getItem("travelora-theme") === "dark") {
+        document.body.classList.add("dark-mode");
+    }
+
+    function updateThemeIcon() {
+        const icon = themeBtn?.querySelector("i");
+
+        if (icon && window.lucide) {
+            icon.setAttribute(
+                "data-lucide",
+                document.body.classList.contains("dark-mode") ? "sun" : "moon"
+            );
+
+            lucide.createIcons();
+        }
+    }
+
+    themeBtn?.addEventListener("click", function () {
+
+        document.body.classList.toggle("dark-mode");
+
+        localStorage.setItem(
+            "travelora-theme",
+            document.body.classList.contains("dark-mode") ? "dark" : "light"
+        );
+
+        updateThemeIcon();
+    });
+
+    updateThemeIcon();
+
+
+    const rtlBtn = document.getElementById("rtlBtn");
+
+    if (localStorage.getItem("travelora-direction") === "rtl") {
+        document.documentElement.dir = "rtl";
+    }
+
+    function updateRTLButton() {
+        rtlBtn?.setAttribute(
+            "aria-pressed",
+            document.documentElement.dir === "rtl"
+        );
+    }
+
+    rtlBtn?.addEventListener("click", function () {
+
+        document.documentElement.dir =
+            document.documentElement.dir === "rtl" ? "ltr" : "rtl";
+
+        localStorage.setItem(
+            "travelora-direction",
+            document.documentElement.dir
+        );
+
+        updateRTLButton();
+    });
+
+    updateRTLButton();
+
+
+    const profileBtn = document.getElementById("profileDropdownBtn");
+    const profileDropdown = document.getElementById("profileDropdown");
+
+    profileBtn?.addEventListener("click", function (event) {
+
+        event.stopPropagation();
+
+        const isOpen = profileDropdown.classList.toggle("show");
+
+        profileBtn.setAttribute("aria-expanded", isOpen);
+
+    });
+
+    document.addEventListener("click", function (event) {
+
+        if (!event.target.closest(".topbar-profile-wrapper")) {
+
+            profileDropdown?.classList.remove("show");
+            profileBtn?.setAttribute("aria-expanded", "false");
+
+        }
+
+    });
+
+
+    const bookingSearch = document.getElementById("bookingSearch");
+    const bookingFilter = document.getElementById("bookingStatusFilter");
+    const bookingItems = document.querySelectorAll(".booking-item");
+    const emptyMessage = document.getElementById("bookingEmptyMessage");
+
+    function filterBookings() {
+
+        const searchTerm = bookingSearch.value.toLowerCase().trim();
+        const selectedStatus = bookingFilter.value;
+
+        let visibleCount = 0;
+
+        bookingItems.forEach(function (item) {
+
+            const searchData = item.dataset.search.toLowerCase();
+            const statuses = item.dataset.status.split(" ");
+
+            const matchesSearch = searchData.includes(searchTerm);
+
+            const matchesStatus =
+                selectedStatus === "all" ||
+                statuses.includes(selectedStatus);
+
+            const shouldShow = matchesSearch && matchesStatus;
+
+            item.hidden = !shouldShow;
+
+            if (shouldShow) {
+                visibleCount++;
+            }
+
+        });
+
+        if (emptyMessage) {
+            emptyMessage.hidden = visibleCount !== 0;
+        }
+
+    }
+
+    bookingSearch?.addEventListener("input", filterBookings);
+    bookingFilter?.addEventListener("change", filterBookings);
+
+});
+</script>
+
+</body>
+</html>

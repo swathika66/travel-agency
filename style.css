@@ -1,11 +1,4 @@
-/* =========================================================
-   TRAVELORA — COMPLETE WEBSITE STYLESHEET
-   Primary: #009C9A (Teal)
-   Secondary: #FF8A00 (Orange)
-   Light/Dark Mode | RTL | Responsive | Animations
-========================================================= */
 
-/* ==================== 1. ROOT & RESET ==================== */
 
 :root {
     --primary: #009C9A;
@@ -193,7 +186,6 @@ svg {
 }
 
 
-/* ==================== 2. BRAND & HEADINGS ==================== */
 
 .travelora-primary {
     color: var(--primary);
@@ -251,7 +243,6 @@ svg {
 }
 
 
-/* ==================== 3. HEADER ==================== */
 
 .site-header {
     position: sticky;
@@ -494,7 +485,6 @@ svg {
 }
 
 
-/* ==================== 4. BUTTON SYSTEM ==================== */
 
 .btn {
     position: relative;
@@ -543,7 +533,6 @@ svg {
     transform: translateY(-3px);
 }
 
-/* Transparent orange outline */
 
 .btn-outline {
     border: 1.5px solid var(--secondary);
@@ -624,7 +613,6 @@ svg {
 }
 
 
-/* ==================== 5. HERO SECTION ==================== */
 
 .hero-section {
     position: relative;
@@ -639,14 +627,12 @@ svg {
     );
 }
 
-/* Removed decorative rings around the entire hero */
 
 .hero-section::before,
 .hero-section::after {
     content: none;
 }
 
-/* Equal-height columns */
 
 .hero-content {
     display: grid;
@@ -769,7 +755,6 @@ svg {
     stroke: var(--secondary);
 }
 
-/* Image column stretches to match the text column */
 
 .hero-visual {
     position: relative;
@@ -782,7 +767,6 @@ svg {
     animation: heroImageIn 900ms ease both;
 }
 
-/* Remove the old orange outline frame completely */
 
 .hero-image-decoration {
     display: none !important;
@@ -859,7 +843,6 @@ svg {
     letter-spacing: -0.035em;
 }
 
-/* Clean floating cards without decorative outlines */
 
 .hero-floating-card {
     position: absolute;
@@ -944,7 +927,6 @@ svg {
 }
 
 
-/* ==================== 6. COMMON SECTIONS ==================== */
 
 .section {
     position: relative;
@@ -967,7 +949,6 @@ svg {
 }
 
 
-/* ==================== 7. INTRODUCTION ==================== */
 
 .intro-grid {
     display: grid;
@@ -982,7 +963,6 @@ svg {
     padding: 0;
 }
 
-/* Remove decorative outline behind image */
 
 .intro-image-wrap::before {
     content: none;
@@ -1087,7 +1067,6 @@ svg {
 }
 
 
-/* ==================== 8. DESTINATION CARDS ==================== */
 
 .destination-grid {
     display: grid;
@@ -1193,7 +1172,6 @@ svg {
 }
 
 
-/* ==================== 9. EXPERIENCE CARDS ==================== */
 
 .experience-grid {
     display: grid;
@@ -1289,7 +1267,6 @@ svg {
 }
 
 
-/* ==================== 10. WHY TRAVELORA ==================== */
 
 .why-grid {
     display: grid;
@@ -1365,7 +1342,6 @@ svg {
     padding: 0;
 }
 
-/* Remove decorative outline behind the image */
 
 .why-image-wrap::before {
     content: none;
@@ -1414,7 +1390,6 @@ svg {
 }
 
 
-/* ==================== 11. INSPIRATION SECTION ==================== */
 
 .inspiration-container {
     display: grid;
@@ -1461,7 +1436,6 @@ svg {
 }
 
 
-/* ==================== 12. FINAL CTA ==================== */
 
 .final-cta {
     position: relative;
@@ -1560,7 +1534,6 @@ body[data-theme="dark"] .final-cta {
 }
 
 
-/* ==================== 13. FOOTER ==================== */
 
 .site-footer {
     background: var(--footer-bg);
@@ -1622,7 +1595,6 @@ body[data-theme="dark"] .final-cta {
     line-height: 1.95;
 }
 
-/* Social icons */
 
 .social-links {
     display: flex;
@@ -1659,7 +1631,6 @@ body[data-theme="dark"] .final-cta {
     transform: translateY(-4px);
 }
 
-/* Footer columns */
 
 .footer-column,
 .footer-contact {
@@ -1710,7 +1681,6 @@ body[data-theme="dark"] .footer-column > a:hover {
     color: var(--secondary);
 }
 
-/* Footer contact */
 
 .footer-contact-description {
     margin: -4px 0 7px;
@@ -1763,7 +1733,6 @@ body[data-theme="dark"] .contact-item > a:hover {
     color: var(--secondary);
 }
 
-/* Footer bottom */
 
 .footer-bottom {
     border-top: 1px solid var(--footer-border);
@@ -1810,7 +1779,6 @@ body[data-theme="dark"] .footer-bottom-links a:hover {
 }
 
 
-/* ==================== 14. RTL LAYOUT ==================== */
 
 html[dir="rtl"] body {
     direction: rtl;
@@ -1908,7 +1876,6 @@ html[dir="rtl"] .section-eyebrow {
 }
 
 
-/* ==================== 15. ANIMATIONS ==================== */
 
 @keyframes heroTextIn {
     from {
@@ -1953,7 +1920,6 @@ html[dir="rtl"] .section-eyebrow {
 }
 
 
-/* ==================== 16. TABLET RESPONSIVE ==================== */
 
 @media (max-width: 1100px) {
     :root {
@@ -2046,7 +2012,6 @@ html[dir="rtl"] .section-eyebrow {
 }
 
 
-/* ==================== 17. MOBILE NAVIGATION ==================== */
 
 @media (max-width: 900px) {
     .header-container {
@@ -2150,7 +2115,6 @@ html[dir="rtl"] .section-eyebrow {
         left: 0;
     }
 
-    /* Mobile hero: stack text and image */
 
     .hero-content {
         grid-template-columns: minmax(0, 1fr);
@@ -2264,7 +2228,6 @@ html[dir="rtl"] .section-eyebrow {
 }
 
 
-/* ==================== 18. MOBILE SCREENS ==================== */
 
 @media (max-width: 600px) {
     :root {
@@ -2376,7 +2339,6 @@ html[dir="rtl"] .section-eyebrow {
         font-size: 12px;
     }
 
-    /* Larger, smooth arch on mobile */
 
     .hero-visual {
         width: 100%;
@@ -2716,7 +2678,6 @@ html[dir="rtl"] .section-eyebrow {
 }
 
 
-/* ==================== 19. EXTRA SMALL SCREENS ==================== */
 
 @media (max-width: 380px) {
     .site-container {
@@ -2810,7 +2771,6 @@ html[dir="rtl"] .section-eyebrow {
 }
 
 
-/* ==================== 20. REDUCED MOTION ==================== */
 
 @media (prefers-reduced-motion: reduce) {
     *,
@@ -2824,7 +2784,6 @@ html[dir="rtl"] .section-eyebrow {
 }
 
 
-/* ==================== 21. PRINT ==================== */
 
 @media print {
     .site-header {
@@ -2874,11 +2833,7 @@ html[dir="rtl"] .section-eyebrow {
 
 
 
-/* =========================================
-   TRAVELORA — HERO TO PRE-CTA ANIMATIONS
-========================================= */
 
-/* Hero animation on page load */
 .hero {
     animation: heroReveal 0.9s ease-out both;
 }
@@ -2894,7 +2849,6 @@ html[dir="rtl"] .section-eyebrow {
     }
 }
 
-/* Sections revealed while scrolling */
 .reveal-section {
     opacity: 0;
     transform: translateY(30px);
@@ -2908,7 +2862,6 @@ html[dir="rtl"] .section-eyebrow {
     transform: translateY(0);
 }
 
-/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
     .hero,
     .reveal-section {
@@ -2918,16 +2871,11 @@ html[dir="rtl"] .section-eyebrow {
         transform: none;
     }
 }
-/* ==================================================
-   TRAVELORA — HOME DROPDOWN & MOBILE MENU FIX
-================================================== */
 
-/* Home dropdown container */
 .home-dropdown {
     position: relative;
 }
 
-/* Home dropdown menu */
 .home-dropdown-menu {
     display: none;
     position: absolute;
@@ -2942,7 +2890,6 @@ html[dir="rtl"] .section-eyebrow {
     z-index: 1000;
 }
 
-/* Show dropdown on desktop hover and keyboard focus */
 @media (min-width: 901px) {
     .home-dropdown:hover .home-dropdown-menu,
     .home-dropdown:focus-within .home-dropdown-menu {
@@ -2950,7 +2897,6 @@ html[dir="rtl"] .section-eyebrow {
     }
 }
 
-/* Dropdown links */
 .home-dropdown-menu a {
     display: block;
     padding: 10px 14px;
@@ -2968,7 +2914,6 @@ html[dir="rtl"] .section-eyebrow {
     color: #ffffff;
 }
 
-/* Mobile dropdown */
 @media (max-width: 900px) {
     .home-dropdown {
         width: 100%;
@@ -2987,7 +2932,6 @@ html[dir="rtl"] .section-eyebrow {
         background: transparent;
     }
 
-    /* JavaScript adds .open when Home is tapped */
     .home-dropdown.open .home-dropdown-menu {
         display: block;
     }
@@ -2999,7 +2943,6 @@ html[dir="rtl"] .section-eyebrow {
     }
 }
 
-/* RTL dropdown alignment */
 html[dir="rtl"] .home-dropdown-menu {
     left: auto;
     right: 0;
@@ -3011,7 +2954,6 @@ html[dir="rtl"] .home-dropdown-menu {
     }
 }
 
-/* FIX: Keep Home active underline visible normally */
 .main-nav .home-dropdown > .home-link.active::after {
     transform: scaleX(1);
     background: var(--secondary);
@@ -3020,7 +2962,6 @@ html[dir="rtl"] .home-dropdown-menu {
 .main-nav .home-dropdown > .home-link.active {
     color: var(--secondary);
 }
-/* HOME ACTIVE STYLE */
 .main-nav .home-dropdown > .home-link.active {
     color: var(--primary);
 }
@@ -3059,7 +3000,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
 }
 
-/* Secondary Buttons — Teal Outline, No Hover Change */
 .btn-outline,
 .btn-cta-outline {
     background-color: transparent;
@@ -3079,7 +3019,6 @@ h1, h2, h3, h4, h5, h6 {
     transform: none !important;
 }
 
-/* Secondary Buttons — Teal Outline with Subtle Lift */
 .btn-outline,
 .btn-cta-outline {
     background-color: transparent;
@@ -3099,7 +3038,6 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 5px 12px rgba(0, 156, 154, 0.15) !important;
 }
 
-/* CTA Section — Visible Secondary Button */
 .final-cta-actions .btn-cta-outline {
     background-color: #FFFFFF;
     color: #009C9A;
@@ -3117,12 +3055,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 5px 12px rgba(0, 156, 154, 0.18) !important;
 }
 
-/* =========================================
-   TRAVELORA — RECTANGULAR IMAGE LAYOUTS
-   Sections between Hero and CTA
-========================================= */
 
-/* Intro section image */
 .intro-image-wrap {
     border-radius: 14px;
     overflow: hidden;
@@ -3136,13 +3069,11 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 14px;
 }
 
-/* Destination cards */
 .destination-card {
     border-radius: 14px;
     overflow: hidden;
 }
 
-/* Experience section images */
 .experience-image {
     width: 100%;
     aspect-ratio: 4 / 3;
@@ -3163,7 +3094,6 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.04);
 }
 
-/* Why Travelora image */
 .why-image-wrap {
     border-radius: 14px;
     overflow: hidden;
@@ -3177,7 +3107,6 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 14px;
 }
 
-/* Inspiration section image */
 .inspiration-image {
     border-radius: 14px;
     overflow: hidden;
@@ -3196,7 +3125,6 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.04);
 }
 
-/* Respect reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
     .experience-image img,
     .inspiration-image img {
@@ -3204,10 +3132,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* =========================================================
-   HOME 2 — SECONDARY BUTTONS
-   Rounded pill style matching Home 1
-========================================================= */
+
 
 .h2-hero .btn-outline,
 .h2-featured .btn-outline,
@@ -3224,7 +3149,6 @@ h1, h2, h3, h4, h5, h6 {
                 border-color 0.3s ease;
 }
 
-/* Hover effect */
 .h2-hero .btn-outline:hover,
 .h2-featured .btn-outline:hover,
 .h2-holiday-packages .btn-outline:hover {
@@ -3234,9 +3158,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: none;
 }
 
-/* =========================================
-   TRAVELORA — DM SANS TYPOGRAPHY
-========================================= */
+
 
 body {
     font-family: 'DM Sans', sans-serif;
@@ -3264,7 +3186,6 @@ nav,
     font-weight: 500;
 }
 
-/* TRAVELORA — COMMON TYPOGRAPHY */
 
 body {
     font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
@@ -3298,9 +3219,7 @@ button, .btn {
     font-weight: 750;
 }
 
-/* =====================================
-   TRAVELORA — GLOBAL TYPOGRAPHY
-   ===================================== */
+
 
 body {
     font-family: "DM Sans", sans-serif;
@@ -3344,7 +3263,6 @@ button,
     font-weight: 700;
 }
 
-/* Travelora - Global Typography */
 
 body,
 button,
@@ -3354,7 +3272,6 @@ select {
     font-family: 'DM Sans', sans-serif;
 }
 
-/* Main headings */
 h1 {
     font-size: 48px;
     font-weight: 700;
@@ -3379,20 +3296,17 @@ h4 {
     line-height: 1.4;
 }
 
-/* Paragraphs */
 p {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.7;
 }
 
-/* Navigation */
 nav a {
     font-size: 15px;
     font-weight: 500;
 }
 
-/* Buttons */
 button,
 .btn,
 a.btn {
@@ -3400,14 +3314,12 @@ a.btn {
     font-weight: 600;
 }
 
-/* Small text */
 small,
 .section-eyebrow {
     font-size: 13px;
     font-weight: 500;
 }
 
-/* Mobile heading sizes */
 @media (max-width: 768px) {
     h1 {
         font-size: 36px;
@@ -3430,16 +3342,11 @@ small,
     display: none !important;
 }
 
-/* ==========================================
-   TRAVELORA HOME 1 — TYPOGRAPHY STANDARD
-   Font: DM Sans
-   ========================================== */
 
 body {
     font-family: 'DM Sans', sans-serif;
 }
 
-/* H1 — Main hero heading */
 body main#main-content .hero-text h1 {
     font-family: 'DM Sans', sans-serif !important;
     font-size: 48px !important;
@@ -3447,7 +3354,6 @@ body main#main-content .hero-text h1 {
     line-height: 1.2 !important;
 }
 
-/* H2 — Section headings and hero image caption */
 body main#main-content h2 {
     font-family: 'DM Sans', sans-serif !important;
     font-size: 36px !important;
@@ -3455,7 +3361,6 @@ body main#main-content h2 {
     line-height: 1.25 !important;
 }
 
-/* H3 — Cards and feature headings */
 body main#main-content h3 {
     font-family: 'DM Sans', sans-serif !important;
     font-size: 24px !important;
@@ -3463,7 +3368,6 @@ body main#main-content h3 {
     line-height: 1.3 !important;
 }
 
-/* Paragraphs */
 body main#main-content p {
     font-family: 'DM Sans', sans-serif !important;
     font-size: 16px !important;
@@ -3471,7 +3375,6 @@ body main#main-content p {
     line-height: 1.7 !important;
 }
 
-/* Small section labels */
 body main#main-content .section-eyebrow,
 body main#main-content .hero-eyebrow,
 body main#main-content .destination-tag {
@@ -3480,7 +3383,6 @@ body main#main-content .destination-tag {
     font-weight: 500 !important;
 }
 
-/* Buttons and text links */
 body main#main-content .btn,
 body main#main-content a.btn,
 body main#main-content .destination-link,
@@ -3490,14 +3392,12 @@ body main#main-content .text-link {
     font-weight: 600 !important;
 }
 
-/* Highlight text */
 body main#main-content .hero-highlight,
 body main#main-content .intro-point strong,
 body main#main-content .why-feature h3 {
     font-family: 'DM Sans', sans-serif !important;
 }
 
-/* Mobile typography */
 @media (max-width: 768px) {
     body main#main-content .hero-text h1 {
         font-size: 36px !important;
@@ -3512,7 +3412,6 @@ body main#main-content .why-feature h3 {
     }
 }
 
-/* HOME 1 HERO TAGLINE — STATIC HALO, NO ANIMATION */
 .hero-section .hero-eyebrow,
 .hero-section .hero-eyebrow-dot {
     animation: none !important;
@@ -3528,7 +3427,6 @@ body main#main-content .why-feature h3 {
     border: none !important;
     border-radius: 50% !important;
 
-    /* Keep the soft, static orange halo */
     box-shadow:
         0 0 0 3px rgba(255, 138, 0, 0.14),
         0 0 9px 3px rgba(255, 138, 0, 0.22) !important;
@@ -3540,7 +3438,6 @@ body main#main-content .why-feature h3 {
     outline: none !important;
 }
 
-/* HOME 1 HERO TAGLINE — STATIC HALO, NO ANIMATION */
 .hero-section .hero-eyebrow,
 .hero-section .hero-eyebrow-dot {
     animation: none !important;
@@ -3556,7 +3453,6 @@ body main#main-content .why-feature h3 {
     border: none !important;
     border-radius: 50% !important;
 
-    /* Keep the soft, static orange halo */
     box-shadow:
         0 0 0 3px rgba(255, 138, 0, 0.14),
         0 0 9px 3px rgba(255, 138, 0, 0.22) !important;
@@ -3568,7 +3464,6 @@ body main#main-content .why-feature h3 {
     outline: none !important;
 }
 
-/* FINAL FIX — REMOVE THE PULSING CIRCLE */
 .hero-section .hero-eyebrow-dot::before,
 .hero-section .hero-eyebrow-dot::after {
     content: none !important;
@@ -3577,7 +3472,6 @@ body main#main-content .why-feature h3 {
     border: none !important;
 }
 
-/* Keep the orange dot and static halo */
 .hero-section .hero-eyebrow-dot {
     position: relative !important;
     width: 8px !important;
@@ -3592,4 +3486,255 @@ body main#main-content .why-feature h3 {
     animation: none !important;
     transition: none !important;
     transform: none !important;
+}
+
+
+
+@media (min-width: 901px) and (max-width: 1100px) {
+
+    .header-container {
+        position: relative;
+        flex-wrap: wrap;
+        min-height: 76px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .mobile-menu-btn {
+        display: inline-flex;
+    }
+
+    .main-nav {
+        position: absolute;
+        z-index: 1000;
+        top: calc(100% + 1px);
+        right: 0;
+        left: 0;
+
+        display: none;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 3px;
+
+        max-height: calc(100dvh - 100px);
+        overflow-y: auto;
+
+        padding: 15px;
+        border: 1px solid var(--border);
+        border-radius: 0 0 16px 16px;
+        background: var(--surface);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .main-nav.is-open,
+    .main-nav.active {
+        display: flex;
+    }
+
+    .main-nav > a,
+    .main-nav .home-link {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 12px 10px;
+        font-size: 13px;
+        white-space: normal;
+    }
+
+    .home-dropdown {
+        width: 100%;
+    }
+
+    .home-dropdown-menu {
+        position: static;
+        display: none;
+        width: 100%;
+        margin-top: 6px;
+        padding: 6px;
+        border: none;
+        box-shadow: none;
+        background: var(--bg-soft);
+    }
+
+    .home-dropdown.open .home-dropdown-menu,
+    .home-dropdown.is-open .home-dropdown-menu {
+        display: grid;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .navbar .dropdown {
+        position: relative;
+    }
+
+    .navbar .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 180px;
+        z-index: 9999;
+        background: #ffffff;
+    }
+
+    .navbar .dropdown:hover .dropdown-menu,
+    .navbar .dropdown:focus-within .dropdown-menu {
+        display: block;
+    }
+
+    .navbar .dropdown-menu a {
+        display: block;
+        padding: 12px 16px;
+        white-space: nowrap;
+        pointer-events: auto;
+    }
+
+    .navbar .dropdown-menu a:hover {
+        background: #f5f5f5;
+    }
+}
+
+
+@media (max-width: 1024px) {
+
+    .header-container {
+        position: relative;
+        flex-wrap: wrap;
+        min-height: 76px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .brand {
+        margin-right: auto;
+    }
+
+    html[dir="rtl"] .brand {
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    .mobile-menu-btn {
+        display: inline-flex;
+    }
+
+    .main-nav {
+        position: absolute;
+        z-index: 1000;
+        top: calc(100% + 1px);
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 3px;
+        max-height: calc(100dvh - 100px);
+        overflow-y: auto;
+        padding: 15px;
+        border: 1px solid var(--border);
+        border-radius: 0 0 16px 16px;
+        background: var(--surface);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .main-nav.is-open,
+    .main-nav.active {
+        display: flex;
+    }
+
+    .main-nav > a,
+    .main-nav .home-link {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 12px 10px;
+        font-size: 13px;
+        white-space: normal;
+    }
+
+    .home-dropdown {
+        width: 100%;
+    }
+
+    .home-dropdown-menu {
+        position: static;
+        width: 100%;
+        margin-top: 6px;
+    }
+
+    .home-dropdown.open .home-dropdown-menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1100px) {
+
+    .site-header,
+    .header-container,
+    .main-nav {
+        overflow: visible !important;
+    }
+
+    .home-dropdown {
+        position: relative !important;
+    }
+
+    .home-dropdown-menu {
+        display: none;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        z-index: 99999 !important;
+        min-width: 180px !important;
+        pointer-events: auto !important;
+    }
+
+    .home-dropdown:hover .home-dropdown-menu,
+    .home-dropdown:focus-within .home-dropdown-menu,
+    .home-dropdown.is-open .home-dropdown-menu {
+        display: block !important;
+    }
+
+    .home-dropdown-menu a {
+        display: block !important;
+        position: relative !important;
+        z-index: 99999 !important;
+        pointer-events: auto !important;
+    }
+}
+
+
+@media (min-width: 901px) and (max-width: 1100px) {
+
+    .home-dropdown {
+        position: relative !important;
+        overflow: visible !important;
+    }
+
+    .home-dropdown-menu {
+        display: none !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        z-index: 99999 !important;
+        pointer-events: auto !important;
+    }
+
+    .home-dropdown.open .home-dropdown-menu {
+        display: block !important;
+    }
+
+    .home-dropdown-menu a {
+        display: block !important;
+        pointer-events: auto !important;
+        position: relative !important;
+        z-index: 99999 !important;
+    }
 }

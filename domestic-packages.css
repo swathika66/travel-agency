@@ -1,10 +1,4 @@
-/* =====================================================
-   TRAVELORA | DOMESTIC PACKAGES
-   Teal + Orange Theme
-   Responsive | Animations | Hover Effects
-===================================================== */
 
-/* ==================== COLORS ==================== */
 
 :root {
     --dp-primary: #009C9A;
@@ -31,7 +25,6 @@
     --dp-transition: 0.3s ease;
 }
 
-/* ==================== PAGE BASE ==================== */
 
 .domestic-page {
     background: var(--dp-bg);
@@ -86,7 +79,6 @@
     font-weight: 700;
 }
 
-/* ==================== CONTAINERS ==================== */
 
 .dp-container {
     width: min(1160px, calc(100% - 48px));
@@ -113,7 +105,6 @@
     font-size: 1rem;
 }
 
-/* ==================== SECTION EYEBROW ==================== */
 
 .dp-eyebrow {
     display: inline-flex;
@@ -137,7 +128,6 @@
     border-radius: 3px;
 }
 
-/* ==================== HERO ==================== */
 
 .dp-hero {
     position: relative;
@@ -249,7 +239,6 @@
     font-size: clamp(1.5rem, 2.5vw, 2rem);
 }
 
-/* ==================== BUTTONS ==================== */
 
 .domestic-page .dp-btn {
     display: inline-flex;
@@ -307,7 +296,6 @@
     outline-offset: 4px;
 }
 
-/* ==================== QUICK HIGHLIGHTS ==================== */
 
 .dp-highlights {
     display: grid;
@@ -347,7 +335,6 @@
     font-size: 0.76rem;
 }
 
-/* ==================== PACKAGE GRID ==================== */
 
 .dp-packages {
     background: var(--dp-bg);
@@ -359,7 +346,6 @@
     gap: 28px;
 }
 
-/* ==================== PACKAGE CARD ==================== */
 
 .dp-package-card {
     position: relative;
@@ -420,7 +406,6 @@
     transform: scale(1.08);
 }
 
-/* Image overlay */
 .dp-package-image::after {
     content: "";
     position: absolute;
@@ -486,7 +471,6 @@
     line-height: 1.75;
 }
 
-/* Package details */
 .dp-package-meta {
     display: flex;
     align-items: center;
@@ -558,7 +542,6 @@
     transform: translateY(-2px);
 }
 
-/* ==================== SEARCH / FILTER ==================== */
 
 .dp-package-toolbar {
     display: flex;
@@ -683,7 +666,6 @@
     font-size: 0.93rem;
 }
 
-/* ==================== TRAVEL CTA ==================== */
 
 .dp-cta {
     position: relative;
@@ -748,7 +730,6 @@
     border-color: #FFFFFF;
 }
 
-/* ==================== FAQ ==================== */
 
 .dp-faq {
     max-width: 850px;
@@ -809,7 +790,6 @@
     font-size: 0.94rem;
 }
 
-/* ==================== ANIMATIONS ==================== */
 
 @keyframes dpFadeUp {
     from {
@@ -833,7 +813,6 @@
     }
 }
 
-/* ==================== DARK MODE ==================== */
 
 body.dark-mode .domestic-page,
 .dark-mode .domestic-page,
@@ -939,7 +918,6 @@ body[data-theme="dark"] .dp-cta {
     background: #103E3B;
 }
 
-/* ==================== RTL SUPPORT ==================== */
 
 html[dir="rtl"] .dp-package-tag {
     right: 15px;
@@ -964,7 +942,6 @@ html[dir="rtl"] .dp-package-content {
     text-align: right;
 }
 
-/* ==================== TABLET ==================== */
 
 @media (max-width: 1000px) {
     .dp-hero {
@@ -1099,7 +1076,6 @@ html[dir="rtl"] .dp-package-content {
     }
 }
 
-/* ==================== REDUCED MOTION ==================== */
 
 @media (prefers-reduced-motion: reduce) {
     .dp-hero-content,
@@ -1122,7 +1098,6 @@ html[dir="rtl"] .dp-package-content {
     }
 }
 
-/* ==================== PRINT ==================== */
 
 @media print {
     .dp-hero,
@@ -1151,7 +1126,6 @@ html[dir="rtl"] .dp-package-content {
     }
 }
 
-/* HERO IMAGE LAYOUT */
 
 .hero-visual {
     position: relative;
@@ -1214,7 +1188,6 @@ html[dir="rtl"] .dp-package-content {
     font-size: 27px;
 }
 
-/* SECONDARY IMAGE */
 
 .hero-secondary-image {
     position: absolute;
@@ -1289,7 +1262,6 @@ html[dir="rtl"] .dp-package-content {
     }
 }
 
-/* TABLET */
 
 @media (max-width: 1000px) {
     .hero-visual {
@@ -1305,7 +1277,6 @@ html[dir="rtl"] .dp-package-content {
     }
 }
 
-/* MOBILE */
 
 @media (max-width: 720px) {
     .hero-visual {
@@ -1421,9 +1392,7 @@ html[dir="rtl"] .dp-package-content {
     }
 }
 
-/* ==========================================
-   DOMESTIC INTRO — MATCH IMAGE AND CONTENT
-========================================== */
+
 
 .intro-section .intro-grid {
     display: grid;
@@ -1530,7 +1499,6 @@ html[dir="rtl"] .dp-package-content {
     white-space: normal;
 }
 
-/* TABLET AND MOBILE */
 @media (max-width: 768px) {
     .intro-section .intro-grid {
         grid-template-columns: minmax(0, 1fr);
@@ -1562,24 +1530,17 @@ html[dir="rtl"] .dp-package-content {
     }
 }
 
-/* =========================================
-   DOMESTIC PACKAGES — GLOBAL TYPOGRAPHY
-   Match Home 1 and Home 2
-   Header and footer remain unchanged
-========================================= */
 
 main {
     font-family: 'DM Sans', sans-serif;
 }
 
-/* Main hero heading */
 main .hero-text h1 {
     font-size: 48px;
     font-weight: 700;
     line-height: 1.2;
 }
 
-/* Section headings */
 main .intro-content h2,
 main .section-heading h2,
 main .why-content h2,
@@ -1590,7 +1551,6 @@ main .final-cta-content h2 {
     line-height: 1.25;
 }
 
-/* Destination and package card headings */
 main .destination-content h3,
 main .experience-content h3,
 main .why-feature h3 {
@@ -1599,20 +1559,17 @@ main .why-feature h3 {
     line-height: 1.3;
 }
 
-/* Paragraphs */
 main p {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.7;
 }
 
-/* Small section labels */
 main .section-eyebrow {
     font-size: 13px;
     font-weight: 500;
 }
 
-/* Buttons and text links */
 main .btn,
 main a.btn,
 main .text-link,
@@ -1621,7 +1578,6 @@ main .destination-link {
     font-weight: 600;
 }
 
-/* Mobile typography */
 @media (max-width: 768px) {
     main .hero-text h1 {
         font-size: 36px;
@@ -1642,14 +1598,12 @@ main .destination-link {
     }
 }
 
-/* Remove floating card from hero */
 .hero-section .hero-image-caption,
 .hero-section .hero-floating-card,
 .hero-section .floating-card {
     display: none !important;
 }
 
-/* Remove round badges from destination cards */
 .destination-card .destination-badge,
 .destination-card .destination-icon,
 .destination-card .destination-tag,
@@ -1657,7 +1611,6 @@ main .destination-link {
     display: none !important;
 }
 
-/* Remove round badges from destination cards */
 .destination-card .destination-badge,
 .destination-card .destination-icon,
 .destination-card .destination-tag,
@@ -1665,7 +1618,6 @@ main .destination-link {
     display: none !important;
 }
 
-/* Completely remove the empty round shape from package cards */
 .experiences-section .experience-number {
     display: none !important;
     width: 0 !important;
@@ -1677,10 +1629,7 @@ main .destination-link {
     box-shadow: none !important;
 }
 
-/* ==========================================
-   DOMESTIC HERO TAGLINE
-   Orange Dot + Soft Halo
-========================================== */
+
 
 .hero-section .hero-eyebrow {
     display: inline-flex;
@@ -1700,7 +1649,6 @@ main .destination-link {
     border: none !important;
     border-radius: 50% !important;
 
-    /* Soft orange halo */
     box-shadow: 0 0 0 4px rgba(255, 138, 0, 0.12) !important;
 
     outline: none !important;
@@ -1709,11 +1657,26 @@ main .destination-link {
     opacity: 1 !important;
 }
 
-/* Prevent extra decorative circles */
 .hero-section .hero-eyebrow-dot::before,
 .hero-section .hero-eyebrow-dot::after {
     content: none !important;
     display: none !important;
     box-shadow: none !important;
     animation: none !important;
+}
+
+
+body.dark-mode .intro-content h2,
+body.dark-mode .intro-content h2 span {
+    color: #EDF7F6 !important;
+}
+
+body.dark-mode .intro-content .section-eyebrow {
+    color: #71DCD5 !important;
+}
+
+body.dark-mode .image-caption,
+body.dark-mode .image-caption strong,
+body.dark-mode .image-caption span {
+    color: #173C46 !important;
 }

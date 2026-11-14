@@ -1,10 +1,4 @@
-/* ============================================================
-   TRAVELORA — COMPLETE ABOUT PAGE CSS
-   Primary: #009C9A (Teal) | Secondary: #FF8A00 (Orange)
-   Light/Dark Mode | RTL | Responsive | Animations
-   Shared header/footer/global buttons remain in style.css.
-   This stylesheet is scoped to .about-page.
-============================================================ */
+
 
 .about-page {
     --about-teal: #009C9A;
@@ -59,7 +53,6 @@
     color: var(--about-text);
 }
 
-/* ==================== SECTION HEADINGS ==================== */
 
 .about-page .section-eyebrow {
     display: inline-flex;
@@ -111,7 +104,6 @@
     line-height: 1.85;
 }
 
-/* ==================== HERO SECTION ==================== */
 
 .about-page .about-hero {
     position: relative;
@@ -329,7 +321,6 @@
     line-height: 1.55;
 }
 
-/* ==================== OUR STORY ==================== */
 
 .about-page .about-story {
     padding-block: 90px;
@@ -462,7 +453,6 @@
     transform: translateX(3px);
 }
 
-/* ==================== MISSION AND VISION ==================== */
 
 .about-page .about-purpose {
     padding-block: 88px 96px;
@@ -577,7 +567,6 @@
     line-height: 1.9;
 }
 
-/* ==================== VALUES ==================== */
 
 .about-page .about-values {
     padding-block: 88px 96px;
@@ -644,7 +633,6 @@
     line-height: 1.85;
 }
 
-/* ==================== WHO WE SERVE ==================== */
 
 .about-page .about-audience {
     padding-block: 88px 96px;
@@ -773,7 +761,6 @@
     line-height: 1.85;
 }
 
-/* ==================== WHY TRAVELORA ==================== */
 
 .about-page .about-difference {
     padding-block: 90px;
@@ -910,7 +897,6 @@
     line-height: 1.6;
 }
 
-/* ==================== FOUR-STEP PROCESS ==================== */
 
 .about-page .about-process {
     padding-block: 88px 96px;
@@ -981,7 +967,6 @@
     line-height: 1.85;
 }
 
-/* ==================== FINAL CALL TO ACTION ==================== */
 
 .about-page .about-final-cta,
 .about-page section.final-cta {
@@ -1117,7 +1102,6 @@
     background: var(--about-orange) !important;
 }
 
-/* ==================== DARK MODE ==================== */
 
 body.dark-mode .about-page,
 html[data-theme="dark"] .about-page,
@@ -1260,7 +1244,6 @@ html[dir="rtl"] .about-page .text-link:hover > span {
     transform: translateX(-3px);
 }
 
-/* ==================== ANIMATIONS ==================== */
 
 @keyframes aboutFadeUp {
     from {
@@ -1284,7 +1267,6 @@ html[dir="rtl"] .about-page .text-link:hover > span {
     }
 }
 
-/* ==================== TABLET ==================== */
 
 @media (max-width: 1050px) {
     .about-page .site-container {
@@ -1329,7 +1311,6 @@ html[dir="rtl"] .about-page .text-link:hover > span {
     }
 }
 
-/* ==================== MOBILE / SMALL TABLET ==================== */
 
 @media (max-width: 800px) {
     .about-page .section {
@@ -1396,7 +1377,6 @@ html[dir="rtl"] .about-page .text-link:hover > span {
     }
 }
 
-/* ==================== MOBILE ==================== */
 
 @media (max-width: 560px) {
     .about-page .site-container {
@@ -1707,7 +1687,6 @@ html[dir="rtl"] .about-page .text-link:hover > span {
     }
 }
 
-/* ==================== VERY SMALL MOBILE ==================== */
 
 @media (max-width: 360px) {
     .about-page .site-container {
@@ -1737,7 +1716,6 @@ html[dir="rtl"] .about-page .text-link:hover > span {
     }
 }
 
-/* ==================== REDUCED MOTION ACCESSIBILITY ==================== */
 
 @media (prefers-reduced-motion: reduce) {
     .about-page *,
@@ -1750,7 +1728,6 @@ html[dir="rtl"] .about-page .text-link:hover > span {
     }
 }
 
-/* ABOUT HERO — MATCH DOMESTIC PACKAGES TAGLINE */
 
 .about-page .about-hero-content > .section-eyebrow {
     display: inline-flex;
@@ -1769,7 +1746,6 @@ html[dir="rtl"] .about-page .text-link:hover > span {
     text-transform: uppercase;
 }
 
-/* Orange dot and soft glow */
 .about-page .about-hero-content > .section-eyebrow::before {
     content: "";
     display: inline-block;
@@ -1781,16 +1757,13 @@ html[dir="rtl"] .about-page .text-link:hover > span {
     box-shadow: 0 0 0 5px rgba(255, 138, 0, 0.12);
 }
 
-/* REMOVE GREEN EXPLORE BADGE FROM STORY IMAGE */
 .about-page .about-story-stamp {
     display: none !important;
 }
 
-/* REMOVE ONLY BOTTOM FLOATING CARD IN HERO */
 .about-page .about-hero-visual .about-floating-bottom {
     display: none !important;
 }
-/* About Us — Values section SVG icons */
 .about-values .about-value-icon {
     display: flex;
     align-items: center;
@@ -1811,7 +1784,6 @@ html[dir="rtl"] .about-page .text-link:hover > span {
     transform: translateY(-3px);
 }
 
-/* OUR TRAVEL PROCESS — SVG ICONS */
 
 .about-process .about-process-icon {
     display: inline-flex;
@@ -1833,9 +1805,6 @@ html[dir="rtl"] .about-page .text-link:hover > span {
     transform: translateY(-2px);
 }
 
-/* =========================================
-   TRAVELORA ABOUT PAGE — ANIMATIONS
-========================================= */
 
 @keyframes aboutFadeUp {
     from {
@@ -1868,7 +1837,6 @@ html[dir="rtl"] .about-page .text-link:hover > span {
     }
 }
 
-/* 1. Hero content */
 .about-hero-content > * {
     animation: aboutFadeUp 0.7s ease both;
 }
@@ -1893,7 +1861,6 @@ html[dir="rtl"] .about-page .text-link:hover > span {
     animation: aboutImageReveal 0.9s ease both;
 }
 
-/* 2. Floating hero cards */
 .about-floating-card {
     animation: aboutFadeUp 0.7s ease both,
                aboutFloat 4s ease-in-out 0.8s infinite;
@@ -1907,7 +1874,6 @@ html[dir="rtl"] .about-page .text-link:hover > span {
     animation-delay: 0.4s, 1.2s;
 }
 
-/* 3. Story images */
 .about-story-image {
     overflow: hidden;
 }
@@ -1924,7 +1890,6 @@ html[dir="rtl"] .about-page .text-link:hover > span {
     transform: scale(1.07);
 }
 
-/* 4. Mission and vision cards */
 .about-purpose-card {
     transition: transform 0.35s ease,
                 box-shadow 0.35s ease;
@@ -1943,7 +1908,6 @@ html[dir="rtl"] .about-page .text-link:hover > span {
     transform: scale(1.1);
 }
 
-/* 5. Values cards */
 .about-value-card {
     transition: transform 0.35s ease,
                 box-shadow 0.35s ease;
@@ -1962,7 +1926,6 @@ html[dir="rtl"] .about-page .text-link:hover > span {
     transform: rotate(-5deg) scale(1.08);
 }
 
-/* 6. Audience cards */
 .about-audience-card {
     transition: transform 0.35s ease,
                 box-shadow 0.35s ease;
@@ -1986,7 +1949,6 @@ html[dir="rtl"] .about-page .text-link:hover > span {
     transform: translateX(5px);
 }
 
-/* 7. Difference section */
 .about-difference-item {
     transition: transform 0.3s ease;
 }
@@ -2005,7 +1967,6 @@ html[dir="rtl"] .about-page .text-link:hover > span {
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
 }
 
-/* 8. Process cards */
 .about-process-card {
     transition: transform 0.35s ease,
                 box-shadow 0.35s ease;
@@ -2024,7 +1985,6 @@ html[dir="rtl"] .about-page .text-link:hover > span {
     transform: scale(1.1);
 }
 
-/* 9. Buttons and links */
 .about-page .btn {
     transition: transform 0.3s ease,
                 box-shadow 0.3s ease,
@@ -2036,7 +1996,6 @@ html[dir="rtl"] .about-page .text-link:hover > span {
     box-shadow: 0 9px 22px rgba(0, 0, 0, 0.12);
 }
 
-/* 10. Scroll reveal */
 .about-story-content,
 .about-purpose-card,
 .about-value-card,
@@ -2046,7 +2005,6 @@ html[dir="rtl"] .about-page .text-link:hover > span {
     animation: aboutFadeUp 0.7s ease both;
 }
 
-/* 11. Respect reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
     .about-hero-content > *,
     .about-hero-visual,
@@ -2066,7 +2024,6 @@ html[dir="rtl"] .about-page .text-link:hover > span {
     }
 }
 
-/* About page — match Travelora font */
 .about-page {
     font-family: "DM Sans", sans-serif !important;
     font-style: normal !important;
@@ -2086,7 +2043,6 @@ html[dir="rtl"] .about-page .text-link:hover > span {
     font-style: normal !important;
 }
 
-/* Match Home 2 font styling */
 .about-page,
 .about-page h1,
 .about-page h2,
@@ -2100,29 +2056,23 @@ html[dir="rtl"] .about-page .text-link:hover > span {
     font-style: normal;
 }
 
-/* Keep decorative labels consistent */
 .about-page .section-eyebrow {
     font-family: "Poppins", sans-serif !important;
 }
 
-/* ABOUT PAGE — MATCH HOME 2 TYPOGRAPHY */
 body .about-page,
 body .about-page * {
     font-family: "Poppins", sans-serif !important;
     font-style: normal !important;
 }
 
-/* About page typography — consistent Poppins font */
 body .about-page,
 body .about-page * {
     font-family: "Poppins", sans-serif !important;
     font-style: normal !important;
 }
 
-/* ============================================
-   TRAVELORA | ABOUT PAGE
-   OUR HISTORY - PREMIUM IMAGE CARD DESIGN
-============================================ */
+
 
 .about-page .about-history {
     position: relative;
@@ -2136,7 +2086,6 @@ body .about-page * {
     margin: 0 auto;
 }
 
-/* ---------- SECTION HEADING ---------- */
 
 .about-page .history-heading {
     max-width: 740px;
@@ -2171,7 +2120,6 @@ body .about-page * {
     line-height: 1.9;
 }
 
-/* ---------- HISTORY GRID ---------- */
 
 .about-page .history-grid {
     display: grid;
@@ -2180,7 +2128,6 @@ body .about-page * {
     gap: 24px;
 }
 
-/* ---------- HISTORY CARD ---------- */
 
 .about-page .history-card {
     position: relative;
@@ -2204,7 +2151,6 @@ body .about-page * {
     box-shadow: 0 18px 40px rgba(23, 60, 70, 0.13);
 }
 
-/* Orange top accent */
 
 .about-page .history-card::before {
     position: absolute;
@@ -2222,7 +2168,6 @@ body .about-page * {
     width: 100%;
 }
 
-/* ---------- HISTORY IMAGES ---------- */
 
 .about-page .history-image {
     position: relative;
@@ -2245,7 +2190,6 @@ body .about-page * {
     transform: scale(1.06);
 }
 
-/* Image overlay */
 
 .about-page .history-image::after {
     position: absolute;
@@ -2259,7 +2203,6 @@ body .about-page * {
     pointer-events: none;
 }
 
-/* Number badge */
 
 .about-page .history-number {
     position: absolute;
@@ -2288,7 +2231,6 @@ body .about-page * {
     transform: translateY(-3px);
 }
 
-/* ---------- CARD CONTENT ---------- */
 
 .about-page .history-content {
     display: flex;
@@ -2328,7 +2270,6 @@ body .about-page * {
     line-height: 1.9;
 }
 
-/* ---------- CLOSING LINE ---------- */
 
 .about-page .history-footer {
     display: flex;
@@ -2356,7 +2297,6 @@ body .about-page * {
     border-radius: 5px;
 }
 
-/* ---------- TABLET ---------- */
 
 @media (max-width: 900px) {
     .about-page .about-history {
@@ -2379,7 +2319,6 @@ body .about-page * {
     }
 }
 
-/* ---------- MOBILE ---------- */
 
 @media (max-width: 600px) {
     .about-page .about-history {
@@ -2444,7 +2383,6 @@ body .about-page * {
     }
 }
 
-/* ---------- DARK MODE ---------- */
 
 .dark-mode .about-page .about-history {
     background: #172A2C;
@@ -2477,7 +2415,6 @@ body .about-page * {
     color: #35CECA;
 }
 
-/* ---------- REDUCED MOTION ---------- */
 
 @media (prefers-reduced-motion: reduce) {
     .about-page .history-card,
@@ -2495,13 +2432,11 @@ body .about-page * {
     }
 }
 
-/* Remove History Card Numbers */
 
 .about-page .history-number {
     display: none !important;
 }
 
-/* History Section Eyebrow Alignment */
 
 .about-page .history-heading .section-eyebrow {
     display: inline-flex;
@@ -2530,7 +2465,6 @@ body .about-page * {
 
 
 
-/* Primary CTA button */
 .about-page .about-final-cta .btn-light {
     background: #FF8A00;
     color: #FFFFFF;
@@ -2548,7 +2482,6 @@ body .about-page * {
     transform: translateY(-2px);
 }
 
-/* Secondary CTA button */
 .about-page .about-final-cta .btn-cta-outline {
     background: transparent;
     color: #007E7C;
@@ -2568,9 +2501,7 @@ body .about-page * {
 }
 
 
-/* ABOUT PAGE — FINAL CTA BUTTONS */
 
-/* Primary button: orange pill */
 .about-page .about-final-cta .btn-light {
     background: #FF8A00;
     color: #FFFFFF;
@@ -2592,7 +2523,6 @@ body .about-page * {
     transform: translateY(-2px);
 }
 
-/* Secondary button: white pill with teal text */
 .about-page .about-final-cta .btn-cta-outline {
     background: #FFFFFF;
     color: #007E7C;
@@ -2614,11 +2544,7 @@ body .about-page * {
     border-color: #E2F7F5;
     transform: translateY(-2px);
 }
-/* =========================================
-   TRAVELORA ABOUT PAGE — FINAL CTA BUTTONS
-   ========================================= */
 
-/* Keep both buttons the same pill shape */
 main.about-page section.about-final-cta .final-cta-actions .btn {
     display: inline-flex !important;
     align-items: center !important;
@@ -2639,14 +2565,12 @@ main.about-page section.about-final-cta .final-cta-actions .btn {
                 transform 0.3s ease;
 }
 
-/* PRIMARY — ORANGE PILL */
 main.about-page section.about-final-cta .final-cta-actions a.btn-light {
     background: #FF8A00 !important;
     color: #FFFFFF !important;
     border: 2px solid #FF8A00 !important;
 }
 
-/* Primary hover */
 main.about-page section.about-final-cta .final-cta-actions a.btn-light:hover {
     background: #E77E00 !important;
     color: #FFFFFF !important;
@@ -2654,14 +2578,12 @@ main.about-page section.about-final-cta .final-cta-actions a.btn-light:hover {
     transform: translateY(-2px);
 }
 
-/* SECONDARY — WHITE PILL, TEAL TEXT */
 main.about-page section.about-final-cta .final-cta-actions a.btn-cta-outline {
     background: #FFFFFF !important;
     color: #007E7C !important;
     border: 2px solid #FFFFFF !important;
 }
 
-/* Secondary hover */
 main.about-page section.about-final-cta .final-cta-actions a.btn-cta-outline:hover {
     background: #E2F7F5 !important;
     color: #007E7C !important;
@@ -2669,7 +2591,6 @@ main.about-page section.about-final-cta .final-cta-actions a.btn-cta-outline:hov
     transform: translateY(-2px);
 }
 
-/* Secondary CTA button */
 main.about-page section.about-final-cta
 .final-cta-actions a.btn-cta-outline {
     background: #FFFFFF !important;
@@ -2679,7 +2600,6 @@ main.about-page section.about-final-cta
     transition: transform 0.3s ease !important;
 }
 
-/* Hover: keep the same colors */
 main.about-page section.about-final-cta
 .final-cta-actions a.btn-cta-outline:hover {
     background: #FFFFFF !important;
@@ -2689,14 +2609,11 @@ main.about-page section.about-final-cta
     transform: translateY(-2px);
 }
 
-/* Hide numbers on audience cards */
 .about-page .about-audience-index {
     display: none !important;
 }
 
-/* =========================================
-   TRAVELORA ABOUT PAGE — CONSISTENT DM SANS
-   ========================================= */
+
 
 main.about-page,
 main.about-page * {
@@ -2704,7 +2621,6 @@ main.about-page * {
     font-style: normal;
 }
 
-/* Main headings */
 main.about-page h1,
 main.about-page h2 {
     font-weight: 700;
@@ -2712,7 +2628,6 @@ main.about-page h2 {
     letter-spacing: -0.5px;
 }
 
-/* Card and smaller headings */
 main.about-page h3,
 main.about-page h4,
 main.about-page h5,
@@ -2721,14 +2636,12 @@ main.about-page h6 {
     line-height: 1.4;
 }
 
-/* Paragraphs */
 main.about-page p {
     font-size: 15px;
     font-weight: 400;
     line-height: 1.85;
 }
 
-/* Small labels */
 main.about-page .section-eyebrow,
 main.about-page .history-label {
     font-size: 11px;
@@ -2737,13 +2650,11 @@ main.about-page .history-label {
     text-transform: uppercase;
 }
 
-/* Navigation and buttons */
 main.about-page a,
 main.about-page button {
     font-weight: 600;
 }
 
-/* Mobile typography */
 @media (max-width: 600px) {
     main.about-page h1 {
         font-size: clamp(32px, 9vw, 42px);
@@ -2758,7 +2669,6 @@ main.about-page button {
         line-height: 1.8;
     }
 }
-/* Match About page typography with Home 1 */
 main.about-page,
 main.about-page * {
     font-family: "DM Sans", sans-serif;
@@ -2771,9 +2681,6 @@ main.about-page h3 {
     font-weight: 700;
 }
 
-/* =========================================
-   TRAVELORA ABOUT PAGE — HOME 1 TYPOGRAPHY
-   ========================================= */
 
 main.about-page,
 main.about-page * {
@@ -2821,23 +2728,16 @@ main.about-page button {
     }
 }
 
-/* =========================================
-   ABOUT PAGE — MATCH TRAVELORA TYPOGRAPHY
-   Header and footer remain unchanged
-========================================= */
 
-.about-page {
     font-family: 'DM Sans', sans-serif;
-}
 
-/* Main hero heading */
+
 .about-page .about-hero-content h1 {
     font-size: 48px;
     font-weight: 700;
     line-height: 1.2;
 }
 
-/* Section headings */
 .about-page .about-story-content h2,
 .about-page .history-heading h2,
 .about-page .section-heading h2,
@@ -2849,7 +2749,6 @@ main.about-page button {
     line-height: 1.25;
 }
 
-/* Card headings */
 .about-page .history-content h3,
 .about-page .about-purpose-card h3,
 .about-page .about-value-card h3,
@@ -2861,21 +2760,18 @@ main.about-page button {
     line-height: 1.3;
 }
 
-/* Hero image caption */
 .about-page .about-hero-image-caption h2 {
     font-size: 20px;
     font-weight: 600;
     line-height: 1.4;
 }
 
-/* Paragraphs */
 .about-page p {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.7;
 }
 
-/* Section labels and eyebrow text */
 .about-page .section-eyebrow,
 .about-page .history-label,
 .about-page .about-card-kicker,
@@ -2884,7 +2780,6 @@ main.about-page button {
     font-weight: 500;
 }
 
-/* Buttons and text links */
 .about-page .btn,
 .about-page a.btn,
 .about-page .text-link {
@@ -2892,7 +2787,6 @@ main.about-page button {
     font-weight: 600;
 }
 
-/* Mobile typography */
 @media (max-width: 768px) {
     .about-page .about-hero-content h1 {
         font-size: 36px;
@@ -2921,15 +2815,12 @@ main.about-page button {
     }
 }
 
-/* ==========================================
-   TRAVELORA ABOUT PAGE — TYPOGRAPHY
-   ========================================== */
+
 
 body main#main-content.about-page {
     font-family: 'DM Sans', sans-serif !important;
 }
 
-/* H1 — Main heading */
 body main#main-content.about-page h1 {
     font-family: 'DM Sans', sans-serif !important;
     font-size: 48px !important;
@@ -2937,7 +2828,6 @@ body main#main-content.about-page h1 {
     line-height: 1.2 !important;
 }
 
-/* H2 — Section headings */
 body main#main-content.about-page h2 {
     font-family: 'DM Sans', sans-serif !important;
     font-size: 36px !important;
@@ -2945,7 +2835,6 @@ body main#main-content.about-page h2 {
     line-height: 1.25 !important;
 }
 
-/* H3 — Card and feature headings */
 body main#main-content.about-page h3 {
     font-family: 'DM Sans', sans-serif !important;
     font-size: 24px !important;
@@ -2953,7 +2842,6 @@ body main#main-content.about-page h3 {
     line-height: 1.3 !important;
 }
 
-/* Paragraphs */
 body main#main-content.about-page p {
     font-family: 'DM Sans', sans-serif !important;
     font-size: 16px !important;
@@ -2961,7 +2849,6 @@ body main#main-content.about-page p {
     line-height: 1.7 !important;
 }
 
-/* Section labels and card labels */
 body main#main-content.about-page .section-eyebrow,
 body main#main-content.about-page .history-label,
 body main#main-content.about-page .about-card-kicker,
@@ -2975,7 +2862,6 @@ body main#main-content.about-page .about-audience-index {
     font-weight: 500 !important;
 }
 
-/* Buttons and text links */
 body main#main-content.about-page .btn,
 body main#main-content.about-page a.btn,
 body main#main-content.about-page .text-link {
@@ -2984,7 +2870,6 @@ body main#main-content.about-page .text-link {
     font-weight: 600 !important;
 }
 
-/* Mobile typography */
 @media (max-width: 768px) {
     body main#main-content.about-page h1 {
         font-size: 36px !important;
@@ -2999,10 +2884,7 @@ body main#main-content.about-page .text-link {
     }
 }
 
-/* =========================================
-   ABOUT HERO TAGLINE — SMALL ORANGE DOT
-   Subtle halo | No animation | No extra glow
-========================================= */
+
 
 .about-hero .section-eyebrow {
     display: inline-flex;
@@ -3010,7 +2892,6 @@ body main#main-content.about-page .text-link {
     gap: 12px;
 }
 
-/* Small orange dot */
 .about-hero .section-eyebrow::before {
     content: "";
     display: inline-block;
@@ -3026,7 +2907,6 @@ body main#main-content.about-page .text-link {
     transform: none;
 }
 
-/* Remove any extra pseudo-element glow */
 .about-hero .section-eyebrow::after {
     content: none;
     display: none;
@@ -3034,7 +2914,6 @@ body main#main-content.about-page .text-link {
     box-shadow: none;
 }
 
-/* ABOUT HERO TAGLINE — EXTRA SMALL ORANGE DOT */
 
 .about-hero .section-eyebrow {
     display: inline-flex;

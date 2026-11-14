@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#009C9A">
+    <meta name="description" content="Manage your Travelora profile, personal details, contact information and travel preferences.">
+
+    <title>My Profile | Travelora</title>
+
+    <link rel="icon" href="favicon.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="my-profile.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="dashboard-page">
+
+<div class="dashboard-app">
+
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+
+        <div class="sidebar-brand">
+            <a href="index.html" class="brand">
+                <img src="logo.png" alt="Travelora Logo">
+
+                <div class="brand-text">
+                    <span><strong>Travel</strong><b>ora</b></span>
+                    <small>EXPLORE THE WORLD</small>
+                </div>
+            </a>
+
+            <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+
+
+        <div class="sidebar-user">
+            <div class="sidebar-avatar">
+                <i data-lucide="user-round"></i>
+            </div>
+
+            <div>
+                <h3>Traveller</h3>
+                <p>Travel Member</p>
+            </div>
+        </div>
+
+
+        <div class="sidebar-menu">
+
+            <p class="sidebar-label">MAIN MENU</p>
+
+            <a href="dashboard.html" class="sidebar-link">
+                <i data-lucide="layout-dashboard"></i>
+                <span>Overview</span>
+            </a>
+
+            <a href="my-bookings.html" class="sidebar-link">
+                <i data-lucide="calendar-check"></i>
+                <span>My Bookings</span>
+            </a>
+
+            <a href="saved-packages.html" class="sidebar-link">
+                <i data-lucide="heart"></i>
+                <span>Saved Packages</span>
+            </a>
+
+            <a href="my-itineraries.html" class="sidebar-link">
+                <i data-lucide="map"></i>
+                <span>My Itineraries</span>
+            </a>
+
+            <a href="tickets-invoices.html" class="sidebar-link">
+                <i data-lucide="ticket"></i>
+                <span>Tickets &amp; Invoices</span>
+            </a>
+
+
+            <p class="sidebar-label">ACCOUNT</p>
+
+            <a href="my-profile.html" class="sidebar-link active" aria-current="page">
+                <i data-lucide="user-round"></i>
+                <span>My Profile</span>
+            </a>
+
+        </div>
+
+
+        <div class="sidebar-support">
+
+            <div class="support-icon">
+                <i data-lucide="headset"></i>
+            </div>
+
+            <h4>Need Assistance?</h4>
+
+            <p>Our travel experts are ready to help you.</p>
+
+            <a href="contact.html">
+                Contact Support
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+
+        </div>
+
+
+        <a href="index.html" class="sidebar-back">
+            <i data-lucide="log-out"></i>
+            <span>Back to Website</span>
+        </a>
+
+    </aside>
+
+
+    <main class="dashboard-main">
+
+
+        <div class="dashboard-topbar">
+
+            <div class="topbar-left">
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                    <i data-lucide="menu"></i>
+                </button>
+
+                <div>
+                    <p class="topbar-greeting">YOUR TRAVEL SPACE</p>
+                    <h1>My Profile</h1>
+                </div>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <div class="dashboard-search">
+                    <i data-lucide="search"></i>
+                    <input type="search" placeholder="Search anything..." aria-label="Search">
+                </div>
+
+                <button
+                    id="rtlBtn"
+                    class="header-icon-btn"
+                    type="button"
+                    title="Toggle RTL"
+                    aria-label="Toggle right-to-left layout"
+                    aria-pressed="false">
+                    <span aria-hidden="true">⇄</span>
+                </button>
+
+                <button class="topbar-icon" id="themeBtn" aria-label="Toggle dark mode">
+                    <i data-lucide="moon"></i>
+                </button>
+
+                <button class="topbar-icon notification-btn" aria-label="Notifications">
+                    <i data-lucide="bell"></i>
+                    <span class="notification-dot"></span>
+                </button>
+
+
+                <div class="topbar-profile-wrapper">
+
+                    <button
+                        class="topbar-profile"
+                        id="profileDropdownBtn"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="profileDropdown"
+                        aria-label="Open profile menu">
+
+                        <div class="topbar-avatar">
+                            <i data-lucide="user-round"></i>
+                        </div>
+
+                        <div class="topbar-profile-info">
+                            <h4>Traveller</h4>
+                            <p>Member</p>
+                        </div>
+
+                        <i data-lucide="chevron-down" class="profile-chevron"></i>
+
+                    </button>
+
+                    <div class="profile-dropdown" id="profileDropdown">
+
+                        <a href="my-profile.html">
+                            <i data-lucide="user-round"></i>
+                            <span>My Profile</span>
+                        </a>
+
+                        <a href="settings.html">
+                            <i data-lucide="settings"></i>
+                            <span>Settings</span>
+                        </a>
+
+                        <a href="my-bookings.html">
+                            <i data-lucide="calendar-check"></i>
+                            <span>My Bookings</span>
+                        </a>
+
+                        <div class="profile-dropdown-divider"></div>
+
+                        <a href="index.html" class="dropdown-logout">
+                            <i data-lucide="log-out"></i>
+                            <span>Logout</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="profile-page">
+
+
+            <section class="profile-welcome">
+
+                <div class="profile-welcome-content">
+
+                    <span class="section-eyebrow">
+                        YOUR PERSONAL SPACE
+                    </span>
+
+                    <h1>My Profile</h1>
+
+                    <p>
+                        Manage your personal details, update your contact
+                        information and customise your travel preferences
+                        for a more personalised travel experience.
+                    </p>
+
+                </div>
+
+                <div class="profile-welcome-icon">
+                    <i data-lucide="user-round"></i>
+                </div>
+
+            </section>
+
+
+            <section class="profile-overview">
+
+                <div class="profile-avatar-large">
+                    <i data-lucide="user-round"></i>
+                </div>
+
+                <div class="profile-overview-info">
+
+                    <h2>Traveller</h2>
+
+                    <p>Travelora Member</p>
+
+                    <span class="profile-member-badge">
+                        <i data-lucide="badge-check"></i>
+                        Member Since 2026
+                    </span>
+
+                </div>
+
+                <div class="profile-overview-action">
+                    <span>ACCOUNT STATUS</span>
+
+                    <div class="profile-active-status">
+                        <span></span>
+                        Active
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section class="profile-section">
+
+                <div class="profile-section-heading">
+
+                    <div>
+                        <span class="section-eyebrow">ABOUT YOU</span>
+
+                        <h2>Personal Information</h2>
+
+                        <p>
+                            Keep your personal details accurate and up to date.
+                        </p>
+                    </div>
+
+                    <div class="profile-section-icon">
+                        <i data-lucide="user-round"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="profile-form-card">
+
+                    <div class="profile-form-grid">
+
+                        <div class="profile-form-group">
+                            <label for="firstName">First Name</label>
+
+                            <input
+                                type="text"
+                                id="firstName"
+                                placeholder="Enter your first name">
+                        </div>
+
+
+                        <div class="profile-form-group">
+                            <label for="lastName">Last Name</label>
+
+                            <input
+                                type="text"
+                                id="lastName"
+                                placeholder="Enter your last name">
+                        </div>
+
+
+                        <div class="profile-form-group">
+                            <label for="dateOfBirth">Date of Birth</label>
+
+                            <input
+                                type="date"
+                                id="dateOfBirth">
+                        </div>
+
+
+                        <div class="profile-form-group">
+                            <label for="gender">Gender</label>
+
+                            <select id="gender">
+                                <option value="">Select gender</option>
+                                <option value="female">Female</option>
+                                <option value="male">Male</option>
+                                <option value="other">Other</option>
+                                <option value="prefer-not-to-say">Prefer not to say</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="profile-section">
+
+                <div class="profile-section-heading">
+
+                    <div>
+                        <span class="section-eyebrow">STAY CONNECTED</span>
+
+                        <h2>Contact Information</h2>
+
+                        <p>
+                            Manage the contact details associated with your account.
+                        </p>
+                    </div>
+
+                    <div class="profile-section-icon">
+                        <i data-lucide="contact"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="profile-form-card">
+
+                    <div class="profile-form-grid">
+
+                        <div class="profile-form-group">
+                            <label for="emailAddress">Email Address</label>
+
+                            <div class="profile-input-icon">
+                                <i data-lucide="mail"></i>
+
+                                <input
+                                    type="email"
+                                    id="emailAddress"
+                                    placeholder="Enter your email address">
+                            </div>
+                        </div>
+
+
+                        <div class="profile-form-group">
+                            <label for="phoneNumber">Phone Number</label>
+
+                            <div class="profile-input-icon">
+                                <i data-lucide="phone"></i>
+
+                                <input
+                                    type="tel"
+                                    id="phoneNumber"
+                                    placeholder="Enter your phone number">
+                            </div>
+                        </div>
+
+
+                        <div class="profile-form-group profile-full-width">
+                            <label for="address">Street Address</label>
+
+                            <textarea
+                                id="address"
+                                rows="3"
+                                placeholder="Enter your street address"></textarea>
+                        </div>
+
+
+                        <div class="profile-form-group">
+                            <label for="city">City</label>
+
+                            <input
+                                type="text"
+                                id="city"
+                                placeholder="Enter your city">
+                        </div>
+
+
+                        <div class="profile-form-group">
+                            <label for="country">Country</label>
+
+                            <input
+                                type="text"
+                                id="country"
+                                placeholder="Enter your country">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="profile-section">
+
+                <div class="profile-section-heading">
+
+                    <div>
+                        <span class="section-eyebrow">TRAVEL YOUR WAY</span>
+
+                        <h2>Travel Preferences</h2>
+
+                        <p>
+                            Customise your travel interests and preferred
+                            holiday experiences.
+                        </p>
+                    </div>
+
+                    <div class="profile-section-icon">
+                        <i data-lucide="compass"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="profile-form-card">
+
+                    <div class="profile-form-grid">
+
+                        <div class="profile-form-group">
+                            <label for="travelStyle">Preferred Travel Style</label>
+
+                            <select id="travelStyle">
+                                <option value="">Select travel style</option>
+                                <option value="adventure">Adventure Travel</option>
+                                <option value="relaxation">Relaxation</option>
+                                <option value="cultural">Cultural Experiences</option>
+                                <option value="luxury">Luxury Travel</option>
+                                <option value="budget">Budget Travel</option>
+                                <option value="nature">Nature &amp; Wildlife</option>
+                            </select>
+                        </div>
+
+
+                        <div class="profile-form-group">
+                            <label for="tripType">Preferred Trip Type</label>
+
+                            <select id="tripType">
+                                <option value="">Select trip type</option>
+                                <option value="domestic">Domestic Holidays</option>
+                                <option value="international">International Holidays</option>
+                                <option value="honeymoon">Honeymoon Trips</option>
+                                <option value="family">Family Holidays</option>
+                                <option value="solo">Solo Travel</option>
+                                <option value="group">Group Tours</option>
+                            </select>
+                        </div>
+
+
+                        <div class="profile-form-group">
+                            <label for="travelBudget">Preferred Budget</label>
+
+                            <select id="travelBudget">
+                                <option value="">Select budget range</option>
+                                <option value="below-10000">Below ₹10,000</option>
+                                <option value="10000-25000">₹10,000 – ₹25,000</option>
+                                <option value="25000-50000">₹25,000 – ₹50,000</option>
+                                <option value="50000-100000">₹50,000 – ₹1,00,000</option>
+                                <option value="above-100000">Above ₹1,00,000</option>
+                            </select>
+                        </div>
+
+
+                        <div class="profile-form-group">
+                            <label for="travelCompanion">Travel Companion</label>
+
+                            <select id="travelCompanion">
+                                <option value="">Select companion</option>
+                                <option value="solo">Solo</option>
+                                <option value="partner">Partner</option>
+                                <option value="family">Family</option>
+                                <option value="friends">Friends</option>
+                                <option value="group">Travel Group</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="profile-section">
+
+                <div class="profile-section-heading">
+
+                    <div>
+                        <span class="section-eyebrow">KEEP IT SECURE</span>
+
+                        <h2>Account Security</h2>
+
+                        <p>
+                            Maintain your account security by updating your password.
+                        </p>
+                    </div>
+
+                    <div class="profile-section-icon">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="profile-form-card">
+
+                    <div class="profile-form-grid">
+
+                        <div class="profile-form-group profile-full-width">
+                            <label for="currentPassword">Current Password</label>
+
+                            <div class="profile-input-icon password-input">
+                                <i data-lucide="lock"></i>
+
+                                <input
+                                    type="password"
+                                    id="currentPassword"
+                                    placeholder="Enter current password">
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    data-target="currentPassword"
+                                    aria-label="Show password">
+                                    <i data-lucide="eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="profile-form-group">
+                            <label for="newPassword">New Password</label>
+
+                            <div class="profile-input-icon password-input">
+                                <i data-lucide="lock"></i>
+
+                                <input
+                                    type="password"
+                                    id="newPassword"
+                                    placeholder="Enter new password">
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    data-target="newPassword"
+                                    aria-label="Show password">
+                                    <i data-lucide="eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="profile-form-group">
+                            <label for="confirmPassword">Confirm New Password</label>
+
+                            <div class="profile-input-icon password-input">
+                                <i data-lucide="lock"></i>
+
+                                <input
+                                    type="password"
+                                    id="confirmPassword"
+                                    placeholder="Confirm new password">
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    data-target="confirmPassword"
+                                    aria-label="Show password">
+                                    <i data-lucide="eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <div class="profile-form-actions">
+
+                <button type="button" class="profile-cancel-btn" id="cancelProfileBtn">
+                    Cancel
+                </button>
+
+                <button type="button" class="profile-save-btn" id="saveProfileBtn">
+                    <i data-lucide="save"></i>
+                    Save Changes
+                </button>
+
+            </div>
+
+
+            <div class="profile-message" id="profileMessage" role="status" aria-live="polite"></div>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    if (window.lucide) {
+        lucide.createIcons();
+    }
+
+
+    const sidebar = document.getElementById("dashboardSidebar");
+    const menuToggle = document.getElementById("menuToggle");
+    const sidebarClose = document.getElementById("sidebarClose");
+    const overlay = document.getElementById("sidebarOverlay");
+
+    function openSidebar() {
+        sidebar?.classList.add("sidebar-open");
+        overlay?.classList.add("active");
+    }
+
+    function closeSidebar() {
+        sidebar?.classList.remove("sidebar-open");
+        overlay?.classList.remove("active");
+    }
+
+    menuToggle?.addEventListener("click", openSidebar);
+    sidebarClose?.addEventListener("click", closeSidebar);
+    overlay?.addEventListener("click", closeSidebar);
+
+
+    const profileBtn = document.getElementById("profileDropdownBtn");
+    const profileDropdown = document.getElementById("profileDropdown");
+
+    profileBtn?.addEventListener("click", function (event) {
+        event.stopPropagation();
+
+        const isOpen = profileDropdown.classList.toggle("show");
+
+        profileBtn.setAttribute("aria-expanded", isOpen);
+    });
+
+    document.addEventListener("click", function (event) {
+        if (
+            !profileDropdown?.contains(event.target) &&
+            !profileBtn?.contains(event.target)
+        ) {
+            profileDropdown?.classList.remove("show");
+            profileBtn?.setAttribute("aria-expanded", "false");
+        }
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            profileDropdown?.classList.remove("show");
+            profileBtn?.setAttribute("aria-expanded", "false");
+        }
+    });
+
+
+    const themeBtn = document.getElementById("themeBtn");
+
+    if (localStorage.getItem("travelora-theme") === "dark") {
+        document.body.classList.add("dark-mode");
+    }
+
+    function updateThemeIcon() {
+        const icon = themeBtn?.querySelector("i");
+
+        if (icon && window.lucide) {
+            icon.setAttribute(
+                "data-lucide",
+                document.body.classList.contains("dark-mode") ? "sun" : "moon"
+            );
+
+            lucide.createIcons();
+        }
+    }
+
+    themeBtn?.addEventListener("click", function () {
+
+        document.body.classList.toggle("dark-mode");
+
+        localStorage.setItem(
+            "travelora-theme",
+            document.body.classList.contains("dark-mode") ? "dark" : "light"
+        );
+
+        updateThemeIcon();
+    });
+
+    updateThemeIcon();
+
+
+    const rtlBtn = document.getElementById("rtlBtn");
+
+    if (localStorage.getItem("travelora-direction") === "rtl") {
+        document.documentElement.dir = "rtl";
+    }
+
+    function updateRTLButton() {
+        rtlBtn?.setAttribute(
+            "aria-pressed",
+            document.documentElement.dir === "rtl"
+        );
+    }
+
+    rtlBtn?.addEventListener("click", function () {
+
+        document.documentElement.dir =
+            document.documentElement.dir === "rtl" ? "ltr" : "rtl";
+
+        localStorage.setItem(
+            "travelora-direction",
+            document.documentElement.dir
+        );
+
+        updateRTLButton();
+    });
+
+    updateRTLButton();
+
+
+    document.querySelectorAll(".password-toggle").forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            const target = document.getElementById(this.dataset.target);
+
+            if (!target) return;
+
+            const showPassword = target.type === "password";
+
+            target.type = showPassword ? "text" : "password";
+
+            this.innerHTML = showPassword
+                ? '<i data-lucide="eye-off"></i>'
+                : '<i data-lucide="eye"></i>';
+
+            this.setAttribute(
+                "aria-label",
+                showPassword ? "Hide password" : "Show password"
+            );
+
+            lucide.createIcons();
+        });
+
+    });
+
+
+    const profileFields = Array.from(
+        document.querySelectorAll(
+            ".profile-page input, .profile-page select, .profile-page textarea"
+        )
+    );
+
+    const originalValues = profileFields.map(field => field.value);
+
+    const saveBtn = document.getElementById("saveProfileBtn");
+    const cancelBtn = document.getElementById("cancelProfileBtn");
+    const message = document.getElementById("profileMessage");
+
+    function showMessage(text, type) {
+        message.textContent = text;
+        message.className = "profile-message " + type;
+    }
+
+
+    saveBtn?.addEventListener("click", function () {
+
+        const currentPassword = document.getElementById("currentPassword").value;
+        const newPassword = document.getElementById("newPassword").value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
+
+        if (currentPassword || newPassword || confirmPassword) {
+
+            if (!currentPassword || !newPassword || !confirmPassword) {
+                showMessage("Please complete all password fields.", "error");
+                return;
+            }
+
+            if (newPassword.length < 8) {
+                showMessage("Your new password must contain at least 8 characters.", "error");
+                return;
+            }
+
+            if (newPassword !== confirmPassword) {
+                showMessage("New password and confirmation do not match.", "error");
+                return;
+            }
+
+        }
+
+        showMessage(
+            "Your changes are ready. Connect this page to your account backend to save them permanently.",
+            "success"
+        );
+
+    });
+
+
+    cancelBtn?.addEventListener("click", function () {
+
+        profileFields.forEach(function (field, index) {
+            field.value = originalValues[index];
+        });
+
+        showMessage("Your unsaved changes have been cleared.", "success");
+
+    });
+
+});
+</script>
+
+</body>
+</html>

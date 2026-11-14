@@ -1,10 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     "use strict";
 
-    // ----------------------------------
-    // 1. SAFE LOCAL STORAGE HELPERS
-    // ----------------------------------
-
+   
     const readStorage = (key, fallback = []) => {
         try {
             const value = JSON.parse(localStorage.getItem(key));
@@ -24,9 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // ----------------------------------
-    // 2. SAVE AND UNSAVE DESTINATIONS
-    // ----------------------------------
+   
 
     const savedKey = "travelora-saved-destinations";
     let savedDestinations = readStorage(savedKey);
@@ -84,10 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateSaveButtons();
     updateSavedCount();
 
-    // ----------------------------------
-    // 3. SEARCH DESTINATIONS
-    // ----------------------------------
-
+    
     const searchInput = document.getElementById("destinationSearch");
     const searchMessage = document.getElementById(
         "destinationSearchMessage"
@@ -119,9 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // ----------------------------------
-    // 4. TRIP PLANNER
-    // ----------------------------------
+   
 
     const plannerButtons = document.querySelectorAll(
         '.dashboard-hero-outline, .travel-planner-content .btn'
@@ -148,9 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // ----------------------------------
-    // 5. DEMO ITINERARY CREATION
-    // ----------------------------------
+   
 
     const itineraryKey = "travelora-demo-itineraries";
     let itineraries = readStorage(itineraryKey);
@@ -213,10 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
         renderItineraries();
     }
 
-    // ----------------------------------
-    // 6. CREATE AN OPTIONAL TRIP FORM
-    // ----------------------------------
-
+   
     const plannerSection = document.querySelector(
         ".travel-planner-section"
     );
@@ -358,9 +343,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // ----------------------------------
-    // 7. DATE AND ICON REFRESH
-    // ----------------------------------
+   
 
     const dateElement = document.getElementById("dashboardDate");
 

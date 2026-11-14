@@ -1,12 +1,8 @@
-/* ==========================================================
-   TRAVELORA — COMPLETE JAVASCRIPT
-   Dark Mode | RTL/LTR | Mobile Menu | Home Dropdown
-========================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
-    /* --------------------------------------------------
-       1. ELEMENTS
-    -------------------------------------------------- */
+
+    
 
     const html = document.documentElement;
     const body = document.body;
@@ -23,14 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const homeDropdown = document.querySelector(".home-dropdown");
 
 
-    /* --------------------------------------------------
-       2. DARK MODE / LIGHT MODE
-    -------------------------------------------------- */
+    
 
     function applyTheme(theme) {
+
         body.classList.toggle("dark-mode", theme === "dark");
 
         if (themeBtn) {
+
             themeBtn.setAttribute(
                 "aria-pressed",
                 String(theme === "dark")
@@ -48,7 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let savedTheme = "light";
 
     try {
-        savedTheme = localStorage.getItem("travelora-theme") || "light";
+        savedTheme =
+            localStorage.getItem("travelora-theme") || "light";
     } catch (error) {
         savedTheme = "light";
     }
@@ -56,8 +53,11 @@ document.addEventListener("DOMContentLoaded", () => {
     applyTheme(savedTheme);
 
     if (themeBtn) {
+
         themeBtn.addEventListener("click", () => {
+
             const isDark = body.classList.contains("dark-mode");
+
             const newTheme = isDark ? "light" : "dark";
 
             applyTheme(newTheme);
@@ -65,20 +65,19 @@ document.addEventListener("DOMContentLoaded", () => {
             try {
                 localStorage.setItem("travelora-theme", newTheme);
             } catch (error) {
-                // Theme still works for the current page.
             }
         });
     }
 
 
-    /* --------------------------------------------------
-       3. RTL / LTR DIRECTION
-    -------------------------------------------------- */
+    
 
     function applyDirection(direction) {
+
         html.setAttribute("dir", direction);
 
         if (rtlBtn) {
+
             rtlBtn.setAttribute(
                 "aria-pressed",
                 String(direction === "rtl")
@@ -105,8 +104,12 @@ document.addEventListener("DOMContentLoaded", () => {
     applyDirection(savedDirection);
 
     if (rtlBtn) {
+
         rtlBtn.addEventListener("click", () => {
-            const currentDirection = html.getAttribute("dir") || "ltr";
+
+            const currentDirection =
+                html.getAttribute("dir") || "ltr";
+
             const newDirection =
                 currentDirection === "ltr" ? "rtl" : "ltr";
 
@@ -118,23 +121,22 @@ document.addEventListener("DOMContentLoaded", () => {
                     newDirection
                 );
             } catch (error) {
-                // Direction still works for the current page.
             }
         });
     }
 
 
-    /* --------------------------------------------------
-       4. MOBILE NAVIGATION
-    -------------------------------------------------- */
+    
 
     function closeMobileMenu() {
+
         if (!mobileMenuBtn || !mainNav) return;
 
         mainNav.classList.remove("active");
         mobileMenuBtn.classList.remove("active");
 
         mobileMenuBtn.setAttribute("aria-expanded", "false");
+
         mobileMenuBtn.setAttribute(
             "aria-label",
             "Open navigation menu"
@@ -142,12 +144,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function openMobileMenu() {
+
         if (!mobileMenuBtn || !mainNav) return;
 
         mainNav.classList.add("active");
         mobileMenuBtn.classList.add("active");
 
         mobileMenuBtn.setAttribute("aria-expanded", "true");
+
         mobileMenuBtn.setAttribute(
             "aria-label",
             "Close navigation menu"
@@ -155,9 +159,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (mobileMenuBtn && mainNav) {
+
         mobileMenuBtn.setAttribute("aria-expanded", "false");
 
         mobileMenuBtn.addEventListener("click", () => {
+
             const isOpen = mainNav.classList.contains("active");
 
             if (isOpen) {
@@ -167,11 +173,11 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        /* Close the mobile menu after selecting a link.
-           Keep it open when the Home dropdown toggle is tapped. */
 
         mainNav.querySelectorAll("a").forEach((link) => {
+
             link.addEventListener("click", () => {
+
                 if (
                     window.innerWidth <= 900 &&
                     link !== homeDropdownToggle
@@ -181,9 +187,9 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
-        /* Close the menu when clicking outside */
 
         document.addEventListener("click", (event) => {
+
             if (
                 window.innerWidth <= 900 &&
                 mainNav.classList.contains("active") &&
@@ -194,9 +200,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        /* Reset mobile menu when returning to desktop */
 
         window.addEventListener("resize", () => {
+
             if (window.innerWidth > 900) {
                 closeMobileMenu();
             }
@@ -204,34 +210,48 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /* --------------------------------------------------
-       5. HOME DROPDOWN — HOME 1 / HOME 2
-    -------------------------------------------------- */
+   
 
     function closeHomeDropdown() {
+
         if (!homeDropdown || !homeDropdownToggle) return;
 
         homeDropdown.classList.remove("open");
 
-        homeDropdownToggle.setAttribute("aria-expanded", "false");
+        homeDropdownToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
     }
 
     if (homeDropdownToggle && homeDropdown) {
-        homeDropdownToggle.setAttribute("aria-haspopup", "true");
-        homeDropdownToggle.setAttribute("aria-expanded", "false");
+
+        homeDropdownToggle.setAttribute(
+            "aria-haspopup",
+            "true"
+        );
+
+        homeDropdownToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
 
         homeDropdownToggle.addEventListener("click", (event) => {
-            /* On mobile, tap Home to open or close the submenu.
-               On desktop, the CSS hover behavior remains available. */
 
-            if (window.innerWidth <= 900) {
+            if (window.innerWidth <= 1100) {
+
                 event.preventDefault();
 
-                const isOpen = homeDropdown.classList.contains("open");
+                const isOpen =
+                    homeDropdown.classList.contains("open");
 
                 if (isOpen) {
+
                     closeHomeDropdown();
+
                 } else {
+
                     homeDropdown.classList.add("open");
 
                     homeDropdownToggle.setAttribute(
@@ -242,30 +262,30 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        /* Close dropdown when clicking outside */
 
         document.addEventListener("click", (event) => {
+
             if (!homeDropdown.contains(event.target)) {
                 closeHomeDropdown();
             }
         });
 
-        /* Close dropdown after resizing to desktop */
 
         window.addEventListener("resize", () => {
-            if (window.innerWidth > 900) {
+
+            if (window.innerWidth > 1100) {
                 closeHomeDropdown();
             }
         });
     }
 
 
-    /* --------------------------------------------------
-       6. ESCAPE KEY — CLOSE OPEN MENUS
-    -------------------------------------------------- */
+    
 
     document.addEventListener("keydown", (event) => {
+
         if (event.key === "Escape") {
+
             closeHomeDropdown();
             closeMobileMenu();
         }

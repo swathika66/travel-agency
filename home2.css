@@ -1,13 +1,3 @@
-/* =========================================================
-   TRAVELORA — HOME 2 COMPLETE STYLESHEET
-   Primary: Teal #009C9A
-   Secondary: Orange #FF8A00
-   Shared Header/Footer: style.css
-   Responsive | Dark Mode | RTL | Animations
-========================================================= */
-
-
-/* ==================== 1. HERO ==================== */
 
 .h2-hero {
     position: relative;
@@ -235,7 +225,6 @@
 }
 
 
-/* ==================== 2. CATEGORY CARDS ==================== */
 
 .h2-categories {
     background: var(--bg);
@@ -319,7 +308,6 @@
 }
 
 
-/* ==================== 3. FEATURED DESTINATIONS ==================== */
 
 .h2-featured {
     background: var(--bg-soft);
@@ -546,7 +534,6 @@
 }
 
 
-/* ==================== 5. PROCESS ==================== */
 
 .h2-process {
     background: var(--bg-soft);
@@ -646,7 +633,6 @@
 }
 
 
-/* ==================== 6. FEATURED HOLIDAY PACKAGES ==================== */
 
 .h2-holiday-packages {
     background: var(--bg);
@@ -838,7 +824,6 @@
 }
 
 
-/* ==================== 7. FAQ ==================== */
 
 .h2-faq {
     background: var(--bg-soft);
@@ -943,7 +928,6 @@
 }
 
 
-/* ==================== 8. DARK MODE ==================== */
 
 body.dark-mode .h2-hero,
 html[data-theme="dark"] .h2-hero,
@@ -954,7 +938,6 @@ body[data-theme="dark"] .h2-hero {
 }
 
 
-/* ==================== 9. RTL SUPPORT ==================== */
 
 html[dir="rtl"] .h2-hero-visual {
     padding-right: 0;
@@ -1155,7 +1138,6 @@ html[dir="rtl"] .h2-featured-info > a:hover span {
 }
 
 
-/* ==================== 12. MOBILE ==================== */
 
 @media (max-width: 600px) {
     .h2-hero {
@@ -1455,7 +1437,6 @@ html[dir="rtl"] .h2-featured-info > a:hover span {
 }
 
 
-/* ==================== 13. EXTRA SMALL SCREENS ==================== */
 
 @media (max-width: 380px) {
     .h2-hero-content h1 {
@@ -1498,7 +1479,6 @@ html[dir="rtl"] .h2-featured-info > a:hover span {
 }
 
 
-/* ==================== 14. REDUCED MOTION ==================== */
 
 @media (prefers-reduced-motion: reduce) {
     .h2-hero-content,
@@ -1522,7 +1502,6 @@ html[dir="rtl"] .h2-featured-info > a:hover span {
 }
 
 
-/* ==================== 15. PRINT ==================== */
 
 @media print {
     .h2-hero,
@@ -1545,7 +1524,6 @@ html[dir="rtl"] .h2-featured-info > a:hover span {
         position: static;
     }
 }
-/* FIX: Hero bottom floating card overlap */
 
 .h2-floating-bottom {
     right: -5px;
@@ -1569,7 +1547,6 @@ html[dir="rtl"] .h2-floating-bottom {
     }
 }
 
-/* HOME 2 — Tagline matching the reference image */
 
 .h2-hero .section-eyebrow {
     display: inline-flex;
@@ -1597,7 +1574,6 @@ html[dir="rtl"] .h2-floating-bottom {
     border-radius: 50%;
 }
 
-/* Home 2 — Match Home 1 tagline size */
 
 .h2-hero .section-eyebrow {
     font-size: 11px;
@@ -1613,15 +1589,11 @@ html[dir="rtl"] .h2-floating-bottom {
     height: 7px;
 }
 
-/* Hide the bottom floating card in Home 2 */
 .h2-hero .h2-floating-bottom {
     display: none;
 }
 
-/* ==========================================
-   HOME 2 — TAGLINE EFFECT
-   Orange dot + subtle background + accent line
-========================================== */
+
 
 .home2-page .h2-eyebrow,
 .home2-page .hero-eyebrow,
@@ -1642,7 +1614,6 @@ html[dir="rtl"] .h2-floating-bottom {
     text-transform: uppercase;
 }
 
-/* Small orange dot */
 .home2-page .h2-eyebrow::before,
 .home2-page .hero-eyebrow::before,
 .home2-page .section-tagline::before,
@@ -1661,7 +1632,6 @@ html[dir="rtl"] .h2-floating-bottom {
     box-shadow: 0 0 0 4px rgba(244, 119, 53, 0.12);
 }
 
-/* Keep the tagline unboxed, with a short orange line */
 .home2-page .h2-eyebrow,
 .home2-page .hero-eyebrow,
 .home2-page .section-tagline,
@@ -1677,12 +1647,7 @@ html[dir="rtl"] .h2-floating-bottom {
     box-shadow: none;
 }
 
-/* ==========================================
-   HOME 2 — SECTION TAGLINE EFFECT
-   Teal text + orange dot + soft glow
-========================================== */
 
-.h2-hero .section-eyebrow,
 .h2-categories .section-eyebrow,
 .h2-featured .section-eyebrow,
 .h2-benefits .section-eyebrow,
@@ -1710,7 +1675,6 @@ html[dir="rtl"] .h2-floating-bottom {
     text-transform: uppercase;
 }
 
-/* Orange dot with soft glow */
 .h2-hero .section-eyebrow::before,
 .h2-categories .section-eyebrow::before,
 .h2-featured .section-eyebrow::before,
@@ -1729,7 +1693,6 @@ html[dir="rtl"] .h2-floating-bottom {
     box-shadow: 0 0 0 4px rgba(255, 138, 0, 0.15);
 }
 
-/* Remove the horizontal line */
 .h2-hero .section-eyebrow::after,
 .h2-categories .section-eyebrow::after,
 .h2-featured .section-eyebrow::after,
@@ -1742,7 +1705,6 @@ html[dir="rtl"] .h2-floating-bottom {
     display: none;
 }
 
-/* Only Home 2 hero tagline */
 .h2-hero .section-eyebrow {
     display: inline-flex;
     align-items: center;
@@ -1762,7 +1724,6 @@ html[dir="rtl"] .h2-floating-bottom {
     text-transform: uppercase;
 }
 
-/* Orange dot with teal soft shadow */
 .h2-hero .section-eyebrow::before {
     content: "";
     width: 9px;
@@ -1775,7 +1736,6 @@ html[dir="rtl"] .h2-floating-bottom {
         0 0 12px rgba(0, 156, 154, 0.25);
 }
 
-/* Remove horizontal line */
 .h2-hero .section-eyebrow::after {
     content: none;
     display: none;
@@ -1801,9 +1761,6 @@ html[dir="rtl"] .h2-floating-bottom {
     box-shadow: 0 0 0 4px rgba(255, 138, 0, 0.12);
 }
 
-/* ==========================================
-   HOME 2 — HERO TAGLINE ONLY
-========================================== */
 
 .h2-hero .section-eyebrow {
     display: inline-flex;
@@ -1824,7 +1781,6 @@ html[dir="rtl"] .h2-floating-bottom {
     text-transform: uppercase;
 }
 
-/* Orange dot with subtle orange glow */
 .h2-hero .section-eyebrow::before {
     content: "";
     width: 9px;
@@ -1835,16 +1791,11 @@ html[dir="rtl"] .h2-floating-bottom {
     box-shadow: 0 0 0 4px rgba(255, 138, 0, 0.12);
 }
 
-/* No line after hero tagline */
 .h2-hero .section-eyebrow::after {
     content: none;
     display: none;
 }
 
-/* ==========================================
-   OTHER HOME 2 SECTION TAGLINES
-   Teal text + small orange line before
-========================================== */
 
 .h2-categories .section-eyebrow,
 .h2-featured .section-eyebrow,
@@ -1873,7 +1824,6 @@ html[dir="rtl"] .h2-floating-bottom {
     text-transform: uppercase;
 }
 
-/* Small orange horizontal line before other taglines */
 .h2-categories .section-eyebrow::before,
 .h2-featured .section-eyebrow::before,
 .h2-benefits .section-eyebrow::before,
@@ -1890,7 +1840,6 @@ html[dir="rtl"] .h2-floating-bottom {
     background: #FF8A00;
 }
 
-/* No line after other taglines */
 .h2-categories .section-eyebrow::after,
 .h2-featured .section-eyebrow::after,
 .h2-benefits .section-eyebrow::after,
@@ -1902,7 +1851,6 @@ html[dir="rtl"] .h2-floating-bottom {
     display: none;
 }
 
-/* Mobile */
 @media (max-width: 560px) {
     .h2-hero .section-eyebrow {
         gap: 10px;
@@ -1937,7 +1885,6 @@ html[dir="rtl"] .h2-floating-bottom {
     }
 }
 
-/* WHY CHOOSE US — SVG ICONS */
 
 .h2-benefit-icon {
     display: inline-flex;
@@ -1979,11 +1926,7 @@ html[dir="rtl"] .h2-floating-bottom {
     }
 }
 
-/* =========================================
-   TRAVELORA HOME 2 — ANIMATIONS
-========================================= */
 
-/* 1. Smooth entrance animations */
 @keyframes h2FadeUp {
     from {
         opacity: 0;
@@ -2024,7 +1967,6 @@ html[dir="rtl"] .h2-floating-bottom {
     }
 }
 
-/* 2. Hero content animation */
 .h2-hero-content > * {
     animation: h2FadeUp 0.75s ease both;
 }
@@ -2066,7 +2008,6 @@ html[dir="rtl"] .h2-floating-bottom {
     animation-delay: 0.5s, 1.5s;
 }
 
-/* 3. Category cards */
 .h2-category-card {
     transition: transform 0.35s ease,
                 box-shadow 0.35s ease;
@@ -2085,7 +2026,6 @@ html[dir="rtl"] .h2-floating-bottom {
     transform: scale(1.08);
 }
 
-/* 4. Featured destination images */
 .h2-featured-card {
     overflow: hidden;
 }
@@ -2112,7 +2052,6 @@ html[dir="rtl"] .h2-floating-bottom {
     color: var(--secondary);
 }
 
-/* 5. Benefits cards */
 .h2-benefit-card {
     transition: transform 0.35s ease,
                 box-shadow 0.35s ease,
@@ -2133,7 +2072,6 @@ html[dir="rtl"] .h2-floating-bottom {
     transform: scale(1.1) rotate(-5deg);
 }
 
-/* 6. Holiday package cards */
 .h2-holiday-card {
     transition: transform 0.35s ease,
                 box-shadow 0.35s ease;
@@ -2165,7 +2103,6 @@ html[dir="rtl"] .h2-floating-bottom {
     transform: translateX(5px);
 }
 
-/* 7. Process steps */
 .h2-process-step {
     transition: transform 0.3s ease;
 }
@@ -2174,7 +2111,6 @@ html[dir="rtl"] .h2-floating-bottom {
     transform: translateX(6px);
 }
 
-/* 8. FAQ interactions */
 .h2-faq-item {
     transition: border-color 0.3s ease,
                 box-shadow 0.3s ease;
@@ -2188,7 +2124,6 @@ html[dir="rtl"] .h2-floating-bottom {
     cursor: pointer;
 }
 
-/* 9. Button hover effects */
 .h2-hero .btn,
 .h2-featured .btn,
 .h2-process .btn,
@@ -2209,7 +2144,6 @@ html[dir="rtl"] .h2-floating-bottom {
     box-shadow: 0 9px 22px rgba(0, 0, 0, 0.12);
 }
 
-/* 10. Scroll reveal — enabled by JavaScript */
 .h2-category-card.reveal-on-scroll,
 .h2-featured-card.reveal-on-scroll,
 .h2-benefit-card.reveal-on-scroll,
@@ -2227,7 +2161,6 @@ html[dir="rtl"] .h2-floating-bottom {
     transform: translateY(0);
 }
 
-/* 11. Accessibility: reduced motion */
 @media (prefers-reduced-motion: reduce) {
     .h2-hero-content > *,
     .h2-hero-image-main,
@@ -2259,10 +2192,8 @@ html[dir="rtl"] .h2-floating-bottom {
     }
 }
 
-/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
 
-/* Main website font */
 body,
 button,
 input,
@@ -2271,7 +2202,6 @@ select {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Headings */
 h1,
 h2,
 h3,
@@ -2282,7 +2212,6 @@ h6 {
     font-weight: 700;
 }
 
-/* Match Home 1 heading fonts */
 .hero-text h1,
 .hero-image-caption h2,
 .intro-content h2,
@@ -2294,9 +2223,6 @@ h6 {
     font-weight: 700;
 }
 
-/* =========================================
-   TRAVELORA — FONT STYLE UPDATE
-========================================= */
 
 body {
     font-family: "Poppins", sans-serif;
@@ -2315,9 +2241,7 @@ textarea {
     font-family: "Poppins", sans-serif;
 }
 
-/* =========================================
-   SECONDARY BUTTONS — PRIMARY TEAL COLORS
-========================================= */
+
 
 .btn-outline,
 .btn-secondary,
@@ -2339,17 +2263,14 @@ a.btn-outline:hover {
     transform: translateY(-2px);
 }
 
-/* Keyboard accessibility */
 .btn-outline:focus-visible,
 .btn-secondary:focus-visible {
     outline: 2px solid #007F7D;
     outline-offset: 3px;
 }
 
-/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
 
-/* Main website font */
 body,
 button,
 input,
@@ -2358,7 +2279,6 @@ select {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Headings */
 h1,
 h2,
 h3,
@@ -2369,7 +2289,6 @@ h6 {
     font-weight: 700;
 }
 
-/* Match Home 1 heading fonts */
 .hero-text h1,
 .hero-image-caption h2,
 .intro-content h2,
@@ -2381,7 +2300,6 @@ h6 {
     font-weight: 700;
 }
 
-/* Same fonts for Home 1 and Home 2 */
 body,
 button,
 input,
@@ -2400,20 +2318,17 @@ select {
     font-family: 'Dancing Script', cursive !important;
     font-weight: 700;
 }
-/* Match Home 1's cursive hero heading */
 .h2-hero-content h1 {
     font-family: 'Dancing Script', cursive !important;
     font-weight: 700;
     line-height: 1.25;
 }
 
-/* Match the image caption font */
 .h2-hero-image-caption h2 {
     font-family: 'Dancing Script', cursive !important;
     font-weight: 700;
 }
 
-/* Make all Home 2 headings cursive */
 .h2-hero-content h1,
 .h2-hero-image-caption h2,
 .h2-categories h2,
@@ -2431,9 +2346,7 @@ select {
     font-weight: 700;
 }
 
-/* =========================================
-   HOME 2 — TRAVEL PHOTO COLLAGE HERO
-========================================= */
+
 
 .h2-photo-collage {
     position: relative;
@@ -2443,7 +2356,6 @@ select {
     isolation: isolate;
 }
 
-/* Large main photograph */
 .h2-photo-collage .h2-hero-image-main {
     position: absolute;
     inset-block: 35px 25px;
@@ -2503,7 +2415,6 @@ select {
     line-height: 1.15;
 }
 
-/* Two smaller overlapping photographs */
 .h2-photo-collage .h2-collage-image {
     position: absolute;
     overflow: hidden;
@@ -2525,7 +2436,6 @@ select {
     transform: scale(1.08);
 }
 
-/* Beach image — upper right */
 .h2-photo-collage .h2-collage-beach {
     top: 0;
     inset-inline-end: 0;
@@ -2534,7 +2444,6 @@ select {
     transform: rotate(4deg);
 }
 
-/* City image — lower left */
 .h2-photo-collage .h2-collage-city {
     bottom: 0;
     inset-inline-start: 0;
@@ -2544,7 +2453,6 @@ select {
 }
 
 
-/* Floating white information card */
 .h2-photo-collage .h2-floating-top {
     position: absolute;
     top: 125px;
@@ -2554,7 +2462,6 @@ select {
     animation: collageFloat 4s ease-in-out infinite;
 }
 
-/* Bottom floating badge */
 .h2-photo-collage .h2-collage-badge {
     position: absolute;
     bottom: 45px;
@@ -2600,7 +2507,6 @@ select {
     line-height: 1.5;
 }
 
-/* Gentle floating animation */
 @keyframes collageFloat {
     0%, 100% {
         transform: translateY(0);
@@ -2610,7 +2516,6 @@ select {
     }
 }
 
-/* Dark mode */
 body.dark-mode .h2-photo-collage .h2-collage-badge,
 .dark-mode .h2-photo-collage .h2-collage-badge {
     color: #f3f7f5;
@@ -2623,9 +2528,7 @@ body.dark-mode .h2-photo-collage .h2-collage-badge div span,
     color: #c1d0ca;
 }
 
-/* RTL layout is handled using logical inset properties above */
 
-/* Tablet */
 @media (max-width: 900px) {
     .h2-photo-collage {
         min-height: 460px;
@@ -2646,7 +2549,6 @@ body.dark-mode .h2-photo-collage .h2-collage-badge div span,
     }
 }
 
-/* Mobile */
 @media (max-width: 560px) {
     .h2-photo-collage {
         min-height: 390px;
@@ -2724,7 +2626,6 @@ body.dark-mode .h2-photo-collage .h2-collage-badge div span,
     }
 }
 
-/* Respect reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
     .h2-photo-collage .h2-floating-top {
         animation: none;
@@ -2736,7 +2637,6 @@ body.dark-mode .h2-photo-collage .h2-collage-badge div span,
     }
 }
 
-/* Match hero text and image collage heights */
 .h2-hero-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2759,7 +2659,6 @@ body.dark-mode .h2-photo-collage .h2-collage-badge div span,
     align-self: stretch;
 }
 
-/* Tablet and mobile */
 @media (max-width: 900px) {
     .h2-hero-grid {
         grid-template-columns: 1fr;
@@ -2783,7 +2682,6 @@ body.dark-mode .h2-photo-collage .h2-collage-badge div span,
     }
 }
 
-/* Keep floating cards positioned neatly */
 .h2-hero-visual {
     padding-left: 35px;
     padding-right: 25px;
@@ -2799,7 +2697,6 @@ body.dark-mode .h2-photo-collage .h2-collage-badge div span,
     bottom: 47px;
 }
 
-/* Prevent floating cards from colliding on smaller screens */
 @media (max-width: 600px) {
     .h2-hero-visual {
         padding: 10px 0 15px;
@@ -2825,7 +2722,6 @@ body.dark-mode .h2-photo-collage .h2-collage-badge div span,
     }
 }
 
-/* HERO IMAGE — IMPROVED */
 
 .h2-hero-visual {
 position: relative;
@@ -2857,7 +2753,6 @@ transition: transform 0.8s ease;
 transform: scale(1.04);
 }
 
-/* TABLET */
 @media (max-width: 992px) {
 .h2-hero-grid {
 grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
@@ -2871,7 +2766,6 @@ gap: 35px;
 
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
 .h2-hero-grid {
 grid-template-columns: 1fr;
@@ -2899,7 +2793,6 @@ border-radius: 110px 110px 18px 18px;
 }
 }
 
-/* ===== FIX HERO IMAGE AND FLOATING CARD OVERLAP ===== */
 
 .h2-hero-visual {
     position: relative;
@@ -2928,7 +2821,6 @@ border-radius: 110px 110px 18px 18px;
     object-position: center;
 }
 
-/* Top floating card */
 .h2-floating-top {
     position: absolute;
     top: 45px;
@@ -2938,7 +2830,6 @@ border-radius: 110px 110px 18px 18px;
     max-width: 175px;
 }
 
-/* Bottom floating card */
 .h2-floating-bottom {
     position: absolute;
     right: -5px;
@@ -2948,7 +2839,6 @@ border-radius: 110px 110px 18px 18px;
     max-width: 195px;
 }
 
-/* Tablet */
 @media (max-width: 992px) {
     .h2-hero-visual {
         max-width: 500px;
@@ -2970,7 +2860,6 @@ border-radius: 110px 110px 18px 18px;
     }
 }
 
-/* Mobile */
 @media (max-width: 600px) {
     .h2-hero-visual {
         max-width: 420px;
@@ -2995,19 +2884,16 @@ border-radius: 110px 110px 18px 18px;
     }
 }
 
-/* Remove bottom floating card */
 .h2-floating-bottom {
     display: none !important;
 }
 
-/* Remove bottom photo if it is a separate image element */
 .h2-hero-image-secondary,
 .h2-hero-image-bottom,
 .h2-floating-photo {
     display: none !important;
 }
 
-/* Compact hero tagline */
 .h2-hero-content > .section-eyebrow {
     display: inline-flex !important;
     align-items: center;
@@ -3025,13 +2911,11 @@ border-radius: 110px 110px 18px 18px;
     box-shadow: none !important;
 }
 
-/* Dark mode */
 body.dark-mode .h2-hero-content > .section-eyebrow {
     background: rgba(0, 156, 154, 0.16) !important;
     color: #62D6D0 !important;
 }
 
-/* Mobile */
 @media (max-width: 600px) {
     .h2-hero-content > .section-eyebrow {
         padding: 4px 8px !important;
@@ -3040,23 +2924,18 @@ body.dark-mode .h2-hero-content > .section-eyebrow {
     }
 }
 
-/* Final CTA — second button in primary colour */
 .final-cta-actions .btn-cta-outline {
     background: #009C9A !important;
     color: #FFFFFF !important;
     border: 2px solid #009C9A !important;
 }
 
-/* Hover effect */
 .final-cta-actions .btn-cta-outline:hover {
     background: #007E7C !important;
     border-color: #007E7C !important;
     color: #FFFFFF !important;
 }
 
-/* =========================
-   TRAVELORA — DM SANS FONT
-========================= */
 
 html,
 body,
@@ -3082,9 +2961,6 @@ summary {
     font-family: "DM Sans", sans-serif;
 }
 
-/* =========================
-   SECONDARY OUTLINE BUTTON
-========================= */
 
 .btn-outline {
     display: inline-flex;
@@ -3131,7 +3007,6 @@ summary {
     transform: translateY(0);
 }
 
-/* Respect reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
     .btn-outline {
         transition: none;
@@ -3158,7 +3033,6 @@ h6 {
 }
 
 
-/* HOME 2 — FORCE DM SANS ON HERO HEADING */
 
 .h2-hero .h2-hero-content h1,
 .h2-hero .h2-hero-content h1 span {
@@ -3175,10 +3049,7 @@ h6 {
     font-style: normal !important;
 }
 
-/* =====================================================
-   TRAVELORA HOME 2 — CONSISTENT DM SANS TYPOGRAPHY
-   Matches Home 1
-===================================================== */
+
 
 body,
 button,
@@ -3189,7 +3060,6 @@ select {
     font-weight: 400;
 }
 
-/* All headings throughout Home 2 */
 h1,
 h2,
 h3,
@@ -3200,13 +3070,11 @@ h6 {
     font-weight: 500;
 }
 
-/* Hero heading */
 .h2-hero h1 {
     font-family: 'DM Sans', sans-serif;
     font-weight: 500;
 }
 
-/* Section headings */
 .section-heading h2,
 .h2-featured-heading h2,
 .h2-process-intro h2,
@@ -3217,7 +3085,6 @@ h6 {
     font-weight: 500;
 }
 
-/* Card headings */
 .h2-category-card h3,
 .h2-featured-card h3,
 .h2-benefit-card h3,
@@ -3228,7 +3095,6 @@ h6 {
     font-weight: 500;
 }
 
-/* Paragraphs and descriptive text */
 p,
 .h2-category-label,
 .h2-holiday-location,
@@ -3240,7 +3106,6 @@ p,
     font-weight: 400;
 }
 
-/* Navigation, buttons and links */
 .main-nav a,
 .login-btn,
 .btn,
@@ -3252,19 +3117,16 @@ p,
     font-weight: 500;
 }
 
-/* Small section taglines */
 .section-eyebrow {
     font-family: 'DM Sans', sans-serif;
     font-weight: 600;
 }
 
-/* Hero tagline */
 .h2-hero .section-eyebrow {
     font-family: 'DM Sans', sans-serif;
     font-weight: 600;
 }
 
-/* Footer typography */
 .site-footer,
 .site-footer h3,
 .site-footer a,
@@ -3276,7 +3138,6 @@ p,
     font-weight: 600;
 }
 
-/* HOME 2 — REMAINING SECTIONS FONT FIX */
 
 .h2-categories,
 .h2-featured,
@@ -3326,7 +3187,6 @@ p,
     font-family: 'DM Sans', sans-serif !important;
 }
 
-/* HOME 2 — CTA SECTION SECONDARY BUTTON */
 
 .final-cta .btn-cta-outline {
     background: transparent;
@@ -3348,7 +3208,6 @@ p,
     box-shadow: none;
 }
 
-/* FINAL CTA — CONTACT US SECONDARY BUTTON */
 
 .final-cta .final-cta-actions a.btn.btn-cta-outline {
     background: transparent !important;
@@ -3368,7 +3227,6 @@ p,
     border-color: #FFFFFF !important;
 }
 
-/* FINAL CTA — CONTACT US SECONDARY BUTTON */
 
 .final-cta .final-cta-actions a.btn.btn-cta-outline,
 .final-cta .final-cta-actions a.btn.btn-cta-outline:hover,
@@ -3386,10 +3244,7 @@ p,
     transition: none;
 }
 
-/* =========================================
-   HOME 2 — HERO TAGLINE
-   Matching the Domestic Packages hero style
-========================================= */
+
 
 .h2-hero .h2-hero-content > .section-eyebrow {
     display: inline-flex !important;
@@ -3414,7 +3269,6 @@ p,
     text-transform: uppercase !important;
 }
 
-/* Orange dot with a soft, visible outer ring */
 .h2-hero .h2-hero-content > .section-eyebrow::before {
     content: "" !important;
     display: inline-block !important;
@@ -3432,13 +3286,11 @@ p,
     box-shadow: 0 0 0 5px rgba(255, 138, 0, 0.12) !important;
 }
 
-/* Remove any unwanted line or extra decoration */
 .h2-hero .h2-hero-content > .section-eyebrow::after {
     content: none !important;
     display: none !important;
 }
 
-/* HOME 2 — MATCH HOME 1 TAGLINE SIZE */
 
 .h2-hero .h2-hero-content > .section-eyebrow {
     font-size: 0.76rem !important;
@@ -3454,7 +3306,6 @@ p,
     }
 }
 
-/* Home 2 hero tagline — matching Home 1 */
 .h2-hero .section-eyebrow {
     font-size: 10px;
     font-weight: 700;
@@ -3468,7 +3319,6 @@ p,
     border-radius: 0;
 }
 
-/* Orange dot */
 .h2-hero .section-eyebrow::before {
     width: 8px;
     height: 8px;
@@ -3476,7 +3326,6 @@ p,
     box-shadow: 0 0 8px rgba(255, 138, 0, 0.3);
 }
 
-/* Reduce space between header and hero */
 .h2-hero {
     padding: 35px 0 70px;
 }
@@ -3497,10 +3346,7 @@ p,
     color: #FFFFFF !important;
 }
 
- /* TRAVELORA HOME 2 — MATCH HOME 1 TYPOGRAPHY */
-/* Header and footer remain unchanged */
-
-/* Hero heading */
+ 
 .h2-hero-content h1 {
     font-family: 'DM Sans', sans-serif;
     font-size: 48px;
@@ -3508,7 +3354,6 @@ p,
     line-height: 1.2;
 }
 
-/* Main section headings */
 .h2-categories h2,
 .h2-featured h2,
 .h2-benefits h2,
@@ -3522,7 +3367,6 @@ p,
     line-height: 1.25;
 }
 
-/* Card headings */
 .h2-hero-image-caption h2 {
     font-family: 'DM Sans', sans-serif;
     font-size: 36px;
@@ -3541,7 +3385,6 @@ p,
     line-height: 1.3;
 }
 
-/* Paragraphs */
 .h2-hero-content p,
 .h2-categories p,
 .h2-featured p,
@@ -3556,7 +3399,6 @@ p,
     line-height: 1.7;
 }
 
-/* Small section labels */
 .h2-hero-content .section-eyebrow,
 .h2-categories .section-eyebrow,
 .h2-featured .section-eyebrow,
@@ -3570,7 +3412,6 @@ p,
     font-weight: 500;
 }
 
-/* Mobile typography */
 @media (max-width: 768px) {
     .h2-hero-content h1 {
         font-size: 36px;
@@ -3597,8 +3438,7 @@ p,
 }
 
 
-/* HOME 2 — SAME FONT SIZES AS HOME 1 */
-/* Header and footer remain unchanged */
+
 
 .h2-hero-content h1 {
     font-family: 'DM Sans', sans-serif;
@@ -3665,7 +3505,6 @@ p,
     font-weight: 500;
 }
 
-/* Mobile */
 @media (max-width: 768px) {
     .h2-hero-content h1 {
         font-size: 36px;
@@ -3693,7 +3532,6 @@ p,
         font-size: 18px;
     }
 }
-/* Remove shadow/background around the hero tagline */
 #main-content .h2-hero .h2-hero-content > .section-eyebrow {
     background: transparent !important;
     background-color: transparent !important;
@@ -3701,7 +3539,6 @@ p,
     filter: none !important;
 }
 
-/* Keep the horizontal line, but remove its shadow */
 #main-content .h2-hero .h2-hero-content > .section-eyebrow::before,
 #main-content .h2-hero .h2-hero-content > .section-eyebrow::after {
     box-shadow: none !important;
@@ -3710,10 +3547,7 @@ p,
 
 
 
-/* ==========================================
-   HOME 2 — SECTION TAGLINE EFFECT
-   Teal text + orange dot + soft glow
-========================================== */
+
 
 .h2-hero .section-eyebrow,
 .h2-categories .section-eyebrow,
@@ -3743,7 +3577,6 @@ p,
     text-transform: uppercase;
 }
 
-/* Orange dot with soft glow */
 .h2-hero .section-eyebrow::before,
 .h2-categories .section-eyebrow::before,
 .h2-featured .section-eyebrow::before,
@@ -3762,7 +3595,6 @@ p,
     box-shadow: 0 0 0 4px rgba(255, 138, 0, 0.15);
 }
 
-/* Remove the horizontal line */
 .h2-hero .section-eyebrow::after,
 .h2-categories .section-eyebrow::after,
 .h2-featured .section-eyebrow::after,
@@ -3775,7 +3607,6 @@ p,
     display: none;
 }
 
-/* Only Home 2 hero tagline */
 .h2-hero .section-eyebrow {
     display: inline-flex;
     align-items: center;
@@ -3795,7 +3626,6 @@ p,
     text-transform: uppercase;
 }
 
-/* Orange dot with teal soft shadow */
 .h2-hero .section-eyebrow::before {
     content: "";
     width: 9px;
@@ -3808,7 +3638,6 @@ p,
         0 0 12px rgba(0, 156, 154, 0.25);
 }
 
-/* Remove horizontal line */
 .h2-hero .section-eyebrow::after {
     content: none;
     display: none;
@@ -3833,7 +3662,6 @@ p,
     background: #FF8A00;
     box-shadow: 0 0 0 4px rgba(255, 138, 0, 0.12);
 }
-/* HERO TAGLINE — TEAL PILL WITH OUTER RING */
 .h2-hero .h2-hero-content > .section-eyebrow {
     display: inline-flex;
     align-items: center;
@@ -3858,7 +3686,6 @@ p,
     text-transform: uppercase;
 }
 
-/* ORANGE DOT */
 .h2-hero .h2-hero-content > .section-eyebrow::before {
     content: "";
     position: absolute;
@@ -3874,7 +3701,6 @@ p,
     box-shadow: 0 0 0 3px rgba(255, 138, 0, 0.18);
 }
 
-/* OUTER PULSING RING AROUND DOT */
 .h2-hero .h2-hero-content > .section-eyebrow::after {
     content: "";
     position: absolute;
@@ -3903,7 +3729,6 @@ p,
         opacity: 0;
     }
 }
-/* FINAL FIX — HOME 2 HERO TAGLINE */
 #main-content .h2-hero .h2-hero-content > .section-eyebrow {
     display: inline-flex !important;
     align-items: center !important;
@@ -3929,7 +3754,6 @@ p,
     line-height: 1.5 !important;
     text-transform: uppercase !important;
 }
-* Orange dot */
 #main-content .h2-hero .h2-hero-content > .section-eyebrow::before {
     content: "" !important;
     display: block !important;
@@ -3948,7 +3772,6 @@ p,
     transform: translateY(-50%) !important;
 }
 
-/* Pulsing orange outer ring */
 #main-content .h2-hero .h2-hero-content > .section-eyebrow::after {
     content: "" !important;
     display: block !important;
@@ -3996,7 +3819,6 @@ p,
     border-radius: 999px;
 }
 
-/* HOME 2 — HERO TAGLINE PILL */
 .h2-hero .h2-hero-content > .section-eyebrow {
     display: inline-flex;
     align-items: center;
@@ -4009,7 +3831,6 @@ p,
     box-shadow: 0 0 0 4px rgba(0, 156, 154, 0.08);
 }
 
-/* Orange dot */
 .h2-hero .h2-hero-content > .section-eyebrow::before {
     content: "";
     width: 8px;
@@ -4030,7 +3851,6 @@ p,
     }
 }
 
-/* HOME 2 HERO TAGLINE PILL */
 #main-content .h2-hero .h2-hero-content > .section-eyebrow {
     display: inline-flex !important;
     align-items: center !important;
@@ -4053,7 +3873,6 @@ p,
     line-height: 1.5 !important;
     text-transform: uppercase !important;
 }
-* Orange dot */
 #main-content .h2-hero .h2-hero-content > .section-eyebrow::before {
     content: "" !important;
     position: absolute !important;
@@ -4074,7 +3893,6 @@ p,
     transform: translateY(-50%) !important;
 }
 
-/* Pulsing orange ring */
 #main-content .h2-hero .h2-hero-content > .section-eyebrow::after {
     content: "" !important;
     position: absolute !important;
@@ -4106,7 +3924,6 @@ p,
     }
 }
 
-/* Mobile */
 @media (max-width: 600px) {
     #main-content .h2-hero .h2-hero-content > .section-eyebrow {
         padding: 8px 12px 8px 26px !important;
@@ -4115,14 +3932,12 @@ p,
     }
 }
 
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
     #main-content .h2-hero .h2-hero-content > .section-eyebrow::after {
         animation: none !important;
     }
 }
 
-/* SMALL HORIZONTAL LINE BEFORE OTHER SECTION TAGLINES */
 #main-content .section-eyebrow:not(.h2-hero .section-eyebrow) {
     display: inline-flex;
     align-items: center;
@@ -4147,7 +3962,6 @@ p,
 }
 
 
-/* DEFINITIVE FIX — REMOVE THE HOME 2 TAGLINE PULSE */
 #main-content .h2-hero .h2-hero-content > .section-eyebrow::before {
     content: "" !important;
     position: absolute !important;
@@ -4183,14 +3997,12 @@ p,
     border: 0 !important;
 }
 
-/* Stop animations applied directly to the tagline */
 #main-content .h2-hero .h2-hero-content > .section-eyebrow {
     animation: none !important;
     transition: none !important;
     box-shadow: none !important;
 }
 
-/* HOME 2 — STATIC ORANGE HALO EFFECT */
 #main-content .h2-hero .h2-hero-content > .section-eyebrow::before {
     content: "" !important;
     position: absolute !important;
@@ -4206,7 +4018,6 @@ p,
     border: none !important;
     border-radius: 50% !important;
 
-    /* Soft orange halo — no pulsing */
     box-shadow:
         0 0 0 3px rgba(255, 138, 0, 0.14),
         0 0 9px 3px rgba(255, 138, 0, 0.22) !important;
@@ -4224,4 +4035,194 @@ p,
 
 #main-content .h2-hero .h2-hero-content > .section-eyebrow {
     animation: none !important;
+}
+
+
+
+.h2-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 90px 0 85px;
+    background: #123C3A;
+}
+
+.h2-hero .h2-hero-grid {
+    position: relative;
+    display: block;
+    min-height: 470px;
+}
+
+.h2-hero .h2-hero-visual.h2-photo-collage {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 100%;
+    min-height: 470px;
+    padding: 0;
+    margin: 0;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.h2-hero .h2-hero-image-main {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.h2-hero .h2-hero-image-main::before {
+    display: none;
+}
+
+.h2-hero .h2-hero-image-main > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+}
+
+.h2-hero .h2-hero-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(8, 30, 31, 0.88) 0%,
+        rgba(8, 30, 31, 0.70) 40%,
+        rgba(8, 30, 31, 0.30) 100%
+    );
+}
+
+.h2-hero .h2-hero-image-caption,
+.h2-hero .h2-collage-image,
+.h2-hero .h2-hero-floating {
+    display: none;
+}
+
+.h2-hero .h2-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    padding: 35px 0;
+    animation: heroTextIn 750ms ease both;
+}
+
+.h2-hero .h2-hero-content h1 {
+    max-width: 680px;
+    color: #FFFFFF;
+    font-size: clamp(42px, 5vw, 64px);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.h2-hero .h2-hero-content h1 span {
+    color: #009C9A;
+}
+
+.h2-hero .h2-hero-content > p {
+    max-width: 570px;
+    color: rgba(255, 255, 255, 0.90);
+    font-size: 16px;
+    line-height: 1.85;
+    margin-bottom: 30px;
+}
+
+.h2-hero .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 0;
+}
+
+.h2-hero .h2-hero-trust {
+    max-width: 440px;
+    border-top-color: rgba(255, 255, 255, 0.25);
+    margin-top: 30px;
+    padding-top: 22px;
+}
+
+.h2-hero .h2-hero-trust > div {
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.h2-hero .h2-trust-icon {
+    background: rgba(0, 156, 154, 0.20);
+    color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+
+    .h2-hero {
+        padding: 65px 0;
+    }
+
+    .h2-hero .h2-hero-grid {
+        min-height: 500px;
+    }
+
+    .h2-hero .h2-hero-visual.h2-photo-collage {
+        min-height: 500px;
+    }
+
+    .h2-hero .h2-hero-content {
+        max-width: 100%;
+        padding: 30px 0;
+    }
+
+    .h2-hero .h2-hero-content h1 {
+        font-size: 40px;
+    }
+
+    .h2-hero .h2-hero-image-overlay {
+        background: rgba(8, 30, 31, 0.68);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .h2-hero {
+        padding: 55px 0;
+    }
+
+    .h2-hero .h2-hero-grid {
+        min-height: 530px;
+    }
+
+    .h2-hero .h2-hero-visual.h2-photo-collage {
+        min-height: 530px;
+    }
+
+    .h2-hero .h2-hero-content {
+        padding: 20px 0;
+    }
+
+    .h2-hero .h2-hero-content h1 {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    .h2-hero .h2-hero-content > p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .h2-hero .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .h2-hero .hero-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .h2-hero .h2-hero-trust {
+        margin-top: 24px;
+        padding-top: 18px;
+    }
 }

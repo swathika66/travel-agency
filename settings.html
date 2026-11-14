@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#009C9A">
+
+    <meta name="description"
+        content="Manage your Travelora account settings, preferences, notifications and privacy.">
+
+    <title>Settings | Travelora</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="settings.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+   
+    <main class="dashboard-page settings-page">
+
+        <section class="settings-header">
+
+            <a href="index.html" class="settings-back-home">
+                <i data-lucide="arrow-left"></i>
+                <span>Back to Home</span>
+            </a>
+
+            <div>
+                <span class="section-eyebrow">ACCOUNT PREFERENCES</span>
+                <h1>Settings</h1>
+                <p>Personalize your Travelora experience and manage your account.</p>
+            </div>
+
+        </section>
+
+        <section class="settings-layout">
+
+            <aside class="settings-sidebar">
+
+                <div class="settings-sidebar-heading">
+                    <h3>Manage Settings</h3>
+                    <p>Customize your account</p>
+                </div>
+
+                <a href="#account-settings" class="settings-nav-link active">
+                    <i data-lucide="user-round"></i>
+                    <span>Account</span>
+                </a>
+
+                <a href="#notification-settings" class="settings-nav-link">
+                    <i data-lucide="bell"></i>
+                    <span>Notifications</span>
+                </a>
+
+                <a href="#appearance-settings" class="settings-nav-link">
+                    <i data-lucide="palette"></i>
+                    <span>Appearance</span>
+                </a>
+
+                <a href="#language-settings" class="settings-nav-link">
+                    <i data-lucide="globe"></i>
+                    <span>Language & Region</span>
+                </a>
+
+                <a href="#privacy-settings" class="settings-nav-link">
+                    <i data-lucide="shield-check"></i>
+                    <span>Privacy & Security</span>
+                </a>
+
+                <a href="#account-actions" class="settings-nav-link">
+                    <i data-lucide="settings-2"></i>
+                    <span>Account Actions</span>
+                </a>
+
+            </aside>
+
+            <div class="settings-content">
+
+                <section class="settings-card" id="account-settings">
+
+                    <div class="settings-card-heading">
+                        <div class="settings-card-icon">
+                            <i data-lucide="user-round"></i>
+                        </div>
+                        <div>
+                            <h2>Account Information</h2>
+                            <p>Manage your personal account details.</p>
+                        </div>
+                    </div>
+
+                    <div class="settings-form-grid">
+
+                        <div class="settings-field">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName"
+                                placeholder="Enter your full name">
+                        </div>
+
+                        <div class="settings-field">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email"
+                                placeholder="Enter your email">
+                        </div>
+
+                        <div class="settings-field">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone"
+                                placeholder="Enter your phone number">
+                        </div>
+
+                        <div class="settings-field">
+                            <label for="country">Country</label>
+                            <select id="country">
+                                <option value="">Select Country</option>
+                                <option>India</option>
+                                <option>United States</option>
+                                <option>United Kingdom</option>
+                                <option>Australia</option>
+                                <option>Canada</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="settings-card-actions">
+                        <button type="button" class="settings-save-btn">
+                            Save Changes
+                        </button>
+                    </div>
+
+                </section>
+
+                <section class="settings-card" id="notification-settings">
+
+                    <div class="settings-card-heading">
+                        <div class="settings-card-icon">
+                            <i data-lucide="bell"></i>
+                        </div>
+                        <div>
+                            <h2>Notification Preferences</h2>
+                            <p>Choose which updates you would like to receive.</p>
+                        </div>
+                    </div>
+
+                    <div class="settings-option">
+                        <div>
+                            <h3>Booking Updates</h3>
+                            <p>Receive updates about your trip bookings.</p>
+                        </div>
+                        <label class="settings-switch">
+                            <input type="checkbox" checked>
+                            <span></span>
+                        </label>
+                    </div>
+
+                    <div class="settings-option">
+                        <div>
+                            <h3>Travel Offers</h3>
+                            <p>Get updates about special travel deals and offers.</p>
+                        </div>
+                        <label class="settings-switch">
+                            <input type="checkbox" checked>
+                            <span></span>
+                        </label>
+                    </div>
+
+                    <div class="settings-option">
+                        <div>
+                            <h3>Travel Reminders</h3>
+                            <p>Receive reminders about upcoming trips.</p>
+                        </div>
+                        <label class="settings-switch">
+                            <input type="checkbox" checked>
+                            <span></span>
+                        </label>
+                    </div>
+
+                    <div class="settings-option">
+                        <div>
+                            <h3>Email Notifications</h3>
+                            <p>Receive important updates through email.</p>
+                        </div>
+                        <label class="settings-switch">
+                            <input type="checkbox" checked>
+                            <span></span>
+                        </label>
+                    </div>
+
+                </section>
+
+                <section class="settings-card" id="appearance-settings">
+
+                    <div class="settings-card-heading">
+                        <div class="settings-card-icon">
+                            <i data-lucide="palette"></i>
+                        </div>
+                        <div>
+                            <h2>Appearance</h2>
+                            <p>Choose how Travelora looks on your device.</p>
+                        </div>
+                    </div>
+
+                    <div class="settings-field">
+                        <label for="themePreference">Theme Preference</label>
+                        <select id="themePreference">
+                            <option value="light">Light Mode</option>
+                            <option value="dark">Dark Mode</option>
+                            <option value="system">System Default</option>
+                        </select>
+                    </div>
+
+                </section>
+
+                <section class="settings-card" id="language-settings">
+
+                    <div class="settings-card-heading">
+                        <div class="settings-card-icon">
+                            <i data-lucide="globe"></i>
+                        </div>
+                        <div>
+                            <h2>Language & Region</h2>
+                            <p>Set your preferred language and regional format.</p>
+                        </div>
+                    </div>
+
+                    <div class="settings-form-grid">
+
+                        <div class="settings-field">
+                            <label for="language">Language</label>
+                            <select id="language">
+                                <option value="en">English</option>
+                                <option value="hi">Hindi</option>
+                                <option value="te">Telugu</option>
+                            </select>
+                        </div>
+
+                        <div class="settings-field">
+                            <label for="currency">Currency</label>
+                            <select id="currency">
+                                <option value="INR">Indian Rupee (₹)</option>
+                                <option value="USD">US Dollar ($)</option>
+                                <option value="GBP">British Pound (£)</option>
+                                <option value="EUR">Euro (€)</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="settings-card" id="privacy-settings">
+
+                    <div class="settings-card-heading">
+                        <div class="settings-card-icon">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <div>
+                            <h2>Privacy & Security</h2>
+                            <p>Manage your account security and privacy preferences.</p>
+                        </div>
+                    </div>
+
+                    <div class="settings-option">
+                        <div>
+                            <h3>Profile Visibility</h3>
+                            <p>Allow your profile information to be visible.</p>
+                        </div>
+                        <label class="settings-switch">
+                            <input type="checkbox" checked>
+                            <span></span>
+                        </label>
+                    </div>
+
+                    <div class="settings-option">
+                        <div>
+                            <h3>Personalized Recommendations</h3>
+                            <p>Allow travel suggestions based on your interests.</p>
+                        </div>
+                        <label class="settings-switch">
+                            <input type="checkbox" checked>
+                            <span></span>
+                        </label>
+                    </div>
+
+                    <div class="settings-security-action">
+                        <div>
+                            <h3>Change Password</h3>
+                            <p>Update your account password regularly.</p>
+                        </div>
+                        <a href="change-password.html" class="settings-outline-btn">
+                            Change Password
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+
+                </section>
+
+                <section class="settings-card" id="account-actions">
+
+                    <div class="settings-card-heading">
+                        <div class="settings-card-icon">
+                            <i data-lucide="settings-2"></i>
+                        </div>
+                        <div>
+                            <h2>Account Actions</h2>
+                            <p>Manage your account access and preferences.</p>
+                        </div>
+                    </div>
+
+                    <div class="settings-security-action">
+                        <div>
+                            <h3>Sign Out</h3>
+                            <p>Sign out of your Travelora account.</p>
+                        </div>
+                        <a href="login.html" class="settings-outline-btn">
+                            <i data-lucide="log-out"></i>
+                            Logout
+                        </a>
+                    </div>
+
+                    <div class="settings-security-action danger-action">
+                        <div>
+                            <h3>Delete Account</h3>
+                            <p>Permanently remove your account and its information.</p>
+                        </div>
+                        <button type="button" class="settings-delete-btn">
+                            Delete Account
+                        </button>
+                    </div>
+
+                </section>
+
+            </div>
+        </section>
+
+    </main>
+
+  
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>

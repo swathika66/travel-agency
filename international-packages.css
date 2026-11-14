@@ -1,7 +1,3 @@
-/* =========================================
-   TRAVELORA — PACKAGE DETAILS
-   Consistent Teal + Orange Colour Theme
-========================================= */
 
 :root {
     --intl-primary: #009C9A;
@@ -20,12 +16,10 @@
     --intl-border: #E2EBEB;
 }
 
-/* Base text */
 body {
     color: var(--intl-text);
 }
 
-/* All main headings */
 h1,
 h2,
 h3,
@@ -38,12 +32,10 @@ h4,
     color: var(--intl-text);
 }
 
-/* Highlighted hero heading text */
 .details-hero-copy h1 span {
     color: var(--intl-primary);
 }
 
-/* Eyebrow labels */
 .details-eyebrow,
 .section-eyebrow {
     color: var(--intl-primary-dark);
@@ -51,7 +43,6 @@ h4,
     letter-spacing: 1.5px;
 }
 
-/* Paragraphs */
 .details-hero-copy p,
 .details-intro p,
 .package-detail-content p,
@@ -59,7 +50,6 @@ h4,
     color: var(--intl-muted);
 }
 
-/* Primary buttons — teal */
 .btn-primary,
 .details-hero-actions .btn-primary,
 .package-enquire {
@@ -69,7 +59,6 @@ h4,
     transition: all 0.3s ease;
 }
 
-/* Primary button hover — orange */
 .btn-primary:hover,
 .details-hero-actions .btn-primary:hover,
 .package-enquire:hover {
@@ -79,7 +68,6 @@ h4,
     transform: translateY(-3px);
 }
 
-/* Secondary button — teal outline */
 .btn-outline {
     color: var(--intl-primary-dark);
     background-color: transparent;
@@ -87,7 +75,6 @@ h4,
     transition: all 0.3s ease;
 }
 
-/* Secondary button hover — orange */
 .btn-outline:hover {
     color: var(--intl-white);
     background-color: var(--intl-accent);
@@ -95,7 +82,6 @@ h4,
     transform: translateY(-3px);
 }
 
-/* Destination jump links */
 .destination-jump-links a {
     color: var(--intl-primary-dark);
     border: 1px solid var(--intl-border);
@@ -108,28 +94,23 @@ h4,
     border-color: var(--intl-accent);
 }
 
-/* Package images */
 .package-image-tag {
     color: var(--intl-accent-dark);
     background-color: var(--intl-accent-light);
 }
 
-/* Package facts */
 .package-facts b {
     color: var(--intl-primary-dark);
 }
 
-/* Highlight lists */
 .package-highlights li::marker {
     color: var(--intl-primary);
 }
 
-/* Itinerary emphasis */
 .itinerary-list li b {
     color: var(--intl-primary-dark);
 }
 
-/* Hero background */
 .details-hero {
     background: linear-gradient(
         120deg,
@@ -138,18 +119,15 @@ h4,
     );
 }
 
-/* Package section backgrounds */
 .details-intro,
 .package-details-list {
     background-color: var(--intl-white);
 }
 
-/* Alternating package cards */
 .package-detail {
     border-color: var(--intl-border);
 }
 
-/* Final CTA section */
 .details-note {
     color: var(--intl-white);
     background-color: var(--intl-primary-dark);
@@ -163,27 +141,23 @@ h4,
     color: rgba(255, 255, 255, 0.86);
 }
 
-/* CTA button hover */
 .details-note .btn-primary:hover {
     color: var(--intl-white);
     background-color: var(--intl-accent);
     border-color: var(--intl-accent);
 }
 
-/* Keyboard accessibility */
 a:focus-visible,
 button:focus-visible {
     outline: 3px solid var(--intl-accent);
     outline-offset: 4px;
 }
 
-/* Remove package numbers */
 .experience-number {
     display: none;
 }
 
 
-/* Remove all package card numbers */
 .experience-number,
 .experience-card .experience-number,
 .experience-card::before,
@@ -195,7 +169,6 @@ button:focus-visible {
     counter-increment: none !important;
 }
 
-/* Disable automatic CSS numbering */
 .experience-grid {
     counter-reset: none !important;
 }
@@ -217,7 +190,6 @@ button:focus-visible {
     content: none !important;
 }
 
-/* Primary buttons — Orange by default */
 .btn-primary,
 .details-hero-actions .btn-primary,
 .package-enquire {
@@ -227,7 +199,6 @@ button:focus-visible {
     transition: all 0.3s ease;
 }
 
-/* Primary buttons — Stay orange on hover */
 .btn-primary:hover,
 .details-hero-actions .btn-primary:hover,
 .package-enquire:hover {
@@ -237,10 +208,6 @@ button:focus-visible {
     transform: translateY(-3px);
 }
 
-/* ==========================================
-   INTERNATIONAL HERO TAGLINE
-   Orange Dot + Soft Halo
-========================================== */
 
 .hero-section .hero-eyebrow {
     display: inline-flex;
@@ -260,7 +227,6 @@ button:focus-visible {
     border: none !important;
     border-radius: 50% !important;
 
-    /* Soft orange halo */
     box-shadow: 0 0 0 4px rgba(255, 138, 0, 0.12) !important;
 
     outline: none !important;
@@ -269,11 +235,37 @@ button:focus-visible {
     opacity: 1 !important;
 }
 
-/* Remove extra decorative circles and glow effects */
 .hero-section .hero-eyebrow-dot::before,
 .hero-section .hero-eyebrow-dot::after {
     content: none !important;
     display: none !important;
     box-shadow: none !important;
     animation: none !important;
+}
+
+
+.dark-mode main h1,
+.dark-mode main h2,
+.dark-mode main h3,
+.dark-mode main h4 {
+    color: #EDF7F6 !important;
+}
+
+.dark-mode main .hero-text h1 span,
+.dark-mode main .intro-content h2 span,
+.dark-mode main .why-content h2 span {
+    color: #71DCD5 !important;
+}
+
+.dark-mode main .section-eyebrow {
+    color: #71DCD5 !important;
+}
+
+.dark-mode main .image-caption strong,
+.dark-mode main .image-caption span {
+    color: #243434 !important;
+}
+
+.dark-mode main .image-caption {
+    background: #FFFFFF !important;
 }

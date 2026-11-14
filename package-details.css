@@ -1,10 +1,4 @@
-/* =========================================================
-   TRAVELORA — PACKAGE DETAILS PAGE
-   Matches the Travelora homepage colour palette
-   Header and footer remain controlled by style.css
-   ========================================================= */
 
-/* ==================== 1. DESIGN TOKENS ==================== */
 
 :root {
     --pd-teal: #009C9A;
@@ -30,7 +24,6 @@
     --pd-container: 1200px;
 }
 
-/* ==================== 2. BASE ==================== */
 
 html {
     scroll-behavior: smooth;
@@ -98,7 +91,6 @@ textarea {
     scroll-margin-top: 105px;
 }
 
-/* ==================== 3. BREADCRUMB ==================== */
 
 .pd-hero-section {
     padding: 26px 0 86px;
@@ -141,7 +133,6 @@ textarea {
     font-weight: 700;
 }
 
-/* ==================== 4. HERO LAYOUT ==================== */
 
 .pd-hero-grid {
     display: grid;
@@ -221,7 +212,6 @@ textarea {
     font-size: 21px;
 }
 
-/* ==================== 5. QUICK INFORMATION ==================== */
 
 .pd-quick-info {
     display: grid;
@@ -409,7 +399,6 @@ textarea {
     font-size: 12px;
 }
 
-/* ==================== 8. SECTION HEADINGS ==================== */
 
 #main-content .section-heading {
     max-width: 690px;
@@ -434,7 +423,6 @@ textarea {
     line-height: 1.8;
 }
 
-/* ==================== 9. OVERVIEW ==================== */
 
 .pd-overview-section {
     background: #FFFFFF;
@@ -528,7 +516,6 @@ textarea {
     color: var(--pd-orange-dark);
 }
 
-/* ==================== 10. HIGHLIGHTS ==================== */
 
 .pd-highlights-section {
     background: var(--pd-soft);
@@ -587,7 +574,6 @@ textarea {
     line-height: 1.85;
 }
 
-/* ==================== 11. ITINERARY ==================== */
 
 .pd-itinerary-section {
     background: #FFFFFF;
@@ -672,7 +658,6 @@ textarea {
     color: var(--pd-heading);
 }
 
-/* ==================== 12. INCLUSIONS / EXCLUSIONS ==================== */
 
 .pd-inclusions-section {
     background: var(--pd-soft);
@@ -781,7 +766,6 @@ textarea {
     text-align: center;
 }
 
-/* ==================== 13. ENQUIRY SECTION ==================== */
 
 .pd-booking-section {
     background: #FFFFFF;
@@ -848,7 +832,6 @@ textarea {
     color: var(--pd-teal-dark);
 }
 
-/* Form panel */
 
 .pd-booking-form {
     min-width: 0;
@@ -925,7 +908,6 @@ textarea {
     line-height: 1.7;
 }
 
-/* ==================== 14. RELATED PACKAGES ==================== */
 
 .pd-related-section {
     background: var(--pd-soft);
@@ -1014,12 +996,7 @@ textarea {
     margin-top: 42px;
 }
 
-/* ==================== 15. SHARED HEADER / FOOTER ==================== */
 
-/*
-   style.css remains responsible for the shared header and footer.
-   This file only ensures their existing colour accents stay consistent.
-*/
 
 .site-header .main-nav a.active {
     color: var(--pd-teal-dark);
@@ -1033,7 +1010,6 @@ textarea {
     color: var(--pd-teal) !important;
 }
 
-/* ==================== 16. DARK MODE SUPPORT ==================== */
 
 body.dark-mode {
     --pd-heading: #F1F5F6;
@@ -1117,7 +1093,6 @@ body.dark-mode .pd-itinerary-note {
     color: #E5D4BE;
 }
 
-/* ==================== 17. RESPONSIVE: TABLETS ==================== */
 
 @media (max-width: 1024px) {
     #main-content .section {
@@ -1164,7 +1139,6 @@ body.dark-mode .pd-itinerary-note {
     }
 }
 
-/* ==================== 18. RESPONSIVE: MOBILE ==================== */
 
 @media (max-width: 700px) {
     #main-content .site-container {
@@ -1416,7 +1390,6 @@ body.dark-mode .pd-itinerary-note {
     }
 }
 
-/* ==================== 19. SMALL MOBILE ==================== */
 
 @media (max-width: 380px) {
     #main-content .site-container {
@@ -1485,11 +1458,7 @@ body.dark-mode .pd-itinerary-note {
     }
 }
 
-/* =========================================================
-   TRAVELORA — RELATED PACKAGES SECTION
-   Applies only to the Related Packages section
-   Brand: Teal #009C9A | Orange #F28C28
-========================================================= */
+
 
 .pd-related-section {
     padding: 80px 0;
@@ -1502,7 +1471,6 @@ body.dark-mode .pd-itinerary-note {
     margin: 0 auto;
 }
 
-/* Section Heading */
 
 .pd-related-section .section-heading {
     max-width: 680px;
@@ -1535,7 +1503,6 @@ body.dark-mode .pd-itinerary-note {
     line-height: 1.8;
 }
 
-/* Package Grid */
 
 .pd-related-section .pd-related-grid {
     display: grid;
@@ -1544,7 +1511,6 @@ body.dark-mode .pd-itinerary-note {
     align-items: stretch;
 }
 
-/* Package Card */
 
 .pd-related-section .pd-related-card {
     display: flex;
@@ -1567,7 +1533,6 @@ body.dark-mode .pd-itinerary-note {
     box-shadow: 0 18px 40px rgba(23, 50, 77, 0.13);
 }
 
-/* Package Image */
 
 .pd-related-section .pd-related-card > img {
     display: block;
@@ -1582,7 +1547,6 @@ body.dark-mode .pd-itinerary-note {
     transform: scale(1.04);
 }
 
-/* Card Content */
 
 .pd-related-section .pd-related-content {
     display: flex;
@@ -1626,7 +1590,6 @@ body.dark-mode .pd-itinerary-note {
     font-size: 18px;
 }
 
-/* Price */
 
 .pd-related-section .pd-card-price {
     display: flex;
@@ -1660,7 +1623,6 @@ body.dark-mode .pd-itinerary-note {
     font-size: 12px;
 }
 
-/* Package Inclusions */
 
 .pd-related-section .pd-card-inclusions {
     width: 100%;
@@ -1708,7 +1670,6 @@ body.dark-mode .pd-itinerary-note {
     font-weight: 800;
 }
 
-/* Enquire Button */
 
 .pd-related-section .pd-card-button {
     display: flex;
@@ -1749,7 +1710,6 @@ body.dark-mode .pd-itinerary-note {
     transform: translateX(4px);
 }
 
-/* Pricing Disclaimer */
 
 .pd-related-section .pd-pricing-note {
     max-width: 850px;
@@ -1760,7 +1720,6 @@ body.dark-mode .pd-itinerary-note {
     text-align: center;
 }
 
-/* Tablet */
 
 @media (max-width: 1024px) {
     .pd-related-section {
@@ -1781,7 +1740,6 @@ body.dark-mode .pd-itinerary-note {
     }
 }
 
-/* Mobile */
 
 @media (max-width: 600px) {
     .pd-related-section {
@@ -1853,9 +1811,7 @@ body.dark-mode .pd-itinerary-note {
     }
 }
 
-/* =========================================================
-   TRAVELORA — PACKAGE DETAILS FINAL CTA
-========================================================= */
+
 
 .pd-final-cta {
     position: relative;
@@ -1999,7 +1955,6 @@ body.dark-mode .pd-itinerary-note {
     opacity: 0.95;
 }
 
-/* Tablet */
 
 @media (max-width: 768px) {
     .pd-final-cta {
@@ -2024,7 +1979,6 @@ body.dark-mode .pd-itinerary-note {
     }
 }
 
-/* Mobile */
 
 @media (max-width: 480px) {
     .pd-final-cta {
@@ -2058,7 +2012,6 @@ body.dark-mode .pd-itinerary-note {
     }
 }
 
-/* Reduced Motion */
 
 @media (prefers-reduced-motion: reduce) {
     .pd-final-cta-button,
@@ -2071,9 +2024,7 @@ body.dark-mode .pd-itinerary-note {
     }
 }
 
-/* ==========================================
-   TRAVELORA — PACKAGE DETAILS CTA
-========================================== */
+
 
 .pd-final-cta {
     position: relative;
@@ -2084,7 +2035,6 @@ body.dark-mode .pd-itinerary-note {
     background: linear-gradient(125deg, #073D48, #007F80, #009C9A);
 }
 
-/* Keep CTA content visible above decoration */
 
 .pd-final-cta .pd-final-cta-container {
     position: relative;
@@ -2138,7 +2088,6 @@ body.dark-mode .pd-itinerary-note {
     visibility: visible;
 }
 
-/* Pill-shaped CTA button */
 
 .pd-final-cta a.pd-final-cta-button {
     position: relative;
@@ -2189,7 +2138,6 @@ body.dark-mode .pd-itinerary-note {
     outline-offset: 4px;
 }
 
-/* Decorative graphics stay behind the text */
 
 .pd-final-cta .pd-final-cta-decoration {
     position: absolute;
@@ -2233,7 +2181,6 @@ body.dark-mode .pd-itinerary-note {
     transform: translateY(-50%) rotate(-12deg);
 }
 
-/* Tablet */
 
 @media (max-width: 768px) {
     .pd-final-cta {
@@ -2254,7 +2201,6 @@ body.dark-mode .pd-itinerary-note {
     }
 }
 
-/* Mobile */
 
 @media (max-width: 480px) {
     .pd-final-cta {
@@ -2294,7 +2240,6 @@ body.dark-mode .pd-itinerary-note {
     }
 }
 
-/* Small decorative line before taglines — except hero */
 
 .pd-related-section .pd-eyebrow::before,
 .pd-final-cta .pd-final-cta-label::before,
@@ -2315,19 +2260,13 @@ body.dark-mode .pd-itinerary-note {
     content: initial;
 }
 
-/* ==========================================
-   NON-HERO TAGLINES — PILL BACKGROUND
-   Hero remains unchanged
-========================================== */
 
-/* Related packages tagline */
+
 .pd-related-section .pd-eyebrow,
 .pd-related-section .section-heading .pd-eyebrow,
 
-/* Final CTA tagline */
 .pd-final-cta .pd-final-cta-label,
 
-/* Other section taglines */
 body .section-heading .pd-eyebrow:not(.pd-hero .pd-eyebrow) {
     display: inline-flex;
     align-items: center;
@@ -2343,7 +2282,6 @@ body .section-heading .pd-eyebrow:not(.pd-hero .pd-eyebrow) {
     line-height: 1.4;
 }
 
-/* Small orange line before non-hero taglines */
 .pd-related-section .pd-eyebrow::before,
 .pd-final-cta .pd-final-cta-label::before,
 .section-heading .pd-eyebrow::before {
@@ -2357,7 +2295,6 @@ body .section-heading .pd-eyebrow:not(.pd-hero .pd-eyebrow) {
     border-radius: 2px;
 }
 
-/* Remove decorative outer rings from non-hero sections */
 .pd-related-section .pd-final-cta-decoration,
 .pd-related-section .pd-cta-circle,
 .pd-final-cta .pd-final-cta-decoration,
@@ -2365,7 +2302,6 @@ body .section-heading .pd-eyebrow:not(.pd-hero .pd-eyebrow) {
     display: none !important;
 }
 
-/* Preserve hero tagline appearance */
 .pd-hero .pd-eyebrow {
     padding: initial;
     background: initial;
@@ -2373,12 +2309,7 @@ body .section-heading .pd-eyebrow:not(.pd-hero .pd-eyebrow) {
     border-radius: initial;
 }
 
-/* ==========================================
-   TAGLINE STYLE — ALL NON-HERO SECTIONS
-   Hero remains unchanged
-========================================== */
 
-/* Remove pill background and border */
 .pd-overview-section .pd-eyebrow,
 .pd-highlights-section .pd-eyebrow,
 .pd-itinerary-section .pd-eyebrow,
@@ -2396,7 +2327,6 @@ body .section-heading .pd-eyebrow:not(.pd-hero .pd-eyebrow) {
     box-shadow: none !important;
 }
 
-/* Remove existing orange dot and decorations */
 .pd-overview-section .pd-eyebrow::after,
 .pd-highlights-section .pd-eyebrow::after,
 .pd-itinerary-section .pd-eyebrow::after,
@@ -2408,7 +2338,6 @@ body .section-heading .pd-eyebrow:not(.pd-hero .pd-eyebrow) {
     display: none !important;
 }
 
-/* Add small horizontal orange line */
 .pd-overview-section .pd-eyebrow::before,
 .pd-highlights-section .pd-eyebrow::before,
 .pd-itinerary-section .pd-eyebrow::before,
@@ -2426,13 +2355,10 @@ body .section-heading .pd-eyebrow:not(.pd-hero .pd-eyebrow) {
     border-radius: 2px;
 }
 
-/* Hero tagline: do not change */
 .pd-hero-section .pd-eyebrow {
-    /* Preserve existing hero styling */
 }
 
 
-/* Remove glow and decorative background from non-hero taglines */
 .pd-overview-section .pd-eyebrow,
 .pd-highlights-section .pd-eyebrow,
 .pd-itinerary-section .pd-eyebrow,
@@ -2447,7 +2373,6 @@ body .section-heading .pd-eyebrow:not(.pd-hero .pd-eyebrow) {
     backdrop-filter: none !important;
 }
 
-/* Remove glow effects from tagline decorations */
 .pd-overview-section .pd-eyebrow::before,
 .pd-highlights-section .pd-eyebrow::before,
 .pd-itinerary-section .pd-eyebrow::before,
@@ -2458,9 +2383,6 @@ body .section-heading .pd-eyebrow:not(.pd-hero .pd-eyebrow) {
     filter: none !important;
 }
 
-/* Do not change the hero tagline */
-
-/* SVG icons — Highlights of Your Journey */
 
 .pd-highlight-icon {
     width: 48px;
@@ -2491,7 +2413,6 @@ body .section-heading .pd-eyebrow:not(.pd-hero .pd-eyebrow) {
     display: none;
 }
 
-/* ==================== FINAL CTA BUTTON ==================== */
 
 .pd-final-cta-button {
     background: #FF8A00;
@@ -2512,7 +2433,6 @@ body .section-heading .pd-eyebrow:not(.pd-hero .pd-eyebrow) {
     filter: none;
 }
 
-/* CTA SECTION — PRIMARY BUTTON: SAME COLOUR ON HOVER */
 
 .pd-final-cta .btn-primary,
 .pd-final-cta .btn-primary:hover,
@@ -2529,7 +2449,6 @@ body .section-heading .pd-eyebrow:not(.pd-hero .pd-eyebrow) {
     opacity: 1 !important;
 }
 
-/* TRAVELORA — CTA PRIMARY BUTTON: FIXED HOVER COLOUR */
 
 body .pd-final-cta .pd-final-cta-content a.pd-final-cta-button,
 body .pd-final-cta .pd-final-cta-content a.pd-final-cta-button:hover,
@@ -2548,13 +2467,11 @@ body .pd-final-cta .pd-final-cta-content a.pd-final-cta-button:visited {
     transition: none !important;
 }
 
-/* Keep the CTA arrow white */
 body .pd-final-cta .pd-final-cta-content a.pd-final-cta-button span,
 body .pd-final-cta .pd-final-cta-content a.pd-final-cta-button:hover span {
     color: #FFFFFF !important;
 }
 
-/* Primary CTA button — subtle lift on hover */
 body .pd-final-cta .pd-final-cta-content a.pd-final-cta-button {
     background: #FF8A00 !important;
     background-color: #FF8A00 !important;
@@ -2583,14 +2500,12 @@ body .pd-final-cta .pd-final-cta-content a.pd-final-cta-button:focus-visible {
     outline-offset: 4px;
 }
 
-/* Travelora — Package Details Font */
 
 body,
 body {
     font-family: 'DM Sans', sans-serif;
 }
 
-/* TRAVELORA — PACKAGE DETAILS FONT */
 
 body {
     font-family: 'DM Sans', sans-serif;
@@ -2603,9 +2518,7 @@ textarea {
     font-family: 'DM Sans', sans-serif;
 }
 
-/* ==========================================
-   TRAVELORA — PACKAGE DETAILS FONT
-========================================== */
+
 
 .package-details-page {
     font-family: "DM Sans", sans-serif;
@@ -2631,7 +2544,6 @@ textarea {
     font-family: "DM Sans", sans-serif;
 }
 
-/* Package Details — DM Sans Font */
 
 .package-details-page {
     font-family: "DM Sans", sans-serif;

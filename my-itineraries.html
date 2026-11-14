@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#009C9A">
+    <meta name="description" content="View and manage your upcoming and completed travel itineraries with Travelora.">
+
+    <title>My Itineraries | Travelora</title>
+
+    <link rel="icon" href="favicon.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="my-itineraries.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="dashboard-page">
+
+<div class="dashboard-app">
+
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+
+        <div class="sidebar-brand">
+            <a href="index.html" class="brand">
+                <img src="logo.png" alt="Travelora Logo">
+
+                <div class="brand-text">
+                    <span><strong>Travel</strong><b>ora</b></span>
+                    <small>EXPLORE THE WORLD</small>
+                </div>
+            </a>
+
+            <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+
+        <div class="sidebar-user">
+            <div class="sidebar-avatar">
+                <i data-lucide="user-round"></i>
+            </div>
+
+            <div>
+                <h3>Traveller</h3>
+                <p>Travel Member</p>
+            </div>
+        </div>
+
+        <div class="sidebar-menu">
+
+            <p class="sidebar-label">MAIN MENU</p>
+
+            <a href="dashboard.html" class="sidebar-link">
+                <i data-lucide="layout-dashboard"></i>
+                <span>Overview</span>
+            </a>
+
+            <a href="my-bookings.html" class="sidebar-link">
+                <i data-lucide="calendar-check"></i>
+                <span>My Bookings</span>
+            </a>
+
+            <a href="saved-packages.html" class="sidebar-link">
+                <i data-lucide="heart"></i>
+                <span>Saved Packages</span>
+            </a>
+
+            <a href="my-itineraries.html" class="sidebar-link active" aria-current="page">
+                <i data-lucide="map"></i>
+                <span>My Itineraries</span>
+            </a>
+
+            <a href="tickets-invoices.html" class="sidebar-link">
+                <i data-lucide="ticket"></i>
+                <span>Tickets &amp; Invoices</span>
+            </a>
+
+            <p class="sidebar-label">ACCOUNT</p>
+
+            <a href="my-profile.html" class="sidebar-link">
+                <i data-lucide="user-round"></i>
+                <span>My Profile</span>
+            </a>
+
+        </div>
+
+        <div class="sidebar-support">
+
+            <div class="support-icon">
+                <i data-lucide="headset"></i>
+            </div>
+
+            <h4>Need Assistance?</h4>
+            <p>Our travel experts are ready to help you.</p>
+
+            <a href="contact.html">
+                Contact Support
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+
+        </div>
+
+        <a href="index.html" class="sidebar-back">
+            <i data-lucide="log-out"></i>
+            <span>Back to Website</span>
+        </a>
+
+    </aside>
+
+
+    <main class="dashboard-main">
+
+        <div class="dashboard-topbar">
+
+            <div class="topbar-left">
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                    <i data-lucide="menu"></i>
+                </button>
+
+                <div>
+                    <p class="topbar-greeting">YOUR TRAVEL SPACE</p>
+                    <h1>My Itineraries</h1>
+                </div>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="dashboard-search">
+                    <i data-lucide="search"></i>
+                    <input type="search" placeholder="Search anything..." aria-label="Search">
+                </div>
+
+                <button
+                    id="rtlBtn"
+                    class="header-icon-btn"
+                    type="button"
+                    title="Toggle RTL"
+                    aria-label="Toggle right-to-left layout"
+                    aria-pressed="false">
+                    <span aria-hidden="true">⇄</span>
+                </button>
+
+                <button class="topbar-icon" id="themeBtn" aria-label="Toggle dark mode">
+                    <i data-lucide="moon"></i>
+                </button>
+
+                <button class="topbar-icon notification-btn" aria-label="Notifications">
+                    <i data-lucide="bell"></i>
+                    <span class="notification-dot"></span>
+                </button>
+
+
+                <div class="topbar-profile-wrapper">
+
+                    <button
+                        class="topbar-profile"
+                        id="profileDropdownBtn"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="profileDropdown"
+                        aria-label="Open profile menu">
+
+                        <div class="topbar-avatar">
+                            <i data-lucide="user-round"></i>
+                        </div>
+
+                        <div class="topbar-profile-info">
+                            <h4>Traveller</h4>
+                            <p>Member</p>
+                        </div>
+
+                        <i data-lucide="chevron-down" class="profile-chevron"></i>
+
+                    </button>
+
+                    <div class="profile-dropdown" id="profileDropdown">
+
+                        <a href="my-profile.html">
+                            <i data-lucide="user-round"></i>
+                            <span>My Profile</span>
+                        </a>
+
+                        <a href="settings.html">
+                            <i data-lucide="settings"></i>
+                            <span>Settings</span>
+                        </a>
+
+                        <a href="my-bookings.html">
+                            <i data-lucide="calendar-check"></i>
+                            <span>My Bookings</span>
+                        </a>
+
+                        <div class="profile-dropdown-divider"></div>
+
+                        <a href="index.html" class="dropdown-logout">
+                            <i data-lucide="log-out"></i>
+                            <span>Logout</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="itineraries-page">
+
+            <section class="itineraries-welcome">
+
+                <div class="itineraries-welcome-content">
+
+                    <span class="section-eyebrow">
+                        YOUR TRAVEL PLANS
+                    </span>
+
+                    <h1>My Travel Itineraries</h1>
+
+                    <p>
+                        Keep your travel plans organised in one place.
+                        Explore your upcoming journeys, review past trips
+                        and get ready for your next adventure.
+                    </p>
+
+                </div>
+
+                <a href="domestic-packages.html" class="itineraries-primary-btn">
+                    Plan a New Trip
+                    <i data-lucide="plus"></i>
+                </a>
+
+            </section>
+
+
+            <section class="itineraries-summary">
+
+                <div class="itinerary-summary-card">
+
+                    <div class="itinerary-summary-icon">
+                        <i data-lucide="map"></i>
+                    </div>
+
+                    <div>
+                        <h3 id="totalTrips">04</h3>
+                        <p>Total Itineraries</p>
+                    </div>
+
+                </div>
+
+                <div class="itinerary-summary-card">
+
+                    <div class="itinerary-summary-icon upcoming-icon">
+                        <i data-lucide="calendar-days"></i>
+                    </div>
+
+                    <div>
+                        <h3 id="upcomingTrips">02</h3>
+                        <p>Upcoming Trips</p>
+                    </div>
+
+                </div>
+
+                <div class="itinerary-summary-card">
+
+                    <div class="itinerary-summary-icon completed-icon">
+                        <i data-lucide="circle-check"></i>
+                    </div>
+
+                    <div>
+                        <h3 id="completedTrips">02</h3>
+                        <p>Completed Trips</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="itinerary-list-section">
+
+                <div class="itinerary-section-heading">
+
+                    <div>
+                        <span class="section-eyebrow">YOUR JOURNEY COLLECTION</span>
+
+                        <h2>Explore Your Itineraries</h2>
+
+                        <p>
+                            View your trip details and keep track of
+                            the destinations you have planned.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="itinerary-filters">
+
+                    <div class="itinerary-search">
+                        <i data-lucide="search"></i>
+
+                        <input
+                            type="search"
+                            id="itinerarySearch"
+                            placeholder="Search destinations..."
+                            aria-label="Search itineraries">
+                    </div>
+
+                    <select id="itineraryFilter" aria-label="Filter itineraries">
+                        <option value="all">All Itineraries</option>
+                        <option value="upcoming">Upcoming Trips</option>
+                        <option value="completed">Completed Trips</option>
+                    </select>
+
+                </div>
+
+
+                <div class="itineraries-grid" id="itinerariesGrid">
+
+
+                    <article class="itinerary-card"
+                        data-status="upcoming"
+                        data-search="manali himachal pradesh mountains india adventure">
+
+                        <div class="itinerary-card-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=85"
+                                alt="Mountain landscape in Manali">
+
+                            <span class="itinerary-status upcoming-status">
+                                Upcoming
+                            </span>
+
+                        </div>
+
+                        <div class="itinerary-card-content">
+
+                            <div class="itinerary-location">
+                                <i data-lucide="map-pin"></i>
+                                Manali, Himachal Pradesh
+                            </div>
+
+                            <h3>Manali Mountain Escape</h3>
+
+                            <p>
+                                Enjoy scenic mountain views, peaceful valleys
+                                and exciting experiences in the Himalayas.
+                            </p>
+
+                            <div class="itinerary-card-details">
+
+                                <div>
+                                    <i data-lucide="calendar-days"></i>
+                                    15 Dec 2026 – 20 Dec 2026
+                                </div>
+
+                                <div>
+                                    <i data-lucide="clock"></i>
+                                    5 Nights / 6 Days
+                                </div>
+
+                                <div>
+                                    <i data-lucide="users"></i>
+                                    2 Travellers
+                                </div>
+
+                            </div>
+
+                            <div class="itinerary-card-footer">
+
+                                <div class="itinerary-card-price">
+                                    <small>Estimated trip cost</small>
+                                    <strong>₹25,000</strong>
+                                </div>
+
+                                <a href="domestic-packages.html" class="itinerary-view-btn">
+                                    View Details
+                                    <i data-lucide="arrow-right"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="itinerary-card"
+                        data-status="upcoming"
+                        data-search="paris france europe city tour international">
+
+                        <div class="itinerary-card-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=85"
+                                alt="Eiffel Tower in Paris">
+
+                            <span class="itinerary-status upcoming-status">
+                                Upcoming
+                            </span>
+
+                        </div>
+
+                        <div class="itinerary-card-content">
+
+                            <div class="itinerary-location">
+                                <i data-lucide="map-pin"></i>
+                                Paris, France
+                            </div>
+
+                            <h3>Paris City Experience</h3>
+
+                            <p>
+                                Discover famous landmarks, charming streets
+                                and unforgettable European experiences.
+                            </p>
+
+                            <div class="itinerary-card-details">
+
+                                <div>
+                                    <i data-lucide="calendar-days"></i>
+                                    10 Jan 2027 – 17 Jan 2027
+                                </div>
+
+                                <div>
+                                    <i data-lucide="clock"></i>
+                                    6 Nights / 7 Days
+                                </div>
+
+                                <div>
+                                    <i data-lucide="users"></i>
+                                    2 Travellers
+                                </div>
+
+                            </div>
+
+                            <div class="itinerary-card-footer">
+
+                                <div class="itinerary-card-price">
+                                    <small>Estimated trip cost</small>
+                                    <strong>₹85,000</strong>
+                                </div>
+
+                                <a href="international-packages.html" class="itinerary-view-btn">
+                                    View Details
+                                    <i data-lucide="arrow-right"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="itinerary-card"
+                        data-status="completed"
+                        data-search="kerala backwaters nature india family">
+
+                        <div class="itinerary-card-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=85"
+                                alt="Kerala backwaters and green landscape">
+
+                            <span class="itinerary-status completed-status">
+                                Completed
+                            </span>
+
+                        </div>
+
+                        <div class="itinerary-card-content">
+
+                            <div class="itinerary-location">
+                                <i data-lucide="map-pin"></i>
+                                Kerala, India
+                            </div>
+
+                            <h3>Kerala Nature Retreat</h3>
+
+                            <p>
+                                Experience beautiful backwaters, lush greenery
+                                and relaxing moments surrounded by nature.
+                            </p>
+
+                            <div class="itinerary-card-details">
+
+                                <div>
+                                    <i data-lucide="calendar-days"></i>
+                                    05 Oct 2026 – 09 Oct 2026
+                                </div>
+
+                                <div>
+                                    <i data-lucide="clock"></i>
+                                    4 Nights / 5 Days
+                                </div>
+
+                                <div>
+                                    <i data-lucide="users"></i>
+                                    3 Travellers
+                                </div>
+
+                            </div>
+
+                            <div class="itinerary-card-footer">
+
+                                <div class="itinerary-card-price">
+                                    <small>Trip cost</small>
+                                    <strong>₹22,000</strong>
+                                </div>
+
+                                <a href="domestic-packages.html" class="itinerary-view-btn">
+                                    View Details
+                                    <i data-lucide="arrow-right"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ITINERARY 4 -->
+                    <article class="itinerary-card"
+                        data-status="completed"
+                        data-search="agra taj mahal heritage india history">
+
+                        <div class="itinerary-card-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=85"
+                                alt="Taj Mahal in Agra">
+
+                            <span class="itinerary-status completed-status">
+                                Completed
+                            </span>
+
+                        </div>
+
+                        <div class="itinerary-card-content">
+
+                            <div class="itinerary-location">
+                                <i data-lucide="map-pin"></i>
+                                Agra, Uttar Pradesh
+                            </div>
+
+                            <h3>Agra Heritage Tour</h3>
+
+                            <p>
+                                Explore India's cultural heritage and
+                                experience the beauty of the Taj Mahal.
+                            </p>
+
+                            <div class="itinerary-card-details">
+
+                                <div>
+                                    <i data-lucide="calendar-days"></i>
+                                    12 Sep 2026 – 14 Sep 2026
+                                </div>
+
+                                <div>
+                                    <i data-lucide="clock"></i>
+                                    2 Nights / 3 Days
+                                </div>
+
+                                <div>
+                                    <i data-lucide="users"></i>
+                                    2 Travellers
+                                </div>
+
+                            </div>
+
+                            <div class="itinerary-card-footer">
+
+                                <div class="itinerary-card-price">
+                                    <small>Trip cost</small>
+                                    <strong>₹12,500</strong>
+                                </div>
+
+                                <a href="domestic-packages.html" class="itinerary-view-btn">
+                                    View Details
+                                    <i data-lucide="arrow-right"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="itinerary-empty" id="itineraryEmpty" hidden>
+
+                    <i data-lucide="map"></i>
+
+                    <h3>No Itineraries Found</h3>
+
+                    <p>
+                        We couldn't find any matching trips.
+                        Try another search or explore more travel packages.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="itinerary-inspiration">
+
+                <div class="itinerary-inspiration-content">
+
+                    <span>YOUR NEXT ADVENTURE STARTS HERE</span>
+
+                    <h2>Ready to Explore Somewhere New?</h2>
+
+                    <p>
+                        Discover exciting destinations and create
+                        unforgettable memories on your next journey.
+                    </p>
+
+                    <a href="domestic-packages.html" class="itineraries-primary-btn">
+                        Explore Destinations
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+
+                </div>
+
+                <div class="itinerary-inspiration-icon">
+                    <i data-lucide="compass"></i>
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    if (window.lucide) {
+        lucide.createIcons();
+    }
+
+
+    const sidebar = document.getElementById("dashboardSidebar");
+    const menuToggle = document.getElementById("menuToggle");
+    const sidebarClose = document.getElementById("sidebarClose");
+    const overlay = document.getElementById("sidebarOverlay");
+
+    function openSidebar() {
+        sidebar?.classList.add("sidebar-open");
+        overlay?.classList.add("active");
+    }
+
+    function closeSidebar() {
+        sidebar?.classList.remove("sidebar-open");
+        overlay?.classList.remove("active");
+    }
+
+    menuToggle?.addEventListener("click", openSidebar);
+    sidebarClose?.addEventListener("click", closeSidebar);
+    overlay?.addEventListener("click", closeSidebar);
+
+
+    const profileBtn = document.getElementById("profileDropdownBtn");
+    const profileDropdown = document.getElementById("profileDropdown");
+
+    profileBtn?.addEventListener("click", function (event) {
+        event.stopPropagation();
+
+        const isOpen = profileDropdown.classList.toggle("show");
+
+        profileBtn.setAttribute("aria-expanded", isOpen);
+    });
+
+    document.addEventListener("click", function (event) {
+        if (
+            !profileDropdown?.contains(event.target) &&
+            !profileBtn?.contains(event.target)
+        ) {
+            profileDropdown?.classList.remove("show");
+            profileBtn?.setAttribute("aria-expanded", "false");
+        }
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            profileDropdown?.classList.remove("show");
+            profileBtn?.setAttribute("aria-expanded", "false");
+        }
+    });
+
+
+    const themeBtn = document.getElementById("themeBtn");
+
+    if (localStorage.getItem("travelora-theme") === "dark") {
+        document.body.classList.add("dark-mode");
+    }
+
+    function updateThemeIcon() {
+        const icon = themeBtn?.querySelector("i");
+
+        if (icon && window.lucide) {
+            icon.setAttribute(
+                "data-lucide",
+                document.body.classList.contains("dark-mode") ? "sun" : "moon"
+            );
+
+            lucide.createIcons();
+        }
+    }
+
+    themeBtn?.addEventListener("click", function () {
+
+        document.body.classList.toggle("dark-mode");
+
+        localStorage.setItem(
+            "travelora-theme",
+            document.body.classList.contains("dark-mode") ? "dark" : "light"
+        );
+
+        updateThemeIcon();
+    });
+
+    updateThemeIcon();
+
+
+    const rtlBtn = document.getElementById("rtlBtn");
+
+    if (localStorage.getItem("travelora-direction") === "rtl") {
+        document.documentElement.dir = "rtl";
+    }
+
+    function updateRTLButton() {
+        rtlBtn?.setAttribute(
+            "aria-pressed",
+            document.documentElement.dir === "rtl"
+        );
+    }
+
+    rtlBtn?.addEventListener("click", function () {
+
+        document.documentElement.dir =
+            document.documentElement.dir === "rtl" ? "ltr" : "rtl";
+
+        localStorage.setItem(
+            "travelora-direction",
+            document.documentElement.dir
+        );
+
+        updateRTLButton();
+    });
+
+    updateRTLButton();
+
+
+    const searchInput = document.getElementById("itinerarySearch");
+    const filterSelect = document.getElementById("itineraryFilter");
+    const grid = document.getElementById("itinerariesGrid");
+    const emptyState = document.getElementById("itineraryEmpty");
+
+    const cards = Array.from(
+        grid.querySelectorAll(".itinerary-card")
+    );
+
+    function updateItineraries() {
+
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        const selectedStatus = filterSelect.value;
+
+        let visibleCount = 0;
+
+        cards.forEach(function (card) {
+
+            const searchData = card.dataset.search.toLowerCase();
+            const status = card.dataset.status;
+
+            const matchesSearch = searchData.includes(searchTerm);
+
+            const matchesStatus =
+                selectedStatus === "all" || status === selectedStatus;
+
+            const shouldShow = matchesSearch && matchesStatus;
+
+            card.hidden = !shouldShow;
+
+            if (shouldShow) {
+                visibleCount++;
+            }
+
+        });
+
+        emptyState.hidden = visibleCount !== 0;
+        grid.hidden = visibleCount === 0;
+
+    }
+
+    searchInput?.addEventListener("input", updateItineraries);
+    filterSelect?.addEventListener("change", updateItineraries);
+
+
+    function updateSummary() {
+
+        const upcoming = cards.filter(
+            card => card.dataset.status === "upcoming"
+        ).length;
+
+        const completed = cards.filter(
+            card => card.dataset.status === "completed"
+        ).length;
+
+        document.getElementById("totalTrips").textContent =
+            String(cards.length).padStart(2, "0");
+
+        document.getElementById("upcomingTrips").textContent =
+            String(upcoming).padStart(2, "0");
+
+        document.getElementById("completedTrips").textContent =
+            String(completed).padStart(2, "0");
+
+    }
+
+    updateSummary();
+
+});
+</script>
+
+</body>
+</html>
